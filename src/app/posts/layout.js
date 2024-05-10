@@ -1,5 +1,5 @@
 import utilStyles from '../../styles/util.module.css'
-import { BackTo } from '@/components/BackTo'
+import { BackTo } from '@/components/CommonComponents'
 
 
 
