@@ -1,5 +1,5 @@
 import utilStyles from '../../styles/util.module.css'
-import { BackToHome } from '@/components/UtilComponent'
+import { BackTo } from '@/components/BackTo'
 
 
 
@@ -15,7 +15,7 @@ export default function PostLayout({ children }) {
             </div>
             
             <div style={{paddingTop: '20px', paddingBottom: '20px'}}>
-                <BackToHome />
+                <BackTo path='/' title='home'/>
             </div>
             
         </div>
