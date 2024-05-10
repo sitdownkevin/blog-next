@@ -7,7 +7,7 @@ export default function PostLayout({ children }) {
     return (
         <div className={utilStyles.gridVertical}>
             <div className={utilStyles.boxCenter}>
-                <h2>Posts</h2>
+                <h2 className='text-2xl font-bold'>Posts</h2>
             </div>
             
             <div className={utilStyles.boxLeft}>
