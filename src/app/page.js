@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="flex flex-col justify-center items-center p-8 w-full">
+        <div className="flex flex-col justify-center items-center p-16 w-full">
           <Image 
             src='/k.jpg'
             width={72}
@@ -23,19 +23,20 @@ export default function Home() {
             className="rounded-full"
           />
         </div>
+
         <div className="flex flex-col w-full">
           <h3>Quick Ref</h3>
           <div className="grid grid-cols-4 gap-4 mt-4">
             {quickRefCards.map((card) => (
-                <div className="flex flex-col justify-center items-center p-4 rounded-md bg-gray-100" key={card.key}>
-                  {card.name}
+                <div className="flex flex-col justify-center items-center p-4 rounded-md border border-gray-300" key={card.key}>
+                  <p className="font-bold text-lg">{card.name}</p>
                 </div>
               ))}
           </div>
         </div>
 
         
-        <div className="flex flex-col w-full mt-8">
+        {/* <div className="flex flex-col w-full mt-8">
           <h3>Project</h3>
           <div className="grid grid-cols-2 gap-4 mt-4">
             {quickRefCards.map((card) => (
@@ -44,7 +45,7 @@ export default function Home() {
                 </div>
               ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="flex flex-col w-full mt-8">
           <h3><Link href={'/posts'}>Posts</Link></h3>
