@@ -1,13 +1,16 @@
-import postStyles from '../styles/post.module.css';
-import utilStyles from '../styles/util.module.css'
 import Link from 'next/link';
+
+import { Badge } from '@/components/ui/badge'
 
 function PostCardCover({ post }) {
     return (
         <>
-            <div className={postStyles.cardCover}>
-                <h1><Link href={`posts/${post.id}`} className={utilStyles.link}>{ post.title }</Link></h1>
-                <h3>{ post.tags }</h3>
+            <div className="flex flex-col border border-gray-300 rounded-lg p-4 w-full">
+                <h2><Link href={`posts/${post.id}`}>{ post.title }</Link></h2>
+                <div className='mt-4 flex flex-row justify-between items-center'>
+                    <Badge>{ post.tags }</Badge>
+                </div>
+                
             </div>
         </>
     )
@@ -18,9 +21,10 @@ function PostCard({ post }) {
     return (
         <>
             <h1>{ post.title }</h1>
-            <h2>{ post.id }</h2>
-            <h3>{ post.tags }</h3>
-            <div>
+            <div className='mt-4 flex flex-row justify-between items-center'>
+                    <Badge>{ post.tags }</Badge>
+            </div>
+            <div className='mt-16'>
                 <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
             </div>
         </>

@@ -1,20 +1,19 @@
-import utilStyles from '../../styles/util.module.css'
 import { BackTo } from '@/components/CommonComponents'
-
+import Link from 'next/link'
 
 
 export default function PostLayout({ children }) {
     return (
-        <div className={utilStyles.gridVertical}>
-            <div className={utilStyles.boxCenter}>
-                <h2 className='text-2xl font-bold'>Posts</h2>
+        <div className="flex flex-col">
+            <div className="flex flex-col justify-center items-center p-16">
+                <h3><Link href='/posts'>Posts</Link></h3>
             </div>
             
-            <div className={utilStyles.boxLeft}>
+            <div>
                 {children}
             </div>
             
-            <div style={{paddingTop: '20px', paddingBottom: '20px'}}>
+            <div className='mt-4'>
                 <BackTo path='/' title='home'/>
             </div>
             

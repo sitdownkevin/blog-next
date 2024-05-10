@@ -1,12 +1,16 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import 'katex/dist/katex.min.css';
+import { icons } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "k's Space",
   description: "",
+  icons: {
+    icon: '/favicon.ico',
+  }
 };
 
 export default function RootLayout({ children }) {
