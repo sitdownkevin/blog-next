@@ -1,5 +1,6 @@
 import utilStyles from '../../styles/util.module.css'
-import Link from 'next/link';
+import { BackToHome } from '@/components/UtilComponent'
+
 
 
 export default function PostLayout({ children }) {
@@ -8,11 +9,15 @@ export default function PostLayout({ children }) {
             <div className={utilStyles.boxCenter}>
                 <h2>Posts</h2>
             </div>
-            <div><Link href={'/'} className={utilStyles.link}>{`<- Back to home`}</Link></div>
-
+            
             <div className={utilStyles.boxLeft}>
                 {children}
             </div>
+            
+            <div style={{paddingTop: '20px', paddingBottom: '20px'}}>
+                <BackToHome />
+            </div>
+            
         </div>
     )
 }

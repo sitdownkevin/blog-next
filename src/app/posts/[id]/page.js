@@ -1,11 +1,22 @@
+import { getMarkdownContent, getMarkdownPostsData } from "@/lib/RenderMarkdown"
+import { PostCard } from "@/components/PostCard";
 
+export const dynamicParams = false;
 
-export default function Post({ params }) {
+export default async function Post({ params }) {
+    const markdownContent = await getMarkdownContent(params.id);
+
     return (
         <div>
-            <h1>Post {params.id}</h1>
-            <h2>Heading 2</h2>
-            <p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <PostCard post={markdownContent}/>
         </div>
     )
+}
+
+export async function generateStaticParams() {
+    const postData = getMarkdownPostsData();
+
+    return postData.map((post) => {
+        return { id: post.id }
+    })
 }

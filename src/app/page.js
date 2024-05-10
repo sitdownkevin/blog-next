@@ -3,10 +3,14 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import utilStyles from "../styles/util.module.css";
 
+import { PostCardCover } from "@/components/PostCard";
+import { getMarkdownPostsData } from "@/lib/RenderMarkdown";
+
 export default function Home() {
   const quickRefs = ['Brew', 'PyPI', 'Conda', 'Git']
   const quickRefCards = quickRefs.map((name, index) => ({name: name, key: index}));
 
+  const postsData = getMarkdownPostsData();
 
   return (
     <div className={utilStyles.gridVertical}>
@@ -40,11 +44,7 @@ export default function Home() {
       <div className={utilStyles.boxLeft}>
           <h1><Link href={'/posts'} className={utilStyles.link}>Posts</Link></h1>
           <div className={utilStyles.gridHorizontal}>
-            {quickRefCards.map((card) => (
-              <div className={utilStyles.cardLg} key={card.key}>
-                {card.name}
-              </div>
-            ))}
+            {postsData.map((post) => (<PostCardCover key={post.slug} post={post} />))}
           </div>
       </div>
 
