@@ -1,12 +1,13 @@
 import Link from "next/link"
 
-import utilStyles from '../../styles/util.module.css';
 
 import { PostCardCover } from "@/components/PostCard";
-import { getMarkdownPostsData } from "@/lib/RenderMarkdown";
+import { getMarkdownPostsDataJson } from "@/lib/RenderMarkdown";
 
+  
 export default function Posts() {
-    const postsData = getMarkdownPostsData();
+    const postsData = getMarkdownPostsDataJson();
+
 
     return (
         <>

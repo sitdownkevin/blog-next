@@ -5,10 +5,12 @@ import { Badge } from '@/components/ui/badge'
 function PostCardCover({ post }) {
     return (
         <>
-            <div className="flex flex-col border border-gray-300 rounded-lg p-4 w-full">
-                <h2><Link href={`posts/${post.id}`}>{ post.title }</Link></h2>
-                <div className='mt-4 flex flex-row justify-between items-center'>
-                    <Badge>{ post.tags }</Badge>
+            <div className="flex flex-col border border-gray-300 rounded-lg p-8 w-full">
+                <h1><Link href={`posts/${post.id}`}>{ post.title }</Link></h1>
+                <div className='mt-4 flex flex-row items-center'>
+                    {post.tagList.map(tag => (
+                        <Badge key={tag} className='mr-4'>{tag}</Badge>
+                    ))}
                 </div>
                 
             </div>
@@ -20,17 +22,18 @@ function PostCardCover({ post }) {
 function PostCard({ post }) {
     return (
         <>
-            <h1>{ post.title }</h1>
-            <div className='mt-4 flex flex-row justify-between items-center'>
-                    <Badge>{ post.tags }</Badge>
+            <h1 className='text-6xl'>{ post.title }</h1>
+            <div className='mt-4 flex flex-row items-center'>
+            {post.tagList.map(tag => (
+                        <Badge key={tag} className='mr-4'>{tag}</Badge>
+                    ))}
             </div>
-            <div className='mt-16'>
+            <div className='mt-16 markdownContainer'>
                 <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
             </div>
         </>
     )
 }
-
 
 
 

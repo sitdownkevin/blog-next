@@ -11,11 +11,12 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
 
 
 const postDirectory = path.join(process.cwd(), 'posts')
 
-console.log(postDirectory);
+// console.log(postDirectory);
 
 function getMarkdownPostsData() {
     const fileNames = fs.readdirSync(postDirectory);
@@ -35,6 +36,28 @@ function getMarkdownPostsData() {
 }
 
 
+export function getMarkdownPostsDataJson() {
+    const fileNames = fs.readdirSync(postDirectory);
+    const allPostsData = fileNames.map(fileName => {
+        const id = fileName.replace(/\.md$/, '');
+        
+        const fullPath = path.join(postDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+        const matterResult = matter(fileContents);
+
+        const title = matterResult.data.title;
+        const tags = matterResult.data.tags;
+        const tagList = tags.split(' ');
+
+        return { id, fileName, title, tagList };
+    })
+
+    return allPostsData;
+}
+
+
+
 async function getMarkdownContent(id) {
     const fullPath = path.join(postDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -43,22 +66,29 @@ async function getMarkdownContent(id) {
 
     const processedContent = await unified()
         .use(remarkParse)
+        .use(remarkGfm)
         .use(remarkMath)
         .use(remarkRehype)
         .use(rehypeKatex)
         .use(rehypeStringify)
         .process(matterResult.content)
-        .then(c => {
-            console.log(c)
-            return c;
-        })
+        // .then(c => {
+        //     console.log(c)
+        //     return c;
+        // })
 
     const contentHtml = processedContent.toString();
 
+    const title = matterResult.data.title;
+    const tags = matterResult.data.tags;
+    const tagList = tags.split(' ');
+
     return {
         id,
+        title,
+        tags,
+        tagList,
         contentHtml,
-        ...matterResult.data
     }
 }
 
