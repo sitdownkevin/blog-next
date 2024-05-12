@@ -114,11 +114,11 @@
   }
 
   h1 {
-    @apply scroll-m-20 text-4xl font-serif tracking-tight lg:text-5xl;
+    @apply mt-8 scroll-m-20 border-b text-4xl font-serif tracking-tight first:mt-0;
   }
 
   h2 {
-    @apply mt-8 scroll-m-20 border-b pb-2 text-3xl font-serif tracking-tight first:mt-0;
+    @apply mt-8 scroll-m-20 pb-2 text-3xl font-serif tracking-tight;
   }
 
   h3 {
@@ -152,12 +152,6 @@
     @apply bg-muted mt-2 mb-2 p-4 rounded;
   } 
 
-  :root {
-    --color-canvas-default: #fff;
-    --color-canvas-subtle: #f6f8fa;
-    --color-border-default: #d0d7de;
-  }
-  
   
   table {
     @apply block overflow-x-auto table-auto border-collapse mt-4 mb-4;
