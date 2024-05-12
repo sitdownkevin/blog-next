@@ -9,9 +9,10 @@ import { unified } from 'unified';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
-import rehypeKatex from 'rehype-katex';
+import rehypeKatex from 'rehype-katex'; // Math
 import rehypeStringify from 'rehype-stringify';
-import remarkGfm from 'remark-gfm';
+import remarkGfm from 'remark-gfm'; // Table
+import rehypeHighlight from 'rehype-highlight'; // Code Block
 
 
 const postDirectory = path.join(process.cwd(), 'posts')
@@ -70,12 +71,9 @@ async function getMarkdownContent(id) {
         .use(remarkMath)
         .use(remarkRehype)
         .use(rehypeKatex)
+        .use(rehypeHighlight)
         .use(rehypeStringify)
         .process(matterResult.content)
-        // .then(c => {
-        //     console.log(c)
-        //     return c;
-        // })
 
     const contentHtml = processedContent.toString();
 

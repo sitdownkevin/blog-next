@@ -12,7 +12,7 @@ export default function Posts() {
     return (
         <>
             {/* <menu>Menu TODO</menu> */}
-            <div className="grid grid-cols-1 gap-4">
+            <div className="grid grid-cols-1 w-full">
                 {postsData.map((post) => (<PostCardCover key={post.slug} post={post} />))}
             </div>
         </>

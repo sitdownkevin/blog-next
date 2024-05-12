@@ -13,7 +13,11 @@ tags: SCU
 
 对于矩阵$A^TA_{n\times n}$，假设对于 $A^TA$的特征值和特征向量为: $A^TAv_i=\sigma_i^2v_i,\ i=1,2,\ldots,n$
 
-$$\begin{aligned}A^TA[v_1:v_2:\vdots:v_n]=&[A^TAv_1:A^TAv_2:\dots:A^TAv_n]\\=& [\sigma_1^2v_1:\sigma_2^2v_2:\dots:\sigma_n^2v_n] \\=&[v_1:v_2:\dots:v_n]  \left[ \begin{matrix} \sigma_1^2&0&\cdots&0 \\ 0&\sigma_2^2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\sigma_n^2\end{matrix} \right]   \end{aligned}$$
+$$
+\begin{aligned}
+A^TA[v_1:v_2:\vdots:v_n]=&[A^TAv_1:A^TAv_2:\dots:A^TAv_n]\\=& [\sigma_1^2v_1:\sigma_2^2v_2:\dots:\sigma_n^2v_n] \\=&[v_1:v_2:\dots:v_n]  \left[ \begin{matrix}\sigma_1^2&0&\cdots&0 \\ 0&\sigma_2^2&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&\sigma_n^2\end{matrix} \right]
+\end{aligned}
+$$
 
 令矩阵$V$ 为$[v_1:v_2:\dots:v_n]$
 

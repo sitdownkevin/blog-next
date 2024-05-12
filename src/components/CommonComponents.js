@@ -14,7 +14,7 @@ export function H({ level, content }) {
 export function BackTo({ path, title }) {
     return (
         <>
-            <Link className={buttonVariants({ variant: "outline" })} href={path}>{`<- Back to ${title}`}</Link>
+            <Link className={buttonVariants({ variant: "outline" })} href={path}>{`Back to ${title}`}</Link>
         </>
     )
 }

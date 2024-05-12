@@ -9,12 +9,10 @@ import { getMarkdownPostsDataJson } from "@/lib/RenderMarkdown";
 import { getAllQuickrefData } from '@/lib/RenderQuickrefs';
 
 export default function Home() {
-  const quickRefs = ['Brew', 'PyPI', 'Conda', 'Git',]
-  const quickRefCards = quickRefs.map((name, index) => ({ name: name, key: index }));
-
   const quickrefData = getAllQuickrefData();
 
   const postsData = getMarkdownPostsDataJson();
+  const selectedPostsData = [...postsData].sort(() => 0.5 - Math.random()).slice(0, 3);
 
   return (
     <>
@@ -31,7 +29,7 @@ export default function Home() {
 
         <div className="flex flex-col w-full">
           <h3><Link href={'/quickrefs'}>Quick Refs</Link></h3>
-          <div className="grid grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
             {quickrefData.map((item) => (<QuickrefCardCover item={item} key={item.key}/>))}
           </div>
         </div>
@@ -51,7 +49,7 @@ export default function Home() {
         <div className="flex flex-col w-full mt-8">
           <h3><Link href={'/posts'}>Posts</Link></h3>
           <div className="grid grid-cols-1 gap-4 mt-4">
-            {postsData.map((post) => (<PostCardCover key={post.slug} post={post} />))}
+            {selectedPostsData.map((post) => (<PostCardCover key={post.slug} post={post} />))}
           </div>
         </div>
 
