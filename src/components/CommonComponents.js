@@ -1,14 +1,5 @@
 import Link from "next/link"
-import { Button, buttonVariants } from "@/components/ui/button"
-
-
-export function H({ level, content }) {
-    return (
-        <div className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-            {content}
-        </div>
-    )
-}
+import { buttonVariants } from "@/components/ui/button"
 
 
 export function BackTo({ path, title }) {

@@ -172,3 +172,18 @@
     background-color: transparent;
   }
 }
+
+@keyframes scaleUpDown {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.myavt {
+  animation: scaleUpDown 1s infinite;
+  animation-timing-function: ease-in-out;
+}

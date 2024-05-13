@@ -35,6 +35,42 @@ export function getAllQuickrefData() {
 }
 
 
+export async function getAllQuickrefContent() {
+    const fileNames = fs.readdirSync(postDirectory);
+
+    const allQuickrefContent = [];
+
+    for (const fileName of fileNames) {
+        const fullPath = path.join(postDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+        const matterResult = matter(fileContents);
+        const processedContent = await unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkMath)
+        .use(remarkRehype)
+        .use(rehypeKatex)
+        .use(rehypeStringify)
+        .process(matterResult.content);
+
+        const id = fileName.replace(/\.md$/, '');
+        const title = matterResult.data.title;
+
+        allQuickrefContent.push(
+            {
+                id,
+                title,
+                contentHtml: processedContent.toString(),
+            }
+        )
+
+    }
+
+    return allQuickrefContent;
+}
+
+
 export async function getQuickrefContent({ id }) {
     const fullPath = path.join(postDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');

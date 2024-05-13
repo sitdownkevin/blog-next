@@ -4,6 +4,7 @@ import 'katex/dist/katex.min.css';
 import { icons } from "lucide-react";
 
 const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from '@/components/ui/sonner'
 
 export const metadata = {
   title: "k's Space",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
                 {children}
             </div>
           </div>
+          <Toaster />
       </body>
     </html>
   );
