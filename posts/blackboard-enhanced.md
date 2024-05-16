@@ -3,16 +3,26 @@ title: Bb 增强 | Blackboard Enhanced
 tags: SCU PROJ
 ---
 
-项目地址：https://github.com/sitdownkevin/Blackboard-Enhanced
+一款基于油猴脚本的浏览器插件，用于增强 Blackboard 网站的功能
 
+- 🔗 Blackboard Enhanced [on GitHub](https://github.com/sitdownkevin/Blackboard-Enhanced)
 
 ## 安装
 
-### 1. 安装油猴软件
+### 1. 安装浏览器插件 - 油猴脚本
+
+Tampermonkey 和 Violentmonkey 二选一
+
+- 🔗 Tampermonkey [on Edge](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd) | [on Chrome](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+
+- 🔗 Violentmonkey [on Edge](https://microsoftedge.microsoft.com/addons/detail/%E6%9A%B4%E5%8A%9B%E7%8C%B4/eeagobfjdenkkddmbclomhiblgggliao) | [on Chrome](https://chromewebstore.google.com/detail/%E6%9A%B4%E5%8A%9B%E7%8C%B4/jinjaccalgkegednnccohejagnlnfdag)
 
 ### 2. 安装脚本：
 
-前往 [**GreasyFork (Bb 增强 | Blackboard Enhanced)**](https://greasyfork.org/zh-CN/scripts/462240-bb%E8%AE%A1%E7%AE%97%E5%88%86%E6%95%B0) 安装油猴脚本
+访问 **GreasyFork** 安装脚本
+
+- 🔗 Blackboard Enhanced [on GreasyFork](https://greasyfork.org/zh-CN/scripts/462240-bb%E8%AE%A1%E7%AE%97%E5%88%86%E6%95%B0)
+
 
 ### 3. 打开**Blackboard**开始使用
 
