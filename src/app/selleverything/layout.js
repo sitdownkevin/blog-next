@@ -15,13 +15,13 @@ export default function SellEverythingLayout({ children }) {
                 </h2>
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <p className="select-none">物品的图片和详情见</p>
+                        <p className="select-none">图片、详情见（电脑访问最佳）</p>
                         <h3 className="mt-4">
                             <a target="_blank" className="text-blue-500 underline" href="https://docs.qq.com/sheet/DWWJ0dmlpcGxRUkRn">腾讯文档</a>
                         </h3>
                     </div>
                     <div>
-                        <p className="select-none">物品的添加、删除联系</p>
+                        <p className="select-none">申请文档编辑权限联系</p>
                         <h3 className="mt-4">
                             <span className="select-none">QQ: </span><span className="">1361786946</span>
                         </h3>
