@@ -20,3 +20,10 @@ export async function getData() {
   
     return shuffledData;
 }
+
+
+export async function getDataByType(type) {
+    const data = await getData();
+
+    return data.filter(item => item.type === type);
+}

@@ -1,7 +1,5 @@
-import { getData } from "./data"
-
-import Link from "next/link"
-
+import { getDataByType } from '@/app/selleverything/data';
+import Link from 'next/link';
 
 function ItemCard({ itemdata }) {
     const typeColors = {
@@ -42,8 +40,8 @@ function ItemCard({ itemdata }) {
 }
 
 
-export default async function SellEverything() {
-    const data = await getData();
+export default async function TypePage({ params }) {
+    const data = await getDataByType(params.type);
 
     return (
         <>
@@ -52,4 +50,13 @@ export default async function SellEverything() {
             </div>
         </>
     )
+}
+
+
+export async function generateStaticParams() {
+    return [
+        { type: 'book' },
+        { type: 'textbook' },
+        { type: 'item' },
+    ]
 }
