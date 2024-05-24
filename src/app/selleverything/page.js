@@ -16,23 +16,23 @@ function ItemCard({ itemdata }) {
 
 
     return (
-        <div className="bg-white shadow-lg rounded-lg p-6 border border-blue-200">
+        <div className="bg-white shadow-lg rounded-lg p-6 border border-blue-100">
 
             <h2 className={`text-2xl font-bold ${typeColors[itemdata.type]} truncate whitespace-nowrap`}>{itemdata.name}</h2>
 
-            <p className="text-gray-700">{itemdata.comment}</p>
-            <div className="grid grid-cols-4 mt-4">
+            <p className="text-gray-400">{itemdata.comment}</p>
+            <div className="grid grid-cols-4 mt-6">
                 <div>
                     <h4>类型</h4>
-                    <p className={`${typeColors[itemdata.type]}}`}>{typeNames[itemdata.type]}</p>
+                    <p className={`ml-2 ${typeColors[itemdata.type]}}`}>{typeNames[itemdata.type]}</p>
                 </div>
                 <div>
                     <h4>价格</h4>
-                    <p className="text-gray-700">{itemdata.price}</p>
+                    <p className="ml-2 text-gray-700">{itemdata.price}</p>
                 </div>
                 <div className="col-span-2">
                     <h4>QQ</h4>
-                    <p className="text-gray-700">{itemdata.contact}</p>
+                    <p className="ml-2 text-gray-700">{itemdata.contact}</p>
                 </div>
             </div>
         </div>
