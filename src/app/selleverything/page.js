@@ -30,7 +30,7 @@ function ItemCard({ itemdata }) {
                     <h4>价格</h4>
                     <p className="ml-2 text-gray-700">{itemdata.price}</p>
                 </div>
-                <div className="col-span-2">
+                <div className="">
                     <h4>QQ</h4>
                     <p className="ml-2 text-gray-700">{itemdata.contact}</p>
                 </div>
