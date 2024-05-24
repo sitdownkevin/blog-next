@@ -17,7 +17,9 @@ function ItemCard({ itemdata }) {
 
     return (
         <div className="bg-white shadow-lg rounded-lg p-6 border border-blue-200">
-            <h2 className={`text-2xl font-bold ${typeColors[itemdata.type]} truncate w-full`}>{itemdata.name}</h2>
+
+            <h2 className={`text-2xl font-bold ${typeColors[itemdata.type]} truncate whitespace-nowrap`}>{itemdata.name}</h2>
+
             <p className="text-gray-700">{itemdata.comment}</p>
             <div className="grid grid-cols-4 mt-4">
                 <div>
