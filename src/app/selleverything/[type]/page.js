@@ -1,6 +1,8 @@
 import { getDataByType } from '@/app/selleverything/data';
 import Link from 'next/link';
 
+export const dynamicParams = false;
+
 function ItemCard({ itemdata }) {
     const typeColors = {
         textbook: 'text-blue-700',
