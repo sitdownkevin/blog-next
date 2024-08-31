@@ -21,16 +21,16 @@ export const metadata = {
 function Header() {
   return <header className="bg-gray-0 py-4 px-6 mb-3 flex items-center justify-between">
     <div className="logo">
-      <h1 className="text-xl font-bold text-gray-800"></h1>
+      <h1 className="text-xl font-bold text-gray-500"></h1>
     </div>
-    <nav className="flex space-x-4 font-mono text-gray-600">
-      <Link href="/" className="hover:text-blue-500 transition-colors duration-200 text-sm md:text-base">
+    <nav className="flex space-x-4 font-sans text-gray-500">
+      <Link href="/" className="hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
         CV
       </Link>
-      <Link href="/posts" className="hover:text-blue-500 transition-colors duration-200 text-sm md:text-base">
+      <Link href="/posts" className="hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
         Posts
       </Link>
-      <Link href="/quickrefs" className=" hover:text-blue-500 transition-colors duration-200 text-sm md:text-base">
+      <Link href="/quickrefs" className=" hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
         QRefs
       </Link>
     </nav>
