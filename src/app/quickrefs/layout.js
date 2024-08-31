@@ -1,4 +1,4 @@
-import { BackTo } from '@/components/CommonComponents'
+
 import Link from 'next/link'
 
 
@@ -12,11 +12,6 @@ export default function PostLayout({ children }) {
             <div>
                 {children}
             </div>
-            
-            <div className='mt-4'>
-                <BackTo path='/' title='home'/>
-            </div>
-            
         </div>
     )
 }
