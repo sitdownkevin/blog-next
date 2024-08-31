@@ -3,6 +3,7 @@ import "./globals.css";
 import 'katex/dist/katex.min.css';
 
 import Link from "next/link";
+import { FaGithub, FaTwitter, FaLinkedin, FaInstagram, FaWeibo } from 'react-icons/fa'
 
 import { icons } from "lucide-react";
 
@@ -22,6 +23,40 @@ function Header() {
   return <header className="bg-gray-0 py-4 px-6 mb-3 flex items-center justify-between">
     <div className="logo">
       <h1 className="text-xl font-bold text-gray-500"></h1>
+      <div className="flex flex-row items-center space-x-4 w-full">
+          <a
+            href="https://github.com/sitdownkevin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-gray-500 transition-colors duration-300"
+          >
+            <FaGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sitdownkevin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-gray-500 transition-colors duration-300"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://www.instagram.com/sitdownkevin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-gray-500 transition-colors duration-300"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://weibo.com/u/5668436889"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-gray-500 transition-colors duration-300"
+          >
+            <FaWeibo />
+          </a>
+      </div>
     </div>
     <nav className="flex space-x-4 font-sans text-gray-500">
       <Link href="/" className="hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
