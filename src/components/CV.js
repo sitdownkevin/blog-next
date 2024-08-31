@@ -13,7 +13,7 @@ function CVItem({ title, subtitle, content, period }) {
 function PersonalInfo() {
     return (
         <div className="sticky top-0 bg-white z-10 py-4 flex animate-slide-down justify-between items-start backdrop-blur-md bg-opacity-90">
-            <div className="w-5/6">
+            <div className="">
                 <h1 className="text-4xl font-mono">Ke Xu</h1>
                 <div className="mt-2 text-xs">
                     <div className="border-0 border-green-500 text-gray-500">
@@ -23,7 +23,7 @@ function PersonalInfo() {
                         Shanghai, China
                     </div>
                 </div>
-                <div className="border-0 border-green-500 mt-2 text-xs text-gray-600">
+                <div className="border-0 border-green-500 mt-2 text-xs text-gray-600 w-2/3 lg:w-5/6">
                     Information Systems, Data Mining, Web3, and Blockchain Technology.
                 </div>
             </div>
