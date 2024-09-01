@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { PersonalInfoCard } from '@/components/ClientComponent'
 
 function CVItem({ title, subtitle, content, period }) {
     return <p>
@@ -12,7 +13,7 @@ function CVItem({ title, subtitle, content, period }) {
 
 function PersonalInfo() {
     return (
-        <div className="sticky top-0 bg-white z-10 py-4 flex animate-slide-down justify-between items-start backdrop-blur-md bg-opacity-90">
+        <div className="sticky top-0 bg-white z-10 py-4 flex animate-slide-down justify-between items-start backdrop-blur-sm bg-opacity-60">
             <div className="">
                 <h1 className="text-4xl font-mono">Ke Xu</h1>
                 <div className="mt-2 text-xs">
@@ -45,14 +46,13 @@ export function CV() {
 
     return <>
         <div className="flex flex-col w-full mt-8">
-
-            <PersonalInfo />
+            <PersonalInfoCard />
 
             {["Education", "Work Experience", "Projects", "Publications"].map((section, index) => (
-                <>
+                <div key={index} className='mt-4'>
                     <h2 className="mt-8 text-2xl font-semibold">{section}</h2>
                     {cvJSONData[section].map((item, idx) => (<CVItem key={idx} {...item} />))}
-                </>
+                </div>
             ))}
 
         </div>
