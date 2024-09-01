@@ -110,31 +110,27 @@
 
 .markdownContainer {
   a {
-    @apply text-blue-500 underline underline-offset-4 break-all;
+    @apply text-blue-600 underline underline-offset-4 break-all;
   }
 
   h1 {
-    @apply mt-8 scroll-m-20 border-b text-4xl font-serif tracking-tight first:mt-0;
+    @apply mt-10 scroll-m-20 border-b text-5xl font-bold tracking-tight first:mt-0;
   }
 
   h2 {
-    @apply mt-8 scroll-m-20 pb-2 text-3xl font-serif tracking-tight;
+    @apply mt-10 scroll-m-20 pb-2 text-4xl font-semibold tracking-tight;
   }
 
   h3 {
-    @apply mt-4 scroll-m-20 text-2xl font-serif tracking-tight;
+    @apply mt-6 scroll-m-20 text-3xl font-semibold tracking-tight;
   }
 
   h4 {
-    @apply mt-4 scroll-m-20 text-xl font-serif tracking-tight;
+    @apply mt-6 scroll-m-20 text-2xl font-semibold tracking-tight;
   }
 
   p {
-    @apply mt-4 mb-4;
-  }
-
-  code {
-    @apply mb-4 relative px-[0.3rem] py-[0.2rem] font-mono text-sm font-light;
+    @apply mt-4 mb-4 leading-relaxed;
   }
 
   .katex,
@@ -148,28 +144,36 @@
   }
 
   pre {
-    overflow-x: auto;
-    @apply bg-muted mt-2 mb-2 p-4 rounded;
-  } 
+    @apply bg-gray-900 text-white mt-2 mb-2 p-4 rounded overflow-x-auto; /* 确保背景为深色，文字为白色，并添加水平滚动条 */
+  }
 
+  pre {
+    @apply relative;
+  }
+
+  .copy-button {
+    @apply absolute top-2 right-2 bg-gray-700 text-white px-2 py-1 rounded opacity-75 hover:opacity-100;
+  }
   
   table {
-    @apply block overflow-x-auto table-auto border-collapse mt-4 mb-4;
+    @apply block overflow-x-auto table-auto border-collapse mt-4 mb-4 w-full;
   }
   
   thead {
-    @apply bg-slate-800 text-white font-mono text-sm;
+    @apply bg-slate-900 text-white font-mono text-base;
   }
-
 
   td,
   th {
-    @apply px-4 py-2 border border-slate-500 text-center align-middle font-mono;
+    @apply px-6 py-3 border border-slate-600 text-center align-middle font-mono;
   }
-  
   
   table img {
     background-color: transparent;
+  }
+
+  img {
+    @apply mx-auto; /* 将所有的图片都水平居中放置 */
   }
 }
 

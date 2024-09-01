@@ -3,6 +3,10 @@ import { getAllQuickrefData, getQuickrefContent } from "@/lib/RenderQuickrefs";
 
 import { QuickrefCardCover, QuickrefCard } from "@/components/QuickRefCard";
 
+export const metadata = {
+    title: "Ke Xu | Quick Reference",
+};
+
 export default async function Posts() {
     const data = getAllQuickrefData();
 
