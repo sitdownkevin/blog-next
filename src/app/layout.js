@@ -22,10 +22,10 @@ function Header() {
     <div className="logo">
       <h1 className="text-xl font-bold text-gray-500"></h1>
       <div className="flex flex-row items-center space-x-4 w-full">
-          <a href="https://github.com/sitdownkevin" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300"><FaGithub /></a>
-          <a href="https://www.linkedin.com/in/sitdownkevin" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300"><FaLinkedin /></a>
-          <a href="https://www.instagram.com/sitdownkevin/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300"><FaInstagram /></a>
-          <a href="https://weibo.com/u/5668436889" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300"><FaWeibo /></a>
+          <a href="https://github.com/sitdownkevin" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/sitdownkevin" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaLinkedin /></a>
+          <a href="https://www.instagram.com/sitdownkevin/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaInstagram /></a>
+          <a href="https://weibo.com/u/5668436889" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaWeibo /></a>
       </div>
     </div>
     <nav className="flex space-x-4 font-sans text-gray-500">

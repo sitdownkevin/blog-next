@@ -27,7 +27,7 @@ export function Avatar() {
     )
 }
 
-export function PersonalInfoCard() {
+export function PersonalInfoCardHeader() {
     const [isSticky, setIsSticky] = React.useState(false);
 
     const handleScroll = () => {
@@ -60,97 +60,12 @@ export function PersonalInfoCard() {
                 alt="kexu_photo"
                 width={2125} // md尺寸下的宽度
                 height={3217} // md尺寸下的高度
-                className="w-20 rounded-sm shadow-lg shadow-gray-500/50 hidden md:block"
+                className="w-20 rounded-sm shadow-lg shadow-gray-500/50 hidden md:block transition-transform duration-300 hover:scale-105 hover:cursor-none"
             />
         </div>
     )
 }
 
-
-export function PersonalInfoCard4() {
-    const [containerSize, setContainerSize] = React.useState("w-full h-64");
-
-    const handleScroll = () => {
-        const shouldShrink = window.scrollY > 70;
-        setContainerSize(`${shouldShrink ? "w-full h-48" : "w-full h-64"} transition-all duration-300`);
-    };
-
-    React.useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    return (
-        <div className={`sticky top-0 bg-white z-10 py-4 flex flex-col animate-slide-down justify-between items-start backdrop-blur-sm bg-opacity-90 ${containerSize}`}>
-            <div className="flex w-full h-full">
-                <div className="flex-1 flex flex-col justify-between">
-                    <h1 className="text-4xl font-mono">Ke Xu</h1>
-                    <div className="mt-2 text-xs">
-                        <div className="border-0 border-green-500 text-gray-500">
-                            kexu567@gmail.com
-                        </div>
-                        <div className="border-0 border-green-500 text-gray-500">
-                            Shanghai, China
-                        </div>
-                    </div>
-                    <div className="border-0 border-green-500 mt-2 text-xs text-gray-600 w-2/3 lg:w-5/6">
-                        Information Systems, Data Mining, Web3, and Blockchain Technology.
-                    </div>
-                </div>
-                <div className="flex-1 flex justify-end items-center">
-                    <Image
-                        src="/kexu_photo.jpg"
-                        alt="kexu_photo"
-                        width={2125} // md尺寸下的宽度
-                        height={3217} // md尺寸下的高度
-                        className={`${containerSize.split(" ")[2]} object-cover mr-4 rounded-sm shadow-lg`}
-                    />
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export function PersonalInfoCardBak() {
-    const [imageSize, setImageSize] = React.useState("w-20 md:w-24");
-
-    const handleScroll = () => {
-        const shouldShrink = window.scrollY > 100;
-        setImageSize(`${shouldShrink ? "w-16 md:w-20" : "w-20 md:w-24"} transition-all duration-0`);
-    };
-
-    React.useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    return (
-        <div className="sticky top-0 bg-white z-10 py-4 flex animate-slide-down justify-between items-start backdrop-blur-sm bg-opacity-90 w-full">
-            <div className="">
-                <h1 className="text-4xl font-mono">Ke Xu</h1>
-                <div className="mt-2 text-xs">
-                    <div className="border-0 border-green-500 text-gray-500">
-                        kexu567@gmail.com
-                    </div>
-                    <div className="border-0 border-green-500 text-gray-500">
-                        Shanghai, China
-                    </div>
-                </div>
-                <div className="border-0 border-green-500 mt-2 text-xs text-gray-600 w-2/3 lg:w-5/6">
-                    Information Systems, Data Mining, Web3, and Blockchain Technology.
-                </div>
-            </div>
-
-            <Image
-                src="/kexu_photo.jpg"
-                alt="kexu_photo"
-                width={2125} // md尺寸下的宽度
-                height={3217} // md尺寸下的高度
-                className={`${imageSize} object-cover mr-4 rounded-sm shadow-lg`}
-            />
-        </div>
-    )
-}
 
 export function PostCardHeader({ title }) {
     const [fontSize, setFontSize] = React.useState("text-3xl sm:text-4xl md:text-5xl");
