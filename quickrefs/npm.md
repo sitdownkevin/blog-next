@@ -1,22 +1,22 @@
 ---
-title: NPM
+title: Node.js
 ---
 
-# NPM
+## NPM
 
-设置镜像（淘宝）
+设置镜像
 
 ```{shell}
 npm config set registry https://registry.npmmirror.com
 ```
 
-# Yarn
+## Yarn
 
 ```{shell}
 yarn config set registry https://registry.npmmirror.com
 ```
 
-# 恢复默认
+## 恢复默认
 
 ```{shell}
 npm config set registry https://registry.npmjs.org

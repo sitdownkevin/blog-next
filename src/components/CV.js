@@ -10,7 +10,6 @@ function CVItem({ title, subtitle, content, period }) {
 }
 
 
-
 export function CV() {
     var cvJSONData = { "Education": [{ "title": "Tongji University, Shanghai", "subtitle": "Master's Degree in Management Science and Engineering", "content": "", "period": "September 2024 - Present" }, { "title": "Sichuan University, Chengdu", "subtitle": "Bachelor's Degree in Industrial Engineering", "content": "", "period": "September 2020 - June 2024" }], "Work Experience": [{ "title": "Airbus Beijing Engineering Centre (ABEC), Beijing", "subtitle": "Engineering Intern at ACO1I", "content": "Data Mining, Operation System (Kanban Development)", "period": "January 2024 - May 2024" }, { "title": "West China Biomedical Big Data Center, Chengdu", "subtitle": "Research Assistant", "content": "Active Learning, Contrastive Learning", "period": "October 2022 - April 2023" }], "Projects": [{ "title": "Design and Control Method of Modular Mechanical Prosthesis, China", "subtitle": "College Students' Innovation and Entrepreneurship Competition", "content": "National Project", "period": "" }], "Publications": [{ "title": "", "subtitle": "", "content": "Xu, K., Chen, Y., & Nie, J. (2023). Subclass classification of ancient glassware based on K-Means and GMM. Highlights in Science, Engineering and Technology, 42, 277-284. https://doi.org/10.54097/hset.v42i.7106", "period": "" }] }
 

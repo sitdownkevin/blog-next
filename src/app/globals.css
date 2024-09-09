@@ -144,11 +144,15 @@
   }
 
   pre {
-    @apply bg-gray-900 text-white mt-2 mb-2 p-4 rounded overflow-x-auto; /* 确保背景为深色，文字为白色，并添加水平滚动条 */
+    @apply bg-gray-900 text-white mt-3 mb-3 p-4 rounded overflow-x-auto; /* 确保背景为深色，文字为白色，并添加水平滚动条 */
   }
 
   pre {
     @apply relative;
+  }
+
+  code {
+    @apply font-mono text-xs;
   }
 
   .copy-button {

@@ -2,7 +2,7 @@
 title: Clash
 ---
 
-# Clash Verge Rev
+## Clash Verge Rev
 
 ```
 # Merge Template for clash verge
@@ -20,7 +20,7 @@ prepend-rules:
   - DOMAIN-SUFFIX,chibaidao.com,DIRECT,
 ```
 
-# Clash for Windows
+## Clash for Windows
 
 `JavaScript` 模式
 
