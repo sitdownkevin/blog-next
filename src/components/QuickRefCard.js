@@ -19,7 +19,7 @@ export function QuickrefCard({ content }) {
     return (
         <>
             <PostCardHeader title={content.title}/>
-            <div className="mt-16 markdownContainer">
+            <div className="mt-16 markdown-body">
                 <div dangerouslySetInnerHTML={{ __html: content.contentHtml }}></div>
             </div>
         </>

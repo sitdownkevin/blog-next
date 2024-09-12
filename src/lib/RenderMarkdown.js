@@ -76,31 +76,6 @@ async function getMarkdownContent(id) {
 
     const contentHtml = processedContent.toString();
 
-    // // 添加复制按钮
-    // const contentWithCopyButtons = contentHtml.replace(
-    //     /<pre><code class="(.*?)">/g,
-    //     (match, language) => {
-    //         return `<pre><button class="copy-button" onclick="copyCode(this)">Copy</button><code class="${language}">`;
-    //     }
-    // );
-
-    // // 添加复制功能
-    // const copyCodeScript = `
-    //     <script>
-    //         function copyCode(button) {
-    //             const codeElement = button.nextElementSibling;
-    //             const textArea = document.createElement("textarea");
-    //             textArea.value = codeElement.innerText;
-    //             document.body.appendChild(textArea);
-    //             textArea.select();
-    //             document.execCommand("copy");
-    //             document.body.removeChild(textArea);
-    //             button.innerText = "Copied!";
-    //             setTimeout(() => { button.innerText = "Copy"; }, 2000);
-    //         }
-    //     </script>
-    // `;
-
     const title = matterResult.data.title;
     const tags = matterResult.data.tags;
     const tagList = tags.split(' ');

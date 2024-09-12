@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./github-markdown.css";
 import 'katex/dist/katex.min.css';
 
 import Link from "next/link";

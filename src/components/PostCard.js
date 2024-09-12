@@ -26,12 +26,12 @@ function PostCard({ post }) {
     return (
         <>
             <PostCardHeader title={post.title} />
-            <div className='mt-4 flex flex-row items-center'>
+            <div className='mt-4 mb-4 flex flex-row items-center'>
                 {post.tagList.map(tag => (
                     <span key={tag} className="mr-4 mt-2 text-gray-500 px-3 py-1 text-xs border border-gray-500 font-mono rounded-sm transition-all duration-300">{tag}</span>
                 ))}
             </div>
-            <div className='mt-16 markdownContainer'>
+            <div className='mt-16 markdown-body'>
                 <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
             </div>
         </>
