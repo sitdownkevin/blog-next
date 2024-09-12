@@ -17,29 +17,59 @@ export function PersonalInfoCardHeader() {
     }, []);
 
     return (
-        <div className={`grid grid-cols-5 py-2 bg-white backdrop-blur-sm bg-opacity-90 ${isSticky ? 'md:sticky md:top-0 md:z-10' : ''}`}>
-            <div className="col-span-5 md:col-span-4 flex flex-col space-y-2 justify-center items-center md:items-start">
-                <h1 className="text-4xl md:text-5xl font-mono">Ke Xu</h1>
-                <div className="text-xs">
-                    <div className="text-gray-500">
-                        kexu567@gmail.com
+        <>
+            <div className={`block md:hidden mb-4`}>
+                    <div className="flex flex-col space-y-4 justify-center items-center md:items-start">
+                        <Image
+                            src="/kexu_photo_rect.png"
+                            alt="kexu_photo"
+                            width={2125}
+                            height={3217}
+                            className={`w-24 rounded-full shadow-lg shadow-gray-500/50 transition-transform duration-300 hover:scale-105 hover:cursor-none`}
+                        />
+                        <h1 className="text-4xl md:text-5xl font-mono">Ke Xu</h1>
+                        <div className="text-xs">
+                            <div className="text-gray-500">
+                                kexu567@gmail.com
+                            </div>
+                            <div className="text-gray-500">
+                                Shanghai, China
+                            </div>
+                        </div>
+                        <div className="text-xs text-gray-600">
+                            Information Systems, Data Mining, Web3, and Blockchain Technology.
+                        </div>
                     </div>
-                    <div className="text-gray-500">
-                        Shanghai, China
+            </div>
+
+            <div className={`hidden md:block md:sticky md:top-0 md:z-10`}>
+                <div className={`grid grid-cols-5 py-2 bg-white backdrop-blur-sm bg-opacity-90`}>
+                    <div className={`col-span-5 md:col-span-4 flex flex-col space-y-4 transition-transform duration-300 justify-center items-center md:items-start`}>
+                        <h1 className={`text-5xl font-mono ${isSticky ? '' : 'none'}`}>Ke Xu</h1>
+                        <div className="text-xs">
+                            <div className="text-gray-500">
+                                kexu567@gmail.com
+                            </div>
+                            <div className="text-gray-500">
+                                Shanghai, China
+                            </div>
+                        </div>
+                        <div className="text-xs text-gray-800">
+                            Information Systems, Data Mining, Web3, and Blockchain Technology.
+                        </div>
                     </div>
-                </div>
-                <div className="text-xs text-gray-600">
-                    Information Systems, Data Mining, Web3, and Blockchain Technology.
+                    <Image
+                        src="/kexu_photo.jpg"
+                        alt="kexu_photo"
+                        width={2125}
+                        height={3217}
+                        className={`${isSticky ? '' : 'scale-110'} w-20 rounded-sm shadow-lg shadow-gray-500/50 transition-transform duration-300 hover:scale-105 hover:cursor-none`}
+                    />
                 </div>
             </div>
-            <Image
-                src="/kexu_photo.jpg"
-                alt="kexu_photo"
-                width={2125} // md尺寸下的宽度
-                height={3217} // md尺寸下的高度
-                className="w-20 rounded-sm shadow-lg shadow-gray-500/50 hidden md:block transition-transform duration-300 hover:scale-105 hover:cursor-none"
-            />
-        </div>
+
+        </>
+
     )
 }
 
