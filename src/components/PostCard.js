@@ -1,6 +1,8 @@
+
+
 import Link from 'next/link';
 import { PostCardHeader } from '@/components/ClientComponent';
-import { Badge } from '@/components/ui/badge';
+
 
 function PostCardCover({ post }) {
     return (
@@ -18,7 +20,6 @@ function PostCardCover({ post }) {
         </>
     )
 }
-
 
 function PostCard({ post }) {
 
