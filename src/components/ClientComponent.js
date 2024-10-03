@@ -3,8 +3,6 @@
 import Image from "next/image";
 import React from 'react';
 
-import { VelocityScroll } from '@/components/ui/scroll-based-velocity';
-import WordFadeIn from "@/components/ui/word-fade-in";
 
 export function PersonalInfoCardHeader() {
     const [isSticky, setIsSticky] = React.useState(false);
@@ -98,3 +96,5 @@ export function PostCardHeader({ title }) {
             <h1 className={`${fontSize} transition-all duration-300`}>{title}</h1>
         </div>)
 }
+
+
