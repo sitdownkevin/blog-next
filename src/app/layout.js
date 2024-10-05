@@ -30,13 +30,13 @@ function Header() {
       </div>
     </div>
     <nav className="flex space-x-4 font-sans text-gray-500">
-      <Link href="/" className="hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
+      <Link href="/" className="hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105">
         CV
       </Link>
-      <Link href="/posts" className="hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
+      <Link href="/posts" className="hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105">
         Posts
       </Link>
-      <Link href="/quickrefs" className=" hover:text-blue-500 transition-colors duration-200 text-xs md:text-sm">
+      <Link href="/quickrefs" className=" hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105">
         QRefs
       </Link>
     </nav>
