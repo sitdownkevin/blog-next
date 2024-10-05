@@ -35,7 +35,7 @@ export function PersonalInfoCardHeader() {
                 </div>
             </div>
 
-            <div className={`hidden md:block sticky top-0 z-10`}>
+            <div className={`hidden md:block top-0 z-10`}>
                 <div className={`grid grid-cols-5 py-2 bg-white backdrop-blur-sm bg-opacity-90`}>
                     <div className={`col-span-5 md:col-span-4 flex flex-col space-y-4 transition-transform duration-300 justify-center items-center md:items-start`}>
                         <h1 className={`text-5xl font-mono`}>Ke Xu</h1>
@@ -51,15 +51,15 @@ export function PersonalInfoCardHeader() {
                             Information Systems, Data Mining, Web3, and Blockchain Technology.
                         </div>
                     </div>
-                    {/* <Image
+                    <Image
                         src="/kexu_photo.jpg"
                         alt="kexu_photo"
                         width={2125}
                         height={3217}
-                        className={`${isSticky ? '' : 'scale-105'}
+                        className={`hidden lg:block
                         w-20 rounded-lg shadow-sm shadow-gray-500/50 transition-transform 
                         duration-100 hover:scale-105`}
-                    /> */}
+                    />
                 </div>
             </div>
 
