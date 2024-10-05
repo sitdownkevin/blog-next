@@ -20,13 +20,6 @@ export function PersonalInfoCardHeader() {
         <>
             <div className={`block md:hidden mb-4`}>
                 <div className="flex flex-col space-y-4 justify-center items-center md:items-start">
-                    {/* <Image
-                        src="/kexu_photo_rect.png"
-                        alt="kexu_photo"
-                        width={2125}
-                        height={3217}
-                        className={`w-24 rounded-full shadow-lg shadow-gray-500/50 transition-transform duration-300 hover:scale-105 hover:cursor-none`}
-                    /> */}
                     <h1 className="text-4xl md:text-5xl font-mono">Ke Xu</h1>
                     <div className="text-xs">
                         <div className="text-gray-500">
@@ -58,13 +51,15 @@ export function PersonalInfoCardHeader() {
                             Information Systems, Data Mining, Web3, and Blockchain Technology.
                         </div>
                     </div>
-                    <Image
+                    {/* <Image
                         src="/kexu_photo.jpg"
                         alt="kexu_photo"
                         width={2125}
                         height={3217}
-                        className={`${isSticky ? '' : 'scale-110'} w-20 rounded-sm shadow-lg shadow-gray-500/50 transition-transform duration-300 hover:scale-105 hover:cursor-none`}
-                    />
+                        className={`${isSticky ? '' : 'scale-105'}
+                        w-20 rounded-lg shadow-sm shadow-gray-500/50 transition-transform 
+                        duration-100 hover:scale-105`}
+                    /> */}
                 </div>
             </div>
 
