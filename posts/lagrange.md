@@ -3,6 +3,8 @@ title: 拉格朗日函数
 tags: MATH
 ---
 
+[Python 代码](/jupyter/lagrange_solver_with_python.html)
+
 ## 拉格朗日函数
 
 ### 原问题
