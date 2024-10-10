@@ -3,6 +3,8 @@
 import Image from "next/image";
 import React from 'react';
 
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
 
 export function PersonalInfoCardHeader() {
     const [isSticky, setIsSticky] = React.useState(false);
@@ -93,3 +95,31 @@ export function PostCardHeader({ title }) {
 }
 
 
+export function CommentSubmit() {
+    const [comment, setComment] = React.useState("");
+
+    const addComment = async () => {
+        const response = await fetch('http://assist.kexu567.xyz/api/add_comment', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ content: comment, domain: "kexu567.xyz" }),
+        })
+        const data = await response.json()
+        console.log(data)
+    }
+
+    const handleCommentChange = (event) => {
+        setComment(event.target.value);
+    }
+
+
+
+    return (
+        <div className="flex flex-col w-full space-y-2">
+            <Textarea label="Leave a comment" value={comment} onChange={handleCommentChange} />
+            <Button onClick={addComment}>Submit</Button>
+        </div>
+    )
+}
