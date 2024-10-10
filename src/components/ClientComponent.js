@@ -6,6 +6,8 @@ import React from 'react';
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 
+import axios from "axios";
+
 export function PersonalInfoCardHeader() {
     const [isSticky, setIsSticky] = React.useState(false);
 
@@ -99,15 +101,15 @@ export function CommentSubmit() {
     const [comment, setComment] = React.useState("");
 
     const addComment = async () => {
-        const response = await fetch('http://assist.kexu567.xyz/api/add_comment', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ content: comment, domain: "kexu567.xyz" }),
-        })
-        const data = await response.json()
-        console.log(data)
+        if (comment.length === 0) {
+            return;
+        }
+
+        const response = await axios.post('/api/add_comment', {
+            content: comment, domain: "kexu567.xyz"
+        });
+
+        window.location.reload();
     }
 
     const handleCommentChange = (event) => {
