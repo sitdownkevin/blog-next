@@ -4,7 +4,7 @@ tags: MATH
 date: 20241023
 ---
 
-[Python 代码](/jupyter/cournot-model-and-starkelberg-model.html)
+[Python 代码](/jupyter/cournot_model_and_starkelberg_model.html)
 
 ### 古诺模型
 
