@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import 'prismjs';
 import "./globals.css";
 import "./github-markdown.css";
 import 'katex/dist/katex.min.css';
@@ -7,7 +8,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram, FaWeibo } from 'react-icons/fa'
 
 const inter = Inter({ subsets: ["latin"] });
-import { Toaster } from '@/components/ui/sonner'
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata = {
   title: "Ke Xu",

@@ -1,5 +1,4 @@
 import Link from "next/link"
-
 import { PostCardHeader } from "@/components/ClientComponent";
 
 export function QuickrefCardCover({ item }) {
@@ -19,7 +18,7 @@ export function QuickrefCard({ content }) {
     return (
         <>
             <PostCardHeader title={content.title}/>
-            <div className="mt-16 markdown-body">
+            <div className="w-full mt-16 markdown-body">
                 <div dangerouslySetInnerHTML={{ __html: content.contentHtml }}></div>
             </div>
         </>

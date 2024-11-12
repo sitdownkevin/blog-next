@@ -42,7 +42,7 @@ function PostCard({ post }) {
             <div className='mb-4'>
                 <Tags tagList={post.tagList} />
             </div>
-            <div className='w-full markdown-body'>
+            <div className='w-full mt-16 markdown-body'>
                 <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
             </div>
         </div>

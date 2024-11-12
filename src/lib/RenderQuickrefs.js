@@ -12,6 +12,7 @@ import remarkRehype from 'remark-rehype';
 import rehypeKatex from 'rehype-katex';
 import rehypeStringify from 'rehype-stringify';
 import remarkGfm from 'remark-gfm';
+import rehypePrism from 'rehype-prism';
 
 
 const postDirectory = path.join(process.cwd(), 'quickrefs')
@@ -46,15 +47,16 @@ export async function getQuickrefContent({ id }) {
         .use(remarkMath)
         .use(remarkRehype)
         .use(rehypeKatex)
+        .use(rehypePrism)
         .use(rehypeStringify)
         .process(matterResult.content)
 
-
     const title = matterResult.data.title;
+    const contentHtml = processedContent.toString();
 
     return {
         id,
         title,
-        contentHtml: processedContent.toString(),
+        contentHtml,
     }
 }

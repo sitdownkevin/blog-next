@@ -1,3 +1,5 @@
+@import 'prismjs/themes/prism.css';
+
 /* light */
 .markdown-body {
   color-scheme: light;

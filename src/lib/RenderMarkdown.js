@@ -13,6 +13,7 @@ import rehypeKatex from 'rehype-katex'; // Math
 import rehypeStringify from 'rehype-stringify';
 import remarkGfm from 'remark-gfm'; // Table
 import rehypeHighlight from 'rehype-highlight'; // Code Block
+import rehypePrism from 'rehype-prism';
 
 
 const postDirectory = path.join(process.cwd(), 'posts')
@@ -57,7 +58,6 @@ export function getMarkdownPostsDataJson() {
 }
 
 
-
 async function getMarkdownContent(id) {
     const fullPath = path.join(postDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -70,6 +70,7 @@ async function getMarkdownContent(id) {
         .use(remarkMath)
         .use(remarkRehype)
         .use(rehypeKatex)
+        .use(rehypePrism)
         .use(rehypeHighlight)
         .use(rehypeStringify)
         .process(matterResult.content)

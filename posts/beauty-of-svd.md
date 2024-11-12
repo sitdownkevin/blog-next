@@ -70,11 +70,17 @@ $$
 
 假设矩阵 $A_{m\times n}$, $rank(A )=r$, 它的奇异值分解为 $A=U\Sigma V^T$
 
-$$U_{m\times m}=[u_1:u_2:\ldots:u_m]$$
+$$
+U_{m\times m}=[u_1:u_2:\ldots:u_m]
+$$
 
-$$\Sigma_{m\times n}=\begin{bmatrix} \sigma_{1} & 0 & 0 & 0 &\cdots &0\\ 0 & \ddots & 0 & \vdots & \cdots & 0\\ 0 & 0 & \sigma_{r} & 0 &\cdots & 0\\ 0 & \cdots & 0 & 0 & \cdots &0\\ \vdots&\ddots&\vdots&\vdots&\ddots&\vdots\\0 & \cdots & 0 & 0 & \cdots & 0 \end{bmatrix}$$
+$$
+\Sigma_{m\times n}=\begin{bmatrix} \sigma_{1} & 0 & 0 & 0 &\cdots &0\\ 0 & \ddots & 0 & \vdots & \cdots & 0\\ 0 & 0 & \sigma_{r} & 0 &\cdots & 0\\ 0 & \cdots & 0 & 0 & \cdots &0\\ \vdots&\ddots&\vdots&\vdots&\ddots&\vdots\\0 & \cdots & 0 & 0 & \cdots & 0 \end{bmatrix}
+$$
 
-$$V_{n\times n}=[v_1:v_2:\ldots:v_n]$$
+$$
+V_{n\times n}=[v_1:v_2:\ldots:v_n]
+$$
 
 $$
 \begin{aligned}A=&[u_1:u_2:\ldots:u_m]\begin{bmatrix} \sigma_{1} & 0 & 0 & 0 &\cdots &0\\ 0 & \ddots & 0 & \vdots & \cdots & 0\\ 0 & 0 & \sigma_{r} & 0 &\cdots & 0\\ 0 & \cdots & 0 & 0 & \cdots &0\\ \vdots&\ddots&\vdots&\vdots&\ddots&\vdots\\0 & \cdots & 0 & 0 & \cdots & 0 \end{bmatrix}\begin{bmatrix}v_1^T\\v_2^T\\\vdots \\v_n^T\end{bmatrix}\\=&[\sigma_1u_1:\sigma_2u_2:\ldots:\sigma_ru_r:0:\ldots:0]\begin{bmatrix}v_1^T\\v_2^T\\\vdots \\v_n^T\end{bmatrix}\\=&\sum_{i=1}^r\sigma_iu_iv_i^T\end{aligned}

@@ -1,6 +1,5 @@
 
 import { getAllQuickrefData, getQuickrefContent } from "@/lib/RenderQuickrefs";
-
 import { QuickrefCard } from "@/components/QuickRefCard";
 
 export const dynamicParams = false;
