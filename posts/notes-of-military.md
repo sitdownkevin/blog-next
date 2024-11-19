@@ -1,6 +1,9 @@
 ---
 title: Notes of Military Theory
 tags: SCU
+create_date: null
+update_date: null
+hidden: true
 ---
 
 **主讲人**

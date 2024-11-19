@@ -1,9 +1,11 @@
 ---
 title: 矩阵求导
 tags: MATH
-create_date: 20241002
-update_date: 20241003
+create_date: 2024-10-02
+update_date: 2024-10-03
 ---
+
+##### Contents
 
 ## 矩阵求导的基本法则
 

@@ -1,12 +1,15 @@
 ---
 title: Cournot and Starkelberg Model
 tags: MATH
-date: 20241023
+create_date: 2024-10-23
+update_date: 2024-11-19
 ---
 
 [Python 代码](/jupyter/cournot_model_and_starkelberg_model.html)
 
-### 古诺模型
+##### Contents
+
+## 古诺模型
 
 > Cournot duopoly model
 >
@@ -80,7 +83,7 @@ $$
 
 因此，甲、乙应该选择合作。但是在缺乏强制性协议保障的情况下，由于最优决策不是纳什均衡，因此两个厂商都会悄悄增产。
 
-### 斯塔克尔伯格模型
+## 斯塔克尔伯格模型
 
 > Stackelberg model
 >
@@ -138,7 +141,7 @@ $$
 \pi=\pi_1+\pi_2=\frac{3(8-c)^2}{16}
 $$
 
-### 古诺模型和斯塔克尔伯格模型的比较
+## 古诺模型和斯塔克尔伯格模型的比较
 
 斯斯塔克尔伯格模型的产量大于古诺模型，价格低于古诺模型，总得益（甲、乙得益之和）小于古诺模型，但甲的得益大于古诺模型甲、乙的总得益，**这反映了两个厂商之间地位不对称性的影响**。
 

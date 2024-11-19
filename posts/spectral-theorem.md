@@ -1,6 +1,8 @@
 ---
 title: The Spectral Theorem
-tags: SCU
+tags: MATH
+create_date: null
+update_date: null
 ---
 
 

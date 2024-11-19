@@ -1,6 +1,8 @@
 ---
 title: Notes of Frontend
 tags: CS
+create_date: null
+update_date: null
 ---
 
 ## Some Concepts

@@ -1,6 +1,8 @@
 ---
 title: The Delta Function
 tags: SCU
+create_date: null
+update_date: null
 ---
 
 ## Definition

@@ -1,7 +1,13 @@
 ---
 title: Review of Probability, Random Variables, and Distributions
 tags: SCU
+create_date: null
+update_date: null
 ---
+
+> This note is a backup from Notion.
+
+##### Contents
 
 ## Lecture 8
 ### Definition of Variance

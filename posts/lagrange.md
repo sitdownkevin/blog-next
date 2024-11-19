@@ -1,6 +1,8 @@
 ---
 title: 拉格朗日函数
 tags: MATH
+create_date: 2024-10-30
+update_date: 2024-11-19
 ---
 
 [Python 代码](/jupyter/lagrange_solver_with_python.html)

@@ -1,7 +1,11 @@
 ---
 title: Project of Information System Rolling Thunder Bicycles Company
 tags: SCU
+create_date: 2022-10-01
+update_date: 2024-11-19
 ---
+
+##### Contents
 
 ## 1. **Identifying Root Cause for Quality Issues and Estimate Overall Cost**
 
@@ -16,8 +20,6 @@ Add a column named _isDefect_ to tag whether the bicycle is defected.
 ```sql
 SELECT iif(B.CustomerID in (26160, 40505, 29577, 40579, 18043, 41008, 2281, 40791, 40686, 40539, 875, 288, 40523, 29422, 40796), 1, Null) AS isDefect, * FROM Bicycle AS B;
 ```
-
-<!--more-->
 
 ### 1.2 Analyze the Data
 

@@ -7,7 +7,7 @@ title: Homebrew
 
 ## 更新所有 Cask
 
-```{shell}
+```shellsession
 brew list --cask | xargs -I {} brew upgrade --cask {}
 ```
 

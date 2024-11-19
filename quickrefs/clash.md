@@ -4,7 +4,7 @@ title: Clash
 
 ## Clash Verge Rev
 
-```
+```yaml
 # Merge Template for clash verge
 # The `Merge` format used to enhance profile
 
@@ -24,7 +24,7 @@ prepend-rules:
 
 `JavaScript` 模式
 
-```{js}
+```javascript
 module.exports.parse = async (
   { content, name, url }, 
   { axios, yaml, notify }

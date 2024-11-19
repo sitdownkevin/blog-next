@@ -1,7 +1,11 @@
 ---
 title: Coach Formula
 tags: SCU
+create_date: null
+update_date: 2024-11-19
 ---
+
+## Contents
 
 ## NVIDIA formula
 

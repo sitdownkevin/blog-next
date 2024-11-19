@@ -1,6 +1,8 @@
 ---
 title: Multiple Linear Regression for 50 Ad Agency
 tags: SCU
+create_date: null
+update_date: null
 ---
 
 ## 1. Data Processing

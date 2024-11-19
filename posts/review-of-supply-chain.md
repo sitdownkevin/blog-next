@@ -1,6 +1,8 @@
 ---
 title: Review of Supply Chain
 tags: SCU
+create_date: null
+update_date: null
 ---
 
 ## Economic Lot Size Model

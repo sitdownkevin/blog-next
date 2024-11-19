@@ -10,7 +10,7 @@ macOS&Windows: https://desktop.github.com/
 
 ## 配置 Git 邮箱和用户名
 
-```{shell}
+```shell
 git config --global user.name "<user_name>"
 git config --global user.email "<user_email>"
 ```
