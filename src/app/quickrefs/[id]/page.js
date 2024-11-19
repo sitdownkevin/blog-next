@@ -5,7 +5,8 @@ import { QuickrefCard } from "@/components/QuickRefCard";
 export const dynamicParams = false;
 
 export default async function Post({ params }) {
-    const content = await getQuickrefContent({id: params.id});
+    const { id } = await params;
+    const content = await getQuickrefContent({ id });
 
     return (
         <QuickrefCard content={content}/>

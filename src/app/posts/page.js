@@ -13,7 +13,7 @@ export default function Posts() {
         <>
             <div className="grid grid-cols-1 w-full">
                 {postsData.map((post) => (
-                    <PostCardCover key={post.slug} post={post} />
+                    <PostCardCover key={post.id} post={post} />
                 ))}
             </div>
         </>
