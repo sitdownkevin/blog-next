@@ -14,7 +14,7 @@ export async function GET() {
 
     const feed = new Feed({
         title: "Ke Xu's Blog",
-        description: "Ke Xu's personal blog",
+        description: "feedId:82048947524871168+userId:42175006902104064",
         id: siteURL,
         link: siteURL,
         language: "en",
