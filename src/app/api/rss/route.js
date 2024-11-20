@@ -1,32 +1,32 @@
 import { Feed } from 'feed';
 import { getMarkdownPostsDataJson, getMarkdownContent } from '@/lib/RenderMarkdown';
 
-const SITE_URL = 'https://kexu567.xyz';
-const AUTHOR = {
-    name: "Ke Xu",
-    email: "kexu567@gmail.com",
-    link: SITE_URL,
-};
-
-async function generateFeed() {
+export async function GET() {
     const posts = getMarkdownPostsDataJson();
+    const siteURL = 'https://kexu567.xyz';
     const date = new Date();
+
+    const author = {
+        name: "Ke Xu",
+        email: "kexu567@gmail.com",
+        link: "https://kexu567.xyz",
+    };
 
     const feed = new Feed({
         title: "Ke Xu's Blog",
         description: "Ke Xu's personal blog",
-        id: SITE_URL,
-        link: SITE_URL,
+        id: siteURL,
+        link: siteURL,
         language: "en",
-        image: `${SITE_URL}/favicon.ico`,
-        favicon: `${SITE_URL}/favicon.ico`,
+        image: `${siteURL}/favicon.ico`,
+        favicon: `${siteURL}/favicon.ico`,
         copyright: `All rights reserved ${date.getFullYear()}, Ke Xu`,
         updated: date,
         generator: "Feed for Node.js",
         feedLinks: {
-            rss2: `${SITE_URL}/api/rss`,
+            rss2: `${siteURL}/rss.xml`,
         },
-        author: AUTHOR,
+        author,
     });
 
     // Add posts to feed
@@ -34,25 +34,31 @@ async function generateFeed() {
         const postContent = await getMarkdownContent(post.id);
         feed.addItem({
             title: post.title,
-            id: `${SITE_URL}/posts/${post.id}`,
-            link: `${SITE_URL}/posts/${post.id}`,
+            id: `${siteURL}/posts/${post.id}`,
+            link: `${siteURL}/posts/${post.id}`,
             description: post.title,
             content: postContent.contentHtml,
-            author: [AUTHOR],
+            author: [author],
             date: post.update_date,
         });
     }
 
-    return feed;
-}
-
-export async function GET() {
-    const feed = await generateFeed();
+    // Generate RSS 2.0 feed
+    const rss2Content = feed.rss2();
     
-    return new Response(feed.rss2(), {
+    // Insert follow_challenge before the closing </rss> tag
+    const followChallenge = `
+    <follow_challenge>
+        <feedId>82048947524871168</feedId>
+        <userId>42175006902104064</userId>
+    </follow_challenge>`;
+    
+    const modifiedRss = rss2Content.replace('</rss>', `${followChallenge}\n</rss>`);
+
+    // Return the feed as RSS 2.0
+    return new Response(modifiedRss, {
         headers: {
             'Content-Type': 'application/xml',
-            'Cache-Control': 'public, s-maxage=1200, stale-while-revalidate=600',
         },
     });
 }
