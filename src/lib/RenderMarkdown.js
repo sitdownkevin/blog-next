@@ -95,14 +95,18 @@ export async function getMarkdownContent(id) {
     const processedContent = await unified()
         .use(remarkParse)
         .use(remarkGfm)
-        .use(remarkMath)
+        .use(remarkMath, {
+            strict: false  // 禁用严格模式
+        })
         .use(remarkToc, { heading: 'Contents' })
         .use(remarkRehype)
-        .use(rehypeKatex)
+        .use(rehypeKatex, {
+            strict: false,  // 禁用严格模式
+            trust: true,    // 允许所有 KaTeX 命令
+            throwOnError: false  // 不抛出错误
+        })
         .use(rehypePrism)
-        // .use(rehypeHighlight)
         .use(rehypeSlug)
-        // .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
         .use(rehypeStringify)
         .process(matterResult.content)
 
