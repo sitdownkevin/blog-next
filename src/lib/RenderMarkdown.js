@@ -18,7 +18,29 @@ import remarkToc from 'remark-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 
+
 const postDirectory = path.join(process.cwd(), 'posts');
+
+
+// function getMarkdownPostsData() {
+//     const fileNames = fs.readdirSync(postDirectory);
+//     const allPostsData = fileNames.map(fileName => {
+//         const id = fileName.replace(/\.md$/, '');
+
+//         const fullPath = path.join(postDirectory, fileName);
+//         const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+//         const matterResult = matter(fileContents);
+//         console.log(matterResult.data);
+//         if (matterResult.data.hidden === true) {
+//             return null;
+//         }
+
+//         return { id, ...matterResult.data };
+//     }).filter(post => post !== null);
+
+//     return allPostsData;
+// }
 
 
 export function getMarkdownPostsDataJson() {
@@ -76,13 +98,7 @@ export async function getMarkdownContent(id) {
         .use(remarkMath)
         .use(remarkToc, { heading: 'Contents' })
         .use(remarkRehype)
-        .use(rehypeKatex, {
-            strict: false,
-            trust: true,
-            macros: {
-                "\\newline": "\\\\",
-            }
-        })
+        .use(rehypeKatex)
         .use(rehypePrism)
         // .use(rehypeHighlight)
         .use(rehypeSlug)
