@@ -18,6 +18,16 @@ export const metadata = {
   description: "Ke Xu's personal website",
   icons: {
     icon: '/favicon.ico',
+  },
+  alternates: {
+    types: {
+      'application/rss+xml': [
+        {
+          url: '/rss.xml',
+          title: "Ke Xu's Blog RSS Feed"
+        }
+      ]
+    }
   }
 };
 
