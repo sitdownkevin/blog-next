@@ -1,5 +1,14 @@
+'use client';
+
 import Link from "next/link";
 import { PostCardHeader } from "@/components/ClientComponent";
+import { useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
+import * as ReactDOM from 'react-dom/client';
+
+const Mermaid = dynamic(() => import('./Mermaid'), {
+  ssr: false
+});
 
 function Tags({ tagList }) {
   return (
@@ -48,6 +57,33 @@ export function PostCardCover({ post }) {
 }
 
 export function PostCard({ post }) {
+  const contentRef = useRef();
+
+  useEffect(() => {
+    if (contentRef.current) {
+      // Find all pre > code.language-mermaid elements
+      const mermaidBlocks = contentRef.current.querySelectorAll('pre > code.language-mermaid');
+      
+      mermaidBlocks.forEach((block, index) => {
+        const pre = block.parentElement;
+        const content = block.textContent;
+        
+        // Create a new div for the Mermaid diagram
+        const mermaidContainer = document.createElement('div');
+        pre.parentNode.insertBefore(mermaidContainer, pre);
+        
+        // Remove the original pre element
+        pre.remove();
+        
+        // Create a new root and render the Mermaid component
+        const root = document.createElement('div');
+        mermaidContainer.appendChild(root);
+        const mermaidInstance = <Mermaid chart={content} id={`${post.id}-${index}`} />;
+        ReactDOM.createRoot(root).render(mermaidInstance);
+      });
+    }
+  }, [post.contentHtml, post.id]);
+
   return (
     <div className="flex flex-col items-start justify-center">
       <PostCardHeader title={post.title} />
@@ -55,7 +91,10 @@ export function PostCard({ post }) {
         <Tags tagList={post.tagList} />
       </div>
       <div className="w-full mt-16 markdown-body">
-        <div dangerouslySetInnerHTML={{ __html: post.contentHtml }}></div>
+        <div 
+          ref={contentRef}
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}>
+        </div>
       </div>
     </div>
   );

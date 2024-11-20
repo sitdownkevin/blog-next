@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import KaTeX styles */
+@import 'katex/dist/katex.min.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -90,7 +93,6 @@
   }
 }
 
-
 @layer base {
   h1 {
     @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
@@ -119,9 +121,7 @@
   ul {
     @apply my-6 ml-6 list-disc [&>li]:mt-2;
   }
-
 }
-
 
 .markdownContainer {
   a {
@@ -193,6 +193,23 @@
 
   img {
     @apply mx-auto; /* 将所有的图片都水平居中放置 */
+  }
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 0.5rem 0;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+  .katex {
+    font-size: 1em;
   }
 }
 
