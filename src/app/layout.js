@@ -8,7 +8,7 @@ import "./github-markdown.css";
 import 'katex/dist/katex.min.css';
 
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaInstagram, FaWeibo } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaInstagram, FaWeibo, FaRss } from 'react-icons/fa'
 
 const inter = Inter({ subsets: ["latin"] });
 import { Toaster } from '@/components/ui/sonner';
@@ -41,6 +41,7 @@ function Header() {
           <a href="https://www.linkedin.com/in/sitdownkevin" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaLinkedin /></a>
           <a href="https://www.instagram.com/sitdownkevin/" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaInstagram /></a>
           <a href="https://weibo.com/u/5668436889" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaWeibo /></a>
+          <a href="/api/rss" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"><FaRss /></a>
       </div>
     </div>
     <nav className="flex space-x-4 font-sans text-gray-500">

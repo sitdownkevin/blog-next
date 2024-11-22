@@ -124,3 +124,50 @@ export async function getMarkdownContent(id) {
         contentHtml,
     }
 }
+
+export async function getMarkdownContentForRSS(id) {
+    const fullPath = path.join(postDirectory, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+    const matterResult = matter(fileContents);
+
+    // 为 RSS 特别优化的渲染流程
+    const processedContent = await unified()
+        .use(remarkParse)
+        .use(remarkMath)
+        .use(remarkGfm)
+        .use(remarkRehype)
+        .use(rehypeKatex, {
+            output: 'html',
+            throwOnError: false,
+            strict: false,
+            trust: true,
+            macros: {
+                "\\RR": "\\mathbb{R}",
+                "\\NN": "\\mathbb{N}",
+                "\\ZZ": "\\mathbb{Z}"
+            }
+        })
+        .use(() => (tree) => {
+            // 内联所有 KaTeX CSS
+            const katexCss = fs.readFileSync(
+                path.join(process.cwd(), 'node_modules/katex/dist/katex.min.css'),
+                'utf8'
+            );
+            // 在文档开头添加内联样式
+            tree.children.unshift({
+                type: 'element',
+                tagName: 'style',
+                properties: {},
+                children: [{ type: 'text', value: katexCss }]
+            });
+            return tree;
+        })
+        .use(rehypeStringify)
+        .process(matterResult.content);
+
+    return {
+        contentHtml: processedContent.toString(),
+        ...matterResult.data
+    };
+}

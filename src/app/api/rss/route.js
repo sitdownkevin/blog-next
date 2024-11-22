@@ -1,5 +1,5 @@
 import { Feed } from 'feed';
-import { getMarkdownPostsDataJson, getMarkdownContent } from '@/lib/RenderMarkdown';
+import { getMarkdownPostsDataJson, getMarkdownContentForRSS } from '@/lib/RenderMarkdown';
 
 export async function GET() {
     const posts = getMarkdownPostsDataJson();
@@ -31,7 +31,7 @@ export async function GET() {
 
     // Add posts to feed
     for (const post of posts) {
-        const postContent = await getMarkdownContent(post.id);
+        const postContent = await getMarkdownContentForRSS(post.id);
         feed.addItem({
             title: post.title,
             id: `${siteURL}/posts/${post.id}`,
