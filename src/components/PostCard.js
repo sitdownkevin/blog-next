@@ -1,5 +1,15 @@
+'use client';
+
 import Link from "next/link";
 import { PostCardHeader } from "@/components/ClientComponent";
+import { useEffect } from "react";
+import mermaid from "mermaid";
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'default',
+  securityLevel: 'loose',
+});
 
 function Tags({ tagList }) {
   return (
@@ -48,6 +58,15 @@ export function PostCardCover({ post }) {
 }
 
 export function PostCard({ post }) {
+  useEffect(() => {
+    const diagrams = document.querySelectorAll('.mermaid');
+    if (diagrams.length > 0) {
+      mermaid.init(undefined, '.mermaid').catch(error => {
+        console.error('Mermaid initialization error:', error);
+      });
+    }
+  }, [post.contentHtml]);
+
   return (
     <div className="flex flex-col items-start justify-center">
       <PostCardHeader title={post.title} />

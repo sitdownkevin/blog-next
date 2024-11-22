@@ -17,31 +17,30 @@ import rehypePrism from 'rehype-prism';
 import remarkToc from 'remark-toc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-
+import { visit } from 'unist-util-visit';
 
 const postDirectory = path.join(process.cwd(), 'posts');
 
-
-// function getMarkdownPostsData() {
-//     const fileNames = fs.readdirSync(postDirectory);
-//     const allPostsData = fileNames.map(fileName => {
-//         const id = fileName.replace(/\.md$/, '');
-
-//         const fullPath = path.join(postDirectory, fileName);
-//         const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-//         const matterResult = matter(fileContents);
-//         console.log(matterResult.data);
-//         if (matterResult.data.hidden === true) {
-//             return null;
-//         }
-
-//         return { id, ...matterResult.data };
-//     }).filter(post => post !== null);
-
-//     return allPostsData;
-// }
-
+function rehypeMermaid() {
+    return (tree) => {
+        visit(tree, 'element', (node) => {
+            // 处理 Mermaid 图表
+            if (node.tagName === 'pre') {
+                const code = node.children[0];
+                if (code && code.tagName === 'code' && 
+                    code.properties.className && 
+                    code.properties.className.includes('language-mermaid')) {
+                    const value = code.children[0].value;
+                    node.tagName = 'div';
+                    node.properties = { 
+                        className: ['mermaid', 'my-8', 'flex', 'justify-center'] 
+                    };
+                    node.children = [{ type: 'text', value: value.trim() }];
+                }
+            }
+        });
+    };
+}
 
 export function getMarkdownPostsDataJson() {
     const fileNames = fs.readdirSync(postDirectory);
@@ -94,19 +93,20 @@ export async function getMarkdownContent(id) {
 
     const processedContent = await unified()
         .use(remarkParse)
+        .use(remarkMath)
         .use(remarkGfm)
-        .use(remarkMath, {
-            strict: false  // 禁用严格模式
-        })
-        .use(remarkToc, { heading: 'Contents' })
+        .use(remarkToc)
         .use(remarkRehype)
         .use(rehypeKatex, {
-            strict: false,  // 禁用严格模式
+            strict: false,  // 关闭严格模式
             trust: true,    // 允许所有 KaTeX 命令
             throwOnError: false  // 不抛出错误
         })
+        .use(rehypeHighlight)
         .use(rehypePrism)
         .use(rehypeSlug)
+        .use(rehypeAutolinkHeadings)
+        .use(rehypeMermaid)
         .use(rehypeStringify)
         .process(matterResult.content)
 

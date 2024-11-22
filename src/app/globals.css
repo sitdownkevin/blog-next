@@ -148,11 +148,6 @@
     @apply mt-4 mb-4 leading-relaxed;
   }
 
-  .katex,
-  .katex-display {
-    @apply py-2 overflow-x-auto max-w-full;
-  }
-
   Link {
     text-decoration: none;
     color: inherit;
@@ -194,6 +189,24 @@
   img {
     @apply mx-auto; /* 将所有的图片都水平居中放置 */
   }
+}
+
+/* Override KaTeX styles for better mobile display */
+.katex-display {
+  @apply overflow-y-hidden overflow-x-auto max-w-full py-4;
+}
+
+.katex-display > .katex {
+  @apply max-w-full;
+}
+
+.katex-display > .katex > .katex-html {
+  @apply max-w-full overflow-x-auto overflow-y-hidden px-0.5;
+}
+
+/* For inline math */
+.katex {
+  @apply max-w-full overflow-x-auto overflow-y-hidden;
 }
 
 @keyframes scaleUpDown {
