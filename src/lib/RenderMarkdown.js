@@ -21,6 +21,54 @@ import { visit } from 'unist-util-visit';
 
 const postDirectory = path.join(process.cwd(), 'posts');
 
+// KaTeX CSS 内容（精简版，只包含最基本的样式）
+const KATEX_CSS = `
+.katex {
+    font: normal 1.21em KaTeX_Main,Times New Roman,serif;
+    line-height: 1.2;
+    text-indent: 0;
+    text-rendering: auto;
+}
+.katex-display {
+    display: block;
+    margin: 1em 0;
+    text-align: center;
+}
+.katex-html {
+    display: inline-block;
+}
+.katex .base {
+    position: relative;
+}
+.katex .mathit {
+    font-family: KaTeX_Math;
+    font-style: italic;
+}
+.katex .mord {
+    font-family: KaTeX_Main;
+}
+.katex .mord.text {
+    font-family: KaTeX_Main;
+}
+.katex .msupsub {
+    text-align: left;
+}
+.katex .mfrac {
+    display: inline-block;
+    text-align: center;
+}
+.katex .mfrac > span {
+    display: block;
+}
+.katex .sqrt {
+    display: inline-block;
+}
+.katex .sqrt > .root {
+    margin-left: 0.27777778em;
+    margin-right: -0.55555556em;
+}
+`;
+
 function rehypeMermaid() {
     return (tree) => {
         visit(tree, 'element', (node) => {
@@ -149,17 +197,12 @@ export async function getMarkdownContentForRSS(id) {
             }
         })
         .use(() => (tree) => {
-            // 内联所有 KaTeX CSS
-            const katexCss = fs.readFileSync(
-                path.join(process.cwd(), 'node_modules/katex/dist/katex.min.css'),
-                'utf8'
-            );
-            // 在文档开头添加内联样式
+            // 使用内联的 KaTeX CSS
             tree.children.unshift({
                 type: 'element',
                 tagName: 'style',
                 properties: {},
-                children: [{ type: 'text', value: katexCss }]
+                children: [{ type: 'text', value: KATEX_CSS }]
             });
             return tree;
         })
