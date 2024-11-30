@@ -2,10 +2,12 @@
 title: 拉格朗日函数
 tags: MATH
 create_date: 2024-10-30
-update_date: 2024-11-19
+update_date: 2024-11-30
 ---
 
 [Python 代码](/jupyter/lagrange_solver_with_python.html)
+
+##### Contents
 
 ## 拉格朗日函数
 
@@ -171,6 +173,60 @@ KKT 条件是强对偶问题的必要条件（只要是强对偶问题，一定�
 KKT 条件的定义
 
 ![image-20240930232633793](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930232633793.png)
+
+### 举个例子
+
+#### 例一
+
+$$
+\max f(x)=(x-3)^2\\
+1\le x\le 5\\
+$$
+
+解
+
+$$
+f(x)=-(x-3)^2\\
+g_1(x)=x-1\\
+g_2(x)=5-x\\
+\downarrow\\
+L(x,\lambda_1,\lambda_2)=-(x-3)^2-\lambda_1(x-1)-\lambda_2(5-x)\\
+s.t.
+\begin{cases}
+\frac{\partial L}{\partial x}= -2(x-3) -\lambda_1+\lambda_2=0\\
+\lambda_1 (x-1)=0\\
+\lambda_2(5-x)=0\\
+\lambda_1,\lambda_2\geq 0\\
+\end{cases}
+$$
+
+1. $\lambda_1\neq0, \lambda_2\neq0$
+
+$$
+\lambda_1 (x-1)=0\rightarrow x=1\\
+\lambda_2(5-x)=0\rightarrow x=5\\
+$$
+
+2. $\lambda_1=0, \lambda_2\neq0$
+
+$$
+\lambda_2(5-x)=0\rightarrow x=5\\
+-2(x-3)-\lambda_1 +\lambda_2=0 \rightarrow \lambda_2=4\\
+$$
+
+3. $\lambda_1\neq0, \lambda_2=0$
+
+$$
+\lambda_1 (x-1)=0\rightarrow x=1\\
+-2(x-3)-\lambda_1 +\lambda_2=0 \rightarrow \lambda_1=4\\
+$$
+
+4. $\lambda_1=0, \lambda_2=0$
+
+$$
+-2(x-3)-\lambda_1 +\lambda_2=0 \rightarrow x=3\\
+$$
+
 
 ## Reference
 
