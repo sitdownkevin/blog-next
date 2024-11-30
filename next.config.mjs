@@ -15,6 +15,7 @@ const nextConfig = {
         ];
         return config;
     },
+    transpilePackages: ['@fullcalendar/core', '@fullcalendar/react', '@fullcalendar/daygrid', '@fullcalendar/timegrid'],
 };
 
 export default nextConfig;

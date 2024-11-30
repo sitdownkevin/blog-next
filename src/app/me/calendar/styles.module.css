@@ -1,0 +1,430 @@
+.calendar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.calendar :global(.fc) {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    --fc-border-color: #f8fafc;
+    --fc-button-bg-color: #f3f4f6;
+    --fc-button-border-color: #e5e7eb;
+    --fc-button-text-color: #374151;
+    --fc-button-hover-bg-color: #e5e7eb;
+    --fc-button-hover-border-color: #d1d5db;
+    --fc-button-active-bg-color: #e5e7eb;
+    --fc-button-active-border-color: #d1d5db;
+    --fc-event-bg-color: #3b82f6;
+    --fc-event-border-color: #3b82f6;
+    --fc-today-bg-color: #f8fafc;
+    --fc-neutral-bg-color: transparent;
+    --fc-list-event-hover-bg-color: #f3f4f6;
+    --fc-page-bg-color: transparent;
+    font-size: 14px;
+}
+
+.calendarTitle {
+    height: 60px;
+    overflow: hidden;
+}
+
+.calendarTitle :global(.fc) {
+    height: 100%;
+}
+
+.calendarTitle :global(.fc-header-toolbar) {
+    margin-bottom: 0 !important;
+    padding: 1rem 0;
+}
+
+.calendarTitle :global(.fc .fc-toolbar-title) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: center;
+    letter-spacing: -0.025em;
+}
+
+.calendarMain {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+.calendarMain :global(.fc) {
+    height: 100%;
+    --fc-border-color: #f1f5f9;
+    --fc-today-bg-color: #f8fafc;
+    --fc-event-bg-color: #3b82f6;
+    --fc-event-border-color: #3b82f6;
+    --fc-event-text-color: #fff;
+    --fc-neutral-bg-color: #fff;
+}
+
+.calendarMain :global(.fc .fc-timegrid-slot) {
+    height: 3rem;
+    border-bottom: 1px solid var(--fc-border-color);
+}
+
+.calendarMain :global(.fc .fc-timegrid-axis) {
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.calendarMain :global(.fc .fc-col-header-cell) {
+    padding: 0.75rem 0;
+    background-color: #fff;
+}
+
+.calendarMain :global(.fc .fc-col-header-cell-cushion) {
+    padding: 0.5rem;
+    color: #1e293b;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.calendarMain :global(.fc .fc-day-today) {
+    background-color: var(--fc-today-bg-color) !important;
+}
+
+.calendarMain :global(.fc-event) {
+    border-radius: 6px;
+    border: none;
+    padding: 2px 4px;
+    font-size: 0.875rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.calendarMain :global(.fc .fc-timegrid-now-indicator-line) {
+    border-color: #ef4444;
+}
+
+.calendarMain :global(.fc .fc-timegrid-now-indicator-arrow) {
+    border-color: #ef4444;
+    border-width: 5px;
+}
+
+.calendarFooter {
+    border-top: 1px solid var(--fc-border-color);
+    background-color: #fff;
+    padding: 0.75rem 1rem;
+}
+
+/* 按钮基础样式 */
+.calendarFooter :global(.fc-button) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e293b;
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    min-width: 64px;
+}
+
+.calendarFooter :global(.fc-button:hover) {
+    background-color: #f8fafc;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}
+
+.calendarFooter :global(.fc-button:active) {
+    background-color: #f1f5f9;
+    transform: translateY(1px);
+}
+
+/* 移动端样式优化 */
+@media (max-width: 640px) {
+    .calendarFooter {
+        padding: 0.5rem;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        border-top: 1px solid #e2e8f0;
+        z-index: 40;
+    }
+
+    .calendarFooter :global(.fc-button) {
+        padding: 0.375rem;
+        font-size: 0.75rem;
+        min-width: 48px;
+        height: 32px;
+        border-radius: 6px;
+    }
+
+    /* 调整按钮组间距 */
+    .calendarFooter :global(.flex.gap-2) {
+        gap: 0.375rem;
+    }
+
+    /* 调整容器内边距 */
+    .calendarFooter :global(.px-4) {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+
+    .calendarFooter :global(.py-3) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* 为固定定位的底部工具栏留出空间 */
+    .calendarMain {
+        margin-bottom: 56px;
+    }
+}
+
+/* 平板端样式 */
+@media (min-width: 641px) and (max-width: 768px) {
+    .calendarFooter :global(.fc-button) {
+        padding: 0.425rem 0.85rem;
+        font-size: 0.8125rem;
+        min-width: 56px;
+    }
+}
+
+.calendar :global(.fc .fc-toolbar.fc-header-toolbar) {
+    margin-bottom: 1em;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.calendar :global(.fc .fc-toolbar-title) {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #1f2937;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem 0;
+}
+
+.calendar :global(.fc-toolbar-chunk) {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.calendar :global(.fc-toolbar-chunk:nth-child(2)) {
+    width: 100%;
+    justify-content: center;
+}
+
+.calendar :global(.fc-toolbar-chunk:first-child),
+.calendar :global(.fc-toolbar-chunk:last-child) {
+    flex: 1;
+}
+
+.calendar :global(.fc-toolbar-chunk:first-child) {
+    justify-content: flex-start;
+}
+
+.calendar :global(.fc-toolbar-chunk:last-child) {
+    justify-content: flex-end;
+}
+
+.calendar :global(.fc-button-group) {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.calendar :global(.fc .fc-button-group .fc-button) {
+    margin: 0;
+}
+
+.calendar :global(.fc td), 
+.calendar :global(.fc th) {
+    border-color: #f8fafc;
+}
+
+.calendar :global(.fc .fc-scrollgrid) {
+    border: none !important;
+}
+
+.calendar :global(.fc .fc-scrollgrid td:last-child),
+.calendar :global(.fc .fc-scrollgrid th:last-child) {
+    border-right: none !important;
+}
+
+.calendar :global(.fc .fc-scrollgrid tr:last-child td) {
+    border-bottom: none !important;
+}
+
+.calendar :global(.fc-event) {
+    border-radius: 0.375rem;
+    margin: 1px 0;
+    transition: transform 0.2s;
+}
+
+.calendar :global(.fc-event:hover) {
+    transform: translateY(-1px);
+}
+
+.calendar :global(.fc .fc-day-today) {
+    background-color: #f8fafc !important;
+}
+
+.calendar :global(.fc .fc-timegrid-axis) {
+    border-right-color: #f8fafc;
+}
+
+.calendar :global(.fc .fc-col-header-cell) {
+    padding: 0.75rem 0;
+}
+
+.calendar :global(.fc .fc-col-header-cell-cushion) {
+    color: #4b5563;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.calendar :global(.fc .fc-timegrid-slot-label) {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.calendar :global(.fc .fc-timegrid-now-indicator-line) {
+    border-color: #3b82f6;
+}
+
+.calendar :global(.fc .fc-timegrid-now-indicator-arrow) {
+    border-color: #3b82f6;
+    border-width: 5px;
+}
+
+/* 全天事件样式 */
+.calendarMain :global(.fc-timegrid-axis-cushion) {
+    font-weight: 500;
+    color: #64748b;
+}
+
+.calendarMain :global(.fc-timegrid-slot-label-cushion) {
+    font-weight: 400;
+    color: #64748b;
+}
+
+.calendarMain :global(.fc-timegrid-axis-frame) {
+    justify-content: center;
+}
+
+/* 全天事件区域样式 */
+.calendarMain :global(.fc-timegrid-axis-frame .fc-timegrid-axis-cushion) {
+    padding: 0 8px;
+}
+
+.calendarMain :global(.fc-timegrid-slot.fc-timegrid-slot-lane) {
+    background: transparent;
+}
+
+.calendarMain :global(.fc .fc-timegrid-col.fc-day-today) {
+    background-color: var(--fc-today-bg-color);
+}
+
+/* 全天事件容器 */
+.calendarMain :global(.fc .fc-timegrid-axis-cushion.fc-scrollgrid-shrink-cushion) {
+    text-transform: none;
+    white-space: nowrap;
+}
+
+.calendarMain :global(.fc .fc-timegrid-slot-label) {
+    border-top: 0;
+}
+
+/* 全天事件样式 */
+.calendarMain :global(.fc-timegrid-event) {
+    border-radius: 4px;
+    margin: 1px 1px 0;
+}
+
+.calendarMain :global(.fc-v-event) {
+    border: none;
+    background-color: var(--fc-event-bg-color);
+}
+
+/* 全天事件区域高度 */
+.calendarMain :global(.fc .fc-timegrid-axis-frame) {
+    min-height: 30px;
+}
+
+.calendarMain :global(.fc .fc-timegrid-slots) {
+    border-top: 1px solid var(--fc-border-color);
+}
+
+/* "更多"按钮样式 */
+.calendarMain :global(.fc-daygrid-more-link) {
+    font-size: 0.75rem;
+    color: #3b82f6;
+    font-weight: 500;
+    padding: 2px 4px;
+}
+
+/* 全天事件展开按钮 */
+.calendarMain :global(.fc-timegrid-more-link) {
+    background: transparent;
+    color: #3b82f6;
+    font-size: 0.75rem;
+    padding: 2px 4px;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .calendar {
+        padding: 0.25rem;
+    }
+
+    .calendar :global(.fc .fc-toolbar.fc-header-toolbar) {
+        gap: 0.5rem;
+    }
+
+    .calendarTitle :global(.fc .fc-toolbar-title) {
+        font-size: 1.25rem;
+    }
+
+    .calendarMain :global(.fc .fc-timegrid-slot) {
+        height: 2.5rem;
+    }
+
+    .calendarFooter :global(.fc-button) {
+        padding: 0.375rem;
+        font-size: 0.75rem;
+        min-width: 48px;
+    }
+
+    .calendarMain :global(.fc .fc-col-header-cell-cushion) {
+        padding: 0.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .calendarMain :global(.fc .fc-timegrid-slot) {
+        height: 2.75rem;
+    }
+
+    .calendarFooter :global(.fc-button) {
+        padding: 0.425rem 0.85rem;
+        font-size: 0.8125rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .calendar :global(.fc) {
+        font-size: 13px;
+    }
+
+    .calendarFooter :global(.fc-button) {
+        padding: 0.4rem 0.85rem;
+    }
+}

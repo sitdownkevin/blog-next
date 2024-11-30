@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@geist-ui/core": "^2.3.8",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-navigation-menu": "^1.2.1",
@@ -26,6 +29,7 @@
     "mermaid": "^11.4.0",
     "next": "15.0.3",
     "next-themes": "^0.4.3",
+    "node-ical": "^0.20.1",
     "prismjs": "^1.29.0",
     "react": "^18",
     "react-dom": "^18",

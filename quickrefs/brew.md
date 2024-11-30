@@ -7,7 +7,14 @@ title: Homebrew
 
 ## 更新所有 Cask
 
-```shellsession
+```shell
 brew list --cask | xargs -I {} brew upgrade --cask {}
 ```
+
+官方命令
+
+```shell
+brew upgrade --greedy
+```
+
 
