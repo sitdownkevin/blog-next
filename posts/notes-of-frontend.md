@@ -81,3 +81,16 @@ Dashboard
 
 - `date-fns`
 
+## ESM and CJS
+
+ESM
+
+- `import`
+- `"type": "module"`
+- `.mjs`
+
+CJS
+
+- `dynamic import()`
+- `require`
+- `.cjs`
