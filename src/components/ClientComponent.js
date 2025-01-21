@@ -34,7 +34,7 @@ export function PersonalInfoCardHeader() {
                         </div>
                     </div>
                     <div className="text-xs text-gray-600">
-                        Information Systems, Data Mining, Web3, and Blockchain Technology.
+                        Information Systems, Data Mining, and Blockchain Technology.
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export function PersonalInfoCardHeader() {
                             </div>
                         </div>
                         <div className="text-xs text-gray-800">
-                            Information Systems, Data Mining, Web3, and Blockchain Technology.
+                            Information Systems, Data Mining, and Blockchain Technology.
                         </div>
                     </div>
                     <Image
@@ -61,8 +61,7 @@ export function PersonalInfoCardHeader() {
                         width={2125}
                         height={3217}
                         className={`hidden lg:block
-                        w-20 rounded-lg shadow-sm shadow-gray-500/50 transition-transform 
-                        duration-100 hover:scale-105`}
+                        w-20 rounded-lg shadow-sm shadow-gray-500/50`}
                     />
                 </div>
             </div>

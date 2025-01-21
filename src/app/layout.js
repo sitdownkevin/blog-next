@@ -6,7 +6,7 @@ import 'prismjs/components/prism-sql';
 import "./globals.css";
 import "./github-markdown.css";
 import 'katex/dist/katex.min.css';
-
+import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaInstagram, FaWeibo, FaRss } from 'react-icons/fa'
 
@@ -69,6 +69,9 @@ export default function RootLayout({ children }) {
           </div>
           <div className="w-5/6 md:w-4/6 lg:w-3/6 mb-16">
             {children}
+          </div>
+          <div className="w-5/6 md:w-4/6 lg:w-3/6 mb-8">
+              <Image src={"/favicon-32x32.png"} width={16} height={16} alt="Not Found" />
           </div>
         </div>
         <Toaster />
