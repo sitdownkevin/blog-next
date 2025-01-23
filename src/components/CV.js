@@ -86,7 +86,7 @@ export function CV() {
             {
                 "title": "Airbus Beijing Engineering Centre (ABEC), Beijing",
                 "subtitle": "Engineering Intern at ACO1I",
-                "content": "Data Mining, Operation System (Kanban Development)",
+                "content": "Data Mining, Operations System Development",
                 "period": "January 2024 - May 2024"
             },
             {
