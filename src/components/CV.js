@@ -1,4 +1,6 @@
-import { PersonalInfoCardHeader } from '@/components/ClientComponent'
+// import { PersonalInfoCardHeader } from '@/components/ClientComponent'
+
+import Image from "next/image";
 
 function CVItem({ title, subtitle, content, period }) {
     return <p>
@@ -8,6 +10,60 @@ function CVItem({ title, subtitle, content, period }) {
         {period ? <>{title || subtitle || content ? <br /> : null}<span className={"text-gray-600 text-sm"}>{period}</span></> : null}
     </p>
 }
+
+
+
+function PersonalInfoCardHeader() {
+    const personalInfo = {
+        name: "Ke Xu",
+        email: "kexu567@gmail.com",
+        location: "Shanghai, China",
+        intro: "Information Systems, Data Mining, and Blockchain Technology.",
+        figurePath: "/kexu_photo.jpg",
+    }
+
+
+    return (
+        <>
+            <div className="block md:hidden py-8">
+                <div className="flex flex-col space-y-4 justify-center items-center">
+                    <h1 className="text-4xl font-mono">{personalInfo.name}</h1>
+                    <div className="flex flex-col space-y-0">
+                        <span className="text-xs text-gray-500">{personalInfo.email}</span>
+                        <span className="text-xs text-gray-500">{personalInfo.location}</span>
+                    </div>
+                    <span className="text-xs text-gray-600">
+                        {personalInfo.intro}
+                    </span>
+                </div>
+            </div>
+
+            <div className="hidden md:block py-8">
+                <div className="grid grid-cols-6">
+                    <div className="col-span-6 md:col-span-5 space-y-4 flex flex-col justify-center items-center md:items-start">
+                        <h1 className="text-5xl font-mono">{personalInfo.name}</h1>
+                        <div className="flex flex-col space-y-0">
+                            <span className="text-xs text-gray-500">{personalInfo.email}</span>
+                            <span className="text-xs text-gray-500">{personalInfo.location}</span>
+                        </div>
+                        <span className="text-xs text-gray-600">
+                            {personalInfo.intro}
+                        </span>
+                    </div>
+                    <Image 
+                        src={personalInfo.figurePath}
+                        alt="figure"
+                        width={2125}
+                        height={3217}
+                        className="hidden lg:block w-20 rounded-lg shadow-sm shadow-gray-500/50"
+                    />
+                </div>
+            </div>
+
+        </>
+    )
+}
+
 
 
 export function CV() {
