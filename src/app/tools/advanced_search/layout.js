@@ -22,7 +22,7 @@ export default function PostLayout({ children }) {
     return (
         <div className="flex flex-col">
             <div className="flex flex-col justify-center items-center p-16">
-                <h4><Link href='/advanced_search'>Advanced Search</Link></h4>
+                <h4><Link href='/tools/advanced_search'>Advanced Search</Link></h4>
             </div>
 
             <div className='py-4'>
