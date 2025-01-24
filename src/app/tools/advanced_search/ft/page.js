@@ -25,287 +25,317 @@ import { useToast } from "@/hooks/use-toast";
 import { Toaster } from "@/components/ui/toaster";
 
 
-const journalsUTD = [
+const journalsFT = [
     {
         "title": "Accounting Review",
         "subject area": "Accounting",
-        "publisher": "American Accounting Association"
+        "print issn": "0001-4826",
+        "online issn": ""
     },
     {
         "title": "Accounting, Organizations and Society",
         "subject area": "Accounting",
-        "publisher": "Elsevier"
+        "print issn": "0361-3682",
+        "online issn": ""
     },
     {
         "title": "Contemporary Accounting Research",
         "subject area": "Accounting",
-        "publisher": "Wiley / Canadian Academic Accounting Association"
+        "print issn": "0823-9150",
+        "online issn": ""
     },
     {
         "title": "Journal of Accounting and Economics",
         "subject area": "Accounting",
-        "publisher": "Elsevier"
+        "print issn": "0165-4101",
+        "online issn": ""
     },
     {
         "title": "Journal of Accounting Research",
         "subject area": "Accounting",
-        "publisher": "Wiley / University of Chicago"
+        "print issn": "0021-8456",
+        "online issn": ""
     },
     {
         "title": "Review of Accounting Studies",
         "subject area": "Accounting",
-        "publisher": "Springer"
+        "print issn": "1380-6653",
+        "online issn": ""
     },
     {
         "title": "American Economic Review",
         "subject area": "Economics",
-        "publisher": "American Economic Association"
+        "print issn": "0002-8282",
+        "online issn": ""
     },
     {
         "title": "Econometrica",
         "subject area": "Economics",
-        "publisher": "Wiley / Econometric Society"
+        "print issn": "0012-9682",
+        "online issn": ""
     },
     {
         "title": "Journal of Political Economy",
         "subject area": "Economics",
-        "publisher": "University of Chicago Press"
+        "print issn": "0022-3808",
+        "online issn": ""
     },
     {
         "title": "Quarterly Journal of Economics",
         "subject area": "Economics",
-        "publisher": "Oxford University Press / Harvard University"
+        "print issn": "0033-5533",
+        "online issn": ""
     },
     {
         "title": "Research Policy",
         "subject area": "Economics, Management",
-        "publisher": "Elsevier"
+        "print issn": "0048-7333",
+        "online issn": ""
     },
     {
         "title": "Review of Economic Studies",
         "subject area": "Economics",
-        "publisher": "Oxford University Press"
+        "print issn": "0034-6527",
+        "online issn": ""
     },
     {
         "title": "Entrepreneurship Theory and Practice",
         "subject area": "Entrepreneurship",
-        "publisher": "Sage"
+        "print issn": "1042-2587",
+        "online issn": ""
     },
     {
         "title": "Journal of Business Venturing",
         "subject area": "Entrepreneurship",
-        "publisher": "Elsevier"
+        "print issn": "0883-9026",
+        "online issn": ""
     },
     {
         "title": "Strategic Entrepreneurship Journal",
         "subject area": "Entrepreneurship",
-        "publisher": "Wiley / Strategic Management Society"
+        "print issn": "1932-4391",
+        "online issn": ""
     },
     {
         "title": "Journal of Business Ethics",
         "subject area": "Ethics",
-        "publisher": "Springer"
+        "print issn": "0167-4544",
+        "online issn": ""
     },
     {
         "title": "Journal of Finance",
         "subject area": "Finance",
-        "publisher": "Wiley / American Finance Association"
+        "print issn": "0022-1082",
+        "online issn": ""
     },
     {
         "title": "Journal of Financial and Quantitative Analysis",
         "subject area": "Finance",
-        "publisher": "Cambridge University Press"
+        "print issn": "0022-1090",
+        "online issn": ""
     },
     {
         "title": "Journal of Financial Economics",
         "subject area": "Finance",
-        "publisher": "Elsevier"
+        "print issn": "0304-405X",
+        "online issn": ""
     },
     {
         "title": "Review of Finance",
         "subject area": "Finance",
-        "publisher": "Oxford University Press / European Finance Association"
+        "print issn": "1572-3097",
+        "online issn": ""
     },
     {
         "title": "Review of Financial Studies",
         "subject area": "Finance",
-        "publisher": "Oxford University Press"
+        "print issn": "0893-9454",
+        "online issn": ""
     },
     {
         "title": "Human Relations",
         "subject area": "Human Resources",
-        "publisher": "Sage"
+        "print issn": "0018-7267",
+        "online issn": "1741-282X"
     },
     {
         "title": "Human Resource Management",
         "subject area": "Human Resources",
-        "publisher": "Wiley"
+        "print issn": "0090-4848",
+        "online issn": ""
     },
     {
         "title": "Information Systems Research",
         "subject area": "Information Systems",
-        "publisher": "INFORMS"
+        "print issn": "1047-7047",
+        "online issn": ""
     },
     {
         "title": "Journal of Management Information Systems",
         "subject area": "Information Systems",
-        "publisher": "Taylor & Francis"
+        "print issn": "0742-1222",
+        "online issn": ""
     },
     {
         "title": "MIS Quarterly",
         "subject area": "Information Systems",
-        "publisher": "Management Information Systems Research Centre, University of Minnesota"
+        "print issn": "0276-7783",
+        "online issn": ""
     },
     {
         "title": "Journal of International Business Studies",
         "subject area": "International Business",
-        "publisher": "Palgrave Macmillan / Academy of International Business"
+        "print issn": "0047-2506",
+        "online issn": ""
     },
     {
         "title": "Academy of Management Journal",
         "subject area": "Management",
-        "publisher": "Academy of Management"
+        "print issn": "0001-4273",
+        "online issn": ""
     },
     {
         "title": "Academy of Management Review",
         "subject area": "Management",
-        "publisher": "Academy of Management"
+        "print issn": "0363-7425",
+        "online issn": ""
     },
     {
         "title": "Administrative Science Quarterly",
         "subject area": "Management",
-        "publisher": "Sage / Cornell University"
+        "print issn": "0001-8392",
+        "online issn": ""
     },
     {
         "title": "Harvard Business Review",
         "subject area": "Management",
-        "publisher": "Harvard Business Publishing"
+        "print issn": "0017-8012",
+        "online issn": ""
     },
     {
         "title": "Journal of Management",
         "subject area": "Management",
-        "publisher": "Sage"
+        "print issn": "0149-2063",
+        "online issn": ""
     },
     {
         "title": "Journal of Management Studies",
         "subject area": "Management",
-        "publisher": "Wiley / Society for the Advancement of Management Studies"
+        "print issn": "0022-2380",
+        "online issn": ""
     },
     {
         "title": "Management Science",
         "subject area": "Management",
-        "publisher": "INFORMS"
+        "print issn": "0025-1909",
+        "online issn": ""
     },
     {
         "title": "MIT Sloan Management Review",
         "subject area": "Management",
-        "publisher": "MIT Press"
+        "print issn": "1532-8937",
+        "online issn": ""
     },
     {
         "title": "Strategic Management Journal",
         "subject area": "Management",
-        "publisher": "Wiley"
+        "print issn": "0143-2095",
+        "online issn": ""
     },
     {
         "title": "Journal of Consumer Psychology",
         "subject area": "Marketing",
-        "publisher": "Wiley / Society for Consumer Psychology"
+        "print issn": "1057-7408",
+        "online issn": ""
     },
     {
         "title": "Journal of Consumer Research",
         "subject area": "Marketing",
-        "publisher": "Oxford University Press"
+        "print issn": "0093-5301",
+        "online issn": ""
     },
     {
         "title": "Journal of Marketing",
         "subject area": "Marketing",
-        "publisher": "American Marketing Association"
+        "print issn": "0022-2429",
+        "online issn": ""
     },
     {
         "title": "Journal of Marketing Research",
         "subject area": "Marketing",
-        "publisher": "American Marketing Association"
+        "print issn": "0022-2437",
+        "online issn": ""
     },
     {
         "title": "Journal of the Academy of Marketing Science",
         "subject area": "Marketing",
-        "publisher": "Springer"
+        "print issn": "0092-0703",
+        "online issn": ""
     },
     {
         "title": "Marketing Science",
         "subject area": "Marketing",
-        "publisher": "INFORMS"
+        "print issn": "0732-2399",
+        "online issn": ""
     },
     {
         "title": "Journal of Operations Management",
         "subject area": "Operations",
-        "publisher": "Wiley / Association for Supply Chain Management"
+        "print issn": "0272-6963",
+        "online issn": ""
     },
     {
         "title": "Manufacturing & Service Operations Management",
         "subject area": "Operations",
-        "publisher": "INFORMS"
+        "print issn": "1523-4614",
+        "online issn": ""
     },
     {
         "title": "Operations Research",
         "subject area": "Operations",
-        "publisher": "INFORMS"
+        "print issn": "0030-364X",
+        "online issn": ""
     },
     {
         "title": "Production and Operations Management",
         "subject area": "Operations",
-        "publisher": "Sage / Production and Operations Management Society"
+        "print issn": "1059-1478",
+        "online issn": ""
     },
     {
         "title": "Journal of Applied Psychology",
         "subject area": "Organizational Behaviour",
-        "publisher": "American Psychological Association"
+        "print issn": "0021-9010",
+        "online issn": ""
     },
     {
         "title": "Organization Science",
         "subject area": "Organizational Behaviour",
-        "publisher": "INFORMS"
+        "print issn": "1047-7039",
+        "online issn": ""
     },
     {
         "title": "Organization Studies",
         "subject area": "Organizational Behaviour",
-        "publisher": "Sage"
+        "print issn": "0170-8406",
+        "online issn": ""
     },
     {
         "title": "Organizational Behavior and Human Decision Processes",
         "subject area": "Organizational Behaviour",
-        "publisher": "Elsevier"
+        "print issn": "0749-5978",
+        "online issn": ""
     }
 ];
 
+function constructISSNQuery(journals) {
+    const issnClauses = journals
+        .filter(journal => journal["print issn"]) // 过滤空ISSN
+        .map(journal => `ISSN(${journal["print issn"]})`) // 构造ISSN查询条件
+        .join(' OR '); // 用OR连接所有条件
 
-
-
-function processJournalsData(journals) {
-
-
-
-    const processTitle = (title) => {
-        return title
-            .trim()
-            .replace(/&/g, 'And')
-            .split(/\s+/)
-            .map(word =>
-                /^[A-Z]+$/.test(word)  // 保留全大写单词（如 INFORMS）
-                    ? word
-                    : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            )
-            .join(' ');
-    }
-
-    const journalClauses = journals.map(journal => {
-        return `LIMIT-TO( EXACTSRCTITLE , "${processTitle(journal.title)}" )`
-    }).join(' OR ');
-
-
-    return journalClauses;
+    return issnClauses;
 }
-
 
 
 export default function Page() {
@@ -320,7 +350,7 @@ export default function Page() {
         })
     }
 
-    const exampleCode = processJournalsData(journalsUTD);
+    const exampleCode = constructISSNQuery(journalsFT);
 
 
     return (
@@ -362,17 +392,17 @@ export default function Page() {
                         <TableHead>Index</TableHead>
                         <TableHead>Title</TableHead>
                         <TableHead>Subject Area</TableHead>
-                        <TableHead>Publisher</TableHead>
+                        <TableHead>Print ISSN</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {journalsUTD.map((journal, index) => {
+                    {journalsFT.map((journal, index) => {
                         return (
                             <TableRow key={index}>
                                 <TableCell>{index + 1}</TableCell>
                                 <TableCell>{journal.title}</TableCell>
                                 <TableCell>{journal["subject area"]}</TableCell>
-                                <TableCell>{journal.publisher}</TableCell>
+                                <TableCell>{journal["print issn"]}</TableCell>
                             </TableRow>
                         )
                     })}

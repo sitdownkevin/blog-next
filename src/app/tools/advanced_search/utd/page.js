@@ -29,152 +29,159 @@ const journalsUTD = [
     {
         "title": "Accounting Review",
         "subject area": "Accounting",
-        "publisher": "American Accounting Association"
+        "print issn": "0001-4826",
+        "online issn": ""
     },
     {
         "title": "Journal of Accounting and Economics",
         "subject area": "Accounting",
-        "publisher": "Elsevier"
+        "print issn": "0165-4101",
+        "online issn": ""
     },
     {
         "title": "Journal of Accounting Research",
         "subject area": "Accounting",
-        "publisher": "Wiley / University of Chicago"
+        "print issn": "0021-8456",
+        "online issn": ""
     },
     {
         "title": "Journal of Finance",
         "subject area": "Finance",
-        "publisher": "Wiley / American Finance Association"
+        "print issn": "0022-1082",
+        "online issn": ""
     },
     {
         "title": "Journal of Financial Economics",
         "subject area": "Finance",
-        "publisher": "Elsevier"
+        "print issn": "0304-405X",
+        "online issn": ""
     },
     {
         "title": "Review of Financial Studies",
         "subject area": "Finance",
-        "publisher": "Oxford University Press"
+        "print issn": "0893-9454",
+        "online issn": ""
     },
     {
         "title": "Information Systems Research",
         "subject area": "Information Systems",
-        "publisher": "INFORMS"
+        "print issn": "1047-7047",
+        "online issn": ""
     },
     {
         "title": "INFORMS Journal on Computing",
         "subject area": "Information Systems",
-        "publisher": "INFORMS"
+        "print issn": "1091-9856",
+        "online issn": ""
     },
     {
         "title": "MIS Quarterly",
         "subject area": "Information Systems",
-        "publisher": "Management Information Systems Research Centre, University of Minnesota"
+        "print issn": "0276-7783",
+        "online issn": ""
     },
     {
         "title": "Journal of International Business Studies",
         "subject area": "International Business",
-        "publisher": "Palgrave Macmillan / Academy of International Business"
+        "print issn": "0047-2506",
+        "online issn": ""
     },
     {
         "title": "Journal of Consumer Research",
         "subject area": "Marketing",
-        "publisher": "Oxford University Press"
+        "print issn": "0093-5301",
+        "online issn": ""
     },
     {
         "title": "Journal of Marketing",
         "subject area": "Marketing",
-        "publisher": "American Marketing Association"
+        "print issn": "0022-2429",
+        "online issn": ""
     },
     {
         "title": "Journal of Marketing Research",
         "subject area": "Marketing",
-        "publisher": "American Marketing Association"
+        "print issn": "0022-2437",
+        "online issn": ""
     },
     {
         "title": "Marketing Science",
         "subject area": "Marketing",
-        "publisher": "INFORMS"
+        "print issn": "0732-2399",
+        "online issn": ""
     },
     {
         "title": "Academy of Management Journal",
         "subject area": "Management",
-        "publisher": "Academy of Management"
+        "print issn": "0001-4273",
+        "online issn": ""
     },
     {
         "title": "Academy of Management Review",
         "subject area": "Management",
-        "publisher": "Academy of Management"
+        "print issn": "0363-7425",
+        "online issn": ""
     },
     {
         "title": "Administrative Science Quarterly",
         "subject area": "Management",
-        "publisher": "Sage / Cornell University"
+        "print issn": "0001-8392",
+        "online issn": ""
     },
     {
         "title": "Management Science",
         "subject area": "Management",
-        "publisher": "INFORMS"
+        "print issn": "0025-1909",
+        "online issn": ""
     },
     {
         "title": "Strategic Management Journal",
         "subject area": "Management",
-        "publisher": "Wiley"
+        "print issn": "0143-2095",
+        "online issn": ""
     },
     {
         "title": "Journal of Operations Management",
         "subject area": "Operations",
-        "publisher": "Wiley / Association for Supply Chain Management"
+        "print issn": "0272-6963",
+        "online issn": ""
     },
     {
         "title": "Manufacturing & Service Operations Management",
         "subject area": "Operations",
-        "publisher": "INFORMS"
+        "print issn": "1523-4614",
+        "online issn": ""
     },
     {
         "title": "Operations Research",
         "subject area": "Operations",
-        "publisher": "INFORMS"
+        "print issn": "0030-364X",
+        "online issn": ""
     },
     {
         "title": "Production and Operations Management",
         "subject area": "Operations",
-        "publisher": "Sage / Production and Operations Management Society"
+        "print issn": "1059-1478",
+        "online issn": ""
     },
     {
         "title": "Organization Science",
         "subject area": "Organizational Behaviour",
-        "publisher": "INFORMS"
+        "print issn": "1047-7039",
+        "online issn": ""
     }
 ];
 
 
 
-function processJournalsData(journals) {
+function constructISSNQuery(journals) {
+    const issnClauses = journals
+        .filter(journal => journal["print issn"]) // 过滤空ISSN
+        .map(journal => `ISSN(${journal["print issn"]})`) // 构造ISSN查询条件
+        .join(' OR '); // 用OR连接所有条件
 
-    
-
-    const processTitle = (title) => {
-        return title
-            .trim()
-            .replace(/&/g, 'And')
-            .split(/\s+/)
-            .map(word => 
-              /^[A-Z]+$/.test(word)  // 保留全大写单词（如 INFORMS）
-                ? word 
-                : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-            )
-            .join(' ');
-    }
-
-    const journalClauses = journals.map(journal => {
-        return `LIMIT-TO( EXACTSRCTITLE , "${processTitle(journal.title)}" )`
-    }).join(' OR ');
-
-
-    return journalClauses;
+    return issnClauses;
 }
-
 
 
 export default function Page() {
@@ -183,13 +190,12 @@ export default function Page() {
 
     const handleCopyCode = (code) => {
         navigator.clipboard.writeText(code);
-
         toast({
             title: "Copied",
         })
     }
 
-    const exampleCode = processJournalsData(journalsUTD);
+    const exampleCode = constructISSNQuery(journalsUTD);
 
 
     return (
@@ -231,7 +237,7 @@ export default function Page() {
                         <TableHead>Index</TableHead>
                         <TableHead>Title</TableHead>
                         <TableHead>Subject Area</TableHead>
-                        <TableHead>Publisher</TableHead>
+                        <TableHead>Print ISSN</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -241,7 +247,7 @@ export default function Page() {
                                 <TableCell>{index + 1}</TableCell>
                                 <TableCell>{journal.title}</TableCell>
                                 <TableCell>{journal["subject area"]}</TableCell>
-                                <TableCell>{journal.publisher}</TableCell>
+                                <TableCell>{journal["print issn"]}</TableCell>
                             </TableRow>
                         )
                     })}
