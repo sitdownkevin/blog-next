@@ -1,6 +1,6 @@
 import { JournalClause } from "@/components/JournalClause";
 import { JournalTable } from "@/components/JournalTable";
-
+import Link from "next/link";
 
 const journalesAIS = [
     {
@@ -75,6 +75,14 @@ const journalesAIS = [
 export default function Page() {
     return (
         <div className="flex flex-col items-center">
+            <div className="p-8">
+                <Link href={`https://aisnet.org/page/SeniorScholarListofPremierJournals/`}
+                    className="text-blue-500 hover:underline hover:text-blue-700"
+                    target="_blank"
+                >
+                    Senior Scholars' List of Premier Journals
+                </Link>
+            </div>
             <JournalClause journals={journalesAIS} caption={"Scopus - AIS Bucket"} />
             <JournalTable journals={journalesAIS} tableCaption={"AIS Bucket"} hideSubjectArea={true} />
         </div>

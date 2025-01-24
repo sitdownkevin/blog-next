@@ -146,14 +146,21 @@ const journalsUTD = [
 ];
 
 
-
 import { JournalClause } from "@/components/JournalClause";
 import { JournalTable } from "@/components/JournalTable";
-
+import Link from "next/link";
 
 export default function Page() {
     return (
         <div className="flex flex-col items-center">
+            <div className="p-8">
+                <Link href={`https://jsom.utdallas.edu/the-utd-top-100-business-school-research-rankings/`}
+                    className="text-blue-500 hover:underline hover:text-blue-700"
+                    target="_blank"
+                >
+                    The UTD Top 100 Business School Research Rankings
+                </Link>
+            </div>
             <JournalClause journals={journalsUTD} caption={"Scopus - UTD24"} />
             <JournalTable journals={journalsUTD} tableCaption={"UTD24"}/>
         </div>

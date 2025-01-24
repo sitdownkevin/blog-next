@@ -236,3 +236,8 @@
   animation: scaleUpDown 1s infinite;
   animation-timing-function: ease-in-out;
 }
+
+
+html {
+  overflow-y: scroll;
+}

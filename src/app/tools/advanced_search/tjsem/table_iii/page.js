@@ -154,7 +154,7 @@ const journalesTableIII = [
         "online issn": ""
     },
     {
-        "title": "同济大学学报自然科学版（限计入 1 篇）",
+        "title": "同济大学学报自然科学版",
         "subject area": "",
         "print issn": "0253-374X",
         "online issn": ""

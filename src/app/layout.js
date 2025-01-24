@@ -55,6 +55,9 @@ function Header() {
       <Link href="/quickrefs" className=" hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105">
         QRefs
       </Link>
+      <Link href="/tools/advanced_search" className=" hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105">
+        AS
+      </Link>
     </nav>
   </header>
 }

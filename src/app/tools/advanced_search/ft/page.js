@@ -1,6 +1,6 @@
 import { JournalClause } from "@/components/JournalClause";
 import { JournalTable } from "@/components/JournalTable";
-
+import Link from "next/link";
 
 const journalsFT = [
     {
@@ -308,8 +308,16 @@ const journalsFT = [
 export default function Page() {
     return (
         <div className="flex flex-col items-center">
+            <div className="p-8">
+                <Link href={`https://www.ft.com/content/3405a512-5cbb-11e1-8f1f-00144feabdc0/`}
+                    className="text-blue-500 hover:underline hover:text-blue-700"
+                    target="_blank"
+                >
+                    50 Journals used in FT Research Rank
+                </Link>
+            </div>
             <JournalClause journals={journalsFT} caption={"Scopus - FT50"} />
-            <JournalTable journals={journalsFT} tableCaption={"FT50"}/>
+            <JournalTable journals={journalsFT} tableCaption={"FT50"} />
         </div>
     )
 }

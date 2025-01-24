@@ -1,5 +1,6 @@
 import { JournalClause } from "@/components/JournalClause";
 import { JournalTable } from "@/components/JournalTable";
+import Link from "next/link";
 
 
 const journalesTableI = [
@@ -507,8 +508,16 @@ const journalesTableI = [
 export default function Page() {
     return (
         <div className="flex flex-col items-center">
+            <div className="p-8">
+                <Link href={`https://sem.tongji.edu.cn/semch/52674.html`}
+                    className="text-blue-500 hover:underline hover:text-blue-700"
+                    target="_blank"
+                >
+                    经济与管理学科博士学位标准及发表学术成果规定
+                </Link>
+            </div>
             <JournalClause journals={journalesTableI} caption={"Scopus - TJSEM Table I"} />
-            <JournalTable journals={journalesTableI} tableCaption={"TJSEM Table I"}/>
+            <JournalTable journals={journalesTableI} tableCaption={"TJSEM Table I"} hideSubjectArea={true} />
         </div>
     )
 }
