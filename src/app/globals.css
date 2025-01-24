@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slowly {
+  animation: spin 30s linear infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
