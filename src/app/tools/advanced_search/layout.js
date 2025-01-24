@@ -8,7 +8,9 @@ export const metadata = {
 export default function PostLayout({ children }) {
     return (
         <div className="flex flex-col">
-            <AdvancedSearchLayout children={children} />
+            <AdvancedSearchLayout>
+                {children}
+            </AdvancedSearchLayout>
         </div>
     )
 }
