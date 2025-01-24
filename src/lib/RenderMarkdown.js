@@ -4,91 +4,11 @@ import path from 'path';
 // Read Markdown Head
 import matter from 'gray-matter';
 
-// Render Markdown and Katex
-import { unified } from 'unified';
-import remarkMath from 'remark-math';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import rehypeKatex from 'rehype-katex'; // Math
-import rehypeStringify from 'rehype-stringify';
-import remarkGfm from 'remark-gfm'; // Table
-import rehypeHighlight from 'rehype-highlight'; // Code Block
-import rehypePrism from 'rehype-prism';
-import remarkToc from 'remark-toc';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import { visit } from 'unist-util-visit';
-
+import { createBasePipeline, createRssPipeline } from './markdown-pipeline';
 const postDirectory = path.join(process.cwd(), 'posts');
 
-// KaTeX CSS 内容（精简版，只包含最基本的样式）
-const KATEX_CSS = `
-.katex {
-    font: normal 1.21em KaTeX_Main,Times New Roman,serif;
-    line-height: 1.2;
-    text-indent: 0;
-    text-rendering: auto;
-}
-.katex-display {
-    display: block;
-    margin: 1em 0;
-    text-align: center;
-}
-.katex-html {
-    display: inline-block;
-}
-.katex .base {
-    position: relative;
-}
-.katex .mathit {
-    font-family: KaTeX_Math;
-    font-style: italic;
-}
-.katex .mord {
-    font-family: KaTeX_Main;
-}
-.katex .mord.text {
-    font-family: KaTeX_Main;
-}
-.katex .msupsub {
-    text-align: left;
-}
-.katex .mfrac {
-    display: inline-block;
-    text-align: center;
-}
-.katex .mfrac > span {
-    display: block;
-}
-.katex .sqrt {
-    display: inline-block;
-}
-.katex .sqrt > .root {
-    margin-left: 0.27777778em;
-    margin-right: -0.55555556em;
-}
-`;
-
-function rehypeMermaid() {
-    return (tree) => {
-        visit(tree, 'element', (node) => {
-            // 处理 Mermaid 图表
-            if (node.tagName === 'pre') {
-                const code = node.children[0];
-                if (code && code.tagName === 'code' && 
-                    code.properties.className && 
-                    code.properties.className.includes('language-mermaid')) {
-                    const value = code.children[0].value;
-                    node.tagName = 'div';
-                    node.properties = { 
-                        className: ['mermaid', 'my-8', 'flex', 'justify-center'] 
-                    };
-                    node.children = [{ type: 'text', value: value.trim() }];
-                }
-            }
-        });
-    };
-}
+import { KATEX_CSS } from './katex-css';
+import { rehypeMermaid } from './rehype-mermaid';
 
 export function getMarkdownPostsDataJson() {
     const fileNames = fs.readdirSync(postDirectory);
@@ -139,26 +59,18 @@ export async function getMarkdownContent(id) {
 
     const matterResult = matter(fileContents);
 
-    const processedContent = await unified()
-        .use(remarkParse)
-        .use(remarkMath)
-        .use(remarkGfm)
-        .use(remarkToc)
-        .use(remarkRehype)
-        .use(rehypeKatex, {
-            strict: false,  // 关闭严格模式
-            trust: true,    // 允许所有 KaTeX 命令
-            throwOnError: false  // 不抛出错误
-        })
-        .use(rehypeHighlight)
-        .use(rehypePrism)
-        .use(rehypeSlug)
-        .use(rehypeAutolinkHeadings)
-        .use(rehypeMermaid)
-        .use(rehypeStringify)
-        .process(matterResult.content)
-
-    const contentHtml = processedContent.toString();
+    // 使用缓存机制
+    const cacheKey = `markdown:${id}`;
+    let contentHtml;
+    
+    try {
+        const pipeline = createBasePipeline();
+        const processedContent = await pipeline.process(matterResult.content);
+        contentHtml = processedContent.toString();
+    } catch (error) {
+        console.error(`Error processing markdown for ${id}:`, error);
+        throw new Error('Failed to process markdown content');
+    }
 
     const title = matterResult.data.title;
     const tags = matterResult.data.tags;
@@ -179,38 +91,21 @@ export async function getMarkdownContentForRSS(id) {
 
     const matterResult = matter(fileContents);
 
-    // 为 RSS 特别优化的渲染流程
-    const processedContent = await unified()
-        .use(remarkParse)
-        .use(remarkMath)
-        .use(remarkGfm)
-        .use(remarkRehype)
-        .use(rehypeKatex, {
-            output: 'html',
-            throwOnError: false,
-            strict: false,
-            trust: true,
-            macros: {
-                "\\RR": "\\mathbb{R}",
-                "\\NN": "\\mathbb{N}",
-                "\\ZZ": "\\mathbb{Z}"
-            }
-        })
-        .use(() => (tree) => {
-            // 使用内联的 KaTeX CSS
-            tree.children.unshift({
-                type: 'element',
-                tagName: 'style',
-                properties: {},
-                children: [{ type: 'text', value: KATEX_CSS }]
-            });
-            return tree;
-        })
-        .use(rehypeStringify)
-        .process(matterResult.content);
+    let contentHtml;
+    try {
+        const pipeline = createRssPipeline();
+        const processedContent = await pipeline.process(matterResult.content);
+        contentHtml = processedContent.toString();
+        
+        // 添加 KaTeX CSS
+        contentHtml = `<style>${KATEX_CSS}</style>${contentHtml}`;
+    } catch (error) {
+        console.error(`Error processing RSS markdown for ${id}:`, error);
+        throw new Error('Failed to process RSS markdown content');
+    }
 
     return {
-        contentHtml: processedContent.toString(),
+        contentHtml,
         ...matterResult.data
     };
 }
