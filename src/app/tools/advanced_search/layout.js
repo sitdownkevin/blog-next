@@ -40,8 +40,10 @@ export default function PostLayout({ children }) {
                         <MenubarTrigger><Link href='/tools/advanced_search/ft'>FT50</Link></MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
+                        <MenubarTrigger><Link href='/tools/advanced_search/ais'>AIS</Link></MenubarTrigger>
+                    </MenubarMenu>
+                    <MenubarMenu>
                         <MenubarTrigger>TJSEM</MenubarTrigger>
-
                         <MenubarContent>
                             <MenubarItem>
                                 <Link href='/tools/advanced_search/tjsem/table_i'>Table I</Link>
