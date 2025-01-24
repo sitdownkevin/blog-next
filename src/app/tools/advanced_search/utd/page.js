@@ -1,30 +1,3 @@
-"use client";
-
-
-import React, { use } from "react"
-import { useState } from "react";
-import {
-    Table,
-    TableBody,
-    TableCaption,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { ChevronDown, ChevronUp } from "lucide-react"
-import { useToast } from "@/hooks/use-toast";
-// import { ToastAction } from "@/components/ui/toast";
-import { Toaster } from "@/components/ui/toaster";
-
-
 const journalsUTD = [
     {
         "title": "Accounting Review",
@@ -174,87 +147,15 @@ const journalsUTD = [
 
 
 
-function constructISSNQuery(journals) {
-    const issnClauses = journals
-        .filter(journal => journal["print issn"]) // 过滤空ISSN
-        .map(journal => `ISSN(${journal["print issn"]})`) // 构造ISSN查询条件
-        .join(' OR '); // 用OR连接所有条件
-
-    return issnClauses;
-}
+import { JournalClause } from "@/components/JournalClause";
+import { JournalTable } from "@/components/JournalTable";
 
 
 export default function Page() {
-    const { toast } = useToast();
-    const [scopusOpen, setScopusOpen] = useState(true)
-
-    const handleCopyCode = (code) => {
-        navigator.clipboard.writeText(code);
-        toast({
-            title: "Copied",
-        })
-    }
-
-    const exampleCode = constructISSNQuery(journalsUTD);
-
-
     return (
         <div className="flex flex-col items-center">
-            <Card className="w-full mb-8">
-                <CardContent className="p-6">
-                    <Collapsible open={scopusOpen} onOpenChange={setScopusOpen}>
-                        <div className="flex flex-row justify-between items-center">
-                            <span className="text-sm font-medium">Scopus</span>
-                            <div className="flex gap-2">
-                                <Button
-                                    size="sm"
-                                    onClick={() => handleCopyCode(exampleCode)}
-                                >
-                                    Copy
-                                </Button>
-                                <CollapsibleTrigger asChild>
-                                    <Button variant="ghost" size="sm">
-                                        {scopusOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
-                                        <span className="sr-only">Toggle</span>
-                                    </Button>
-                                </CollapsibleTrigger>
-                            </div>
-                        </div>
-                        <CollapsibleContent className="mt-4">
-                            <pre className="bg-gray-100 p-4 rounded-md text-sm whitespace-pre-wrap">
-                                <code>{exampleCode}</code>
-                            </pre>
-                        </CollapsibleContent>
-                    </Collapsible>
-                </CardContent>
-            </Card>
-
-
-            <Table className="w-full mb-8">
-                <TableCaption>UTD</TableCaption>
-                <TableHeader>
-                    <TableRow>
-                        <TableHead>Index</TableHead>
-                        <TableHead>Title</TableHead>
-                        <TableHead>Subject Area</TableHead>
-                        <TableHead>Print ISSN</TableHead>
-                    </TableRow>
-                </TableHeader>
-                <TableBody>
-                    {journalsUTD.map((journal, index) => {
-                        return (
-                            <TableRow key={index}>
-                                <TableCell>{index + 1}</TableCell>
-                                <TableCell>{journal.title}</TableCell>
-                                <TableCell>{journal["subject area"]}</TableCell>
-                                <TableCell>{journal["print issn"]}</TableCell>
-                            </TableRow>
-                        )
-                    })}
-                </TableBody>
-            </Table>
-
-            <Toaster />
+            <JournalClause journals={journalsUTD} caption={"Scopus - UTD24"} />
+            <JournalTable journals={journalsUTD} tableCaption={"UTD24"}/>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+"use client"
+import { Toaster } from "@/components/ui/toaster";
 
 import Link from 'next/link'
 
@@ -16,6 +18,7 @@ import {
     MenubarSubTrigger,
     MenubarTrigger,
 } from "@/components/ui/menubar"
+import { Menu } from 'lucide-react'
 
 
 export default function PostLayout({ children }) {
@@ -37,13 +40,26 @@ export default function PostLayout({ children }) {
                         <MenubarTrigger><Link href='/tools/advanced_search/ft'>FT50</Link></MenubarTrigger>
                     </MenubarMenu>
                     <MenubarMenu>
-                        <MenubarTrigger><Link href='/tools/advanced_search/tjsem'>TJSEM</Link></MenubarTrigger>
+                        <MenubarTrigger>TJSEM</MenubarTrigger>
+
+                        <MenubarContent>
+                            <MenubarItem>
+                                <Link href='/tools/advanced_search/tjsem/table_i'>Table I</Link>
+                            </MenubarItem>
+                            <MenubarItem>
+                                <Link href='/tools/advanced_search/tjsem/table_ii'>Table II</Link>
+                            </MenubarItem>
+                            <MenubarItem>
+                                <Link href='/tools/advanced_search/tjsem/table_iii'>Table III</Link>
+                            </MenubarItem>
+                        </MenubarContent>
                     </MenubarMenu>
                 </Menubar>
             </div>
 
             <div>
                 {children}
+                <Toaster />
             </div>
         </div>
     )
