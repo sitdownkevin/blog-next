@@ -12,11 +12,11 @@ import {
 import { useState } from "react"
 import { useToast } from "@/hooks/use-toast";
 
-export function JournalClause({ journals, caption }) {
+export function JournalClause({ journals, caption }: { journals: any[], caption: string }) {
     const { toast } = useToast();
     const [open, setOpen] = useState(true);
 
-    const handleCopyCode = (code) => {
+    const handleCopyCode = (code: string) => {
         navigator.clipboard.writeText(code);
 
         toast({
@@ -24,10 +24,10 @@ export function JournalClause({ journals, caption }) {
         })
     }
 
-    function constructISSNQuery(journals) {
+    function constructISSNQuery(journals: any[]) {
         const issnClauses = journals
-            .filter(journal => journal["print issn"]) // 过滤空ISSN
-            .map(journal => `ISSN(${journal["print issn"]})`) // 构造ISSN查询条件
+            .filter((journal: any) => journal["print issn"]) // 过滤空ISSN
+            .map((journal: any) => `ISSN(${journal["print issn"]})`) // 构造ISSN查询条件
             .join(' OR '); // 用OR连接所有条件
 
         return issnClauses;

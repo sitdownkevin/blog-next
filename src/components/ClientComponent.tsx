@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import React from 'react';
 
 import { Textarea } from "@/components/ui/textarea"
@@ -26,7 +25,7 @@ import {
 
 import axios from "axios";
 
-export function PostCardHeader({ title }) {
+export function PostCardHeader({ title }: { title: string }) {
     const [fontSize, setFontSize] = React.useState("text-3xl sm:text-4xl md:text-5xl");
 
     const handleScroll = () => {
@@ -50,37 +49,8 @@ export function PostCardHeader({ title }) {
 }
 
 
-export function CommentSubmit() {
-    const [comment, setComment] = React.useState("");
 
-    const addComment = async () => {
-        if (comment.length === 0) {
-            return;
-        }
-
-        const response = await axios.post('/api/add_comment', {
-            content: comment, domain: "kexu567.xyz"
-        });
-
-        window.location.reload();
-    }
-
-    const handleCommentChange = (event) => {
-        setComment(event.target.value);
-    }
-
-
-
-    return (
-        <div className="flex flex-col w-full space-y-2">
-            <Textarea label="Leave a comment" value={comment} onChange={handleCommentChange} />
-            <Button onClick={addComment}>Submit</Button>
-        </div>
-    )
-}
-
-
-export function AdvancedSearchLayout({ children }) {
+export function AdvancedSearchLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex flex-col">
             <div className="flex flex-col justify-center items-center p-16">

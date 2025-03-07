@@ -11,7 +11,7 @@ mermaid.initialize({
   securityLevel: 'loose',
 });
 
-function Tags({ tagList }) {
+function Tags({ tagList }: { tagList: string[] }) {
   return (
     <>
       <div className="flex flex-row items-center flex-wrap">
@@ -32,7 +32,7 @@ function Tags({ tagList }) {
   );
 }
 
-export function PostCardCover({ post }) {
+export function PostCardCover({ post }: { post: any }) {
   return (
     <>
       <Link href={`posts/${post.id}`} className="block">
@@ -57,7 +57,7 @@ export function PostCardCover({ post }) {
   );
 }
 
-export function PostCard({ post }) {
+export function PostCard({ post }: { post: any }) {
   useEffect(() => {
     const diagrams = document.querySelectorAll('.mermaid');
     if (diagrams.length > 0) {

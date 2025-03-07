@@ -5,7 +5,7 @@ export const metadata = {
     description: "Advanced Search for journal articles",
 };
 
-export default function PostLayout({ children }) {
+export default function PostLayout({ children }: { children: React.ReactNode }) {
     return (
         <div className="flex flex-col">
             <AdvancedSearchLayout>
