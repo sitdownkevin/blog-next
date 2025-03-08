@@ -145,12 +145,12 @@ function Footer() {
             <span className="text-gray-500 text-xxs">
               <Link
                 href={
-                  "https://greasyfork.org/zh-CN/scripts/519430-tj-dorm-wifi-%E8%BE%85%E5%8A%A9"
+                  "https://sitdownkevin.github.io/dorm-wifi-tauri/"
                 }
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TJ-DORM-WIFI
+                DORM WIFI
               </Link>
             </span>
             <span className="text-gray-500 text-xxs">

@@ -4,13 +4,13 @@ import { getMarkdownPostsDataJson, getMarkdownContent } from './RenderMarkdown.j
 
 export async function generateRssFeed() {
   const posts = getMarkdownPostsDataJson();
-  const siteURL = 'https://kexu567.xyz';
+  const siteURL = 'https://kevinxu.site';
   const date = new Date();
 
   const author = {
     name: "Ke Xu",
     email: "kexu567@gmail.com",
-    link: "https://kexu567.xyz",
+    link: "https://kevinxu.site",
   };
 
   const feed = new Feed({
