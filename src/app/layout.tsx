@@ -136,6 +136,9 @@ function Footer() {
             <span className="text-gray-500 text-xxs">
               <Link href={"/quickrefs"}>Quick References</Link>
             </span>
+            <span className="text-gray-500 text-xxs">
+              <Link href={"/pow"}>PoW</Link>
+            </span>
           </div>
           <div className="flex flex-col">
             <span className="text-xxs">Projects</span>
@@ -144,9 +147,7 @@ function Footer() {
             </span>
             <span className="text-gray-500 text-xxs">
               <Link
-                href={
-                  "https://sitdownkevin.github.io/dorm-wifi-tauri/"
-                }
+                href={"https://sitdownkevin.github.io/dorm-wifi-tauri/"}
                 target="_blank"
                 rel="noopener noreferrer"
               >
