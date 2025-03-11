@@ -20,16 +20,18 @@ export default function JournalClause({
   const code = constructISSNQueryForScopus(journals);
 
   return (
-    <CodeLayout className="w-full" bordered={true}>
+    <div className="w-full border-b p-4">
+          <CodeLayout bordered={true}>
       {/* <CodeLayout.Preview>
         {code}
       </CodeLayout.Preview> */}
-      <CodeLayout.Toolbar text={code} visibleButton={true} collapse={false}>
-        Scopus
+      <CodeLayout.Toolbar text={code} visibleButton={true} collapse={true} className="text-sm font-bold">
+        Scopus ISSN
       </CodeLayout.Toolbar>
       <CodeLayout.Code tagName="pre" className="whitespace-pre-wrap">
         {code}
       </CodeLayout.Code>
     </CodeLayout>
+    </div>
   );
 }

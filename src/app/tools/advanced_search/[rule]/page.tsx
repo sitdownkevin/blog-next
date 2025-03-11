@@ -5,10 +5,11 @@ import DescriptionCard from "@/components/advanced-search/DescriptionCard";
 import { JournalType } from "@/lib/types";
 
 
-const rules = ["utd"]; // ["utd", "ft", "tjsem_i", "tjsem_ii", "tjsem_iii"]
+const rules = ["utd", "ft", "ais", "tjsem_i", "tjsem_ii"]; // ["utd", "ft", "tjsem_i", "tjsem_ii", "tjsem_iii"]
 const caption = {
   utd: "UTD24",
   ft: "FT50",
+  ais: "AIS Bucket",
   tjsem_i: "TJSEM I",
   tjsem_ii: "TJSEM II",
   tjsem_iii: "TJSEM III",
@@ -37,9 +38,9 @@ export default async function Page({ params }) {
 
   return (
     <div className="flex flex-col items-center space-y-4">
-      <DescriptionCard title={title} link={link} />
       <JournalClause journals={data} />
       <JournalTable journals={data} tableCaption={caption[rule]} />
+      <DescriptionCard title={title} link={link} />
     </div>
   );
 }

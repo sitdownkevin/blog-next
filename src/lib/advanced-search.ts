@@ -10,8 +10,9 @@ export async function getData(rule: string): Promise<JournalType[]> {
   return JSON.parse(data)["data"];
 }
 
-
-export async function getDescription(rule: string): Promise<{title: string, link: string}> {
+export async function getDescription(
+  rule: string
+): Promise<{ title: string; link: string }> {
   const fullPath = path.join(dataDir, `${rule}.json`);
   const data = fs.readFileSync(fullPath, "utf8");
   return JSON.parse(data)["source"];
