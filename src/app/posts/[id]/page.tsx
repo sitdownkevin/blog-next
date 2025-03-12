@@ -4,8 +4,6 @@ import {
 } from "@/lib/RenderMarkdown";
 import { PostCard } from "@/components/PostCard";
 
-export const dynamicParams = false;
-
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const markdownContent = await getMarkdownContent(id);
@@ -25,6 +23,7 @@ export default async function Post({ params }) {
   );
 }
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
   const postData = getMarkdownPostsDataJson();
 

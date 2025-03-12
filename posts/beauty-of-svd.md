@@ -1,6 +1,6 @@
 ---
 title: Beauty of SVD
-tags: SCU
+tags: SCU MATH
 create_date: null
 update_date: 2024-11-19
 hidden: true
