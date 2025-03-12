@@ -1,20 +1,46 @@
-import * as CryptoJS from "crypto-js";
-
-function calculateHash(message: string, nonce: number): string {
-  const blockData = message + nonce.toString();
-  return CryptoJS.SHA256(blockData).toString(CryptoJS.enc.Hex);
-}
+import { ValidateParams, ValidateResult } from "@/lib/pow/types";
+import { calculateHash } from "@/lib/pow/utils";
+import path from "path";
+import fs from "fs";
 
 export async function POST(req: Request) {
-  const { message, nonce, hash } = await req.json();
+  const { task, nonce }: ValidateParams = await req.json();
 
-  const calculatedHash = calculateHash(message, nonce);
+  const calculatedHash = calculateHash(task.message, nonce);
+  const isValid = calculatedHash.startsWith("0".repeat(task.difficulty));
 
-  return new Response(
-    JSON.stringify({
-      isValid: (calculatedHash === hash) && hash.startsWith("0".repeat(4)),
-      calculatedHash,
-    }),
-    { headers: { "Content-Type": "application/json" } }
-  );
+
+  try {
+    const filePath = path.join(process.cwd(), "public", "wechat.png");
+    const fileBuffer = await fs.promises.readFile(filePath);
+    const base64Image = fileBuffer.toString("base64");
+
+    const result: ValidateResult = {
+      isValid,
+      data: {
+        task: task,
+        hash: calculatedHash,
+        image: `data:image/png;base64,${base64Image}`,
+      },
+    };
+
+    return new Response(
+      JSON.stringify(result),
+      { headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    return new Response(
+      JSON.stringify({
+        isValid,
+        data: {
+          task: task,
+          hash: calculatedHash,
+          image: `data:image/png;base64,`,
+        },
+      }),
+      { headers: { "Content-Type": "application/json" } }
+    );
+  }
+
+
 }

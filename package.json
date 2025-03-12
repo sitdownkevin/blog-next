@@ -60,7 +60,8 @@
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
     "unified": "^11.0.4",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.13.9",

@@ -1,16 +1,10 @@
-type Task = {
-    message: string;
-    difficulty: number;
-}
+import { Task } from "@/lib/pow/types";
+import { v4 as uuidv4 } from 'uuid';
 
-
-export async function GET() {
-  // 生成随机消息
-  const randomMessage = generateRandomMessage();
-  
+export async function POST() {
   const task: Task = {
-    message: randomMessage,
-    difficulty: 4,
+    message: uuidv4(),
+    difficulty: 5,
   };
 
   return new Response(JSON.stringify(task), {
@@ -18,15 +12,4 @@ export async function GET() {
       "Content-Type": "application/json",
     },
   });
-}
-
-
-// 生成随机消息的函数
-function generateRandomMessage(): string {
-  const timestamp = Date.now().toString();
-  const randomPart = Math.random().toString(36).substring(2, 15);
-  const additionalRandom = Math.random().toString(36).substring(2, 15);
-  const randomMessage = `${timestamp}-${randomPart}-${additionalRandom}`;
-
-  return randomMessage;
 }

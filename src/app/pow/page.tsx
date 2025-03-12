@@ -5,21 +5,15 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
+  CardDescription,
   CardContent,
   CardHeader,
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
 
-type Task = {
-  message: string;
-  difficulty: number;
-};
-
-function calculateHash(data: string, nonce: number): string {
-  const blockData = data + nonce.toString();
-  return CryptoJS.SHA256(blockData).toString(CryptoJS.enc.Hex);
-}
+import { calculateHash } from "@/lib/pow/utils";
+import { Task, ValidateParams, ValidateResult } from "@/lib/pow/types";
 
 async function proofOfWork(
   data: string,
@@ -93,36 +87,135 @@ async function proofOfWork(
   });
 }
 
+async function initiateTask(setTask: (task: Task) => void) {
+  fetch("/api/pow/initiate", {
+    method: "POST",
+  })
+    .then((res) => res.json())
+    .then((data) => setTask(data));
+}
+
+function PoWCard({ task, hash, nonce, result, isMining, handleMine, handleStop }: { task: Task | null, hash: string | null, nonce: number, result: { nonce: number, hash: string } | null, isMining: boolean, handleMine: () => void, handleStop: () => void }) {
+  return (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>PoW</CardTitle>
+        <CardDescription>
+          Proof of Work is a mechanism used in blockchain technology to ensure the integrity of the blockchain.
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="flex flex-col space-y-4">
+        <div className="flex flex-col">
+          <span className="text-sm font-bold">Message</span>
+          <span className="h-4 w-full whitespace-pre-wrap break-all">{task?.message}</span>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-sm font-bold">Difficulty</span>
+          <span className="h-4 w-full whitespace-pre-wrap break-all">{task?.difficulty}</span>
+        </div>
+        <div className="flex flex-col">
+          <span className="text-sm font-bold">Current Nonce</span>
+          <span className="whitespace-pre-wrap break-all">{nonce}</span>
+        </div>
+        {hash && (
+          <div className="flex flex-col">
+            <span className="text-sm font-bold">Current Hash</span>
+            <span className="h-4 w-full whitespace-pre-wrap break-all">{hash}</span>
+          </div>
+        )}
+        {result && (
+          <div className="flex flex-col">
+            <span className="text-sm font-bold">Final Nonce</span>
+            <span className="whitespace-pre-wrap break-all">{result.nonce}</span>
+          </div>
+        )}
+        {result && (
+          <div className="flex flex-col">
+            <span className="text-sm font-bold">Final Hash</span>
+            <span className="whitespace-pre-wrap break-all">{result.hash}</span>
+          </div>
+        )}
+      </CardContent>
+      <CardFooter>
+        <div className="flex space-x-4">
+          <Button onClick={handleMine} disabled={isMining} variant="outline">
+            {isMining ? "Mining..." : "Mine"}
+          </Button>
+          {isMining && (
+            <Button onClick={handleStop} variant="destructive">
+              Stop Mining
+            </Button>
+          )}
+        </div>
+      </CardFooter>
+    </Card>
+  )
+}
+
+
+function ValidateCard({ task, nonce }: { task: Task, nonce: number }) {
+  const [validationResult, setValidationResult] = useState<ValidateResult | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const handleValidate = async () => {
+    setIsLoading(true);
+    const response = await fetch("/api/pow/validate", {
+      method: "POST",
+      body: JSON.stringify({
+        task,
+        nonce,
+      } as ValidateParams),
+    });
+    const data: ValidateResult = await response.json();
+    setValidationResult(data);
+    setIsLoading(false);
+  };
+
+  return (
+    <Card className="w-full">
+      <CardHeader>
+        <CardTitle>Validate</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="flex flex-col space-y-0">
+          <p className="text-sm font-bold">Validation Result</p>
+          <p className="whitespace-pre-wrap break-all">
+            {validationResult?.isValid ? "Valid" : "Invalid"}
+          </p>
+          {validationResult?.data?.image && (
+            <img src={validationResult.data.image} alt="Wechat QR Code" />
+          )}
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button onClick={handleValidate} disabled={isLoading}>{isLoading ? "Validating..." : "Validate"}</Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
 export default function Page() {
   const [result, setResult] = useState<{
     nonce: number;
     hash: string;
   } | null>(null);
 
-  const [hash, setHash] = useState<string>("...");
+  const [hash, setHash] = useState<string | null>(null);
   const [nonce, setNonce] = useState<number>(0);
   const [isMining, setIsMining] = useState<boolean>(false);
-  const [task, setTask] = useState<Task | null>({
-    message: "...",
-    difficulty: 0,
-  });
+  const [task, setTask] = useState<Task | null>(null);
 
-  useEffect(() => {
-    fetch("/api/pow/initiate")
-      .then((res) => res.json())
-      .then((data) => setTask(data));
-  }, []);
-
-  // 使用ref来存储停止信号
   const stopMining = useRef<boolean>(false);
 
-  // 组件卸载时停止挖矿
   useEffect(() => {
+    initiateTask(setTask);
+
     return () => {
       stopMining.current = true;
       console.log("Component unmounted, mining stopped");
     };
   }, []);
+
 
   const handleMine = async () => {
     // 重置停止信号
@@ -138,6 +231,8 @@ export default function Page() {
         stopMining
       );
       if (result) {
+        setHash(result.hash);
+        setNonce(result.nonce);
         setResult(result);
       }
     } finally {
@@ -149,89 +244,10 @@ export default function Page() {
     stopMining.current = true;
   };
 
-  const [validationResult, setValidationResult] = useState<{
-    isValid: boolean;
-    calculatedHash: string;
-  } | null>(null);
-
-  const handleValidate = async () => {
-    const response = await fetch("/api/pow/validate", {
-      method: "POST",
-      body: JSON.stringify({
-        message: task?.message,
-        nonce: result?.nonce,
-        hash: result?.hash,
-      }),
-    });
-    const data = await response.json();
-    setValidationResult(data);
-  };
-
   return (
     <div className="flex flex-col gap-4">
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle>PoW</CardTitle>
-        </CardHeader>
-        <CardContent className="flex flex-col space-y-4">
-          <div className="flex flex-col space-y-0">
-            <p className="text-sm font-bold">Message</p>
-            <p className="whitespace-pre-wrap break-all">{task?.message}</p>
-          </div>
-          <div className="flex flex-col space-y-0">
-            <p className="text-sm font-bold">Difficulty</p>
-            <p className="whitespace-pre-wrap break-all">{task?.difficulty}</p>
-          </div>
-          <div className="flex flex-col space-y-0">
-            <p className="text-sm font-bold">Current Nonce</p>
-            <p className="whitespace-pre-wrap break-all">{nonce}</p>
-          </div>
-          <div className="flex flex-col space-y-0 w-full">
-            <p className="text-sm font-bold">Current Hash</p>
-            <p className="whitespace-pre-wrap break-all">{hash}</p>
-          </div>
-          {result && (
-            <>
-              <div className="flex flex-col space-y-0">
-                <p className="text-sm font-bold">Final Nonce</p>
-                <p className="whitespace-pre-wrap break-all">{result.nonce}</p>
-              </div>
-              <div className="flex flex-col space-y-0">
-                <p className="text-sm font-bold">Final Hash</p>
-                <p className="whitespace-pre-wrap break-all">{result.hash}</p>
-              </div>
-            </>
-          )}
-        </CardContent>
-        <CardFooter>
-          <div className="flex space-x-4">
-            <Button onClick={handleMine} disabled={isMining}>
-              {isMining ? "Mining..." : "Mine"}
-            </Button>
-            {isMining && (
-              <Button onClick={handleStop} variant="destructive">
-                Stop Mining
-              </Button>
-            )}
-          </div>
-        </CardFooter>
-      </Card>
-      <Card className="w-full">
-        <CardHeader>
-          <CardTitle>Validate</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col space-y-0">
-            <p className="text-sm font-bold">Validation Result</p>
-            <p className="whitespace-pre-wrap break-all">
-              {validationResult?.isValid ? "Valid" : "Invalid"}
-            </p>
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Button onClick={handleValidate}>Validate</Button>
-        </CardFooter>
-      </Card>
+      <PoWCard task={task} hash={hash} nonce={nonce} result={result} isMining={isMining} handleMine={handleMine} handleStop={handleStop} />
+      {result && <ValidateCard task={task} nonce={result.nonce} />}
     </div>
   );
 }
