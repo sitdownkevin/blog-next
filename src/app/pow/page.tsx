@@ -1,7 +1,6 @@
 "use client";
 
-import * as CryptoJS from "crypto-js";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, JSX } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -21,7 +20,7 @@ async function proofOfWork(
   setHash: (hash: string) => void,
   nonce: number,
   setNonce: (nonce: number) => void,
-  stopSignal: React.MutableRefObject<boolean>
+  stopSignal: React.RefObject<boolean>
 ): Promise<{
   nonce: number;
   hash: string;
@@ -95,44 +94,86 @@ async function initiateTask(setTask: (task: Task) => void) {
     .then((data) => setTask(data));
 }
 
-function PoWCard({ task, hash, nonce, result, isMining, handleMine, handleStop }: { task: Task | null, hash: string | null, nonce: number, result: { nonce: number, hash: string } | null, isMining: boolean, handleMine: () => void, handleStop: () => void }) {
+async function validateTask(
+  task: Task,
+  nonce: number
+): Promise<ValidateResult> {
+  const response = await fetch("/api/pow/validate", {
+    method: "POST",
+    body: JSON.stringify({
+      task,
+      nonce,
+    } as ValidateParams),
+  });
+  const data: ValidateResult = await response.json();
+  return data;
+}
+
+function PoWCard({
+  task,
+  hash,
+  nonce,
+  result,
+  isMining,
+  handleMine,
+  handleStop,
+}: {
+  task: Task | null;
+  hash: string | null;
+  nonce: number;
+  result: { nonce: number; hash: string } | null;
+  isMining: boolean;
+  handleMine: () => void;
+  handleStop: () => void;
+}): JSX.Element {
   return (
     <Card className="w-full">
       <CardHeader>
         <CardTitle>PoW</CardTitle>
         <CardDescription>
-          Proof of Work is a mechanism used in blockchain technology to ensure the integrity of the blockchain.
+          Proof of Work is a mechanism used in blockchain technology to ensure
+          the integrity of the blockchain.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col space-y-4">
+      <CardContent className="flex flex-col gap-2">
         <div className="flex flex-col">
           <span className="text-sm font-bold">Message</span>
-          <span className="h-4 w-full whitespace-pre-wrap break-all">{task?.message}</span>
+          <span className="w-full whitespace-pre-wrap break-all">
+            {task?.message}
+          </span>
         </div>
         <div className="flex flex-col">
           <span className="text-sm font-bold">Difficulty</span>
-          <span className="h-4 w-full whitespace-pre-wrap break-all">{task?.difficulty}</span>
+          <span className="w-full whitespace-pre-wrap break-all">
+            {task?.difficulty}
+          </span>
         </div>
         <div className="flex flex-col">
           <span className="text-sm font-bold">Current Nonce</span>
-          <span className="whitespace-pre-wrap break-all">{nonce}</span>
+          <span className="w-full whitespace-pre-wrap break-all">{nonce}</span>
         </div>
         {hash && (
           <div className="flex flex-col">
             <span className="text-sm font-bold">Current Hash</span>
-            <span className="h-4 w-full whitespace-pre-wrap break-all">{hash}</span>
+            <span className="w-full whitespace-pre-wrap break-all">
+              {hash}
+            </span>
           </div>
         )}
         {result && (
           <div className="flex flex-col">
             <span className="text-sm font-bold">Final Nonce</span>
-            <span className="whitespace-pre-wrap break-all">{result.nonce}</span>
+            <span className="w-full whitespace-pre-wrap break-all">
+              {result.nonce}
+            </span>
           </div>
         )}
         {result && (
           <div className="flex flex-col">
             <span className="text-sm font-bold">Final Hash</span>
-            <span className="whitespace-pre-wrap break-all">{result.hash}</span>
+            <span className="w-full whitespace-pre-wrap break-all">
+              {result.hash}
+            </span>
           </div>
         )}
       </CardContent>
@@ -149,25 +190,24 @@ function PoWCard({ task, hash, nonce, result, isMining, handleMine, handleStop }
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
 
-
-function ValidateCard({ task, nonce }: { task: Task, nonce: number }) {
-  const [validationResult, setValidationResult] = useState<ValidateResult | null>(null);
+function ValidateCard({
+  task,
+  nonce,
+}: {
+  task: Task;
+  nonce: number;
+}): JSX.Element {
+  const [validationResult, setValidationResult] =
+    useState<ValidateResult | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleValidate = async () => {
     setIsLoading(true);
-    const response = await fetch("/api/pow/validate", {
-      method: "POST",
-      body: JSON.stringify({
-        task,
-        nonce,
-      } as ValidateParams),
-    });
-    const data: ValidateResult = await response.json();
-    setValidationResult(data);
+    const result = await validateTask(task, nonce);
+    setValidationResult(result);
     setIsLoading(false);
   };
 
@@ -177,7 +217,7 @@ function ValidateCard({ task, nonce }: { task: Task, nonce: number }) {
         <CardTitle>Validate</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-col space-y-0">
+        <div className="flex flex-col">
           <p className="text-sm font-bold">Validation Result</p>
           <p className="whitespace-pre-wrap break-all">
             {validationResult?.isValid ? "Valid" : "Invalid"}
@@ -188,10 +228,12 @@ function ValidateCard({ task, nonce }: { task: Task, nonce: number }) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button onClick={handleValidate} disabled={isLoading}>{isLoading ? "Validating..." : "Validate"}</Button>
+        <Button onClick={handleValidate} disabled={isLoading}>
+          {isLoading ? "Validating..." : "Validate"}
+        </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }
 
 export default function Page() {
@@ -215,7 +257,6 @@ export default function Page() {
       console.log("Component unmounted, mining stopped");
     };
   }, []);
-
 
   const handleMine = async () => {
     // 重置停止信号
@@ -246,7 +287,15 @@ export default function Page() {
 
   return (
     <div className="flex flex-col gap-4">
-      <PoWCard task={task} hash={hash} nonce={nonce} result={result} isMining={isMining} handleMine={handleMine} handleStop={handleStop} />
+      <PoWCard
+        task={task}
+        hash={hash}
+        nonce={nonce}
+        result={result}
+        isMining={isMining}
+        handleMine={handleMine}
+        handleStop={handleStop}
+      />
       {result && <ValidateCard task={task} nonce={result.nonce} />}
     </div>
   );
