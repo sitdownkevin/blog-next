@@ -1,5 +1,4 @@
 import { createClient } from "@libsql/client";
-import { CommentToBeSubmittedType } from "@/lib/comments/types";
 
 const turso = createClient({
   url: process.env.TURSO_DATABASE_URL,
@@ -7,20 +6,13 @@ const turso = createClient({
 });
 
 export async function POST(request: Request) {
-  const {
-    user_id,
-    post_id,
-    comment_text,
-    comment_ts,
-  }: CommentToBeSubmittedType = await request.json();
+  const { comment_id }: { comment_id: number } = await request.json();
 
   try {
     const result = await turso.execute({
-      sql: "INSERT INTO COMMENTS (user_id, post_id, comment_text, comment_ts) VALUES (?, ?, ?, ?)",
-      args: [user_id, post_id, comment_text, comment_ts],
+      sql: "DELETE FROM COMMENTS WHERE comment_id = ?",
+      args: [comment_id],
     });
-
-    console.log(result);
 
     return new Response(JSON.stringify(result.rows), {
       status: 200,
@@ -28,7 +20,7 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error("Database query error:", error);
-    return new Response(JSON.stringify({ error: "Failed to fetch users." }), {
+    return new Response(JSON.stringify({ error: "Failed to delete comment." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
