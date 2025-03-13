@@ -1,8 +1,12 @@
 import { CommentType, CommentToBeSubmittedType } from "@/lib/comments/types";
 
-export async function fetchComments({ postId }: { postId: number }): Promise<CommentType[]> {
+export async function fetchComments({ postId }: { postId: string }): Promise<CommentType[]> {
   try {
-    const response = await fetch(`/api/db/get_comments?postId=${postId}`);
+    const response = await fetch(`/api/db/get_comments`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ post_id: postId }),
+    });
     if (!response.ok) throw new Error("Failed to fetch comments");
     return await response.json();
   } catch (error) {

@@ -6,14 +6,14 @@ const turso = createClient({
 });
 
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
+  const { post_id }: { post_id: string } = await request.json();
+
   try {
     const result = await turso.execute({
       sql: "SELECT * FROM COMMENTS WHERE post_id = ?",
-      args: [1],
+      args: [post_id],
     });
-
-    console.log(result);
 
     return new Response(JSON.stringify(result.rows), {
       status: 200,

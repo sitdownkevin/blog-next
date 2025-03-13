@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PostMatterType } from "@/lib/posts/types";
 import { PinTopIcon } from "@radix-ui/react-icons";
 
-function Tag({ tags }: { tags: string[] }) {
+export function Tag({ tags }: { tags: string[] }) {
     const gradients = [
         {from: 'from-blue-100', to: 'to-purple-100', textFrom: 'from-blue-400', textTo: 'to-purple-400'},
         {from: 'from-green-100', to: 'to-teal-100', textFrom: 'from-green-400', textTo: 'to-teal-400'},
@@ -34,7 +34,7 @@ function Tag({ tags }: { tags: string[] }) {
 }
 
 
-function DateTag({ date }: { date: Date }) {
+export function DateTag({ date }: { date: Date }) {
     const pivotDate = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
     if (date.getTime() <= pivotDate.getTime()) {
         return (

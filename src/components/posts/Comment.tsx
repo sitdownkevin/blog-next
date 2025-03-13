@@ -111,7 +111,7 @@ function CommentForm({
   postId,
   onCommentAdded,
 }: {
-  postId: number;
+  postId: string;
   onCommentAdded: (comment: CommentType) => void;
 }) {
   const [commentText, setCommentText] = useState("");
@@ -194,7 +194,7 @@ function CommentForm({
 }
 
 // 主评论组件
-export function Comment({ postId = 1 }: { postId?: number }) {
+export function Comment({ postId = '1' }: { postId?: string }) {
   const [comments, setComments] = useState<CommentType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -223,7 +223,7 @@ export function Comment({ postId = 1 }: { postId?: number }) {
   };
 
   return (
-    <Card className="shadow-md">
+    <Card className="shadow-none border-none">
       <CardHeader className="pb-3">
         <CardTitle>Comments</CardTitle>
       </CardHeader>

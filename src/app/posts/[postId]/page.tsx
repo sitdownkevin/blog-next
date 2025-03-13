@@ -1,7 +1,9 @@
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { getMarkdownContent } from "@/lib/posts/getMarkdownContent";
 import { MarkdownType } from "@/lib/posts/types";
-
+import { Comment } from "@/components/posts/Comment";
+import { Separator } from "@/components/ui/separator";
+import { Tag, DateTag } from "@/components/posts/PostCover";
 
 function MarkdownBody({ markdownHtml }: { markdownHtml: string }) {
     return (
@@ -9,13 +11,11 @@ function MarkdownBody({ markdownHtml }: { markdownHtml: string }) {
     )
 }
 
-
 function Title({ title }: { title: string }) {
     return (
         <h1>{title}</h1>
     )
 }
-
 
 export default async function Post({ params }) {
     const { postId } = await params;
@@ -24,7 +24,13 @@ export default async function Post({ params }) {
     return (
         <div className="w-full flex flex-col gap-4">
             <Title title={markdownContent.title} />
+            <div className="flex flex-row items-center justify-between border-b border-gray-200 pb-2">
+                <Tag tags={markdownContent.tags} />
+                <DateTag date={markdownContent.update_date} />
+            </div>
             <MarkdownBody markdownHtml={markdownContent.content} />
+            <Separator />
+            <Comment postId={postId} />
         </div>
     );
 }

@@ -2,6 +2,7 @@ import { getMatterList } from "@/lib/posts/getMatterList";
 import { PostMatterType } from "@/lib/posts/types";
 import { PostCover } from "@/components/posts/PostCover";
 
+
 export default function Page() {
     const matterList: PostMatterType[] = getMatterList();
     const matterListNotHidden: PostMatterType[] = matterList.filter((matter) => !matter.hidden);
