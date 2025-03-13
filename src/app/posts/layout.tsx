@@ -1,6 +1,6 @@
-
-import Link from 'next/link'
-
+import Link from 'next/link';
+import "katex/dist/katex.min.css";
+import '@/app/posts/github-markdown.css';
 
 export default function PostLayout({ children }) {
     return (
@@ -8,7 +8,7 @@ export default function PostLayout({ children }) {
             <div className="flex flex-col justify-center items-center p-16">
                 <h4 className="transition-transform duration-300 hover:scale-105"><Link href='/posts'>Posts</Link></h4>
             </div>
-            
+
             <div>
                 {children}
             </div>
