@@ -44,11 +44,12 @@ function CommentItem({
           <div className="flex flex-row items-center gap-4">
             <div className="flex-shrink-0">
               <Avatar>
-                <AvatarFallback>{`U${comment.user_id}`}</AvatarFallback>
+                {/* <AvatarFallback>{`U${comment.user_id}`}</AvatarFallback> */}
+                <AvatarFallback>Guest</AvatarFallback>
               </Avatar>
             </div>
             <div className="flex flex-col space-y-0">
-              <p className="font-medium">User #{comment.user_id}</p>
+              <p className="font-medium">Guest</p>
               <p className="text-sm text-muted-foreground">
                 {new Date(comment.comment_ts * 1000).toLocaleString()}
               </p>
@@ -157,7 +158,7 @@ function CommentForm({
     <div className="w-full space-y-4">
       <div className="flex items-start gap-4">
         <Avatar>
-          <AvatarFallback>U1</AvatarFallback>
+          <AvatarFallback>Guest</AvatarFallback>
         </Avatar>
         <div className="flex-1">
           <Textarea
@@ -188,6 +189,29 @@ function CommentForm({
             </>
           )}
         </Button>
+      </div>
+    </div>
+  );
+}
+
+// 添加骨架屏组件
+function CommentSkeleton() {
+  return (
+    <div className="mb-4">
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-row items-center justify-between">
+          <div className="flex flex-row items-center gap-4">
+            <Skeleton className="h-10 w-10 rounded-full" />
+            <div className="flex flex-col space-y-2">
+              <Skeleton className="h-4 w-24" />
+              <Skeleton className="h-3 w-32" />
+            </div>
+          </div>
+        </div>
+        <div className="w-full p-2">
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-3/4 mt-2" />
+        </div>
       </div>
     </div>
   );
@@ -237,6 +261,16 @@ export function Comment({ postId = '1' }: { postId?: string }) {
               重试
             </Button>
           </div>
+        ) : isLoading ? (
+          <>
+            <div className="flex justify-between items-center mb-4">
+              <Skeleton className="h-4 w-24" />
+              <Skeleton className="h-8 w-24" />
+            </div>
+            {[1,].map((_, index) => (
+              <CommentSkeleton key={index} />
+            ))}
+          </>
         ) : (
           <CommentList comments={comments} onRefresh={handleFetchComments} />
         )}
