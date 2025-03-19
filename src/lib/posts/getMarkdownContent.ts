@@ -7,7 +7,6 @@ import { createBasePipeline } from '@/lib/posts/markdownPipeline';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
-
 function addCopyButton(contentHtml: string): string {
     return contentHtml.replace(
         /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/g,
