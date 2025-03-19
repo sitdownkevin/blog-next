@@ -116,9 +116,9 @@ function Footer() {
             <span className="text-gray-500 text-xxs">
               <Link href={"/"}>CV</Link>
             </span>
-            <span className="text-gray-500 text-xxs">
+            {/* <span className="text-gray-500 text-xxs">
               <Link href={"/me/value"}>Values</Link>
-            </span>
+            </span> */}
             <span className="text-gray-500 text-xxs">
               <Link href={"/me/gallery"}>Gallery</Link>
             </span>
@@ -128,9 +128,9 @@ function Footer() {
             <span className="text-gray-500 text-xxs">
               <Link href={"/tools/advanced_search"}>Advanced Search</Link>
             </span>
-            <span className="text-gray-500 text-xxs">
+            {/* <span className="text-gray-500 text-xxs">
               <Link href={"/quickrefs"}>Quick References</Link>
-            </span>
+            </span> */}
             <span className="text-gray-500 text-xxs">
               <Link href={"/pow"}>PoW</Link>
             </span>
