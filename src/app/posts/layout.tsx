@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import "katex/dist/katex.min.css";
-import '@/app/posts/github-markdown.css';
 
 export default function PostLayout({ children }) {
     return (

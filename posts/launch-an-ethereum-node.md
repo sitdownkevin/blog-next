@@ -16,14 +16,14 @@ update_date: 2025-01-21
 
 2. 创建数据文件夹
 
-```shell
+```bash
 sudo mkdir /mnt/lv-2t/ethereum-data
 sudo mkdir /mnt/lv-2t/lighthouse-data
 ```
 
 3. 生成密钥
 
-```shell
+```zsh
 openssl rand -hex 32 | tr -d "\n" > /mnt/lv-2t/ethereum-data/jwtsecret
 ```
 

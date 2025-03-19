@@ -1,12 +1,6 @@
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "prismjs";
-import "prismjs/themes/prism.css";
-import "prismjs/components/prism-yaml";
-import "prismjs/components/prism-sql";
 import "./globals.css";
-// import "./github-markdown.css";
-// import "katex/dist/katex.min.css";
 import Image from "next/image";
 import Link from "next/link";
 import {
