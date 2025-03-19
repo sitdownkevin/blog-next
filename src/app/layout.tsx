@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "@fontsource/maple-mono";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";

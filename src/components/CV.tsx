@@ -25,7 +25,7 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
     <>
       <div className="block md:hidden py-8">
         <div className="flex flex-col space-y-4 justify-center items-center">
-          <h1 className="text-4xl font-mono">{personalInfo.name}</h1>
+          <h1 className="text-4xl font-maple">{personalInfo.name}</h1>
           <div className="flex flex-col space-y-0">
             <span className="text-xs text-gray-500">{personalInfo.email}</span>
             <span className="text-xs text-gray-500">

@@ -20,6 +20,10 @@ module.exports = {
       fontSize: {
         xxs: "10px",
       },
+      fontFamily: {
+        maple: ["Maple Mono", "sans-serif"],
+        mapleItalic: ["Maple Mono Italic", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
