@@ -5,7 +5,7 @@ import DescriptionCard from "@/components/advanced-search/DescriptionCard";
 import { JournalType } from "@/lib/types";
 
 
-const rules = ["utd", "ft", "ais", "tjsem_i", "tjsem_ii"]; // ["utd", "ft", "tjsem_i", "tjsem_ii", "tjsem_iii"]
+const rules = ["utd", "ft", "ais", "tjsem_i", "tjsem_ii", "ustc_som"]; // ["utd", "ft", "tjsem_i", "tjsem_ii", "tjsem_iii"]
 const caption = {
   utd: "UTD24",
   ft: "FT50",
@@ -13,6 +13,7 @@ const caption = {
   tjsem_i: "TJSEM I",
   tjsem_ii: "TJSEM II",
   tjsem_iii: "TJSEM III",
+  ustc_som: "USTC SOM",
 };
 
 export const dynamicParams = false;

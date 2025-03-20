@@ -33,10 +33,16 @@ const components: { title: string; href: string; description: string; alias: str
         href: "/tools/advanced_search/tjsem_ii",
         description: "TJSEM Table II",
         alias: "tjsem_ii",
+    },
+    {
+        title: "USTC SOM",
+        href: "/tools/advanced_search/ustc_som",
+        description: "USTC SOM",
+        alias: "ustc_som",
     }
 ];
 
-export default function ManuBar() {
+export default function Menubar() {
     const pathname = usePathname();
     const currentAlias = pathname.split("/").pop();
 

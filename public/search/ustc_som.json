@@ -1,0 +1,5408 @@
+{
+    "source": {
+        "title": "School of Management, University of Science and Technology of China",
+        "link": "https://som.ustc.edu.cn"
+    },
+    "data": [
+        {
+            "title": "Nature",
+            "subjectArea": "2A1",
+            "printIssn": "0028-0836",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Science",
+            "subjectArea": "2A1",
+            "printIssn": "0036-8075",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Proceedings of the National Academy of Sciences of the United States of America",
+            "subjectArea": "2A1",
+            "printIssn": "0027-8424",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Academy of Management Journal",
+            "subjectArea": "A1",
+            "printIssn": "0001-4273",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Academy of Management Review",
+            "subjectArea": "A1",
+            "printIssn": "0363-7425",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting Review",
+            "subjectArea": "A1",
+            "printIssn": "0001-4826",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Administrative Science Quarterly",
+            "subjectArea": "A1",
+            "printIssn": "0001-8392",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Economic Review",
+            "subjectArea": "A1",
+            "printIssn": "0002-8282",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Statistics",
+            "subjectArea": "A1",
+            "printIssn": "0090-5364",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Biometrika",
+            "subjectArea": "A1",
+            "printIssn": "0006-3444",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Contemporary Accounting Research",
+            "subjectArea": "A1",
+            "printIssn": "0823-9150",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Econometrica",
+            "subjectArea": "A1",
+            "printIssn": "0012-9682",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Systems Research",
+            "subjectArea": "A1",
+            "printIssn": "1047-7047",
+            "onlineIssn": ""
+        },
+        {
+            "title": "INFORMS Journal on Computing",
+            "subjectArea": "A1",
+            "printIssn": "1091-9856",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Accounting and Economics",
+            "subjectArea": "A1",
+            "printIssn": "0165-4101",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Accounting Research",
+            "subjectArea": "A1",
+            "printIssn": "0021-8456",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Consumer Research",
+            "subjectArea": "A1",
+            "printIssn": "0093-5301",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Finance",
+            "subjectArea": "A1",
+            "printIssn": "0022-1082",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial and Quantitative Analysis",
+            "subjectArea": "A1",
+            "printIssn": "0022-1090",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Economics",
+            "subjectArea": "A1",
+            "printIssn": "0304-405X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Business Studies",
+            "subjectArea": "A1",
+            "printIssn": "0047-2506",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Marketing",
+            "subjectArea": "A1",
+            "printIssn": "0022-2429",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Marketing Research",
+            "subjectArea": "A1",
+            "printIssn": "0022-2437",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Operations Management",
+            "subjectArea": "A1",
+            "printIssn": "0272-6963",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Political Economy",
+            "subjectArea": "A1",
+            "printIssn": "0022-3808",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the American Statistical Association",
+            "subjectArea": "A1",
+            "printIssn": "0162-1459",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Royal Statistical Society, Series B (Statistical Methodology)",
+            "subjectArea": "A1",
+            "printIssn": "1369-7412",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management Science",
+            "subjectArea": "A1",
+            "printIssn": "0025-1909",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Manufacturing and Service Operations Management",
+            "subjectArea": "A1",
+            "printIssn": "1523-4614",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Marketing Science",
+            "subjectArea": "A1",
+            "printIssn": "0732-2399",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematical Programming",
+            "subjectArea": "A1",
+            "printIssn": "0025-5610",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematics of Operations Research",
+            "subjectArea": "A1",
+            "printIssn": "0364-765X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "MIS Quarterly",
+            "subjectArea": "A1",
+            "printIssn": "0276-7783",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Operations Research",
+            "subjectArea": "A1",
+            "printIssn": "0030-364X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organization Science",
+            "subjectArea": "A1",
+            "printIssn": "1047-7039",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Production and Operations Management",
+            "subjectArea": "A1",
+            "printIssn": "1059-1478",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quarterly Journal of Economics",
+            "subjectArea": "A1",
+            "printIssn": "0033-5533",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Accounting Studies",
+            "subjectArea": "A1",
+            "printIssn": "1380-6653",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Economic Studies",
+            "subjectArea": "A1",
+            "printIssn": "0034-6527",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Financial Studies",
+            "subjectArea": "A1",
+            "printIssn": "0893-9454",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Strategic Management Journal",
+            "subjectArea": "A1",
+            "printIssn": "0143-2095",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Science",
+            "subjectArea": "A1",
+            "printIssn": "0041-1655",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting, Organizations and Society",
+            "subjectArea": "A2",
+            "printIssn": "0361-3682",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Applied Statistics",
+            "subjectArea": "A2",
+            "printIssn": "1932-6157",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Probability",
+            "subjectArea": "A2",
+            "printIssn": "0091-1798",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Auditing: A Journal of Practice & Theory",
+            "subjectArea": "A2",
+            "printIssn": "0278-0380",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Biometrics",
+            "subjectArea": "A2",
+            "printIssn": "0006-341X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Journal",
+            "subjectArea": "A2",
+            "printIssn": "0013-0133",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Entrepreneurship, Theory and Practice",
+            "subjectArea": "A2",
+            "printIssn": "1042-2587",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Harvard Business Review",
+            "subjectArea": "A2",
+            "printIssn": "0017-8012",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Relations",
+            "subjectArea": "A2",
+            "printIssn": "0018-7267",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Resource Management (USA)",
+            "subjectArea": "A2",
+            "printIssn": "0090-4848",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Economic Review",
+            "subjectArea": "A2",
+            "printIssn": "0020-6598",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Applied Psychology",
+            "subjectArea": "A2",
+            "printIssn": "0021-9010",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Banking and Finance",
+            "subjectArea": "A2",
+            "printIssn": "0378-4266",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business and Economic Statistics",
+            "subjectArea": "A2",
+            "printIssn": "0735-0015",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business Ethics",
+            "subjectArea": "A2",
+            "printIssn": "0167-4544",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business Venturing",
+            "subjectArea": "A2",
+            "printIssn": "0883-9026",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Computational and Graphical Statistics",
+            "subjectArea": "A2",
+            "printIssn": "1061-8600",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Consumer Psychology",
+            "subjectArea": "A2",
+            "printIssn": "1057-7408",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Corporate Finance",
+            "subjectArea": "A2",
+            "printIssn": "0929-1199",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Development Economics",
+            "subjectArea": "A2",
+            "printIssn": "0304-3878",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Econometrics",
+            "subjectArea": "A2",
+            "printIssn": "0304-4076",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Theory",
+            "subjectArea": "A2",
+            "printIssn": "0022-0531",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Empirical Finance",
+            "subjectArea": "A2",
+            "printIssn": "0927-5398",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Markets",
+            "subjectArea": "A2",
+            "printIssn": "1386-4181",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Economics",
+            "subjectArea": "A2",
+            "printIssn": "0022-1996",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Labor Economics",
+            "subjectArea": "A2",
+            "printIssn": "0734-306X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Machine Learning Research",
+            "subjectArea": "A2",
+            "printIssn": "1532-4435",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management",
+            "subjectArea": "A2",
+            "printIssn": "0149-2063",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management Information Systems",
+            "subjectArea": "A2",
+            "printIssn": "0742-1222",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management Studies",
+            "subjectArea": "A2",
+            "printIssn": "0022-2380",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Monetary Economics",
+            "subjectArea": "A2",
+            "printIssn": "0304-3932",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Public Economics",
+            "subjectArea": "A2",
+            "printIssn": "0047-2727",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Academy of Marketing Science",
+            "subjectArea": "A2",
+            "printIssn": "0092-0703",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematical Finance",
+            "subjectArea": "A2",
+            "printIssn": "0960-1627",
+            "onlineIssn": ""
+        },
+        {
+            "title": "MIT Sloan Management Review",
+            "subjectArea": "A2",
+            "printIssn": "1532-9194",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organization Studies",
+            "subjectArea": "A2",
+            "printIssn": "0170-8406",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organizational Behavior and Human Decision Processes",
+            "subjectArea": "A2",
+            "printIssn": "0749-5978",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Research Policy",
+            "subjectArea": "A2",
+            "printIssn": "0048-7333",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Economics and Statistics",
+            "subjectArea": "A2",
+            "printIssn": "0034-6535",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Finance",
+            "subjectArea": "A2",
+            "printIssn": "1572-3097",
+            "onlineIssn": ""
+        },
+        {
+            "title": "SIAM Journal on Optimization",
+            "subjectArea": "A2",
+            "printIssn": "1052-6234",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Strategic Entrepreneurship Journal",
+            "subjectArea": "A2",
+            "printIssn": "1932-4391",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part B: Methodological",
+            "subjectArea": "A2",
+            "printIssn": "0191-2615",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Academy of Management Annals",
+            "subjectArea": "A3",
+            "printIssn": "1941-6520",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Academy of Management Learning and Education",
+            "subjectArea": "A3",
+            "printIssn": "1537-260X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Database Systems",
+            "subjectArea": "A3",
+            "printIssn": "0362-5915",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Economic Journal: Applied Economics",
+            "subjectArea": "A3",
+            "printIssn": "1945-7782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Economic Journal: Economic Policy",
+            "subjectArea": "A3",
+            "printIssn": "1945-7731",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Journal of Agricultural Economics",
+            "subjectArea": "A3",
+            "printIssn": "0002-9092",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Applied Probability",
+            "subjectArea": "A3",
+            "printIssn": "1050-5164",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Tourism Research",
+            "subjectArea": "A3",
+            "printIssn": "0160-7383",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annual Review of Psychology",
+            "subjectArea": "A3",
+            "printIssn": "0066-4308",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Automation in Construction",
+            "subjectArea": "A3",
+            "printIssn": "0926-5805",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business Ethics Quarterly",
+            "subjectArea": "A3",
+            "printIssn": "1052-150X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Decision Support Systems",
+            "subjectArea": "A3",
+            "printIssn": "0167-9236",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Ecological Economics",
+            "subjectArea": "A3",
+            "printIssn": "0921-8009",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Econometric Theory",
+            "subjectArea": "A3",
+            "printIssn": "0266-4666",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Geography",
+            "subjectArea": "A3",
+            "printIssn": "0013-0095",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic History Review",
+            "subjectArea": "A3",
+            "printIssn": "0013-0117",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Energy Journal",
+            "subjectArea": "A3",
+            "printIssn": "0195-6574",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environmental & Resource Economics",
+            "subjectArea": "A3",
+            "printIssn": "0924-6460",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Operational Research",
+            "subjectArea": "A3",
+            "printIssn": "0377-2217",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Experimental Economics",
+            "subjectArea": "A3",
+            "printIssn": "1386-4157",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Games and Economic Behavior",
+            "subjectArea": "A3",
+            "printIssn": "0899-8256",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Global Environmental Change-Human and Policy Dimensions",
+            "subjectArea": "A3",
+            "printIssn": "0959-3780",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Governance",
+            "subjectArea": "A3",
+            "printIssn": "0952-1895",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Health Affairs",
+            "subjectArea": "A3",
+            "printIssn": "0278-2715",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Health Economics",
+            "subjectArea": "A3",
+            "printIssn": "1057-9230",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Health Services Research",
+            "subjectArea": "A3",
+            "printIssn": "0017-9124",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Resource Management Journal (UK)",
+            "subjectArea": "A3",
+            "printIssn": "0954-5395",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Computers",
+            "subjectArea": "A3",
+            "printIssn": "0018-9340",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Engineering Management",
+            "subjectArea": "A3",
+            "printIssn": "0018-9391",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Human-Machine Systems (IEEE Transactions on Systems, Man, and Cybernetics - Part C)",
+            "subjectArea": "A3",
+            "printIssn": "2168-2291",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on System, Man and Cybernetics: Systems (IEEE Transactions on Systems, Man, and Cybernetics - Part A)",
+            "subjectArea": "A3",
+            "printIssn": "2168-2216",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IISE Transactions (IIE Transactions)",
+            "subjectArea": "A3",
+            "printIssn": "0740-817X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial Relations: A Journal of Economy and Society",
+            "subjectArea": "A3",
+            "printIssn": "0019-8676",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Geography",
+            "subjectArea": "A3",
+            "printIssn": "1468-2702",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic History",
+            "subjectArea": "A3",
+            "printIssn": "0022-0507",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Literature",
+            "subjectArea": "A3",
+            "printIssn": "0022-0515",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Perspectives",
+            "subjectArea": "A3",
+            "printIssn": "0895-3309",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Environmental Economics and Management",
+            "subjectArea": "A3",
+            "printIssn": "0095-0696",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Intermediation",
+            "subjectArea": "A3",
+            "printIssn": "1042-9573",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Health Economics",
+            "subjectArea": "A3",
+            "printIssn": "0167-6296",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Human Resources",
+            "subjectArea": "A3",
+            "printIssn": "0022-166X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Organizational Behavior",
+            "subjectArea": "A3",
+            "printIssn": "0894-3796",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Personality and Social Psychology",
+            "subjectArea": "A3",
+            "printIssn": "0022-3514",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Policy Analysis and Management",
+            "subjectArea": "A3",
+            "printIssn": "0276-8739",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Product Innovation Management",
+            "subjectArea": "A3",
+            "printIssn": "0737-6782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Public Administration Research and Theory",
+            "subjectArea": "A3",
+            "printIssn": "1053-1858",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Risk and Uncertainty",
+            "subjectArea": "A3",
+            "printIssn": "0895-5646",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Association for Information Science and Technology (Journal of the American Society for Information Science and Technology)2330-1635",
+            "subjectArea": "A3",
+            "printIssn": "2330-1635",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Association for Information Systems",
+            "subjectArea": "A3",
+            "printIssn": "1536-9323",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Association of Environmental and Resource Economists",
+            "subjectArea": "A3",
+            "printIssn": "2333-5955",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the European Economic Association",
+            "subjectArea": "A3",
+            "printIssn": "1542-4766",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Royal Statistical Society, Series A (Statistics in Society)",
+            "subjectArea": "A3",
+            "printIssn": "0964-1998",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Royal Statistical Society: Series C (Applied Statistics)",
+            "subjectArea": "A3",
+            "printIssn": "0035-9254",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Travel Research",
+            "subjectArea": "A3",
+            "printIssn": "0047-2875",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of World Business",
+            "subjectArea": "A3",
+            "printIssn": "1090-9516",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Leadership Quarterly",
+            "subjectArea": "A3",
+            "printIssn": "1048-9843",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Long Range Planning",
+            "subjectArea": "A3",
+            "printIssn": "0024-6301",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management International Review",
+            "subjectArea": "A3",
+            "printIssn": "0938-8249",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organizational Research Methods",
+            "subjectArea": "A3",
+            "printIssn": "1094-4281",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Personnel Psychology",
+            "subjectArea": "A3",
+            "printIssn": "0031-5826",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Probability Theory and Related Fields",
+            "subjectArea": "A3",
+            "printIssn": "0178-8051",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Psychological Bulletin",
+            "subjectArea": "A3",
+            "printIssn": "0033-2909",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Psychological Science",
+            "subjectArea": "A3",
+            "printIssn": "0956-7976",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Administration Review",
+            "subjectArea": "A3",
+            "printIssn": "0033-3352",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Management Review",
+            "subjectArea": "A3",
+            "printIssn": "1471-9037",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quantitative Economics",
+            "subjectArea": "A3",
+            "printIssn": "1759-7323",
+            "onlineIssn": ""
+        },
+        {
+            "title": "RAND Journal of Economics",
+            "subjectArea": "A3",
+            "printIssn": "0741-6261",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Reliability Engineering & System Safety",
+            "subjectArea": "A3",
+            "printIssn": "0951-8320",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Risk Analysis",
+            "subjectArea": "A3",
+            "printIssn": "0272-4332",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Theoretical Economics",
+            "subjectArea": "A3",
+            "printIssn": "1933-6837",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourism Management",
+            "subjectArea": "A3",
+            "printIssn": "0261-5177",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part A: Policy and Practice",
+            "subjectArea": "A3",
+            "printIssn": "0965-8564",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part C: Emerging Technologies",
+            "subjectArea": "A3",
+            "printIssn": "0968-090X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part E: Logistics and Transportation Review",
+            "subjectArea": "A3",
+            "printIssn": "1366-5545",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Abacus",
+            "subjectArea": "B1",
+            "printIssn": "0001-3072",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Academy of Management Perspectives",
+            "subjectArea": "B1",
+            "printIssn": "1558-9080",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accident Analysis and Prevention",
+            "subjectArea": "B1",
+            "printIssn": "0001-4575",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting and Business Research",
+            "subjectArea": "B1",
+            "printIssn": "0001-4788",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting Horizons",
+            "subjectArea": "B1",
+            "printIssn": "0888-7993",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Computing Surveys",
+            "subjectArea": "B1",
+            "printIssn": "0360-0300",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Computer-Human Interaction",
+            "subjectArea": "B1",
+            "printIssn": "1073-0516",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Advances in Applied Probability",
+            "subjectArea": "B1",
+            "printIssn": "0001-8678",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Economic Journal: Macroeconomics",
+            "subjectArea": "B1",
+            "printIssn": "1945-7707",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Economic Journal: Microeconomics",
+            "subjectArea": "B1",
+            "printIssn": "1945-7669",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Journal of Public Health",
+            "subjectArea": "B1",
+            "printIssn": "0090-0036",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annales\u00a0de\u00a0l'Institut\u00a0Henri\u00a0Poincare",
+            "subjectArea": "B1",
+            "printIssn": "0246-0203",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of Operations Research",
+            "subjectArea": "B1",
+            "printIssn": "0254-5330",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annals of the Institute of\u00a0Statistical\u00a0Mathematics",
+            "subjectArea": "B1",
+            "printIssn": "0020-3157",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Artificial Intelligence",
+            "subjectArea": "B1",
+            "printIssn": "0004-3702",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia-Pacific Journal of Management",
+            "subjectArea": "B1",
+            "printIssn": "0217-4561",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Bernoulli",
+            "subjectArea": "B1",
+            "printIssn": "1350-7265",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Biostatistics",
+            "subjectArea": "B1",
+            "printIssn": "1465-4644",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Accounting Review",
+            "subjectArea": "B1",
+            "printIssn": "0890-8389",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Industrial Relations",
+            "subjectArea": "B1",
+            "printIssn": "0007-1080",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Management",
+            "subjectArea": "B1",
+            "printIssn": "1045-3172",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Brookings Papers on Economic Activity",
+            "subjectArea": "B1",
+            "printIssn": "0007-2303",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business History Review",
+            "subjectArea": "B1",
+            "printIssn": "0007-6805",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business Strategy & the Environment",
+            "subjectArea": "B1",
+            "printIssn": "0964-4733",
+            "onlineIssn": ""
+        },
+        {
+            "title": "California Management Review",
+            "subjectArea": "B1",
+            "printIssn": "0008-1256",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Cambridge Journal of Economics",
+            "subjectArea": "B1",
+            "printIssn": "0309-166X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Canadian Journal of Economics",
+            "subjectArea": "B1",
+            "printIssn": "0008-4085",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Communications of the ACM",
+            "subjectArea": "B1",
+            "printIssn": "0001-0782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computational Statistics and Data Analysis",
+            "subjectArea": "B1",
+            "printIssn": "0167-9473",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computers and Operations Research",
+            "subjectArea": "B1",
+            "printIssn": "0305-0548",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Current Directions in Psychological Science",
+            "subjectArea": "B1",
+            "printIssn": "0963-7214",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Decision Analysis",
+            "subjectArea": "B1",
+            "printIssn": "1545-8490",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Decision Sciences",
+            "subjectArea": "B1",
+            "printIssn": "0011-7315",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Inquiry",
+            "subjectArea": "B1",
+            "printIssn": "0095-2583",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Policy",
+            "subjectArea": "B1",
+            "printIssn": "0266-4658",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Theory",
+            "subjectArea": "B1",
+            "printIssn": "0938-2259",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economica",
+            "subjectArea": "B1",
+            "printIssn": "0013-0427",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economics Letters",
+            "subjectArea": "B1",
+            "printIssn": "0165-1765",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Electronic Journal of Probability",
+            "subjectArea": "B1",
+            "printIssn": "1083-6489",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Energy Economics",
+            "subjectArea": "B1",
+            "printIssn": "0140-9883",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environment and Planning A",
+            "subjectArea": "B1",
+            "printIssn": "0308-518X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environment and Planning D: society and space",
+            "subjectArea": "B1",
+            "printIssn": "0263-7758",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environmental Science & Policy",
+            "subjectArea": "B1",
+            "printIssn": "1462-9011",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Accounting Review",
+            "subjectArea": "B1",
+            "printIssn": "0963-8180",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Economic Review",
+            "subjectArea": "B1",
+            "printIssn": "0014-2921",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Financial Management",
+            "subjectArea": "B1",
+            "printIssn": "1354-7798",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Information Systems",
+            "subjectArea": "B1",
+            "printIssn": "0960-085X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Marketing",
+            "subjectArea": "B1",
+            "printIssn": "0309-0566",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Financial Analysts Journal",
+            "subjectArea": "B1",
+            "printIssn": "0015-198X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Financial Management (USA)",
+            "subjectArea": "B1",
+            "printIssn": "0046-3892",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Foreign Affairs",
+            "subjectArea": "B1",
+            "printIssn": "0015-7120",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Gender & Society",
+            "subjectArea": "B1",
+            "printIssn": "0891-2432",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Group and Organization Management",
+            "subjectArea": "B1",
+            "printIssn": "1059-6011",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Automatic Control",
+            "subjectArea": "B1",
+            "printIssn": "0018-9286",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Knowledge and Data Engineering",
+            "subjectArea": "B1",
+            "printIssn": "1041-4347",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Software Engineering",
+            "subjectArea": "B1",
+            "printIssn": "0098-5589",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial and Corporate Change",
+            "subjectArea": "B1",
+            "printIssn": "0960-6491",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial and Labor Relations Review",
+            "subjectArea": "B1",
+            "printIssn": "0019-7939",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial Marketing Management",
+            "subjectArea": "B1",
+            "printIssn": "0019-8501",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information and Management",
+            "subjectArea": "B1",
+            "printIssn": "0378-7206",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information and Organization",
+            "subjectArea": "B1",
+            "printIssn": "1471-7727",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Society (TIS)",
+            "subjectArea": "B1",
+            "printIssn": "0197-2243",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Systems Journal",
+            "subjectArea": "B1",
+            "printIssn": "1350-1917",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Technology and People",
+            "subjectArea": "B1",
+            "printIssn": "0959-3845",
+            "onlineIssn": ""
+        },
+        {
+            "title": "INFORMS Journal on Applied Analytics (Interfaces)",
+            "subjectArea": "B1",
+            "printIssn": "0092-2102",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Insurance: Mathematics and Economics",
+            "subjectArea": "B1",
+            "printIssn": "0167-6687",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Business Review",
+            "subjectArea": "B1",
+            "printIssn": "0969-5931",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Electronic Commerce",
+            "subjectArea": "B1",
+            "printIssn": "1086-4415",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Hospitality Management",
+            "subjectArea": "B1",
+            "printIssn": "0278-4319",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Human Resource Management",
+            "subjectArea": "B1",
+            "printIssn": "0958-5192",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Industrial Organization",
+            "subjectArea": "B1",
+            "printIssn": "0167-7187",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Information Management",
+            "subjectArea": "B1",
+            "printIssn": "0268-4012",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Management Reviews",
+            "subjectArea": "B1",
+            "printIssn": "1460-8545",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Operations and Production Management",
+            "subjectArea": "B1",
+            "printIssn": "0144-3577",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Production Economics",
+            "subjectArea": "B1",
+            "printIssn": "0925-5273",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Production Research",
+            "subjectArea": "B1",
+            "printIssn": "0020-7543",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Research in Marketing",
+            "subjectArea": "B1",
+            "printIssn": "0167-8116",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Marketing Review",
+            "subjectArea": "B1",
+            "printIssn": "0265-1335",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Accounting and Public Policy",
+            "subjectArea": "B1",
+            "printIssn": "0278-4254",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Advertising",
+            "subjectArea": "B1",
+            "printIssn": "0091-3367",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Advertising Research",
+            "subjectArea": "B1",
+            "printIssn": "0021-8499",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Agricultural Economics",
+            "subjectArea": "B1",
+            "printIssn": "0021-857X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Applied Econometrics",
+            "subjectArea": "B1",
+            "printIssn": "0883-7252",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Applied Probability",
+            "subjectArea": "B1",
+            "printIssn": "0021-9002",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business Finance and Accounting",
+            "subjectArea": "B1",
+            "printIssn": "0306-686X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business Research",
+            "subjectArea": "B1",
+            "printIssn": "0148-2963",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Construction Engineering and Management",
+            "subjectArea": "B1",
+            "printIssn": "0733-9364",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Behavior and Organization",
+            "subjectArea": "B1",
+            "printIssn": "0167-2681",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Dynamics and Control",
+            "subjectArea": "B1",
+            "printIssn": "0165-1889",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Growth",
+            "subjectArea": "B1",
+            "printIssn": "1381-4338",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Environmental Management",
+            "subjectArea": "B1",
+            "printIssn": "0301-4797",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Experimental Psychology Applied",
+            "subjectArea": "B1",
+            "printIssn": "1076-898X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Experimental Social Psychology",
+            "subjectArea": "B1",
+            "printIssn": "0022-1031",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Econometrics",
+            "subjectArea": "B1",
+            "printIssn": "1479-8409",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Futures Markets",
+            "subjectArea": "B1",
+            "printIssn": "0270-7314",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Information Technology",
+            "subjectArea": "B1",
+            "printIssn": "0268-3962",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Informetrics",
+            "subjectArea": "B1",
+            "printIssn": "1751-1577",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Interactive Marketing",
+            "subjectArea": "B1",
+            "printIssn": "1094-9968",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Management",
+            "subjectArea": "B1",
+            "printIssn": "1075-4253",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Marketing",
+            "subjectArea": "B1",
+            "printIssn": "1069-031X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Money and Finance",
+            "subjectArea": "B1",
+            "printIssn": "0261-5606",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Law and Economics",
+            "subjectArea": "B1",
+            "printIssn": "0022-2186",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Law, Economics and Organization",
+            "subjectArea": "B1",
+            "printIssn": "8756-6222",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Mathematical Economics",
+            "subjectArea": "B1",
+            "printIssn": "0304-4068",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Money, Credit and Banking",
+            "subjectArea": "B1",
+            "printIssn": "0022-2879",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Multivariate Analysis",
+            "subjectArea": "B1",
+            "printIssn": "0047-259X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Occupational and Organizational Psychology",
+            "subjectArea": "B1",
+            "printIssn": "0963-1798",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Occupational Health Psychology",
+            "subjectArea": "B1",
+            "printIssn": "1076-8998",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Regional Science",
+            "subjectArea": "B1",
+            "printIssn": "0022-4146",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Retailing",
+            "subjectArea": "B1",
+            "printIssn": "0022-4359",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Risk & Insurance",
+            "subjectArea": "B1",
+            "printIssn": "0022-4367",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Rural Studies",
+            "subjectArea": "B1",
+            "printIssn": "0743-0167",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Scheduling",
+            "subjectArea": "B1",
+            "printIssn": "1094-6136",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Service Research",
+            "subjectArea": "B1",
+            "printIssn": "1094-6705",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Statistical Planning and Inference",
+            "subjectArea": "B1",
+            "printIssn": "0378-3758",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Strategic Information Systems",
+            "subjectArea": "B1",
+            "printIssn": "0963-8687",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Sustainable Tourism",
+            "subjectArea": "B1",
+            "printIssn": "0966-9582",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Operational Research Society",
+            "subjectArea": "B1",
+            "printIssn": "0160-5682",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Theoretical Probability",
+            "subjectArea": "B1",
+            "printIssn": "0894-9840",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Time Series Analysis",
+            "subjectArea": "B1",
+            "printIssn": "0143-9782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Urban Economics",
+            "subjectArea": "B1",
+            "printIssn": "0094-1190",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Vocational Behavior",
+            "subjectArea": "B1",
+            "printIssn": "0001-8791",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management Accounting Research",
+            "subjectArea": "B1",
+            "printIssn": "1044-5005",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management Learning",
+            "subjectArea": "B1",
+            "printIssn": "1350-5076",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Marketing Letters",
+            "subjectArea": "B1",
+            "printIssn": "0923-0645",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Marketing Theory",
+            "subjectArea": "B1",
+            "printIssn": "1470-5931",
+            "onlineIssn": ""
+        },
+        {
+            "title": "New Technology, Work and Employment",
+            "subjectArea": "B1",
+            "printIssn": "0268-1072",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Omega: The International Journal of Management Science",
+            "subjectArea": "B1",
+            "printIssn": "0305-0483",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organization",
+            "subjectArea": "B1",
+            "printIssn": "1350-5084",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Personality and Social Psychology Bulletin",
+            "subjectArea": "B1",
+            "printIssn": "0146-1672",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Psychology and Marketing",
+            "subjectArea": "B1",
+            "printIssn": "0742-6046",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Administration",
+            "subjectArea": "B1",
+            "printIssn": "0033-3298",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Opinion Quarterly",
+            "subjectArea": "B1",
+            "printIssn": "0033-362X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Regional Studies",
+            "subjectArea": "B1",
+            "printIssn": "0034-3404",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Economic Dynamics",
+            "subjectArea": "B1",
+            "printIssn": "1094-2025",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scandinavian Journal of Statistics",
+            "subjectArea": "B1",
+            "printIssn": "0303-6898",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Social Science & Medicine",
+            "subjectArea": "B1",
+            "printIssn": "0277-9536",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Sociology of Health & Illness",
+            "subjectArea": "B1",
+            "printIssn": "0141-9889",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistica Sinica",
+            "subjectArea": "B1",
+            "printIssn": "1017-0405",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Science",
+            "subjectArea": "B1",
+            "printIssn": "0883-4237",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics & Computing",
+            "subjectArea": "B1",
+            "printIssn": "0960-3174",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics in Medicine",
+            "subjectArea": "B1",
+            "printIssn": "0277-6715",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastic Processes and their Applications",
+            "subjectArea": "B1",
+            "printIssn": "0304-4149",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Technometrics",
+            "subjectArea": "B1",
+            "printIssn": "0040-1706",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Technovation",
+            "subjectArea": "B1",
+            "printIssn": "0166-4972",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Theory of Probability & Its Applications",
+            "subjectArea": "B1",
+            "printIssn": "0040-585X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part D: Transport & Environment",
+            "subjectArea": "B1",
+            "printIssn": "1361-9209",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Urban Studies",
+            "subjectArea": "B1",
+            "printIssn": "0042-0980",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Work & Stress",
+            "subjectArea": "B1",
+            "printIssn": "0267-8373",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Work, Employment and Society",
+            "subjectArea": "B1",
+            "printIssn": "0950-0170",
+            "onlineIssn": ""
+        },
+        {
+            "title": "World Bank Economic Review",
+            "subjectArea": "B1",
+            "printIssn": "0258-6770",
+            "onlineIssn": ""
+        },
+        {
+            "title": "World Development",
+            "subjectArea": "B1",
+            "printIssn": "0305-750X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting and Finance",
+            "subjectArea": "B2",
+            "printIssn": "0810-5391",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting, Auditing & Accountability Journal",
+            "subjectArea": "B2",
+            "printIssn": "0951-3574",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Information Systems",
+            "subjectArea": "B2",
+            "printIssn": "1046-8188",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Knowledge Discovery from Data",
+            "subjectArea": "B2",
+            "printIssn": "1556-4681",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Modeling and Computer Simulation",
+            "subjectArea": "B2",
+            "printIssn": "1049-3301",
+            "onlineIssn": ""
+        },
+        {
+            "title": "ACM Transactions on Software Engineering and Methodology",
+            "subjectArea": "B2",
+            "printIssn": "1049-331X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Administration & Society",
+            "subjectArea": "B2",
+            "printIssn": "0095-3997",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Agricultural Economics",
+            "subjectArea": "B2",
+            "printIssn": "0169-5150",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Business Law Journal",
+            "subjectArea": "B2",
+            "printIssn": "0002-7766\t",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Journal of Health Economics",
+            "subjectArea": "B2",
+            "printIssn": "2332-3493",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Review of Public Administration",
+            "subjectArea": "B2",
+            "printIssn": "0275-0740",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annual Review of Organizational Psychology and Organizational Behavior",
+            "subjectArea": "B2",
+            "printIssn": "2327-0608",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Annual Review of Statistics and Its Application",
+            "subjectArea": "B2",
+            "printIssn": "2326-8298",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Applied Psychology",
+            "subjectArea": "B2",
+            "printIssn": "0269-994X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Astin Bulletin",
+            "subjectArea": "B2",
+            "printIssn": "0515-0361",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Australian and New Zealand Journal of Statistics",
+            "subjectArea": "B2",
+            "printIssn": "1369-1473",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Australian Journal of International Affairs",
+            "subjectArea": "B2",
+            "printIssn": "1035-7718",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Bioinformatics",
+            "subjectArea": "B2",
+            "printIssn": "1367-4803",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Educational Technology",
+            "subjectArea": "B2",
+            "printIssn": "0007-1013",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Psychology",
+            "subjectArea": "B2",
+            "printIssn": "0007-1269",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Social Psychology",
+            "subjectArea": "B2",
+            "printIssn": "0144-6665",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business & Society",
+            "subjectArea": "B2",
+            "printIssn": "0007-6503",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business History",
+            "subjectArea": "B2",
+            "printIssn": "0007-6791",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Canadian Journal of Statistics",
+            "subjectArea": "B2",
+            "printIssn": "0319-5724",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Chemometrics and Intelligent Laboratory Systems",
+            "subjectArea": "B2",
+            "printIssn": "0169-7439",
+            "onlineIssn": ""
+        },
+        {
+            "title": "China Agricultural Economic Review",
+            "subjectArea": "B2",
+            "printIssn": "1756-137X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "China Economic Review",
+            "subjectArea": "B2",
+            "printIssn": "1043-951X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "CIRP Annals-Manufacturing Technology",
+            "subjectArea": "B2",
+            "printIssn": "1726-0604",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Climate Policy",
+            "subjectArea": "B2",
+            "printIssn": "1469-3062",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Communications in Statistics-Simulation and Computation",
+            "subjectArea": "B2",
+            "printIssn": "0361-0918",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Communications in Statistics-Theory and Methods",
+            "subjectArea": "B2",
+            "printIssn": "0361-0926",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computers & Industrial Engineering",
+            "subjectArea": "B2",
+            "printIssn": "0360-8352",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computers in Human Behavior",
+            "subjectArea": "B2",
+            "printIssn": "0747-5632",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Cornell Hospitality Quarterly",
+            "subjectArea": "B2",
+            "printIssn": "1938-9663",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Corporate Governance: An International Review",
+            "subjectArea": "B2",
+            "printIssn": "0964-8410",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Corporate Social Responsibility and Environmental Management",
+            "subjectArea": "B2",
+            "printIssn": "1535-3958",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Critical Perspectives on Accounting",
+            "subjectArea": "B2",
+            "printIssn": "1045-2354",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Current Issues in Tourism",
+            "subjectArea": "B2",
+            "printIssn": "1368-3500",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Data & Knowledge Engineering",
+            "subjectArea": "B2",
+            "printIssn": "0169-023X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Data Base for Advances in Information Systems",
+            "subjectArea": "B2",
+            "printIssn": "1532-0936",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Demography",
+            "subjectArea": "B2",
+            "printIssn": "0070-3370",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Disasters",
+            "subjectArea": "B2",
+            "printIssn": "0361-3666",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Econometric Reviews",
+            "subjectArea": "B2",
+            "printIssn": "0747-4938",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Econometrics Journal",
+            "subjectArea": "B2",
+            "printIssn": "1368-4221",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic and Industrial Democracy",
+            "subjectArea": "B2",
+            "printIssn": "0143-831X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Development and Cultural Change",
+            "subjectArea": "B2",
+            "printIssn": "0013-0079",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic Systems Research",
+            "subjectArea": "B2",
+            "printIssn": "0953-5314",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economy & Society",
+            "subjectArea": "B2",
+            "printIssn": "0308-5147",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Employee Relations",
+            "subjectArea": "B2",
+            "printIssn": "0142-5455",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Energy Policy",
+            "subjectArea": "B2",
+            "printIssn": "0301-4215",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Enterprise and Society",
+            "subjectArea": "B2",
+            "printIssn": "1467-2227",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Entrepreneurship and Regional Development",
+            "subjectArea": "B2",
+            "printIssn": "0898-5626",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environment and Development Economics",
+            "subjectArea": "B2",
+            "printIssn": "1355-770X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Finance",
+            "subjectArea": "B2",
+            "printIssn": "1351-847X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Industrial Relations",
+            "subjectArea": "B2",
+            "printIssn": "0959-6801",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of International Relations",
+            "subjectArea": "B2",
+            "printIssn": "1354-0661",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Political Economy",
+            "subjectArea": "B2",
+            "printIssn": "0176-2630",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Work and Organizational Psychology",
+            "subjectArea": "B2",
+            "printIssn": "1359-432X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Review of Agricultural Economics",
+            "subjectArea": "B2",
+            "printIssn": "0165-1587",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Review of Economic History",
+            "subjectArea": "B2",
+            "printIssn": "1361-4916",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Sport Management Quarterly",
+            "subjectArea": "B2",
+            "printIssn": "1618-4742",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Urban and Regional Studies",
+            "subjectArea": "B2",
+            "printIssn": "0969-7764",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Expert Systems with Applications",
+            "subjectArea": "B2",
+            "printIssn": "0957-4174",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Explorations in Economic History",
+            "subjectArea": "B2",
+            "printIssn": "0014-4983",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Family Business Review",
+            "subjectArea": "B2",
+            "printIssn": "0894-4865",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Finance and Stochastics",
+            "subjectArea": "B2",
+            "printIssn": "0949-2984",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Food Policy",
+            "subjectArea": "B2",
+            "printIssn": "0306-9192",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Forbes",
+            "subjectArea": "B2",
+            "printIssn": "0015-6914",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Forest Policy and Economics",
+            "subjectArea": "B2",
+            "printIssn": "1389-9341",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Fuzzy Sets and Systems",
+            "subjectArea": "B2",
+            "printIssn": "0165-0114",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Gender and Education",
+            "subjectArea": "B2",
+            "printIssn": "0954-0253",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Gender, Work and Organization",
+            "subjectArea": "B2",
+            "printIssn": "0968-6673",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Global Networks",
+            "subjectArea": "B2",
+            "printIssn": "1470-2266",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Global Strategy Journal",
+            "subjectArea": "B2",
+            "printIssn": "2042-5791",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Group Decision and Negotiation",
+            "subjectArea": "B2",
+            "printIssn": "0926-2644",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Higher Education",
+            "subjectArea": "B2",
+            "printIssn": "0018-1560",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Communication Research",
+            "subjectArea": "B2",
+            "printIssn": "0360-3989",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Factors",
+            "subjectArea": "B2",
+            "printIssn": "0018-7208",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Organization",
+            "subjectArea": "B2",
+            "printIssn": "0018-7259",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Performance",
+            "subjectArea": "B2",
+            "printIssn": "0895-9285",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Resource Management Review",
+            "subjectArea": "B2",
+            "printIssn": "1053-4822",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human-Computer Interaction",
+            "subjectArea": "B2",
+            "printIssn": "0737-0024",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Systems Journal",
+            "subjectArea": "B2",
+            "printIssn": "1932-8184",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Cybernetics (IEEE Transactions on Systems, Man, and Cybernetics - Part B)",
+            "subjectArea": "B2",
+            "printIssn": "2168-2267",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Evolutionary Computation",
+            "subjectArea": "B2",
+            "printIssn": "1089-778X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Industrial Informatics",
+            "subjectArea": "B2",
+            "printIssn": "1551-3203",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Intelligent Transportation Systems",
+            "subjectArea": "B2",
+            "printIssn": "1524-9050",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Neural Networks and Learning Systems (IEEE Transactions on Neural Networks)",
+            "subjectArea": "B2",
+            "printIssn": "2162-237X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+            "subjectArea": "B2",
+            "printIssn": "0162-8828",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE-ACM Transactions on Computational Biology and Bioinformatics",
+            "subjectArea": "B2",
+            "printIssn": "1545-5963",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial Law Journal",
+            "subjectArea": "B2",
+            "printIssn": "0305-9332",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Processing and Management",
+            "subjectArea": "B2",
+            "printIssn": "0306-4573",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Sciences",
+            "subjectArea": "B2",
+            "printIssn": "0020-0255",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Systems Frontiers",
+            "subjectArea": "B2",
+            "printIssn": "1387-3326",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Affairs",
+            "subjectArea": "B2",
+            "printIssn": "0020-5850",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Advertising",
+            "subjectArea": "B2",
+            "printIssn": "0265-0487",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Contemporary Hospitality Management",
+            "subjectArea": "B2",
+            "printIssn": "0959-6119",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Finance & Economics",
+            "subjectArea": "B2",
+            "printIssn": "1076-9307",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Forecasting",
+            "subjectArea": "B2",
+            "printIssn": "0169-2070",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Game Theory",
+            "subjectArea": "B2",
+            "printIssn": "0020-7276",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Human-Computer Studies",
+            "subjectArea": "B2",
+            "printIssn": "1071-5819",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Information Technology & Decision Making",
+            "subjectArea": "B2",
+            "printIssn": "0219-6220",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Logistics Management",
+            "subjectArea": "B2",
+            "printIssn": "0957-4093",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Market Research",
+            "subjectArea": "B2",
+            "printIssn": "1470-7853",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Physical Distribution & Logistics Management",
+            "subjectArea": "B2",
+            "printIssn": "0960-0035",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Project Management",
+            "subjectArea": "B2",
+            "printIssn": "0263-7863",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Selection and Assessment",
+            "subjectArea": "B2",
+            "printIssn": "0965-075X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Migration Review",
+            "subjectArea": "B2",
+            "printIssn": "0197-9183",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Public Management Journal",
+            "subjectArea": "B2",
+            "printIssn": "1096-7494",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Review of Finance",
+            "subjectArea": "B2",
+            "printIssn": "1369-412X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Review of Financial Analysis",
+            "subjectArea": "B2",
+            "printIssn": "1057-5219",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Small Business Journal",
+            "subjectArea": "B2",
+            "printIssn": "0266-2426",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Statistical Review",
+            "subjectArea": "B2",
+            "printIssn": "0306-7734",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Studies Quarterly",
+            "subjectArea": "B2",
+            "printIssn": "0020-8833",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Internet Research",
+            "subjectArea": "B2",
+            "printIssn": "1066-2243",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Accounting, Auditing and Finance",
+            "subjectArea": "B2",
+            "printIssn": "0148-558X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Artificial Intelligence Research",
+            "subjectArea": "B2",
+            "printIssn": "1076-9757",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Behavioral Decision Making",
+            "subjectArea": "B2",
+            "printIssn": "0894-3257",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business and Industrial Marketing",
+            "subjectArea": "B2",
+            "printIssn": "0885-8624",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business Logistics",
+            "subjectArea": "B2",
+            "printIssn": "0735-3766",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Civil Engineering and Management",
+            "subjectArea": "B2",
+            "printIssn": "1392-3730",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Common Market Studies",
+            "subjectArea": "B2",
+            "printIssn": "0021-9886",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Comparative Economics",
+            "subjectArea": "B2",
+            "printIssn": "0147-5967",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Consumer Affairs",
+            "subjectArea": "B2",
+            "printIssn": "0022-0078",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Destination Marketing & Management",
+            "subjectArea": "B2",
+            "printIssn": "2212-571X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Development Studies",
+            "subjectArea": "B2",
+            "printIssn": "0022-0388",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Documentation",
+            "subjectArea": "B2",
+            "printIssn": "0022-0418",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Education",
+            "subjectArea": "B2",
+            "printIssn": "0022-0485",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economics and Management Strategy",
+            "subjectArea": "B2",
+            "printIssn": "1058-6407",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Environmental Planning and Management",
+            "subjectArea": "B2",
+            "printIssn": "0964-0568",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of European Public Policy",
+            "subjectArea": "B2",
+            "printIssn": "1350-1763",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Family Business Strategy",
+            "subjectArea": "B2",
+            "printIssn": "1877-8585",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Research",
+            "subjectArea": "B2",
+            "printIssn": "0270-2592",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Services Research",
+            "subjectArea": "B2",
+            "printIssn": "0920-8550",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Financial Stability",
+            "subjectArea": "B2",
+            "printIssn": "1572-3089",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Forecasting",
+            "subjectArea": "B2",
+            "printIssn": "0277-6693",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Heuristics",
+            "subjectArea": "B2",
+            "printIssn": "1381-1231",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Hospitality & Tourism Research",
+            "subjectArea": "B2",
+            "printIssn": "1096-3480",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Hospitality Marketing & Management",
+            "subjectArea": "B2",
+            "printIssn": "1936-8623",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Human Capital",
+            "subjectArea": "B2",
+            "printIssn": "1932-8575",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Industrial Ecology",
+            "subjectArea": "B2",
+            "printIssn": "1088-1980",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Industrial Economics",
+            "subjectArea": "B2",
+            "printIssn": "0022-1821",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Information Science",
+            "subjectArea": "B2",
+            "printIssn": "0165-5515",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Financial Markets, Institution & Money",
+            "subjectArea": "B2",
+            "printIssn": "1042-4431",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Knowledge Management",
+            "subjectArea": "B2",
+            "printIssn": "1367-3270",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Leisure Research",
+            "subjectArea": "B2",
+            "printIssn": "0022-2216",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Macromarketing",
+            "subjectArea": "B2",
+            "printIssn": "0276-1467",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management in Engineering",
+            "subjectArea": "B2",
+            "printIssn": "0742-597X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management Inquiry",
+            "subjectArea": "B2",
+            "printIssn": "1056-4926",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Manufacturing Systems",
+            "subjectArea": "B2",
+            "printIssn": "0278-6125",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Materials Processing Technology",
+            "subjectArea": "B2",
+            "printIssn": "0924-0136",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Optimization Theory and Applications",
+            "subjectArea": "B2",
+            "printIssn": "0022-3239",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Population Economics",
+            "subjectArea": "B2",
+            "printIssn": "0933-1433",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Portfolio Management",
+            "subjectArea": "B2",
+            "printIssn": "0095-4918",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Productivity Analysis",
+            "subjectArea": "B2",
+            "printIssn": "0895-562X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Public Policy and Marketing",
+            "subjectArea": "B2",
+            "printIssn": "0743-9156",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Quality Technology",
+            "subjectArea": "B2",
+            "printIssn": "0022-4065",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Real Estate Finance and Economics",
+            "subjectArea": "B2",
+            "printIssn": "0395-5638",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Risk",
+            "subjectArea": "B2",
+            "printIssn": "1465-1211",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Safety Research",
+            "subjectArea": "B2",
+            "printIssn": "0022-4375",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Service Management",
+            "subjectArea": "B2",
+            "printIssn": "1757-5818",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Services Marketing",
+            "subjectArea": "B2",
+            "printIssn": "0887-6045",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Small Business Management",
+            "subjectArea": "B2",
+            "printIssn": "0047-2778",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Social Policy",
+            "subjectArea": "B2",
+            "printIssn": "0047-2794",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Sport and Health Science",
+            "subjectArea": "B2",
+            "printIssn": "2095-2546",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Statistical Computation and Simulation",
+            "subjectArea": "B2",
+            "printIssn": "0094-9655",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Statistical Software",
+            "subjectArea": "B2",
+            "printIssn": "1548-7660",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Supply Chain Management",
+            "subjectArea": "B2",
+            "printIssn": "1523-2409",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Technology Transfer",
+            "subjectArea": "B2",
+            "printIssn": "0892-9912",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the ACM",
+            "subjectArea": "B2",
+            "printIssn": "0004-5411",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Transport Geography",
+            "subjectArea": "B2",
+            "printIssn": "0966-6923",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Urban Affairs",
+            "subjectArea": "B2",
+            "printIssn": "0735-2166",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Kyklos",
+            "subjectArea": "B2",
+            "printIssn": "0023-5962",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Labour Economics",
+            "subjectArea": "B2",
+            "printIssn": "0927-5371",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Land Economics",
+            "subjectArea": "B2",
+            "printIssn": "0023-7639",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Library & Information Science Research",
+            "subjectArea": "B2",
+            "printIssn": "0740-8188",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Lifetime Data Analysis",
+            "subjectArea": "B2",
+            "printIssn": "1380-7870",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Machine Learning",
+            "subjectArea": "B2",
+            "printIssn": "0885-6125",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management and Organization Review",
+            "subjectArea": "B2",
+            "printIssn": "1740-8776",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Medical Decision Making",
+            "subjectArea": "B2",
+            "printIssn": "0272-989X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "MIS Quarterly Executive",
+            "subjectArea": "B2",
+            "printIssn": "1540-1960",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Multivariate Behavioral Research",
+            "subjectArea": "B2",
+            "printIssn": "0027-3171",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Naval Research Logistics",
+            "subjectArea": "B2",
+            "printIssn": "0894-069X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "NBER Macroeconomics Annual",
+            "subjectArea": "B2",
+            "printIssn": "0889-3365",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Networks & Spatial Economics",
+            "subjectArea": "B2",
+            "printIssn": "1566-113X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Nonprofit and Voluntary Sector Quarterly",
+            "subjectArea": "B2",
+            "printIssn": "0899-7640",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Operations Research Letters",
+            "subjectArea": "B2",
+            "printIssn": "0167-6377",
+            "onlineIssn": ""
+        },
+        {
+            "title": "OR Spectrum",
+            "subjectArea": "B2",
+            "printIssn": "0171-6468",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organizational Dynamics",
+            "subjectArea": "B2",
+            "printIssn": "0090-2616",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Oxford Bulletin of Economics and Statistics",
+            "subjectArea": "B2",
+            "printIssn": "0305-9049",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Oxford Economics Papers",
+            "subjectArea": "B2",
+            "printIssn": "0030-7653",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Pacific-Basin Finance Journal",
+            "subjectArea": "B2",
+            "printIssn": "0927-538X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Papers in Regional Science",
+            "subjectArea": "B2",
+            "printIssn": "1056-8190",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Personality and Individual Differences",
+            "subjectArea": "B2",
+            "printIssn": "0191-8869",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Policy and Politics",
+            "subjectArea": "B2",
+            "printIssn": "0305-5736",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Policy Studies Journal",
+            "subjectArea": "B2",
+            "printIssn": "0190-292X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Population and Development Review",
+            "subjectArea": "B2",
+            "printIssn": "0098-7921",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Probabilistic Engineering Mechanics",
+            "subjectArea": "B2",
+            "printIssn": "0266-8920",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Probability in the Engineering and Informational Sciences",
+            "subjectArea": "B2",
+            "printIssn": "0269-9648",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Proceedings of the Institution of Mechanical Engineers Part O-Journal of Risk and Reliability",
+            "subjectArea": "B2",
+            "printIssn": "1748-006X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Production Planning and Control",
+            "subjectArea": "B2",
+            "printIssn": "0953-7287",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Project Management Journal",
+            "subjectArea": "B2",
+            "printIssn": "8756-9728",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Psychology of Women Quarterly",
+            "subjectArea": "B2",
+            "printIssn": "0361-6843",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Relations Review",
+            "subjectArea": "B2",
+            "printIssn": "0363-8111",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quantitative Finance",
+            "subjectArea": "B2",
+            "printIssn": "1469-7688",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quantitative Marketing and Economics",
+            "subjectArea": "B2",
+            "printIssn": "1570-7156",
+            "onlineIssn": ""
+        },
+        {
+            "title": "R and D Management",
+            "subjectArea": "B2",
+            "printIssn": "0033-6807",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Random Structures & Algorithms",
+            "subjectArea": "B2",
+            "printIssn": "1098-2418",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Real Estate Economics",
+            "subjectArea": "B2",
+            "printIssn": "1080-8620",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Regional Science and Urban Economics",
+            "subjectArea": "B2",
+            "printIssn": "0166-0462",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Regulation & Governance",
+            "subjectArea": "B2",
+            "printIssn": "1748-5983",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Research in Organizational Behavior",
+            "subjectArea": "B2",
+            "printIssn": "0191-3085",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Research Technology Management",
+            "subjectArea": "B2",
+            "printIssn": "0895-6308",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Resource and Energy Economics",
+            "subjectArea": "B2",
+            "printIssn": "0928-7655",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Environmental Economics and Policies",
+            "subjectArea": "B2",
+            "printIssn": "1750-6816",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Income and Wealth",
+            "subjectArea": "B2",
+            "printIssn": "0034-6586",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of International Political Economy",
+            "subjectArea": "B2",
+            "printIssn": "0969-2290",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Safety Science",
+            "subjectArea": "B2",
+            "printIssn": "0925-7535",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scandinavian Journal of Economics",
+            "subjectArea": "B2",
+            "printIssn": "0347-0520",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Science and Public Policy",
+            "subjectArea": "B2",
+            "printIssn": "0302-3427",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Science, Technology & Human Values",
+            "subjectArea": "B2",
+            "printIssn": "0162-2439",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scientometrics",
+            "subjectArea": "B2",
+            "printIssn": "0138-9130",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Security Dialogue",
+            "subjectArea": "B2",
+            "printIssn": "0967-0106",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Service Science",
+            "subjectArea": "B2",
+            "printIssn": "2164-3970",
+            "onlineIssn": ""
+        },
+        {
+            "title": "SIAM Journal on Applied Mathematics",
+            "subjectArea": "B2",
+            "printIssn": "0036-1399",
+            "onlineIssn": ""
+        },
+        {
+            "title": "SIAM Journal on Computing",
+            "subjectArea": "B2",
+            "printIssn": "0097-5397",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Small Business Economics",
+            "subjectArea": "B2",
+            "printIssn": "0921-898X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Social Choice and Welfare",
+            "subjectArea": "B2",
+            "printIssn": "0176-1714",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Socio-Economic Review",
+            "subjectArea": "B2",
+            "printIssn": "1475-1461",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stata Journal",
+            "subjectArea": "B2",
+            "printIssn": "1536-867X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Methods in Medical Research",
+            "subjectArea": "B2",
+            "printIssn": "0962-2802",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics and Probability Letters",
+            "subjectArea": "B2",
+            "printIssn": "0167-7152",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastic Analysis and Applications",
+            "subjectArea": "B2",
+            "printIssn": "0736-2994",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastic Environmental Research and Risk Assessment",
+            "subjectArea": "B2",
+            "printIssn": "1436-3240",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Strategic Organization",
+            "subjectArea": "B2",
+            "printIssn": "1476-1270",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Studies in Higher Education",
+            "subjectArea": "B2",
+            "printIssn": "0307-5079",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Supply Chain Management: An International Journal",
+            "subjectArea": "B2",
+            "printIssn": "1359-8546",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Technological Forecasting and Social Change",
+            "subjectArea": "B2",
+            "printIssn": "0040-1625",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Theory, Culture & Society",
+            "subjectArea": "B2",
+            "printIssn": "0263-2764",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transport Policy",
+            "subjectArea": "B2",
+            "printIssn": "0967-070X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transport Reviews",
+            "subjectArea": "B2",
+            "printIssn": "0144-1647",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation",
+            "subjectArea": "B2",
+            "printIssn": "0049-4488",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transportation Research Part F: Traffic Psychology and Behaviour",
+            "subjectArea": "B2",
+            "printIssn": "1369-8478",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Water Resources Research",
+            "subjectArea": "B2",
+            "printIssn": "0043-1397",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Work and Occupations",
+            "subjectArea": "B2",
+            "printIssn": "0730-8884",
+            "onlineIssn": ""
+        },
+        {
+            "title": "4OR",
+            "subjectArea": "C1",
+            "printIssn": "1619-4500",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Accounting Forum",
+            "subjectArea": "C1",
+            "printIssn": "0155-9982",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Action Research",
+            "subjectArea": "C1",
+            "printIssn": "1476-7503",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Advanced Theory and Simulations",
+            "subjectArea": "C1",
+            "printIssn": "2513-0390",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Advances in Data Analysis and Classification",
+            "subjectArea": "C1",
+            "printIssn": "1862-5347",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Advances in Production Engineering and Management",
+            "subjectArea": "C1",
+            "printIssn": "1854-6250",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Bankruptcy Law Journal",
+            "subjectArea": "C1",
+            "printIssn": "0027-9048",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Health and Drug Benefits",
+            "subjectArea": "C1",
+            "printIssn": "1942-2962",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Journal of Evaluation",
+            "subjectArea": "C1",
+            "printIssn": "1098-2140",
+            "onlineIssn": ""
+        },
+        {
+            "title": "American Statistician",
+            "subjectArea": "C1",
+            "printIssn": "0003-1305",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Applied Geography",
+            "subjectArea": "C1",
+            "printIssn": "0143-6228",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Applied Stochastic Models in Business and Industry",
+            "subjectArea": "C1",
+            "printIssn": "1526-4025",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Argumenta Oeconomica",
+            "subjectArea": "C1",
+            "printIssn": "1233-5835",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia and the Pacific Policy Studies",
+            "subjectArea": "C1",
+            "printIssn": "2050-2680",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia Europe Journal",
+            "subjectArea": "C1",
+            "printIssn": "1610-2932",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia Pacific Business Review",
+            "subjectArea": "C1",
+            "printIssn": "1360-2381",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia Pacific Journal of Human Resources",
+            "subjectArea": "C1",
+            "printIssn": "1038-4111\t",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia Pacific Journal of Marketing and Logistics",
+            "subjectArea": "C1",
+            "printIssn": "1355-5855",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia Pacific Journal of Tourism Research",
+            "subjectArea": "C1",
+            "printIssn": "1094-1665",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asian Business and Management",
+            "subjectArea": "C1",
+            "printIssn": "1472-4782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asian Journal of Technology Innovation",
+            "subjectArea": "C1",
+            "printIssn": "1976-1597",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia-Pacific Journal of Accounting & Economics",
+            "subjectArea": "C1",
+            "printIssn": "1608-1625",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Asia-Pacific Journal of Operational Research",
+            "subjectArea": "C1",
+            "printIssn": "0217-5959",
+            "onlineIssn": ""
+        },
+        {
+            "title": "AStA Advances in Statistical Analysis",
+            "subjectArea": "C1",
+            "printIssn": "1863-8171",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Australian Accounting Review",
+            "subjectArea": "C1",
+            "printIssn": "1035-6908",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Australian Journal of Management",
+            "subjectArea": "C1",
+            "printIssn": "0312-8962",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Baltic Journal of Management",
+            "subjectArea": "C1",
+            "printIssn": "1746-5265",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Big Data",
+            "subjectArea": "C1",
+            "printIssn": "2167-6461",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Big Data Research",
+            "subjectArea": "C1",
+            "printIssn": "2214-5796",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Biometrical Journal",
+            "subjectArea": "C1",
+            "printIssn": "0323-3847",
+            "onlineIssn": ""
+        },
+        {
+            "title": "BioSystems",
+            "subjectArea": "C1",
+            "printIssn": "0303-2647",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Brazilian Journal of Probability and Statistics",
+            "subjectArea": "C1",
+            "printIssn": "0103-0752",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Food Journal",
+            "subjectArea": "C1",
+            "printIssn": "0007-070X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "British Journal of Mathematical and Statistical Psychology",
+            "subjectArea": "C1",
+            "printIssn": "0007-1102",
+            "onlineIssn": ""
+        },
+        {
+            "title": "BRQ Business Research Quarterly",
+            "subjectArea": "C1",
+            "printIssn": "2340-9444",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business Horizons",
+            "subjectArea": "C1",
+            "printIssn": "0007-6813",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Business Process Management Journal",
+            "subjectArea": "C1",
+            "printIssn": "1463-7154",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Canadian Journal of Administrative Sciences",
+            "subjectArea": "C1",
+            "printIssn": "0825-0383",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Career Development and Transition for Exceptional Individuals",
+            "subjectArea": "C1",
+            "printIssn": "2165-1434",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Career Development International",
+            "subjectArea": "C1",
+            "printIssn": "1362-0436",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Career Development Quarterly",
+            "subjectArea": "C1",
+            "printIssn": "0889-4019",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Cartography and Geographic Information Science",
+            "subjectArea": "C1",
+            "printIssn": "1523-0406",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Central European Journal of Operations Research",
+            "subjectArea": "C1",
+            "printIssn": "1435-246X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "China: An International Journal",
+            "subjectArea": "C1",
+            "printIssn": "0219-7472",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Chinese Management Studies",
+            "subjectArea": "C1",
+            "printIssn": "1750-614X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Cities",
+            "subjectArea": "C1",
+            "printIssn": "0264-2751",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Clothing and Textiles Research Journal",
+            "subjectArea": "C1",
+            "printIssn": "0887-302X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Combinatorics Probability and Computing",
+            "subjectArea": "C1",
+            "printIssn": "0963-5483",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Communications in Analysis and Geometry",
+            "subjectArea": "C1",
+            "printIssn": "1019-8385",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Communications in Mathematics and Statistics",
+            "subjectArea": "C1",
+            "printIssn": "2194-6701",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Competition and Change",
+            "subjectArea": "C1",
+            "printIssn": "1024-5294",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computational and Mathematical Organization Theory",
+            "subjectArea": "C1",
+            "printIssn": "1381-298X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computational Statistics",
+            "subjectArea": "C1",
+            "printIssn": "0943-4062",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Computer Law and Security Review",
+            "subjectArea": "C1",
+            "printIssn": "0267-3649",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Consumption Markets and Culture",
+            "subjectArea": "C1",
+            "printIssn": "1025-3866",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Contemporary Economic Policy",
+            "subjectArea": "C1",
+            "printIssn": "1074-3529",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Creativity and Innovation Management",
+            "subjectArea": "C1",
+            "printIssn": "0963-1690",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Cross Cultural and Strategic Management",
+            "subjectArea": "C1",
+            "printIssn": "2059-5794",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Culture and Organization",
+            "subjectArea": "C1",
+            "printIssn": "1475-9551",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Digital Signal Processing: A Review Journal",
+            "subjectArea": "C1",
+            "printIssn": "1051-2004",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Distributed and Parallel Databases",
+            "subjectArea": "C1",
+            "printIssn": "0926-8782",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Dynamic Games and Applications",
+            "subjectArea": "C1",
+            "printIssn": "2153-0785",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Ecological Indicators",
+            "subjectArea": "C1",
+            "printIssn": "1470-160X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economic and Labour Relations Review",
+            "subjectArea": "C1",
+            "printIssn": "1035-3046",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economics of Governance",
+            "subjectArea": "C1",
+            "printIssn": "1435-6104",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Economics of Innovation and New Technology",
+            "subjectArea": "C1",
+            "printIssn": "1043-8599",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Education and Training",
+            "subjectArea": "C1",
+            "printIssn": "0040-0912",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Educational Assessment, Evaluation and Accountability",
+            "subjectArea": "C1",
+            "printIssn": "1874-8597",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Educational Management Administration and Leadership",
+            "subjectArea": "C1",
+            "printIssn": "1741-1432",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Electronic Commerce Research and Applications",
+            "subjectArea": "C1",
+            "printIssn": "1567-4223",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Electronic Communications in Probability",
+            "subjectArea": "C1",
+            "printIssn": "1083-589X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Electronic Journal of Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1935-7524",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Electronic Markets",
+            "subjectArea": "C1",
+            "printIssn": "1019-6781",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Emerging Markets Review",
+            "subjectArea": "C1",
+            "printIssn": "1566-0141",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Empirical Economics",
+            "subjectArea": "C1",
+            "printIssn": "0377-7332",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Engineering Optimization",
+            "subjectArea": "C1",
+            "printIssn": "0305-215X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Enterprise Information Systems",
+            "subjectArea": "C1",
+            "printIssn": "1751-7575",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Entrepreneurship Research Journal",
+            "subjectArea": "C1",
+            "printIssn": "2194-6175",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environmental and Ecological Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1352-8505",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Environmetrics",
+            "subjectArea": "C1",
+            "printIssn": "1180-4009",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Eurasian Business Review",
+            "subjectArea": "C1",
+            "printIssn": "1309-4297",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Business Organization Law Review",
+            "subjectArea": "C1",
+            "printIssn": "1566-7529",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Innovation Management",
+            "subjectArea": "C1",
+            "printIssn": "1460-1060",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of International Management",
+            "subjectArea": "C1",
+            "printIssn": "1751-6757",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Journal of Law and Economics",
+            "subjectArea": "C1",
+            "printIssn": "0929-1261",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Management Journal",
+            "subjectArea": "C1",
+            "printIssn": "0263-2373",
+            "onlineIssn": ""
+        },
+        {
+            "title": "European Management Review",
+            "subjectArea": "C1",
+            "printIssn": "1740-4754",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Evaluation and Program Planning",
+            "subjectArea": "C1",
+            "printIssn": "0149-7189",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Extremes",
+            "subjectArea": "C1",
+            "printIssn": "1386-1999",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Feminist Economics",
+            "subjectArea": "C1",
+            "printIssn": "1354-5701",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Financial Innovation",
+            "subjectArea": "C1",
+            "printIssn": "2199-4730",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Fiscal Studies",
+            "subjectArea": "C1",
+            "printIssn": "0143-5671",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Flexible Services and Manufacturing Journal",
+            "subjectArea": "C1",
+            "printIssn": "1936-6582",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Food Science and Technology Research",
+            "subjectArea": "C1",
+            "printIssn": "1344-6606",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Futures",
+            "subjectArea": "C1",
+            "printIssn": "0016-3287",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Gender in Management",
+            "subjectArea": "C1",
+            "printIssn": "1754-2413",
+            "onlineIssn": ""
+        },
+        {
+            "title": "GENEVA Risk and Insurance Review",
+            "subjectArea": "C1",
+            "printIssn": "1554-964X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Global Economic Review",
+            "subjectArea": "C1",
+            "printIssn": "1226-508X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Hacettepe Journal of Mathematics and Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1303-5010",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Health Care Management Review",
+            "subjectArea": "C1",
+            "printIssn": "0361-6274",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Hitotsubashi Journal of Economics",
+            "subjectArea": "C1",
+            "printIssn": "0018-280X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Resource Development Quarterly",
+            "subjectArea": "C1",
+            "printIssn": "1044-8004",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Resource Development Review",
+            "subjectArea": "C1",
+            "printIssn": "1552-6712",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Human Service Organizations Management, Leadership and Governance",
+            "subjectArea": "C1",
+            "printIssn": "2330-3131",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Professional Communication",
+            "subjectArea": "C1",
+            "printIssn": "0361-1434",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IEEE Transactions on Services Computing",
+            "subjectArea": "C1",
+            "printIssn": "1939-1374",
+            "onlineIssn": ""
+        },
+        {
+            "title": "IMA Journal of Management Mathematics",
+            "subjectArea": "C1",
+            "printIssn": "1471-678X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industrial Management and Data Systems",
+            "subjectArea": "C1",
+            "printIssn": "0263-5577",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Industry and Innovation",
+            "subjectArea": "C1",
+            "printIssn": "1366-2716",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Information Technology and Management",
+            "subjectArea": "C1",
+            "printIssn": "1385-951X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Entrepreneurship and Management Journal",
+            "subjectArea": "C1",
+            "printIssn": "1554-7191",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal for Uncertainty Quantification",
+            "subjectArea": "C1",
+            "printIssn": "2152-5080",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Accounting Information Systems",
+            "subjectArea": "C1",
+            "printIssn": "1467-0895",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Applied Ceramic Technology",
+            "subjectArea": "C1",
+            "printIssn": "1546-542X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Auditing",
+            "subjectArea": "C1",
+            "printIssn": "1090-6738",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Bank Marketing",
+            "subjectArea": "C1",
+            "printIssn": "0265-2323",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Biostatistics",
+            "subjectArea": "C1",
+            "printIssn": "1557-4679",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Business Communication",
+            "subjectArea": "C1",
+            "printIssn": "2329-4884",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Clothing Science and Technology",
+            "subjectArea": "C1",
+            "printIssn": "0955-6222",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Conflict Management",
+            "subjectArea": "C1",
+            "printIssn": "1044-4068",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Consumer Studies",
+            "subjectArea": "C1",
+            "printIssn": "1470-6423",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Critical Infrastructure Protection",
+            "subjectArea": "C1",
+            "printIssn": "1874-5482",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Emerging Markets",
+            "subjectArea": "C1",
+            "printIssn": "1746-8817",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Entrepreneurial Behaviour and Research",
+            "subjectArea": "C1",
+            "printIssn": "1355-2554",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Heritage Studies",
+            "subjectArea": "C1",
+            "printIssn": "1352-7258",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Intercultural Relations",
+            "subjectArea": "C1",
+            "printIssn": "0147-1767",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Islamic and Middle Eastern Finance and Management",
+            "subjectArea": "C1",
+            "printIssn": "1753-8394",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Lean Six Sigma",
+            "subjectArea": "C1",
+            "printIssn": "2040-4174",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Logistics Research and Applications",
+            "subjectArea": "C1",
+            "printIssn": "1367-5567",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Management Education",
+            "subjectArea": "C1",
+            "printIssn": "1472-8117",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Managing Projects in Business",
+            "subjectArea": "C1",
+            "printIssn": "1753-8378",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Manpower",
+            "subjectArea": "C1",
+            "printIssn": "0143-7720",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Mining, Reclamation and Environment",
+            "subjectArea": "C1",
+            "printIssn": "1748-0930",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Retail and Distribution Management",
+            "subjectArea": "C1",
+            "printIssn": "0959-0552",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Shipping and Transport Logistics",
+            "subjectArea": "C1",
+            "printIssn": "1756-6517",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Sport Finance",
+            "subjectArea": "C1",
+            "printIssn": "1558-6235",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Sports Marketing and Sponsorship",
+            "subjectArea": "C1",
+            "printIssn": "1464-6668",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Stress Management",
+            "subjectArea": "C1",
+            "printIssn": "1072-5245",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Technology Management",
+            "subjectArea": "C1",
+            "printIssn": "0267-5730",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Journal of Tourism Research",
+            "subjectArea": "C1",
+            "printIssn": "1099-2340",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Labor and Working-Class History",
+            "subjectArea": "C1",
+            "printIssn": "0147-5479",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Labour Review",
+            "subjectArea": "C1",
+            "printIssn": "0020-7780",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Organization",
+            "subjectArea": "C1",
+            "printIssn": "0020-8183",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Tax and Public Finance",
+            "subjectArea": "C1",
+            "printIssn": "0927-5940",
+            "onlineIssn": ""
+        },
+        {
+            "title": "International Transactions in Operational Research",
+            "subjectArea": "C1",
+            "printIssn": "0969-6016",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Investment Analysts Journal",
+            "subjectArea": "C1",
+            "printIssn": "1029-3523",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Iranian Journal of Fuzzy Systems",
+            "subjectArea": "C1",
+            "printIssn": "1735-0654",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Agricultural, Biological and Environmental Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1085-7117",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Air Transport Management",
+            "subjectArea": "C1",
+            "printIssn": "0969-6997",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Applied Statistics",
+            "subjectArea": "C1",
+            "printIssn": "0266-4763",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Biopharmaceutical Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1054-3406",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Brand Management",
+            "subjectArea": "C1",
+            "printIssn": "1350-231X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business and Psychology",
+            "subjectArea": "C1",
+            "printIssn": "0889-3268",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business and Technical Communication",
+            "subjectArea": "C1",
+            "printIssn": "1050-6519",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Business-to-Business Marketing",
+            "subjectArea": "C1",
+            "printIssn": "1051-712X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Career Assessment",
+            "subjectArea": "C1",
+            "printIssn": "1069-0727",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Career Development",
+            "subjectArea": "C1",
+            "printIssn": "0894-8453",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Choice Modelling",
+            "subjectArea": "C1",
+            "printIssn": "1755-5345",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Classification",
+            "subjectArea": "C1",
+            "printIssn": "0176-4268",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Cleaner Production",
+            "subjectArea": "C1",
+            "printIssn": "0959-6526",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Complexity",
+            "subjectArea": "C1",
+            "printIssn": "0885-064X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Conflict Resolution",
+            "subjectArea": "C1",
+            "printIssn": "0022-0027",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Consumer Culture",
+            "subjectArea": "C1",
+            "printIssn": "1469-5405",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Contemporary Accounting and Economics",
+            "subjectArea": "C1",
+            "printIssn": "1815-5669",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Contextual Behavioral Science",
+            "subjectArea": "C1",
+            "printIssn": "2212-1447",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Contingencies and Crisis Management",
+            "subjectArea": "C1",
+            "printIssn": "0966-0879",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of East European Management Studies",
+            "subjectArea": "C1",
+            "printIssn": "0949-6181",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Inequality",
+            "subjectArea": "C1",
+            "printIssn": "1569-1721",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Interaction and Coordination",
+            "subjectArea": "C1",
+            "printIssn": "1860-711X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Issues",
+            "subjectArea": "C1",
+            "printIssn": "0021-3624",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Economic Policy Reform",
+            "subjectArea": "C1",
+            "printIssn": "1748-7870",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Employment Counseling",
+            "subjectArea": "C1",
+            "printIssn": "0022-0787",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Engineering and Technology Management - JET-M",
+            "subjectArea": "C1",
+            "printIssn": "0923-4748",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Enterprise Information Management",
+            "subjectArea": "C1",
+            "printIssn": "1741-0398",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Environmental Informatics",
+            "subjectArea": "C1",
+            "printIssn": "1726-2135",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Evolutionary Economics",
+            "subjectArea": "C1",
+            "printIssn": "0936-9937",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Fashion Marketing and Management",
+            "subjectArea": "C1",
+            "printIssn": "1361-2026",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Global Information Management",
+            "subjectArea": "C1",
+            "printIssn": "1062-7375",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Global Information Technology Management",
+            "subjectArea": "C1",
+            "printIssn": "1097-198X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Global Optimization",
+            "subjectArea": "C1",
+            "printIssn": "0925-5001",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Grey System",
+            "subjectArea": "C1",
+            "printIssn": "0957-3720",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Health Organization and Management",
+            "subjectArea": "C1",
+            "printIssn": "1477-7266",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Healthcare Management",
+            "subjectArea": "C1",
+            "printIssn": "1096-9012",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Homeland Security and Emergency Management",
+            "subjectArea": "C1",
+            "printIssn": "1547-7355",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Hospitality and Tourism Management",
+            "subjectArea": "C1",
+            "printIssn": "1447-6770",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Hospitality and Tourism Technology",
+            "subjectArea": "C1",
+            "printIssn": "1757-9880",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Hospitality, Leisure, Sports and Tourism Education",
+            "subjectArea": "C1",
+            "printIssn": "1473-8376",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Industrial and Management Optimization",
+            "subjectArea": "C1",
+            "printIssn": "1547-5816",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Industrial Information Integration",
+            "subjectArea": "C1",
+            "printIssn": "2467-964X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Innovation and Knowledge",
+            "subjectArea": "C1",
+            "printIssn": "2530-7614",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Intellectual Capital (Emerald) ",
+            "subjectArea": "C1",
+            "printIssn": "1469-1930",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of International Financial Management & Accounting",
+            "subjectArea": "C1",
+            "printIssn": "0954-1314",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Korea Trade",
+            "subjectArea": "C1",
+            "printIssn": "1229-828X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Labor Research",
+            "subjectArea": "C1",
+            "printIssn": "0195-3613",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Leadership and Organizational Studies",
+            "subjectArea": "C1",
+            "printIssn": "1548-0518",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Loss Prevention in the Process Industries",
+            "subjectArea": "C1",
+            "printIssn": "0950-4230",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Management and Organization",
+            "subjectArea": "C1",
+            "printIssn": "1833-3672",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Managerial Psychology",
+            "subjectArea": "C1",
+            "printIssn": "0268-3946",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Manufacturing Processes",
+            "subjectArea": "C1",
+            "printIssn": "1526-6125",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Manufacturing Technology Management",
+            "subjectArea": "C1",
+            "printIssn": "1741-038X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Marketing for Higher Education",
+            "subjectArea": "C1",
+            "printIssn": "0884-1241",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Marketing Management",
+            "subjectArea": "C1",
+            "printIssn": "0267-257X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Mathematical Imaging and Vision",
+            "subjectArea": "C1",
+            "printIssn": "0924-9907",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Mixed Methods Research",
+            "subjectArea": "C1",
+            "printIssn": "1558-6898",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Network and Systems Management",
+            "subjectArea": "C1",
+            "printIssn": "1064-7570",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Neuroscience, Psychology, and Economics",
+            "subjectArea": "C1",
+            "printIssn": "1937-321X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Nonparametric Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1048-5252",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Operational Risk",
+            "subjectArea": "C1",
+            "printIssn": "1744-6740",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Organizational and End User Computing",
+            "subjectArea": "C1",
+            "printIssn": "1546-2234",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Organizational Behavior Management",
+            "subjectArea": "C1",
+            "printIssn": "0160-8061",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Organizational Change Management",
+            "subjectArea": "C1",
+            "printIssn": "0953-4814",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Outdoor Recreation and Tourism",
+            "subjectArea": "C1",
+            "printIssn": "2213-0780",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Pension Economics and Finance",
+            "subjectArea": "C1",
+            "printIssn": "1474-7472",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Personnel Psychology",
+            "subjectArea": "C1",
+            "printIssn": "1866-5888",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Physics A: Mathematical and Theoretical",
+            "subjectArea": "C1",
+            "printIssn": "1751-8113",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Product and Brand Management",
+            "subjectArea": "C1",
+            "printIssn": "1061-0421",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Psychology: Interdisciplinary and Applied",
+            "subjectArea": "C1",
+            "printIssn": "0022-3980",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Purchasing and Supply Management",
+            "subjectArea": "C1",
+            "printIssn": "1478-4092",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Research in Interactive Marketing",
+            "subjectArea": "C1",
+            "printIssn": "2040-7122",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Retailing and Consumer Services",
+            "subjectArea": "C1",
+            "printIssn": "0969-6989",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Risk Research",
+            "subjectArea": "C1",
+            "printIssn": "1366-9877",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Service Theory and Practice",
+            "subjectArea": "C1",
+            "printIssn": "2055-6225",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Simulation",
+            "subjectArea": "C1",
+            "printIssn": "1747-7778",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Social Marketing",
+            "subjectArea": "C1",
+            "printIssn": "2042-6763",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of South Asian Development",
+            "subjectArea": "C1",
+            "printIssn": "0973-1741",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Sport Management",
+            "subjectArea": "C1",
+            "printIssn": "0888-4773",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Statistical Mechanics: Theory and Experiment",
+            "subjectArea": "C1",
+            "printIssn": "1742-5468",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of the Korean Statistical Society",
+            "subjectArea": "C1",
+            "printIssn": "1226-3192",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Theoretical Biology",
+            "subjectArea": "C1",
+            "printIssn": "0022-5193",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Tourism and Cultural Change",
+            "subjectArea": "C1",
+            "printIssn": "1476-6825",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Travel & Tourism Marketing",
+            "subjectArea": "C1",
+            "printIssn": "1054-8408",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Vacation Marketing",
+            "subjectArea": "C1",
+            "printIssn": "1356-7667",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Vinyl and Additive Technology",
+            "subjectArea": "C1",
+            "printIssn": "1083-5601",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Journal of Wine Economics",
+            "subjectArea": "C1",
+            "printIssn": "1931-4361",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Judgment and Decision Making",
+            "subjectArea": "C1",
+            "printIssn": "1930-2975",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Knowledge Management Research & Practice",
+            "subjectArea": "C1",
+            "printIssn": "1477-8238",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Knowledge-Based Systems",
+            "subjectArea": "C1",
+            "printIssn": "0950-7051",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Labor History",
+            "subjectArea": "C1",
+            "printIssn": "0023-656X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Labor Studies Journal",
+            "subjectArea": "C1",
+            "printIssn": "0160-449X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Labour History",
+            "subjectArea": "C1",
+            "printIssn": "0023-6942",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Law, Probability and Risk",
+            "subjectArea": "C1",
+            "printIssn": "1470-8396",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Leadership",
+            "subjectArea": "C1",
+            "printIssn": "1742-7150",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Leadership & Organization Development Journal",
+            "subjectArea": "C1",
+            "printIssn": "0143-7739",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Leisure Sciences",
+            "subjectArea": "C1",
+            "printIssn": "0149-0400",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Leisure Studies",
+            "subjectArea": "C1",
+            "printIssn": "0261-4367",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management and Organizational History",
+            "subjectArea": "C1",
+            "printIssn": "1744-9359",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management Communication Quarterly",
+            "subjectArea": "C1",
+            "printIssn": "0893-3189",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Management Decision",
+            "subjectArea": "C1",
+            "printIssn": "0025-1747",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Managerial and Decision Economics",
+            "subjectArea": "C1",
+            "printIssn": "0143-6570",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Managerial Auditing Journal",
+            "subjectArea": "C1",
+            "printIssn": "0268-6902",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Marketing Intelligence and Planning",
+            "subjectArea": "C1",
+            "printIssn": "0263-4503",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Markov Processes and Related Fields",
+            "subjectArea": "C1",
+            "printIssn": "1024-2953",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematical Biosciences",
+            "subjectArea": "C1",
+            "printIssn": "0025-5564",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematical Methods of Operations Research",
+            "subjectArea": "C1",
+            "printIssn": "1432-2994",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematical Social Sciences",
+            "subjectArea": "C1",
+            "printIssn": "0165-4896",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Mathematics and Financial Economics",
+            "subjectArea": "C1",
+            "printIssn": "1862-9679",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Measurement",
+            "subjectArea": "C1",
+            "printIssn": "0263-2241",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Methodology and Computing in Applied Probability",
+            "subjectArea": "C1",
+            "printIssn": "1387-5841",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Metrika",
+            "subjectArea": "C1",
+            "printIssn": "0026-1335\t",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Military Operations Research",
+            "subjectArea": "C1",
+            "printIssn": "0275-5823",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Monthly Labor Review",
+            "subjectArea": "C1",
+            "printIssn": "0098-1818\t",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Multinational Business Review",
+            "subjectArea": "C1",
+            "printIssn": "1525-383X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "NanoEthics",
+            "subjectArea": "C1",
+            "printIssn": "1871-4757",
+            "onlineIssn": ""
+        },
+        {
+            "title": "National Tax Journal",
+            "subjectArea": "C1",
+            "printIssn": "0028-0283",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Negotiation and Conflict Management Research",
+            "subjectArea": "C1",
+            "printIssn": "1750-4708",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Negotiation Journal",
+            "subjectArea": "C1",
+            "printIssn": "0748-4526",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Networks and Heterogeneous Media",
+            "subjectArea": "C1",
+            "printIssn": "1556-1801",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Nonprofit Management & Leadership",
+            "subjectArea": "C1",
+            "printIssn": "1048-6682",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Northwestern Journal of International Law and Business",
+            "subjectArea": "C1",
+            "printIssn": "0196-3228",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Operational Research",
+            "subjectArea": "C1",
+            "printIssn": "1109-2858",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Operations Management Research",
+            "subjectArea": "C1",
+            "printIssn": "1936-9735",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Optimization",
+            "subjectArea": "C1",
+            "printIssn": "0233-1934",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organization & Environment",
+            "subjectArea": "C1",
+            "printIssn": "1086-0266",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Organizational Psychology Review",
+            "subjectArea": "C1",
+            "printIssn": "2041-3866",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Personal and Ubiquitous Computing",
+            "subjectArea": "C1",
+            "printIssn": "1617-4909",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Personnel Review",
+            "subjectArea": "C1",
+            "printIssn": "0048-3486",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Pharmaceutical Statistics",
+            "subjectArea": "C1",
+            "printIssn": "1539-1604",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Physica A: Statistical Mechanics and its Applications",
+            "subjectArea": "C1",
+            "printIssn": "0378-4371",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Physical Review E",
+            "subjectArea": "C1",
+            "printIssn": "1063-651X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Money and Management",
+            "subjectArea": "C1",
+            "printIssn": "0954-0962",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Performance & Management Review",
+            "subjectArea": "C1",
+            "printIssn": "1530-9576",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Public Personnel Management",
+            "subjectArea": "C1",
+            "printIssn": "0091-0260",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Qualitative Research in Accounting and Management",
+            "subjectArea": "C1",
+            "printIssn": "1176-6093",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quality and Reliability Engineering International",
+            "subjectArea": "C1",
+            "printIssn": "0748-8017",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Quality Technology and Quantitative Management",
+            "subjectArea": "C1",
+            "printIssn": "1684-3703",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Queueing Systems",
+            "subjectArea": "C1",
+            "printIssn": "0257-0130",
+            "onlineIssn": ""
+        },
+        {
+            "title": "RAIRO-Operations Research",
+            "subjectArea": "C1",
+            "printIssn": "0399-0559",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Random Matrices: Theory and Applications",
+            "subjectArea": "C1",
+            "printIssn": "2010-3263",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Research in International Business and Finance",
+            "subjectArea": "C1",
+            "printIssn": "0275-5319",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Research in Transportation Business and Management",
+            "subjectArea": "C1",
+            "printIssn": "2210-5395",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Industrial Organization",
+            "subjectArea": "C1",
+            "printIssn": "0889-938X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Managerial Science",
+            "subjectArea": "C1",
+            "printIssn": "1863-6683",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Review of Public Personnel Administration",
+            "subjectArea": "C1",
+            "printIssn": "0734-371X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scandinavian Actuarial Journal",
+            "subjectArea": "C1",
+            "printIssn": "0346-1238",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scandinavian Journal of Hospitality and Tourism",
+            "subjectArea": "C1",
+            "printIssn": "1502-2250",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Scandinavian Journal of Management",
+            "subjectArea": "C1",
+            "printIssn": "0956-5221",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Science and Engineering Ethics",
+            "subjectArea": "C1",
+            "printIssn": "1353-3452",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Security Journal",
+            "subjectArea": "C1",
+            "printIssn": "0955-1662",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Service Business",
+            "subjectArea": "C1",
+            "printIssn": "1862-8516",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Service Industries Journal",
+            "subjectArea": "C1",
+            "printIssn": "0264-2069",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Set-Valued and Variational Analysis",
+            "subjectArea": "C1",
+            "printIssn": "1877-0533",
+            "onlineIssn": ""
+        },
+        {
+            "title": "SIAM-ASA Journal on Uncertainty Quantification",
+            "subjectArea": "C1",
+            "printIssn": "2166-2525",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Socio-Economic Planning Sciences",
+            "subjectArea": "C1",
+            "printIssn": "0038-0121",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Space and Culture",
+            "subjectArea": "C1",
+            "printIssn": "1206-3312",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Spatial Economic Analysis",
+            "subjectArea": "C1",
+            "printIssn": "1742-1772",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Spatial Statistics",
+            "subjectArea": "C1",
+            "printIssn": "2211-6753",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Sport Management Review",
+            "subjectArea": "C1",
+            "printIssn": "1441-3523",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Sport Marketing Quarterly",
+            "subjectArea": "C1",
+            "printIssn": "1061-6934",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stat",
+            "subjectArea": "C1",
+            "printIssn": "2049-1573",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistica Neerlandica",
+            "subjectArea": "C1",
+            "printIssn": "0039-0402",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Applications in Genetics and Molecular Biology",
+            "subjectArea": "C1",
+            "printIssn": "1544-6115",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Methods and Applications",
+            "subjectArea": "C1",
+            "printIssn": "1618-2510",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Modelling",
+            "subjectArea": "C1",
+            "printIssn": "1471-082X\t",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistical Papers",
+            "subjectArea": "C1",
+            "printIssn": "0932-5026",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics",
+            "subjectArea": "C1",
+            "printIssn": "0233-1888",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics and its Interface",
+            "subjectArea": "C1",
+            "printIssn": "1938-7989",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Statistics in Biopharmaceutical Research",
+            "subjectArea": "C1",
+            "printIssn": "1946-6315",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastic Models",
+            "subjectArea": "C1",
+            "printIssn": "1532-6349",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastics",
+            "subjectArea": "C1",
+            "printIssn": "1744-2508",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Stochastics and Partial Differential Equations: Analysis and Computations",
+            "subjectArea": "C1",
+            "printIssn": "2194-0401",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Survey Methodology",
+            "subjectArea": "C1",
+            "printIssn": "0714-0045",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Sustainability Accounting, Management and Policy Journal",
+            "subjectArea": "C1",
+            "printIssn": "2040-8021",
+            "onlineIssn": ""
+        },
+        {
+            "title": "System Dynamics Review",
+            "subjectArea": "C1",
+            "printIssn": "0883-7066",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Systemic Practice and Action Research",
+            "subjectArea": "C1",
+            "printIssn": "1094-429X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Systems Research and Behavioral Science",
+            "subjectArea": "C1",
+            "printIssn": "1092-7026",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Technology Analysis and Strategic Management",
+            "subjectArea": "C1",
+            "printIssn": "0953-7325",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Technology in Society",
+            "subjectArea": "C1",
+            "printIssn": "0160-791X",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Test",
+            "subjectArea": "C1",
+            "printIssn": "1133-0686",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Theory and Decision",
+            "subjectArea": "C1",
+            "printIssn": "0040-5833",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Theory in Biosciences",
+            "subjectArea": "C1",
+            "printIssn": "1431-7613",
+            "onlineIssn": ""
+        },
+        {
+            "title": "TOP",
+            "subjectArea": "C1",
+            "printIssn": "1134-5764",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourism Economics",
+            "subjectArea": "C1",
+            "printIssn": "1354-8166",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourism Geographies",
+            "subjectArea": "C1",
+            "printIssn": "1461-6688",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourism Management Perspectives",
+            "subjectArea": "C1",
+            "printIssn": "2211-9736",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourism Review",
+            "subjectArea": "C1",
+            "printIssn": "1660-5373",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Tourist Studies",
+            "subjectArea": "C1",
+            "printIssn": "1468-7976",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transformations in Business and Economics",
+            "subjectArea": "C1",
+            "printIssn": "1648-4460",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Transylvanian Review of Administrative Sciences",
+            "subjectArea": "C1",
+            "printIssn": "1842-2845",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Travail Humain",
+            "subjectArea": "C1",
+            "printIssn": "0041-1868",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Utilitas Mathematica",
+            "subjectArea": "C1",
+            "printIssn": "0315-3681",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Utilities Policy",
+            "subjectArea": "C1",
+            "printIssn": "0957-1787",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Voluntas",
+            "subjectArea": "C1",
+            "printIssn": "0957-8765",
+            "onlineIssn": ""
+        },
+        {
+            "title": "Work, Aging and Retirement",
+            "subjectArea": "C1",
+            "printIssn": "2054-4642",
+            "onlineIssn": ""
+        },
+        {
+            "title": "World Economy",
+            "subjectArea": "C1",
+            "printIssn": "0378-5920",
+            "onlineIssn": ""
+        }
+    ]
+}
