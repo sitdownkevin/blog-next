@@ -22,7 +22,6 @@ module.exports = {
       },
       fontFamily: {
         maple: ["Maple Mono", "sans-serif"],
-        mapleItalic: ["Maple Mono Italic", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -106,7 +106,7 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
       <div
         className={`rounded backdrop-blur-md bg-background/50 overflow-hidden transition-all duration-200 ${
           collapsed ? "h-0 p-0" : "mt-4"
-        } text-xs font-maple`}
+        } text-xs font-maple font-extrabold`}
       >
         {code}
       </div>

@@ -39,7 +39,7 @@ function addCopyButton(contentHtml: string): string {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                     </button>
-                    <pre><code class="language-${language}">${code}</code></pre>
+                    <pre><code class="language-${language}" style="font-family: 'Maple Mono', monospace;">${code}</code></pre>
                 </div>
             `.trim();
         }
