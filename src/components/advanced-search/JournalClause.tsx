@@ -1,7 +1,6 @@
 "use client";
 
 import { JournalType } from "@/lib/types";
-import CodeLayout from "react-code-preview-layout";
 import React from "react";
 
 function constructISSNQueryForScopus(journals: JournalType[]): string {

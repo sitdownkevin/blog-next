@@ -1448,11 +1448,6 @@
     "@typescript-eslint/types" "8.21.0"
     eslint-visitor-keys "^4.2.0"
 
-"@uiw/copy-to-clipboard@^1.0.12":
-  version "1.0.17"
-  resolved "https://registry.npmmirror.com/@uiw/copy-to-clipboard/-/copy-to-clipboard-1.0.17.tgz#86f501ddc8a6db0b45e6899bcd9d48e0b78f233e"
-  integrity sha512-O2GUHV90Iw2VrSLVLK0OmNIMdZ5fgEg4NhvtwINsX+eZ/Wf6DWD0TdsK9xwV7dNRnK/UI2mQtl0a2/kRgm1m1A==
-
 "@ungap/structured-clone@^1.0.0":
   version "1.2.1"
   resolved "https://registry.npmmirror.com/@ungap/structured-clone/-/structured-clone-1.2.1.tgz#28fa185f67daaf7b7a1a8c1d445132c5d979f8bd"
@@ -4864,13 +4859,6 @@ queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.npmmirror.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
-
-react-code-preview-layout@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.npmmirror.com/react-code-preview-layout/-/react-code-preview-layout-3.1.5.tgz#a6775e42a08e853869d3c070aecb7a968c6f9e58"
-  integrity sha512-MvQ+OUr/jGBYrKfvm7iHwObYnUCv1kSkQX/iYUGNpjdK9nIQD+LOj+/LdXnJ4tqV/+VB+isDS/ZR3/5plsbr8Q==
-  dependencies:
-    "@uiw/copy-to-clipboard" "^1.0.12"
 
 react-dom@^19.0.0:
   version "19.0.0"
