@@ -12,6 +12,7 @@ export default function JournalTable({
   journals,
   tableCaption,
   hideSubjectArea = false,
+  subjectAreaTitle = 'Subject Area',
 }) {
   return (
     <Table className="w-full">
@@ -20,7 +21,7 @@ export default function JournalTable({
         <TableRow>
           <TableHead>Index</TableHead>
           <TableHead>Title</TableHead>
-          {!hideSubjectArea && <TableHead>Subject Area</TableHead>}
+          {!hideSubjectArea && <TableHead>{subjectAreaTitle}</TableHead>}
           <TableHead>Print ISSN</TableHead>
         </TableRow>
       </TableHeader>
