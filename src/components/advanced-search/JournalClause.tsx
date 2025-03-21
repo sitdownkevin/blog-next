@@ -14,7 +14,7 @@ function constructISSNQueryForScopus(journals: JournalType[]): string {
 
 
 function constructISSNQueryForWos(journals: JournalType[]): string {
-  let issnClauses = "IS(";
+  let issnClauses = "IS=(";
   for (const journal of journals) {
     if (journal.printIssn) {
       issnClauses += `${journal.printIssn} OR `;
