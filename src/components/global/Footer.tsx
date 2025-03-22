@@ -20,9 +20,6 @@ export default function Footer() {
                     <span className="text-gray-500 text-xxs">
                         <Link href={"/"}>CV</Link>
                     </span>
-                    {/* <span className="text-gray-500 text-xxs">
-                <Link href={"/me/value"}>Values</Link>
-              </span> */}
                     <span className="text-gray-500 text-xxs">
                         <Link href={"/me/gallery"}>Gallery</Link>
                     </span>
@@ -32,9 +29,6 @@ export default function Footer() {
                     <span className="text-gray-500 text-xxs">
                         <Link href={"/tools/advanced_search"}>Advanced Search</Link>
                     </span>
-                    {/* <span className="text-gray-500 text-xxs">
-                <Link href={"/quickrefs"}>Quick References</Link>
-              </span> */}
                     <span className="text-gray-500 text-xxs">
                         <Link href={"/pow"}>PoW</Link>
                     </span>
@@ -42,7 +36,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <span className="text-xxs">Projects</span>
                     <span className="text-gray-500 text-xxs">
-                        <Link href={"/posts/blackboard-enhanced"}>BB Enhanced</Link>
+                        <Link href={"https://github.com/sitdownkevin/Blackboard-Enhanced"}>BB Enhanced</Link>
                     </span>
                     <span className="text-gray-500 text-xxs">
                         <Link
