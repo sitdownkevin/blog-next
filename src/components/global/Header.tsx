@@ -1,5 +1,6 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaWeibo, FaRss } from "react-icons/fa";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
     return (
@@ -14,7 +15,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
                         >
-                            <FaGithub />
+                            <FaGithub className="dark:text-white" />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/sitdownkevin"
@@ -22,7 +23,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
                         >
-                            <FaLinkedin />
+                            <FaLinkedin className="dark:text-white" />
                         </a>
                         <a
                             href="https://www.instagram.com/sitdownkevin/"
@@ -30,7 +31,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
                         >
-                            <FaInstagram />
+                            <FaInstagram className="dark:text-white" />
                         </a>
                         <a
                             href="https://weibo.com/u/5668436889"
@@ -38,7 +39,7 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
                         >
-                            <FaWeibo />
+                            <FaWeibo className="dark:text-white" />
                         </a>
                         <a
                             href="/api/rss"
@@ -46,14 +47,15 @@ export default function Header() {
                             rel="noopener noreferrer"
                             className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
                         >
-                            <FaRss />
+                            <FaRss className="dark:text-white" />
                         </a>
+                        <ThemeToggle />
                     </div>
                 </div>
                 <nav className="flex space-x-4 font-sans text-gray-500">
                     <Link
                         href="/posts"
-                        className="hover:text-blue-500 transition-colors duration-300 text-xs hover:scale-105"
+                        className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs hover:scale-105"
                     >
                         Posts
                     </Link>

@@ -139,22 +139,24 @@ export default function Menubar() {
                 >
                     <button
                         className={`px-3 py-2 text-xs rounded-md transition-colors
-                            ${isActive ? "text-blue-500" : "text-gray-500 hover:text-gray-700"}
+                            ${isActive 
+                                ? "text-blue-600 dark:text-blue-400" 
+                                : "text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"}
                         `}
                     >
                         {component.title}
                     </button>
                     
                     {activeDropdown === component.title && (
-                        <div className="absolute top-full left-0 bg-white rounded-md min-w-[150px] z-10">
+                        <div className="absolute top-full left-0 bg-white dark:bg-black rounded-md min-w-[150px] z-10 shadow-md dark:shadow-gray-800">
                             {component.subItems.map((subItem) => (
                                 <Link
                                     key={subItem.href}
                                     href={subItem.href || "#"}
                                     className={`block px-4 py-2 text-xs transition-colors
                                         ${currentAlias === subItem.alias 
-                                            ? "text-blue-500 bg-blue-50" 
-                                            : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                                            ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-900" 
+                                            : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-100"
                                         }`}
                                 >
                                     {subItem.title}
@@ -172,8 +174,8 @@ export default function Menubar() {
                 href={component.href || "#"}
                 className={`px-3 text-xs py-2 rounded-md transition-colors
                     ${isActive 
-                        ? "text-blue-500 bg-blue-50" 
-                        : "text-gray-500 hover:bg-gray-50 hover:text-gray-700"
+                        ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-gray-900" 
+                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-900 dark:hover:text-gray-100"
                     }`}
             >
                 {component.title}
@@ -182,7 +184,7 @@ export default function Menubar() {
     };
 
     return (
-        <nav className="flex flex-row items-center gap-1 sm:gap-2 justify-center bg-white rounded-lg">
+        <nav className="flex flex-row items-center gap-1 sm:gap-2 justify-center bg-white dark:bg-black">
             {components.map(renderMenuItem)}
         </nav>
     );

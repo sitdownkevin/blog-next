@@ -17,28 +17,28 @@ export default function Footer() {
             <div className="flex flex-row justify-center space-x-8 md:space-x-16">
                 <div className="flex flex-col">
                     <span className="text-xxs">About</span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/"}>CV</Link>
                     </span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/me/gallery"}>Gallery</Link>
                     </span>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xxs">Tools</span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/tools/advanced_search"}>Advanced Search</Link>
                     </span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/pow"}>PoW</Link>
                     </span>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xxs">Projects</span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"https://github.com/sitdownkevin/Blackboard-Enhanced"}>BB Enhanced</Link>
                     </span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link
                             href={"https://sitdownkevin.github.io/dorm-wifi-tauri/"}
                             target="_blank"
@@ -47,7 +47,7 @@ export default function Footer() {
                             DORM WIFI
                         </Link>
                     </span>
-                    <span className="text-gray-500 text-xxs">
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link
                             href={
                                 "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control"
