@@ -37,9 +37,7 @@ export function Tag({ tags }: { tags: string[] }) {
 export function DateTag({ date }: { date: Date }) {
     const pivotDate = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
     if (date.getTime() <= pivotDate.getTime()) {
-        return (
-            <p className="select-none text-gray-600 dark:text-gray-300 text-xs font-bold">{date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-        )
+        return null;
     }
 
     return (
@@ -59,7 +57,7 @@ function Title({ matter }: { matter: PostMatterType }) {
 
 export function PostCover({ matter, first = false }: { matter: PostMatterType, first?: boolean }) {
     return (
-        <div className={`flex flex-col space-y-4 p-4 border-b border-gray-200 ${first ? 'border-t' : ''} ${matter.pinned ? '' : ''}`}>
+        <div className={`flex flex-col space-y-4 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? 'border-t' : ''} ${matter.pinned ? '' : ''}`}>
             <div className="flex justify-between items-start">
                 <Title matter={matter} />
                 {matter.pinned && <PinTopIcon className="w-4 h-4" />}

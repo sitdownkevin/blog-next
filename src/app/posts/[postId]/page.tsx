@@ -25,7 +25,7 @@ export default async function Post({ params }) {
     return (
         <div className="w-full flex flex-col gap-4">
             <Title title={markdownContent.title} />
-            <div className="flex flex-row items-center justify-between border-b border-gray-200 pb-2">
+            <div className="flex flex-row items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-2">
                 <Tag tags={markdownContent.tags} />
                 <DateTag date={markdownContent.update_date} />
             </div>

@@ -195,6 +195,8 @@
     padding-bottom: .3em;
     font-size: 2em;
     border-bottom: 1px solid var(--borderColor-muted);
+    display: inline-block;
+    width: fit-content;
 }
 
 .markdown-body mark {
@@ -400,6 +402,8 @@
     padding-bottom: .3em;
     font-size: 1.5em;
     border-bottom: 1px solid var(--borderColor-muted);
+    display: inline-block;
+    width: fit-content;
 }
 
 .markdown-body h3 {

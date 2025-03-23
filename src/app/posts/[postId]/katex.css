@@ -1,0 +1,17 @@
+/* Override KaTeX styles for better mobile display */
+.katex-display {
+  @apply overflow-y-hidden overflow-x-auto max-w-full;
+}
+
+/* .katex-display > .katex {
+  @apply max-w-full;
+} */
+
+/* .katex-display > .katex > .katex-html {
+  @apply max-w-full overflow-x-auto overflow-y-hidden px-0.5;
+} */
+
+/* For inline math */
+/* .katex {
+  @apply max-w-full overflow-x-auto overflow-y-hidden;
+} */
