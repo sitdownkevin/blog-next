@@ -5,7 +5,7 @@ create_date: 2022-10-01
 update_date: 2024-11-19
 ---
 
-##### Contents
+## Contents
 
 ## 1. **Identifying Root Cause for Quality Issues and Estimate Overall Cost**
 

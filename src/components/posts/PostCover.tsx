@@ -57,7 +57,7 @@ function Title({ matter }: { matter: PostMatterType }) {
 
 export function PostCover({ matter, first = false }: { matter: PostMatterType, first?: boolean }) {
     return (
-        <div className={`flex flex-col space-y-4 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? 'border-t' : ''} ${matter.pinned ? '' : ''}`}>
+        <div className={`flex flex-col space-y-4 md:space-y-6 lg:space-y-8 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? 'border-t' : ''} ${matter.pinned ? '' : ''}`}>
             <div className="flex justify-between items-start">
                 <Title matter={matter} />
                 {matter.pinned && <PinTopIcon className="w-4 h-4" />}

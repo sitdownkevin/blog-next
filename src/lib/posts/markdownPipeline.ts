@@ -19,7 +19,12 @@ export function createBasePipeline(): Processor<any, any, any, any, string> {
         .use(remarkMath)
         .use(remarkFixKatexSyntax)
         .use(remarkGfm)
-        .use(remarkToc)
+        .use(remarkToc, {
+            heading: 'Contents',
+            maxDepth: 3,
+            tight: true,
+            ordered: false
+        })
         .use(remarkRehype, {
             allowDangerousHtml: true,
         })
