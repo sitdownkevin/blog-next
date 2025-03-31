@@ -2,8 +2,12 @@
 title: Launch an Ethereum Node
 tags: Web3
 create_date: 2025-01-10
-update_date: 2025-03-22
+update_date: 2025-03-31
 ---
+
+## Content
+
+
 
 ## 需要的材料
 
@@ -117,7 +121,7 @@ lighthouse beacon --network mainnet \
 
    ```toml
    "prune.mode" = "archive" 
-   datadir = './data-archive'
+   datadir = '/Volumes/Disk/data-archive'
    chain = "mainnet"
    http = true
    "http.addr"="0.0.0.0"
@@ -125,17 +129,36 @@ lighthouse beacon --network mainnet \
    "torrent.download.rate" = "512mb"
    ```
 
+   > `/Volumes/Disk/data-archive` 是我存放数据的目录
+
 #### JSON-RPC
 
 `Erigon` 在下载完数据后，支持直接通过 `rpcdaemon` 开启 JSON-RPC 服务
 
-https://github.com/erigontech/erigon/blob/main/cmd/rpcdaemon/README.md
+```shell
+make rpcdaemon
+```
+
+> `rpcdaemon` 文档
+> https://github.com/erigontech/erigon/blob/main/cmd/rpcdaemon/README.md
 
 ```shell
 ./build/bin/rpcdaemon --datadir=<your_data_dir> --txpool.api.addr=localhost:9090 --private.api.addr=localhost:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool
 ```
 
+```shell
+./build/bin/rpcdaemon --datadir=/Volumes/Disk/data-archive --txpool.api.addr=localhost:9090 --private.api.addr=localhost:9090 --http.api=eth,erigon,web3,net,debug,trace,txpool
+```
+
 ## JSON-RPC
+
+### 参考
+
+- [Geth vs Erigon: Deep dive into RPC methods on Ethereum clients
+](https://docs.chainstack.com/docs/geth-vs-erigon-deep-dive-into-rpc-methods-on-ethereum-clients)
+
+- [JSON-RPC Server
+](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
 
 ### 常用命令
 
