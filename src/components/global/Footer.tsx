@@ -18,7 +18,7 @@ export default function Footer() {
                 <div className="flex flex-col">
                     <span className="text-xxs">About</span>
                     <span className="text-gray-500 text-xxs dark:text-gray-300">
-                        <Link href={"/"}>CV</Link>
+                        <Link href={"/resume"}>Resume</Link>
                     </span>
                     <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/me/gallery"}>Gallery</Link>

@@ -7,7 +7,7 @@ function EducationElementCard({ educationElement }: { educationElement: Educatio
                 <span className="text-xs font-bold">{educationElement.school}</span>
                 <span className="text-xs font-bold">{educationElement.location}</span>
             </div>
-            <div className="flex flex-row justify-between">
+            <div className="flex flex-col sm:flex-row sm:justify-between">
                 <span className="text-xs italic">{educationElement.degree}</span>
                 <span className="text-xs italic">{educationElement.period}</span>
             </div>
@@ -30,9 +30,11 @@ export default function EducationElementsCard({ educationElements }: { education
             <span className="font-bold text-lg border-b border-gray-300">
                 EDUCATION
             </span>
-            {educationElements.map((educationElement, index) => (
-                <EducationElementCard key={index} educationElement={educationElement} />
-            ))}
+            <div className="flex flex-col gap-2 sm:gap-1">
+                {educationElements.map((educationElement, index) => (
+                    <EducationElementCard key={index} educationElement={educationElement} />
+                ))}
+            </div>
         </div>
     )
 }

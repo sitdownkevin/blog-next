@@ -20,7 +20,8 @@ export default function Resume() {
             prefix: "+86",
             number: "155 5867 3178",
         },
-        website: "www.kevinxu.site",
+        website: "kexu.win",
+        github: "sitdownkevin",
     }
 
 
@@ -31,7 +32,8 @@ export default function Resume() {
             degree: "Master of Management Science and Engineering: Information Systems",
             period: "Sep 2024 - Present",
             content: [
-                "Relevant Courses: Database System, Data Structure, Computer Network, Operating System, etc.",
+                "Successive Master-Doctor Program",
+                "Research Interest: Web3, Blockchain Technology, and Artificial Intelligence",
             ],
         },
         {
@@ -40,7 +42,7 @@ export default function Resume() {
             degree: "Bachelor of Industrial Engineering",
             period: "Sep 2020 - Jun 2024",
             content: [
-                "Relevant Courses: Database System, Data Structure, Computer Network, Operating System, etc.",
+                "GPA: 3.93/4.00",
             ],
         }
     ];
@@ -52,7 +54,8 @@ export default function Resume() {
             position: "Engineering Intern",
             period: "Jan 2024 - May 2024",
             content: [
-                "Data Mining, Operations System Development",
+                "Operations System Development",
+                "Kanban System Development with Python (Streamlit, Pandas, NumPy, etc.), SQL, and JavaScript",
             ],
         },
         {
@@ -61,32 +64,77 @@ export default function Resume() {
             position: "Research Assistant",
             period: "Oct 2022 - Apr 2023",
             content: [
-                "Active Learning, Contrastive Learning",
+                "Deep Learning (Active Learning, Contrastive Learning) on Medical Image Data with Python (PyTorch, Scikit-learn, etc.), MATLAB, and R",
             ],
         }
     ];
 
     const projectExperienceElements: ProjectExperienceElementType[] = [
         {
-            project: "College Students' Innovation and Entrepreneurship Competition",
-            location: "Chengdu",
+            project: "Design and Control Method of Modular Mechanical Prosthesis",
+            location: "China",
             role: "Project Leader",
-            period: "Oct 2022 - Apr 2023",
             content: [
-                "National Project",
-                "Design and Control Method of Modular Mechanical Prosthesis",
+                "A National Project of College Students' Innovation and Entrepreneurship Competition",
+                "Responsible for the design of the mechanical prosthesis with SolidWorks, the control panel with Vue.js, and the communication program with C++",
+            ],
+        },
+        {
+            project: "Blackboard Enhanced Extension",
+            location: "",
+            role: "github.com/sitdownkevin/Blackboard-Enhanced",
+            content: [
+                "A Chrome extension that enhances the functionality of Blackboard, a popular educational management system widely used in universities. Developed with React",
+            ],
+        },
+        {
+            project: "DORM WIFI",
+            location: "",
+            role: "sitdownkevin.github.io/dorm-wifi-tauri",
+            content: [
+                "A WiFi connection utility for Tongji University that enables automatic authentication and seamless connectivity",
+                "Built a cross-platform desktop application using Tauri framework with Rust backend and TypeScript frontend",
+                "Developed companion mobile app using React Native and Expo framework"
+            ],
+        },
+        {
+            project: "Blog Next",
+            location: "",
+            role: "github.com/sitdownkevin/blog-next",
+            content: [
+                "A personal blog developed with Next.js, Tailwind CSS, and TypeScript",
+            ],
+        },
+        {
+            project: "Folo",
+            location: "",
+            role: "follow.is",
+            content: [
+                "Contributed to the open-source project RSSHub, by creating RSS rules for follow.is",
             ],
         }
     ];
 
     const additionalInformationElements: AdditionalInformationElementType[] = [
         {
-            title: "Skills",
-            content: "Python, SQL, Java, C++, etc.",
+            title: "Programming Languages",
+            content: "Python, JavaScript, TypeScript, R, SQL, Stata, etc.",
+        },
+        {
+            title: "Frontend",
+            content: "React, Next.js, Vue.js, Tailwind CSS, etc.",
+        },
+        {
+            title: "Frameworks",
+            content: "Pandas, NumPy, PyTorch, LangChain, Streamlit, Flask, etc.",
         },
         {
             title: "Languages",
-            content: "Mandarin, English",
+            content: "Mandarin, English (TOEFL 94)",
+        },
+        {
+            title: "Hobbies",
+            content: "Trading, traveling, and enjoying delicious food",
         }
     ];
 
@@ -100,7 +148,7 @@ export default function Resume() {
     ];
 
     return (
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 sm:gap-1">
             <Header basicInfo={basicInfo} />
             <EducationElementsCard educationElements={educationElements} />
             <WorkExperienceElementsCard workExperienceElements={workExperienceElements} />

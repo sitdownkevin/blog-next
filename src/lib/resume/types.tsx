@@ -16,6 +16,8 @@ export type BasicInfoType = {
     email?: string;
     phone?: PhoneType;
     website?: string;
+    linkedin?: string;
+    github?: string;
 }
 
 
@@ -43,8 +45,8 @@ export type WorkExperienceElementType = {
 export type ProjectExperienceElementType = {
     project: string;
     location?: string;
-    role: string;
-    period: string;
+    role?: string;
+    period?: string;
     content: string[];
 }
 
