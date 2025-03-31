@@ -123,3 +123,69 @@ html {
   overflow-y: scroll;
 }
 
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: white !important;
+  }
+
+  /* Hide Vercel Speed Insights and other non-printable elements */
+  [data-vercel-speed-insights],
+  #vercel-speed-insights,
+  [role="button"],
+  button:not([type="submit"]),
+  .refresh-button,
+  .reload-button {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide refresh button and other non-printable elements */
+  [role="button"],
+  button:not([type="submit"]),
+  .refresh-button,
+  .reload-button {
+    display: none !important;
+  }
+
+  .print\:break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  .print\:break-inside-avoid-page {
+    break-inside: avoid-page;
+  }
+
+  /* Hide navigation and other non-resume elements */
+  nav,
+  footer,
+  .navbar,
+  .footer {
+    display: none !important;
+  }
+
+  /* Ensure resume content is visible */
+  .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+
+  /* Ensure resume content is visible */
+  .container > * {
+    display: block !important;
+  }
+}
+

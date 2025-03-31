@@ -1,3 +1,5 @@
+"use client";
+
 import { BasicInfoType, EducationElementType, WorkExperienceElementType, ProjectExperienceElementType, AdditionalInformationElementType, PublicationElementType } from "@/lib/resume/types";
 import EducationElementsCard from "@/components/resume/Education";
 import Header from "@/components/resume/Header";
@@ -5,7 +7,7 @@ import WorkExperienceElementsCard from "@/components/resume/WorkExperience";
 import ProjectExperienceElementsCard from "@/components/resume/ProjectExperience";
 import AdditionalInformation from "@/components/resume/AdditionalInformation";
 import Publications from "@/components/resume/Publications";
-
+import { Printer } from "lucide-react";
 
 export default function Resume() {
     const basicInfo: BasicInfoType = {
@@ -147,14 +149,33 @@ export default function Resume() {
         }
     ];
 
+    const handlePrint = () => {
+        window.print();
+    };
+
     return (
         <div className="flex flex-col gap-2 sm:gap-1">
-            <Header basicInfo={basicInfo} />
-            <EducationElementsCard educationElements={educationElements} />
-            <WorkExperienceElementsCard workExperienceElements={workExperienceElements} />
-            <ProjectExperienceElementsCard projectExperienceElements={projectExperienceElements} />
-            <AdditionalInformation additionalInformationElements={additionalInformationElements} />
-            <Publications publications={publications} />
+            <div className="print:max-w-[210mm] print:w-full print:mx-auto print:my-0 print:bg-white print:shadow-none">
+                <div className="print:py-[10mm] print:px-[8mm]">
+                    <div className="flex justify-end mb-4 print:hidden">
+                        <button
+                            onClick={handlePrint}
+                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
+                        >
+                            <Printer className="w-4 h-4" />
+                            Print Resume
+                        </button>
+                    </div>
+                    <div className="print:break-inside-avoid print:block">
+                        <Header basicInfo={basicInfo} />
+                        <EducationElementsCard educationElements={educationElements} />
+                        <WorkExperienceElementsCard workExperienceElements={workExperienceElements} />
+                        <ProjectExperienceElementsCard projectExperienceElements={projectExperienceElements} />
+                        <AdditionalInformation additionalInformationElements={additionalInformationElements} />
+                        <Publications publications={publications} />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

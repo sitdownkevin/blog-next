@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="w-5/6 md:w-2/3 lg:w-1/2 flex flex-col space-y-8 mb-16">
+        <div className="w-5/6 md:w-2/3 lg:w-1/2 flex flex-col space-y-8 mb-16 print:hidden">
             <div className="flex flex-row justify-center items-center space-x-4">
                 <Image
                     src={"/favicon-32x32.png"}

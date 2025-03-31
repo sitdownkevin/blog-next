@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
     return (
-        <div className="w-full md:w-5/6 lg:w-4/6">
+        <div className="w-full md:w-5/6 lg:w-4/6 print:hidden">
             <header className="bg-gray-0 py-4 px-6 mb-3 flex items-center justify-between">
                 <div className="logo">
                     <h1 className="text-xl font-bold text-gray-500"></h1>
