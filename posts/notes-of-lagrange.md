@@ -7,7 +7,7 @@ update_date: 2024-11-30
 
 [Python 代码](/jupyter/lagrange_solver_with_python.html)
 
-##### Contents
+## Contents
 
 ## 拉格朗日函数
 

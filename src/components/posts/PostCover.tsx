@@ -41,7 +41,7 @@ export function DateTag({ date }: { date: Date }) {
     }
 
     return (
-        <p className="select-none text-gray-600 dark:text-gray-300 text-xs font-bold">{date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p className="select-none text-gray-600 dark:text-gray-300 text-xs font-bold">{date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
     )
 }
 

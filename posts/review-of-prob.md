@@ -7,7 +7,7 @@ update_date: null
 
 > This note is a backup from Notion.
 
-##### Contents
+## Contents
 
 ## Lecture 8
 ### Definition of Variance

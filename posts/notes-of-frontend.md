@@ -1,6 +1,6 @@
 ---
 title: Notes of Frontend
-tags: CS
+tags: Coding
 create_date: null
 update_date: 2024-11-30
 ---
