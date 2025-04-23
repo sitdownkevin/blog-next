@@ -3,6 +3,10 @@ import axios from "axios";
 import Link from "next/link";
 import { PostMatterType } from "@/lib/posts/types";
 import { PinTopIcon } from "@radix-ui/react-icons";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
 
 export function Tag({ tags }: { tags: string[] }) {
   const gradients = [
@@ -116,7 +120,7 @@ export function PostCover({
 }) {
   return (
     <div
-      className={`flex flex-col space-y-4 md:space-y-6 lg:space-y-8 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? "border-t" : ""} ${matter.pinned ? "" : ""}`}
+      className={`flex flex-col space-y-4 md:space-y-6 lg:space-y-8 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
     >
       <div className="flex justify-between items-start">
         <Title matter={matter} />
@@ -126,6 +130,51 @@ export function PostCover({
         <Tag tags={matter.tags} />
         <DateTag date={matter.update_date} />
       </div>
+    </div>
+  );
+}
+
+export function PostCovers({ matterList }: { matterList: PostMatterType[] }) {
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => Math.min(prevCount + 5, matterList.length));
+  };
+
+  useEffect(() => {
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("visibleCount", String(visibleCount));
+    }
+  }, [visibleCount]);
+
+  useEffect(() => {
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("visibleCount", String(visibleCount));
+    }
+  }, [visibleCount]);
+
+  const visiblePosts = matterList.slice(0, visibleCount);
+
+  return (
+    <div className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8">
+      <AnimatePresence>
+        {visiblePosts.map((matter, index) => (
+          <motion.div
+            key={matter.id}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <PostCover matter={matter} first={index === 0} />
+          </motion.div>
+        ))}
+      </AnimatePresence>
+      {visibleCount < matterList.length && (
+        <Button variant="secondary" size="sm" onClick={handleShowMore} className="w-full">
+          展开更多
+        </Button>
+      )}
     </div>
   );
 }

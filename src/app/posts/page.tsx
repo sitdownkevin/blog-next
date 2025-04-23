@@ -1,6 +1,7 @@
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { PostMatterType } from "@/lib/posts/types";
 import { PostCover } from "@/components/posts/PostCover";
+import { PostCovers } from "@/components/posts/PostCover";
 
 
 export default function Page() {
@@ -20,9 +21,10 @@ export default function Page() {
 
     return (
         <div className="w-full flex flex-col">
-            {matterListSorted.map((matter, index) => (
+            {/* {matterListSorted.map((matter, index) => (
                 <PostCover key={matter.id} matter={matter} first={index === 0} />
-            ))}
+            ))} */}
+            <PostCovers matterList={matterListSorted} />
         </div>
     )
 }

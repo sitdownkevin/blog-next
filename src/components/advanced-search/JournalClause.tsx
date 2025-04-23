@@ -27,7 +27,7 @@ function constructISSNQueryForWos(journals: JournalType[]): string {
 
 function CodeBlock({ code, title }: { code: string; title: string }) {
   const [copied, setCopied] = React.useState(false);
-  const [collapsed, setCollapsed] = React.useState(false);
+  const [collapsed, setCollapsed] = React.useState(true);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(code);
