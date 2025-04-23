@@ -27,13 +27,7 @@ export default function ThemeToggle() {
       className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
       aria-label="切换主题"
     >
-      {theme === "dark" ? (
-        <FiSun className="text-yellow-400" />
-      ) : theme === "light" ? (
-        <FiMoon className="text-gray-600" />
-      ) : (
-        <FiMonitor className="text-gray-600 dark:text-gray-300" />
-      )}
+      {theme === "dark" ? <FiSun className="text-yellow-400" /> : <FiMoon className="text-gray-600" />}
     </button>
   );
 } 
