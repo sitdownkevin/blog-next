@@ -55,7 +55,8 @@ export function Tag({ tags }: { tags: string[] }) {
       {tags.map((tag) => {
         const gradient = getGradient(tag);
         return (
-          <span
+          <Link
+            href={`/tags/${tag}`}
             key={tag}
             className={`bg-gradient-to-r ${gradient.from} ${gradient.to} px-2 py-1 rounded-full`}
           >
@@ -64,7 +65,7 @@ export function Tag({ tags }: { tags: string[] }) {
             >
               {tag}
             </p>
-          </span>
+          </Link>
         );
       })}
     </div>
