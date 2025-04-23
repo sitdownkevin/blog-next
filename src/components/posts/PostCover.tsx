@@ -120,7 +120,7 @@ export function PostCover({
 }) {
   return (
     <div
-      className={`flex flex-col space-y-4 md:space-y-6 lg:space-y-8 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
+      className={`flex flex-col space-y-2 md:space-y-4 lg:space-y-6 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
     >
       <div className="flex justify-between items-start">
         <Title matter={matter} />
@@ -156,7 +156,7 @@ export function PostCovers({ matterList }: { matterList: PostMatterType[] }) {
   const visiblePosts = matterList.slice(0, visibleCount);
 
   return (
-    <div className="flex flex-col space-y-4 md:space-y-6 lg:space-y-8">
+    <div className="flex flex-col space-y-0 md:space-y-2 lg:space-y-4">
       <AnimatePresence>
         {visiblePosts.map((matter, index) => (
           <motion.div

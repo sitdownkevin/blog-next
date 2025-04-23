@@ -37,7 +37,8 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
             <Header />
-            <div className="w-5/6 md:w-2/3 lg:w-1/2 mb-16">{children}</div>
+            {/* Add padding-top equal to header height to prevent overlap */}
+            <div className="w-5/6 md:w-2/3 lg:w-1/2 mb-16 pt-[70px]">{children}</div> {/* Adjust pt-[70px] based on actual header height */}
             <Footer />
           </div>
         </ThemeProvider>
