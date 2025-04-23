@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, JSX } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -223,7 +224,7 @@ function ValidateCard({
             {validationResult?.isValid ? "Valid" : "Invalid"}
           </p>
           {validationResult?.data?.image && (
-            <img src={validationResult.data.image} alt="Wechat QR Code" />
+            <Image src={validationResult.data.image} alt="Wechat QR Code" width={200} height={200} />
           )}
         </div>
       </CardContent>

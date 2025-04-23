@@ -223,22 +223,21 @@ export function Comment({ postId = '1' }: { postId?: string }) {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const handleFetchComments = async () => {
-    setIsLoading(true);
-    setError(null);
-
-    try {
-      const data = await fetchComments({ postId });
-      setComments(data);
-    } catch (err) {
-      setError("加载评论失败，请刷新重试");
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const handleFetchComments = async () => {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const data = await fetchComments({ postId });
+        setComments(data);
+      } catch (err) {
+        setError("加载评论失败，请刷新重试");
+        console.error(err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
     handleFetchComments();
   }, [postId]);
 
@@ -256,7 +255,23 @@ export function Comment({ postId = '1' }: { postId?: string }) {
         {error ? (
           <div className="text-center py-4">
             <p className="text-red-500 mb-2">{error}</p>
-            <Button variant="outline" onClick={handleFetchComments}>
+            <Button variant="outline" onClick={() => {
+              const handleFetchComments = async () => {
+                setIsLoading(true);
+                setError(null);
+
+                try {
+                  const data = await fetchComments({ postId });
+                  setComments(data);
+                } catch (err) {
+                  setError("加载评论失败，请刷新重试");
+                  console.error(err);
+                } finally {
+                  setIsLoading(false);
+                }
+              };
+              handleFetchComments();
+            }}>
               <RefreshCw className="h-4 w-4 mr-2" />
               重试
             </Button>
@@ -272,7 +287,23 @@ export function Comment({ postId = '1' }: { postId?: string }) {
             ))}
           </>
         ) : (
-          <CommentList comments={comments} onRefresh={handleFetchComments} />
+          <CommentList comments={comments} onRefresh={() => {
+            const handleFetchComments = async () => {
+              setIsLoading(true);
+              setError(null);
+
+              try {
+                const data = await fetchComments({ postId });
+                setComments(data);
+              } catch (err) {
+                setError("加载评论失败，请刷新重试");
+                console.error(err);
+              } finally {
+                setIsLoading(false);
+              }
+            };
+            handleFetchComments();
+          }} />
         )}
       </CardContent>
 

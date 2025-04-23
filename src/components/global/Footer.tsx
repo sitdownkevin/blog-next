@@ -23,14 +23,14 @@ export default function Footer() {
                     <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/me/gallery"}>Gallery</Link>
                     </span>
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
+                        <Link href={"/pow"}>WeChat</Link>
+                    </span>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xxs">Tools</span>
                     <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/tools/advanced_search"}>Advanced Search</Link>
-                    </span>
-                    <span className="text-gray-500 text-xxs dark:text-gray-300">
-                        <Link href={"/pow"}>PoW</Link>
                     </span>
                 </div>
                 <div className="flex flex-col">

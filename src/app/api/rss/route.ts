@@ -4,7 +4,7 @@ import { MarkdownType } from '@/lib/posts/types';
 
 
 export async function GET() {
-  const siteURL = 'https://kevinxu.site'; // 替换为你的网站域名
+  const siteURL = 'https://kexu.win'; // 替换为你的网站域名
   const date = new Date();
 
   const author = {
@@ -38,7 +38,6 @@ export async function GET() {
       id: `${post.id}`,
       link: `${siteURL}/posts/${post.id}`,
       description: post.description || post.title,
-      content: post.content,
       author: [author],
       date: new Date(post.update_date),
     });
@@ -46,14 +45,6 @@ export async function GET() {
 
   let rss2Content = feed.rss2();
 
-  // Insert follow_challenge before the closing </rss> tag
-  const followChallenge = `
-  <follow_challenge>
-        <feedId>82048947524871168</feedId>
-        <userId>42175006902104064</userId>
-    </follow_challenge>`;
-
-  rss2Content = rss2Content.replace('</rss>', `${followChallenge}\n</rss>`);
 
   return new Response(rss2Content, {
     headers: {
