@@ -58,13 +58,14 @@
     --color-prettylights-syntax-markup-deleted-bg: #67060c;
     --color-prettylights-syntax-markup-inserted-text: #aff5b4;
     --color-prettylights-syntax-markup-inserted-bg: #033a16;
-    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
-    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-changed-text: #ffdfb6;
+    --color-prettylights-syntax-changed-bg: #5a1e02;
     --color-prettylights-syntax-markup-ignored-text: #f0f6fc;
     --color-prettylights-syntax-markup-ignored-bg: #1158c7;
     --color-prettylights-syntax-meta-diff-range: #d2a8ff;
     --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
-}
+    background-color: var(--bgColor-default) !important; /* Ensure dark background */
+  }
 
 .markdown-body {
     /* light */
