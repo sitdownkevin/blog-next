@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const photos = Array.from({ length: 8 }, (_, index) => ({
   id: index + 1,
-  src: `/photos/g${index + 1}.jpg`,
+  src: `/photos/g${index + 1}.webp`,
   caption: ''
 }));
 

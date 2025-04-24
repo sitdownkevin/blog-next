@@ -97,7 +97,7 @@ export default function CvSectionElement() {
     email: "kexu567@gmail.com",
     location: "Shanghai, China",
     intro: "Information Systems, Data Mining, and Blockchain Technology.",
-    figurePath: "/kexu_photo.jpg",
+    figurePath: "/personal/kexu_photo.webp",
   };
 
   const data: CvSection[] = [
