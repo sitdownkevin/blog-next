@@ -7,7 +7,6 @@ import WorkExperienceElementsCard from "@/components/resume/WorkExperience";
 import ProjectExperienceElementsCard from "@/components/resume/ProjectExperience";
 import AdditionalInformation from "@/components/resume/AdditionalInformation";
 import Publications from "@/components/resume/Publications";
-import { Printer } from "lucide-react";
 
 export default function Resume() {
     const basicInfo: BasicInfoType = {
@@ -149,24 +148,14 @@ export default function Resume() {
         }
     ];
 
-    const handlePrint = () => {
-        window.print();
-    };
 
     return (
         <div className="flex flex-col gap-2 sm:gap-1">
-            <div className="print:max-w-[210mm] print:w-full print:mx-auto print:my-0 print:bg-white print:shadow-none">
-                <div className="print:py-[10mm] print:px-[8mm]">
-                    <div className="flex justify-end mb-4 print:hidden">
-                        <button
-                            onClick={handlePrint}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 transition-colors"
-                        >
-                            <Printer className="w-4 h-4" />
-                            Print Resume
-                        </button>
+            <div className="">
+                <div className="">
+                    <div className="flex justify-end mb-4">
                     </div>
-                    <div className="print:break-inside-avoid print:block">
+                    <div className="">
                         <Header basicInfo={basicInfo} />
                         <EducationElementsCard educationElements={educationElements} />
                         <WorkExperienceElementsCard workExperienceElements={workExperienceElements} />

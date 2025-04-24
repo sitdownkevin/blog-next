@@ -9,8 +9,8 @@ import ThemeProvider from "@/components/global/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ke Xu",
-  description: "Ke Xu's personal website",
+  title: "k's Space",
+  description: "Personal website of Ke Xu",
   icons: {
     icon: "/favicon.ico",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "application/rss+xml": [
         {
           url: "/api/rss",
-          title: "Ke Xu's Blog RSS Feed",
+          title: "Blog RSS Feed of kexu.win",
         },
       ],
     },
