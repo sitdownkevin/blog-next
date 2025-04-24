@@ -7,6 +7,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
+import { EnhancedMarkdownBody } from "./EnhancedMarkdownBody"; // Import EnhancedMarkdownBody
+
 
 export function Tag({ tags }: { tags: string[] }) {
   const gradients = [
@@ -114,9 +116,11 @@ function Title({ matter }: { matter: PostMatterType }) {
 
 export function PostCover({
   matter,
+  searching,
   first = false,
 }: {
   matter: PostMatterType;
+  searching: boolean;
   first?: boolean;
 }) {
   return (
@@ -127,6 +131,12 @@ export function PostCover({
         <Title matter={matter} />
         {matter.pinned && <PinTopIcon className="w-4 h-4" />}
       </div>
+      {/* Use EnhancedMarkdownBody to render snippetHtml */}
+      {searching && matter.snippetHtml && (
+        <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 w-full break-words">
+          <EnhancedMarkdownBody markdownHtml={matter.snippetHtml} />
+        </div>
+      )}
       <div className="flex justify-between items-end">
         <Tag tags={matter.tags} />
         <DateTag date={matter.update_date} />
@@ -135,7 +145,7 @@ export function PostCover({
   );
 }
 
-export function PostCovers({ matterList }: { matterList: PostMatterType[] }) {
+export function PostCovers({ matterList, searching }: { matterList: PostMatterType[]; searching: boolean }) {
   const [visibleCount, setVisibleCount] = useState(5);
 
   const handleShowMore = () => {
@@ -167,7 +177,7 @@ export function PostCovers({ matterList }: { matterList: PostMatterType[] }) {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
-            <PostCover matter={matter} first={index === 0} />
+            <PostCover matter={matter} first={index === 0} searching={searching} />
           </motion.div>
         ))}
       </AnimatePresence>

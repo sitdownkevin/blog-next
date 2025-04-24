@@ -21,7 +21,7 @@ export default function TagPage({ params }) {
   return (
     <div className="w-full flex flex-col">
       <h1 className="text-2xl font-bold mb-4">Posts tagged with "{tagId}"</h1>
-      <PostCovers matterList={sortedFilteredMatterList} />
+      <PostCovers matterList={sortedFilteredMatterList} searching={false} />
     </div>
   );
 }

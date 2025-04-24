@@ -7,6 +7,9 @@ export type PostMatterType = {
     description?: string;
     create_date?: Date;
     update_date?: Date;
+    content?: string;
+    snippet?: string;
+    snippetHtml?: string;
 }
 
 
