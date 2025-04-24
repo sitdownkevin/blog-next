@@ -1,62 +1,100 @@
 import { BasicInfoType } from "@/lib/resume/types";
 import Link from "next/link";
+// Import icons from lucide-react
 import {
-  FaWeixin,
-  FaEnvelope,
-  FaGlobe,
-  FaPhone,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+  Mail, // Replaces FaEnvelope
+  Globe, // Replaces FaGlobe
+  Phone, // Replaces FaPhone
+  Linkedin, // Replaces FaLinkedin
+  Github, // Replaces FaGithub
+} from 'lucide-react';
 
-export default function Header({ basicInfo }: { basicInfo: BasicInfoType }) {
+// Define props interface
+interface HeaderProps {
+  basicInfo: BasicInfoType;
+}
+
+export default function Header({ basicInfo }: HeaderProps) {
+  // Define common icon class for size and alignment
+  const iconClass = "inline-block mr-1 h-3 w-3"; // Adjusted size
+
   return (
     <div className="flex flex-col gap-2 mb-2">
       <div className="flex gap-4 font-bold text-2xl border-b-2 border-gray-300 pb-2">
         <div>
-          {basicInfo.name.first_name} ({basicInfo.name.first_name_en}){" "}
-          {basicInfo.name.last_name}
+          {/* Keep the original name format for now */}
+          {basicInfo.name.first_name} {basicInfo.name.last_name}
+          {(basicInfo.name.first_name_en || basicInfo.name.last_name_en) && (
+            <span> ({basicInfo.name.first_name_en} {basicInfo.name.last_name_en})</span>
+          )}
         </div>
       </div>
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
-        <div className="text-xs">
-          <Link
-            href={`tel:${basicInfo.phone?.prefix}${basicInfo.phone?.number}`}
-            className=""
-          >
-            <FaPhone className="inline-block mr-1" />
-            {basicInfo.phone?.prefix} {basicInfo.phone?.number}
-          </Link>
-        </div>
-        <div className="text-xs">
-          <Link
-            href={`mailto:${basicInfo.email}`}
-            className=""
-          >
-            <FaEnvelope className="inline-block mr-1" />
-            {basicInfo.email}
-          </Link>
-        </div>
+
+      {/* Use flex-wrap for responsive layout */}
+      <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
+        {/* Phone */}
+        {basicInfo.phone && (
+          <div className="flex items-center"> {/* Keep items-center on individual items */}
+            <Link
+              href={`tel:${basicInfo.phone.prefix}${basicInfo.phone.number}`}
+              className="hover:underline" // Removed flex items-center from Link, it's on the parent div now
+            >
+              <Phone className={iconClass} />
+              {basicInfo.phone.prefix} {basicInfo.phone.number}
+            </Link>
+          </div>
+        )}
+        {/* Email */}
+        {basicInfo.email && (
+          <div className="flex items-center">
+            <Link
+              href={`mailto:${basicInfo.email}`}
+              className="hover:underline"
+            >
+              <Mail className={iconClass} />
+              {basicInfo.email}
+            </Link>
+          </div>
+        )}
+        {/* Website */}
         {basicInfo.website && (
-          <div className="text-xs">
+          <div className="flex items-center">
             <Link
               href={`https://${basicInfo.website}`}
-              className=""
+              target="_blank" // Open external links in new tab
+              rel="noopener noreferrer" // Security best practice
+              className="hover:underline"
             >
-              <FaGlobe className="inline-block mr-1" />
+              <Globe className={iconClass} />
               {basicInfo.website}
             </Link>
           </div>
         )}
+        {/* GitHub */}
         {basicInfo.github && (
-          <div className="text-xs">
+          <div className="flex items-center">
             <Link
               href={`https://github.com/${basicInfo.github}`}
-              className=""
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
             >
-              <FaGithub className="inline-block mr-1" />
+              <Github className={iconClass} />
               {basicInfo.github}
+            </Link>
+          </div>
+        )}
+        {/* LinkedIn */}
+        {basicInfo.linkedin && (
+          <div className="flex items-center">
+            <Link
+              href={`https://linkedin.com/in/${basicInfo.linkedin}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              <Linkedin className={iconClass} />
+              {basicInfo.linkedin}
             </Link>
           </div>
         )}

@@ -1,32 +1,36 @@
 import { PublicationElementType } from "@/lib/resume/types";
 
-function PublicationElementCard({
-  publication,
-}: {
-  publication: PublicationElementType;
-}) {
-  return (
-    <div className="flex flex-row ml-4 gap-4">
-      <span className="text-xs">•</span>
-      <span className="text-xs text-justify">{publication.content}</span>
-    </div>
-  );
+// Define props interface for the single element card
+interface PublicationElementCardProps {
+    publication: PublicationElementType;
 }
-export default function Publications({
-  publications,
-}: {
-  publications: PublicationElementType[];
-}) {
-  return (
-    <div>
-      <span className="font-bold text-lg border-b border-gray-300">
-        PUBLICATIONS
-      </span>
-      <div className="flex flex-col">
-        {publications.map((publication, index) => (
-          <PublicationElementCard key={index} publication={publication} />
-        ))}
-      </div>
-    </div>
-  );
+
+// Render as a list item (li)
+function PublicationElementCard({ publication }: PublicationElementCardProps) {
+    return (
+        <li className="text-xs text-justify"> {/* Use li and apply text styles */}
+            {publication.content}
+        </li>
+    );
+}
+
+// Define props interface for the main container
+interface PublicationsProps {
+    publications: PublicationElementType[];
+}
+
+export default function Publications({ publications }: PublicationsProps) {
+    return (
+        <div className="mt-2"> {/* Add margin top for separation */}
+            <span className="font-bold text-lg border-b border-gray-300 block mb-1"> {/* Make title block and add margin bottom */}
+                PUBLICATIONS
+            </span>
+            {/* Use ul for the list */}
+            <ul className="list-disc list-inside ml-4 flex flex-col gap-1"> {/* Add list styles and gap */}
+                {publications.map((pub, index) => (
+                    <PublicationElementCard key={index} publication={pub} />
+                ))}
+            </ul>
+        </div>
+    );
 }
