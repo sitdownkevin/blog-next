@@ -56,9 +56,6 @@ function CommentItem({
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" onClick={handleDeleteComment}>
-              <Trash className="h-4 w-4" />
-            </Button>
           </div>
         </div>
         <div className="w-full p-2">

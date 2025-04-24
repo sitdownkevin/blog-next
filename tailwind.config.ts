@@ -6,6 +6,7 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
     "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/app/posts/[postId]/markdown.css",
   ],
   prefix: "",
   theme: {

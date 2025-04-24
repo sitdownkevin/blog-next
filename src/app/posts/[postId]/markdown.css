@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .markdown-body {
     --base-size-4: 0.25rem;
     --base-size-8: 0.5rem;
@@ -22,9 +26,9 @@
     --fgColor-attention: #d29922;
     --fgColor-danger: #f85149;
     --fgColor-done: #ab7df8;
-    --bgColor-default: #0d1117;
-    --bgColor-muted: #151b23;
-    --bgColor-neutral-muted: #656c7633;
+    --bgColor-default: 40 14% 7%; /* #12120f in HSL */
+    --bgColor-muted: 40 7% 11%; /* Dark Beige */
+    --bgColor-neutral-muted: 40 7% 11%; /* Dark Beige */
     --bgColor-attention-muted: #bb800926;
     --borderColor-default: #3d444d;
     --borderColor-muted: #3d444db3;
@@ -67,7 +71,7 @@
     background-color: var(--bgColor-default) !important; /* Ensure dark background */
   }
 
-.markdown-body {
+ .markdown-body {
     /* light */
     color-scheme: light;
     --focus-outlineColor: #0969da;
@@ -77,10 +81,10 @@
     --fgColor-success: #1a7f37;
     --fgColor-attention: #9a6700;
     --fgColor-danger: #d1242f;
-    --fgColor-done: #8250df;
-    --bgColor-default: #ffffff;
-    --bgColor-muted: #f6f8fa;
-    --bgColor-neutral-muted: #818b981f;
+    --fgColor-done: #0969da;
+    --bgColor-default: 40 14% 97%; /* #f8f8f2 in HSL */
+    --bgColor-muted: 40 7% 94%; /* Light Beige */
+    --bgColor-neutral-muted: 40 7% 94%; /* Light Beige */
     --bgColor-attention-muted: #fff8c5;
     --borderColor-default: #d1d9e0;
     --borderColor-muted: #d1d9e0b3;
@@ -127,7 +131,7 @@
     -webkit-text-size-adjust: 100%;
     margin: 0;
     color: var(--fgColor-default);
-    background-color: var(--bgColor-default);
+    background-color: var(--bgColor-default) !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 16px;
     line-height: 1.5;
@@ -876,7 +880,7 @@
     font-size: 85%;
     line-height: 1.45;
     color: var(--fgColor-default);
-    background-color: var(--bgColor-muted);
+    background-color: 40 7% 80%; /* Even darker beige */
     border-radius: 6px;
 }
 
@@ -889,7 +893,7 @@
     overflow: visible;
     line-height: inherit;
     word-wrap: normal;
-    background-color: transparent;
+    background-color: inherit;
     border: 0;
 }
 

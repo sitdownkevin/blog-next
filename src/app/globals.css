@@ -17,32 +17,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 40 14% 97%; /* #f8f8f2 in HSL */
     --foreground: 0 0% 3.9%;
 
-    --card: 0 0% 100%;
+    --card: 40 14% 97%; /* #f8f8f2 in HSL */
     --card-foreground: 0 0% 3.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 40 14% 97%; /* #f8f8f2 in HSL */
     --popover-foreground: 0 0% 3.9%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 214 100% 59%; /* #0070f3 in HSL */
+    --primary-foreground: 0 0% 100%; /* #ffffff in HSL */
 
-    --secondary: 0 0% 96.1%;
+    --secondary: 40 7% 94%; /* Light Beige */
     --secondary-foreground: 0 0% 9%;
 
-    --muted: 0 0% 96.1%;
+    --muted: 40 7% 94%; /* Light Beige */
     --muted-foreground: 0 0% 45.1%;
 
-    --accent: 0 0% 96.1%;
+    --accent: 40 7% 94%; /* Light Beige */
     --accent-foreground: 0 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 40 7% 89.8%;
+    --input: 40 7% 89.8%;
     --ring: 0 0% 3.9%;
 
     --radius: 0.5rem;
@@ -59,32 +59,32 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    --background: 40 14% 7%; /* #12120f in HSL */
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 3.9%;
+    --card: 40 14% 7%; /* #12120f in HSL */
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 3.9%;
+    --popover: 40 14% 7%; /* #12120f in HSL */
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 214 100% 59%; /* #0070f3 in HSL */
+    --primary-foreground: 0 0% 0%; /* #000000 in HSL */
 
-    --secondary: 0 0% 14.9%;
+    --secondary: 40 7% 11%; /* Dark Beige */
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 0 0% 14.9%;
+    --muted: 40 7% 11%; /* Dark Beige */
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 0 0% 14.9%;
+    --accent: 40 7% 11%; /* Dark Beige */
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 40 7% 14.9%;
+    --input: 40 7% 14.9%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
