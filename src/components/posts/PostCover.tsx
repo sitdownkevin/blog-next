@@ -121,7 +121,7 @@ export function PostCover({
 }) {
   return (
     <div
-      className={`flex flex-col space-y-2 md:space-y-4 lg:space-y-6 p-4 border-b border-gray-200 dark:border-gray-800 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
+      className={`flex flex-col space-y-2 md:space-y-4 lg:space-y-6 p-4 border-b border-gray-200 dark:border-gray-700 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
     >
       <div className="flex justify-between items-start">
         <Title matter={matter} />

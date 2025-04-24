@@ -13,12 +13,12 @@ function addCopyButton(contentHtml: string): string {
         (match, language, code) => {
             return `
                 <div class="relative group">
-                    <button class="absolute hidden group-hover:flex items-center justify-center right-2 top-2 
+                    <button class="absolute hidden group-hover:flex items-center justify-center right-2 top-2
                             bg-zinc-500/50 hover:bg-zinc-400/60 text-zinc-100 hover:text-white
-                            rounded-md w-8 h-8 
+                            rounded-md w-8 h-8
                             transition-all duration-200 ease-in-out
                             shadow-sm hover:shadow-md
-                            ring-1 ring-zinc-400/20 hover:ring-zinc-300/30"
+                            ring-1 ring-zinc-400/20 hover:ring-300/30"
                             onclick="(() => {
                                 navigator.clipboard.writeText(this.parentElement.querySelector('code').textContent);
                                 const copyIcon = this.querySelector('.copy-icon');
@@ -39,7 +39,7 @@ function addCopyButton(contentHtml: string): string {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                         </svg>
                     </button>
-                    <pre class="bg-slate-100 border border-zinc-400/20 rounded-md"><code class="language-${language} bg-zinc-200 text-zinc-900 rounded-md p-2" style="font-family: 'Maple Mono', monospace;">${code}</code></pre>
+                    <pre class="bg-slate-100 dark:bg-zinc-800 border border-zinc-400/20 dark:border-zinc-700 rounded-md"><code class="language-${language} text-zinc-900 dark:text-zinc-100 rounded-md p-2" style="font-family: 'Maple Mono', monospace;">${code}</code></pre>
                 </div>
             `.trim();
         }

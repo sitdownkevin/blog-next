@@ -59,34 +59,34 @@
   }
 
   .dark {
-    --background: 40 14% 7%; /* #12120f in HSL */
-    --foreground: 0 0% 98%;
+    --background: 220 20% 10%; /* 更深的蓝色调背景 */
+    --foreground: 210 40% 98%; /* 亮白色前景 */
 
-    --card: 40 14% 7%; /* #12120f in HSL */
-    --card-foreground: 0 0% 98%;
+    --card: 220 20% 15%; /* 比背景稍亮的卡片 */
+    --card-foreground: 210 40% 98%; /* 亮白色前景 */
 
-    --popover: 40 14% 7%; /* #12120f in HSL */
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 20% 15%; /* 比背景稍亮的弹窗 */
+    --popover-foreground: 210 40% 98%; /* 亮白色前景 */
 
-    --primary: 214 100% 59%; /* #0070f3 in HSL */
-    --primary-foreground: 0 0% 0%; /* #000000 in HSL */
+    --primary: 214 100% 70%; /* 更亮的蓝色主色调 */
+    --primary-foreground: 0 0% 100%; /* 纯白色主色调前景 */
 
-    --secondary: 40 7% 11%; /* Dark Beige */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 15% 25%; /* 柔和的次要颜色 */
+    --secondary-foreground: 210 40% 98%; /* 亮白色次要颜色前景 */
 
-    --muted: 40 7% 11%; /* Dark Beige */
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 220 15% 25%; /* 柔和的静音颜色 */
+    --muted-foreground: 215 20% 65%; /* 浅灰色静音颜色前景 */
 
-    --accent: 40 7% 11%; /* Dark Beige */
-    --accent-foreground: 0 0% 98%;
+    --accent: 220 15% 25%; /* 柔和的强调颜色 */
+    --accent-foreground: 210 40% 98%; /* 亮白色强调颜色前景 */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%; /* 保持红色不变 */
+    --destructive-foreground: 0 0% 98%; /* 保持白色不变 */
 
-    --border: 40 7% 14.9%;
-    --input: 40 7% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
+    --border: 220 15% 30%; /* 柔和的边框颜色 */
+    --input: 220 15% 30%; /* 柔和的输入框颜色 */
+    --ring: 215 20% 85%; /* 浅色光环 */
+    --chart-1: 220 70% 50%; /* 保持图表颜色不变 */
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
