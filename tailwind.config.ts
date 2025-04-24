@@ -25,6 +25,7 @@ module.exports = {
         maple: ["Maple Mono", "sans-serif"],
       },
       colors: {
+        "claude-orange": "#EA580C",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

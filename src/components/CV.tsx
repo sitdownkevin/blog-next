@@ -25,7 +25,7 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
     <>
       <div className="block md:hidden py-8">
         <div className="flex flex-col space-y-4 justify-center items-center">
-          <h1 className="text-4xl font-serif">{personalInfo.name}</h1>
+          <h1 className="text-4xl font-serif text-claude-orange">{personalInfo.name}</h1>
           <div className="flex flex-col space-y-0">
             <span className="text-xs text-gray-500 dark:text-gray-300">{personalInfo.email}</span>
             <span className="text-xs text-gray-500 dark:text-gray-300">
@@ -39,7 +39,7 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
       <div className="hidden md:block py-8">
         <div className="grid grid-cols-6">
           <div className="col-span-6 md:col-span-5 space-y-4 flex flex-col justify-center items-center md:items-start">
-            <h1 className="text-5xl font-serif">{personalInfo.name}</h1>
+            <h1 className="text-5xl font-serif text-claude-orange">{personalInfo.name}</h1>
             <div className="flex flex-col space-y-0">
               <span className="text-xs text-gray-500 dark:text-gray-300">
                 {personalInfo.email}
