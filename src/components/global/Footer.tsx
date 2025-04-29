@@ -34,6 +34,9 @@ export default function Footer() {
                     <span className="text-gray-500 text-xxs dark:text-gray-300">
                         <Link href={"/tools/advanced_search"}>Advanced Search</Link>
                     </span>
+                    <span className="text-gray-500 text-xxs dark:text-gray-300">
+                        <Link href={"/tools/gpt_4o_image_prompts"}>GPT-4o Prompts</Link>
+                    </span>
                 </div>
                 <div className="flex flex-col">
                     <span className="text-xxs">Projects</span>

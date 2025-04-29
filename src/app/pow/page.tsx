@@ -287,9 +287,11 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col gap-4">
-      <PoWCard
-        task={task}
+    // Add the width constraint wrapper div here
+    <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
+      <div className="flex flex-col gap-4">
+        <PoWCard
+          task={task}
         hash={hash}
         nonce={nonce}
         result={result}
@@ -297,7 +299,8 @@ export default function Page() {
         handleMine={handleMine}
         handleStop={handleStop}
       />
-      {result && <ValidateCard task={task} nonce={result.nonce} />}
+        {result && <ValidateCard task={task} nonce={result.nonce} />}
+      </div>
     </div>
   );
 }

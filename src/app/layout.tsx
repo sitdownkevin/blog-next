@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 import ThemeProvider from "@/components/global/ThemeProvider";
+import { Toaster } from "@/components/ui/sonner"; // Import Toaster
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,8 +39,10 @@ export default function RootLayout({
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
             <Header />
             {/* Add padding-top equal to header height to prevent overlap */}
-            <div className="w-5/6 md:w-2/3 lg:w-1/2 mb-16 pt-[70px]">{children}</div> {/* Adjust pt-[70px] based on actual header height */}
+            {/* Removed width constraints (w-5/6 md:w-2/3 lg:w-1/2) - Apply them in specific page layouts/pages where needed */}
+            <div className="w-full mb-16 pt-[70px] px-4">{children}</div> {/* Use w-full and add some padding */}
             <Footer />
+            <Toaster richColors /> {/* Add Toaster here */}
           </div>
         </ThemeProvider>
       </body>
