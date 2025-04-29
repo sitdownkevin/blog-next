@@ -47,7 +47,7 @@ export default async function Page({ params }) {
   if (rule.startsWith("ustc_som")) {
     data = await getData('ustc_som');
     data = data.filter((journal) => journal.subjectArea === caption[rule]);
-    console.log(data);
+    // console.log(data);
     ({ title, link } = await getDescription('ustc_som'));
     subjectAreaTitle = "Level";
   } else {

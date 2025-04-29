@@ -98,7 +98,7 @@ function Title({ matter }: { matter: PostMatterType }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ postId: matter.id }),
     });
-    console.log(response);
+    // console.log(response);
   };
 
   return (

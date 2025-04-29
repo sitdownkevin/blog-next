@@ -21,7 +21,7 @@ function constructISSNQueryForWos(journals: JournalType[]): string {
     }
   }
   issnClauses = issnClauses.slice(0, -4) + ")";
-  console.log(issnClauses);
+  // console.log(issnClauses);
   return issnClauses;
 }
 
