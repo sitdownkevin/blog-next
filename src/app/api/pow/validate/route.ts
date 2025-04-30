@@ -1,7 +1,6 @@
 import { ValidateParams, ValidateResult } from "@/lib/pow/types";
 import { calculateHash } from "@/lib/pow/utils";
-import path from "path";
-import fs from "fs";
+import { wechatBase64 } from "@/lib/pow/data";
 
 export async function POST(req: Request) {
   const { task, nonce }: ValidateParams = await req.json();
@@ -11,16 +10,12 @@ export async function POST(req: Request) {
 
 
   try {
-    const filePath = path.join(process.cwd(), "public", "wechat.png");
-    const fileBuffer = await fs.promises.readFile(filePath);
-    const base64Image = fileBuffer.toString("base64");
-
     const result: ValidateResult = {
       isValid,
       data: {
         task: task,
         hash: calculatedHash,
-        image: `data:image/png;base64,${base64Image}`,
+        image: `data:image/png;base64,${wechatBase64}`,
       },
     };
 
