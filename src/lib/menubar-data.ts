@@ -16,10 +16,10 @@ export const menubarComponents: MenubarItem[] = [
         alias: "ft",
     },
     {
-        title: "AIS Bucket",
+        title: "AIS Basket",
         item: false,
         href: "/tools/advanced_search/ais",
-        description: "AIS Bucket",
+        description: "AIS Basket",
         alias: "ais",
     },
     {

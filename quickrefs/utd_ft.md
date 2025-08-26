@@ -229,7 +229,7 @@ AND
 )
 ```
 
-## AIS Buckets
+## AIS Basket
 
 [Senior Scholars' List of Premier Journals](https://aisnet.org/page/SeniorScholarListofPremierJournals)
 

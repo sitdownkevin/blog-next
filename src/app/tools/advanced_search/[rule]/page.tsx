@@ -7,7 +7,7 @@ import { JournalType } from "@/lib/types";
 const caption = {
   utd: "UTD24",
   ft: "FT50",
-  ais: "AIS Bucket",
+  ais: "AIS Basket",
   tjsem_i: "TJSEM I",
   tjsem_ii: "TJSEM II",
   ustc_som: "USTC SOM",
