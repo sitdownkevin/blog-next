@@ -22,8 +22,76 @@ type CvSection = {
 
 function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
   return (
-    <>
-      <div className="block md:hidden py-8">
+    <div>
+      <div className="block md:hidden pb-8">
+        <div className="flex flex-col space-y-4">
+          <h1 className="text-4xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+            {personalInfo.name}
+          </h1>
+          <div className="flex flex-col space-y-0">
+            <span className="text-xs text-gray-500 dark:text-gray-300">
+              {personalInfo.email}
+            </span>
+            <span className="text-xs text-gray-500 dark:text-gray-300">
+              {personalInfo.location}
+            </span>
+          </div>
+          <span className="text-xs text-gray-600 dark:text-gray-300">
+            {personalInfo.intro}
+          </span>
+        </div>
+      </div>
+
+      <div className="hidden md:block lg:hidden pb-8">
+        <div className="flex flex-col space-y-4">
+          <h1 className="text-5xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+            {personalInfo.name}
+          </h1>
+          <div className="flex flex-col space-y-0">
+            <span className="text-xs text-gray-500 dark:text-gray-300">
+              {personalInfo.email}
+            </span>
+            <span className="text-xs text-gray-500 dark:text-gray-300">
+              {personalInfo.location}
+            </span>
+          </div>
+          <span className="text-xs text-gray-600 dark:text-gray-300">
+            {personalInfo.intro}
+          </span>
+        </div>
+      </div>
+
+      <div className="hidden lg:block pb-8">
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-col space-y-4">
+            <h1 className="text-6xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+              {personalInfo.name}
+            </h1>
+            <div className="flex flex-col space-y-0">
+              <span className="text-xs text-gray-500 dark:text-gray-300">
+                {personalInfo.email}
+              </span>
+              <span className="text-xs text-gray-500 dark:text-gray-300">
+                {personalInfo.location}
+              </span>
+            </div>
+            <span className="text-xs text-gray-600 dark:text-gray-300">
+              {personalInfo.intro}
+            </span>
+          </div>
+          <div className="w-24">
+            <Image
+              src={personalInfo.figurePath}
+              alt="figure"
+              width={2125}
+              height={3217}
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="block md:hidden py-8">
         <div className="flex flex-col space-y-4 justify-center items-center">
           <h1 className="text-4xl font-serif text-claude-orange">{personalInfo.name}</h1>
           <div className="flex flex-col space-y-0">
@@ -34,10 +102,10 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
           </div>
           <span className="text-xs text-gray-600 dark:text-gray-300">{personalInfo.intro}</span>
         </div>
-      </div>
+      </div> */}
 
-      <div className="hidden md:block py-8">
-        <div className="grid grid-cols-6">
+      {/* <div className="hidden md:block py-8">
+        <div className="flex flex-row justify-between">
           <div className="col-span-6 md:col-span-5 space-y-4 flex flex-col justify-center items-center md:items-start">
             <h1 className="text-5xl font-serif text-claude-orange">{personalInfo.name}</h1>
             <div className="flex flex-col space-y-0">
@@ -58,8 +126,8 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
             className="hidden lg:block w-20 rounded-lg shadow-xs shadow-gray-500/50"
           />
         </div>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 }
 
@@ -72,19 +140,25 @@ function CvItemElement({ cvItem }: { cvItem: CvItem }) {
       {cvItem.subtitle ? (
         <>
           {cvItem.title ? <br /> : null}
-          <span className={"italic text-gray-600 dark:text-gray-300"}>{cvItem.subtitle}</span>
+          <span className={"italic text-gray-600 dark:text-gray-300"}>
+            {cvItem.subtitle}
+          </span>
         </>
       ) : null}
       {cvItem.content ? (
         <>
           {cvItem.title || cvItem.subtitle ? <br /> : null}
-          <span className={"text-gray-600 dark:text-gray-300"}>{cvItem.content}</span>
+          <span className={"text-gray-600 dark:text-gray-300"}>
+            {cvItem.content}
+          </span>
         </>
       ) : null}
       {cvItem.period ? (
         <>
           {cvItem.title || cvItem.subtitle || cvItem.content ? <br /> : null}
-          <span className={"text-gray-600 dark:text-gray-300 text-sm"}>{cvItem.period}</span>
+          <span className={"text-gray-600 dark:text-gray-300 text-sm"}>
+            {cvItem.period}
+          </span>
         </>
       ) : null}
     </p>
@@ -119,7 +193,7 @@ export default function CvSectionElement() {
       ],
     },
     {
-      title: "Work Experience",
+      title: "Working Experience",
       items: [
         {
           title: "Airbus Beijing Engineering Centre (ABEC), Beijing",
@@ -163,13 +237,6 @@ export default function CvSectionElement() {
           subtitle: "",
           content:
             "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, D., & Yin, R. (2024). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. In F. Tosi et al. (Eds.), Springer Series in Design and Innovation.",
-          period: "",
-        },
-        {
-          title: "",
-          subtitle: "",
-          content:
-            "Xu, K., Chen, Y., & Nie, J. (2023). Subclass classification of ancient glassware based on K-Means and GMM. Highlights in Science, Engineering and Technology, 42, 277-284.",
           period: "",
         },
       ],

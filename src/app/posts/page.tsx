@@ -133,7 +133,7 @@ export default function Page() {
 
     return (
         <div className="w-full flex flex-col">
-            <div className="mb-8 w-full max-w-md mx-auto relative hidden md:block">
+            <div className="mt-8 mb-8 w-full max-w-md mx-auto relative hidden md:block">
                 <Input
                     ref={inputRef} // Assign the ref to the input
                     {...{
