@@ -36,14 +36,14 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
   };
 
   return (
-    <div className="relative rounded-lg border backdrop-blur-sm bg-muted/30 p-4">
+    <div className="relative rounded-lg border backdrop-blur-xs bg-muted/30 p-4">
       <div className="text-sm font-medium text-muted-foreground">
         {title}
       </div>
       <div className="absolute right-2 top-2 flex gap-1">
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="rounded-md p-2 hover:bg-accent/50 hover:text-accent-foreground transition-colors backdrop-blur-sm"
+          className="rounded-md p-2 hover:bg-accent/50 hover:text-accent-foreground transition-colors backdrop-blur-xs"
           title={collapsed ? "展开" : "折叠"}
         >
           <svg
@@ -66,7 +66,7 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
 
         <button
           onClick={handleCopy}
-          className="rounded-md p-2 hover:bg-accent/50 hover:text-accent-foreground transition-colors backdrop-blur-sm"
+          className="rounded-md p-2 hover:bg-accent/50 hover:text-accent-foreground transition-colors backdrop-blur-xs"
           title={copied ? "已复制！" : "复制到剪贴板"}
         >
           {copied ? (

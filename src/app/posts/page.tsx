@@ -58,7 +58,7 @@ export default function Page() {
                 console.log('Cmd/Ctrl+K pressed, focusing input'); // Add log
                 inputRef.current?.focus();
             } else if (event.key === 'Escape') {
-                console.log('Escape pressed, attempting to blur input'); // Add log
+                console.log('Escape pressed, attempting to blur-sm input'); // Add log
                 console.log('inputRef.current:', inputRef.current); // Log ref value
                 inputRef.current?.blur();
             }
@@ -141,14 +141,14 @@ export default function Page() {
                         placeholder: "搜索文章...",
                         value: searchQuery,
                         onChange: (e) => setSearchQuery(e.target.value),
-                        className: "pl-10 pr-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 transition-all duration-200 ease-in-out shadow-sm",
+                        className: "pl-10 pr-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-hidden focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-600 transition-all duration-200 ease-in-out shadow-xs",
                     } as React.InputHTMLAttributes<HTMLInputElement>}
                 />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500">
                     <path fillRule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clipRule="evenodd" />
                 </svg>
                 {osShortcut && ( // Display shortcut if detected
-                    <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-gray-300 text-xs font-mono px-1 py-0.5 border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 shadow-sm">
+                    <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-600 dark:text-gray-300 text-xs font-mono px-1 py-0.5 border border-gray-300 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 shadow-xs">
                         {osShortcut}
                     </span>
                 )}

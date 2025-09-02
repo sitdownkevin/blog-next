@@ -60,10 +60,10 @@ export function Tag({ tags }: { tags: string[] }) {
           <Link
             href={`/tags/${tag}`}
             key={tag}
-            className={`bg-gradient-to-r ${gradient.from} ${gradient.to} px-2 py-1 rounded-full`}
+            className={`bg-linear-to-r ${gradient.from} ${gradient.to} px-2 py-1 rounded-full`}
           >
             <p
-              className={`bg-gradient-to-r ${gradient.textFrom} ${gradient.textTo} bg-clip-text text-transparent text-xs font-bold`}
+              className={`bg-linear-to-r ${gradient.textFrom} ${gradient.textTo} bg-clip-text text-transparent text-xs font-bold`}
             >
               {tag}
             </p>

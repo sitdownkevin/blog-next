@@ -38,7 +38,7 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
                    ${copied ? 'bg-emerald-600/70 hover:bg-emerald-500/80 ring-emerald-400/30' : 'bg-zinc-500/50 hover:bg-zinc-400/60 text-zinc-100 hover:text-white ring-zinc-400/20 hover:ring-zinc-300/30'}
                    rounded-md w-8 h-8
                    transition-all duration-200 ease-in-out
-                   shadow-sm hover:shadow-md
+                   shadow-xs hover:shadow-md
                    ring-1`}
         onClick={handleCopy}
         aria-label="Copy code to clipboard"

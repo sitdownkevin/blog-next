@@ -55,7 +55,7 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
             alt="figure"
             width={2125}
             height={3217}
-            className="hidden lg:block w-20 rounded-lg shadow-sm shadow-gray-500/50"
+            className="hidden lg:block w-20 rounded-lg shadow-xs shadow-gray-500/50"
           />
         </div>
       </div>

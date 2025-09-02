@@ -42,7 +42,7 @@ function CommentItem({
       <div className="flex flex-col gap-2">
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row items-center gap-4">
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <Avatar>
                 {/* <AvatarFallback>{`U${comment.user_id}`}</AvatarFallback> */}
                 <AvatarFallback>Guest</AvatarFallback>

@@ -18,7 +18,7 @@ export const imageData: BoxProps[] = [ // Use the imported type
     {
         title: "卡纸风",
         author: "",
-        prompt: "根据附图创建一个 emoji 图。 The emoji is handcrafted from colorful cut paper with visible textures, creases, and layered shapes. It casts a soft drop shadow beneath, giving a sense of lightness and depth. The design is minimal, playful, and clean — centered in the frame with lots of negative space. Use soft studio lighting to highlight the paper texture and edges.",
+        prompt: "根据附图创建一个 emoji 图。 The emoji is handcrafted from colorful cut paper with visible textures, creases, and layered shapes. It casts a soft drop shadow-sm beneath, giving a sense of lightness and depth. The design is minimal, playful, and clean — centered in the frame with lots of negative space. Use soft studio lighting to highlight the paper texture and edges.",
         inputImgPath: "/figures/gpt_4o_image/input/Kl5fZ5cC5E17upYotvhoMTCS0gxzRx.webp",
         outputImgPath: "/figures/gpt_4o_image/output/Kl5fZ5cC5E17upYotvhoMTCS0gxzRx.webp",
         tags: ["Emoji", "剪纸", "纹理", "分层", "简约", "俏皮", "干净", "工作室光照"],
