@@ -18,4 +18,8 @@ export const auth = betterAuth({
       scope: ["user:email", "read:user"]
     },
   },
+  trustedOrigins: [
+    "http://localhost:3000", 
+    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : [])
+  ],
 });
