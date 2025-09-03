@@ -2,10 +2,9 @@ import { CommentType, CommentToBeSubmittedType } from "@/lib/comments/types";
 
 export async function fetchComments({ postId }: { postId: string }): Promise<CommentType[]> {
   try {
-    const response = await fetch(`/api/db/get_comments`, {
-      method: "POST",
+    const response = await fetch(`/api/comments?postId=${postId}`, {
+      method: "GET",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ post_id: postId }),
     });
     if (!response.ok) throw new Error("Failed to fetch comments");
     return await response.json();
@@ -15,46 +14,46 @@ export async function fetchComments({ postId }: { postId: string }): Promise<Com
   }
 }
 
-
 export async function postComment(
   comment: CommentToBeSubmittedType
-): Promise<any> {
+): Promise<CommentType> {
   try {
-    const response = await fetch("/api/db/insert_comment", {
+    const response = await fetch("/api/comments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(comment),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to post comment");
+      const errorData = await response.json();
+      throw new Error(errorData.error || "Failed to post comment");
     }
 
     return await response.json();
   } catch (error) {
     console.error("Error posting comment:", error);
-    return null;
+    throw error;
   }
 }
 
-
 export async function deleteComment(
-  commentId: number
+  commentId: string
 ): Promise<any> {
   try {
-    const response = await fetch("/api/db/delete_comment", {
-      method: "POST",
+    const response = await fetch("/api/comments/delete", {
+      method: "DELETE",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ comment_id: commentId }),
+      body: JSON.stringify({ commentId }),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to delete comment");
+      const errorData = await response.json();
+      throw new Error(errorData.error || "Failed to delete comment");
     }
 
     return await response.json();
   } catch (error) {
     console.error("Error deleting comment:", error);
-    return null;
+    throw error;
   }
 }

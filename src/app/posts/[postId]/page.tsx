@@ -29,7 +29,7 @@ export default async function Post({ params }) {
         <DateText date={markdownContent.update_date} />
       </div>
       {renderMarkdownBody(markdownContent.content)}
-      <CommentContainer />
+      <CommentContainer postId={postId} />
     </div>
   );
 }
