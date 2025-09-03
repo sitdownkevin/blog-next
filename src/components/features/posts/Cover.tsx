@@ -1,3 +1,5 @@
+"use client";
+
 import { PostMatterType } from "@/lib/posts/types";
 import { PinTopIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
