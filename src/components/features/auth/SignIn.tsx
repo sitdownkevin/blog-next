@@ -12,11 +12,11 @@ export default function SignIn() {
     try {
       setIsLoading(true);
       // 获取当前页面 URL 作为回调地址
-      const currentURL = typeof window !== 'undefined' ? window.location.href : '/';
+      // const currentURL = typeof window !== 'undefined' ? window.location.href : '/';
       
       await authClient.signIn.social({
         provider: "github",
-        callbackURL: currentURL,
+        // callbackURL: currentURL,
       });
     } catch (error) {
       console.error("登录失败:", error);
