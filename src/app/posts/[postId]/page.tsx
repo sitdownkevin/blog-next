@@ -6,6 +6,8 @@ import { Tag } from "@/components/features/posts/Tags";
 import { DateText } from "@/components/features/posts/Date";
 import { Title } from "@/components/features/posts/Title";
 
+import { Container as CommentContainer } from "@/components/features/comment/Container";
+
 const renderMarkdownBody = (markdownHtml: string) => {
   return (
     <div
@@ -27,6 +29,7 @@ export default async function Post({ params }) {
         <DateText date={markdownContent.update_date} />
       </div>
       {renderMarkdownBody(markdownContent.content)}
+      <CommentContainer />
     </div>
   );
 }
