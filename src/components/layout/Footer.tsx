@@ -6,7 +6,9 @@ export default function Footer() {
     <div className="w-5/6 md:w-2/3 lg:w-1/2 flex flex-col space-y-8 py-4 mb-16 print:hidden border-t-1 border-gray-300">
       <div className="flex flex-row justify-center space-x-8 md:space-x-16">
         <div className="flex flex-col">
-          <span className="text-xxs">About</span>
+          <span className="text-xxs">
+            <Link href={"/"}>About</Link>
+          </span>
           <span className="text-gray-500 text-xxs dark:text-gray-300">
             <Link href={"/about/resume"}>Resume</Link>
           </span>
