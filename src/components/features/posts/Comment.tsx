@@ -126,20 +126,10 @@ function CommentForm({
     setError(null);
 
     try {
-      const commentToBeSubmitted: CommentToBeSubmittedType = {
-        user_id: "1", // 假设当前用户ID为1
-        post_id: postId,
-        comment_text: commentText,
-        comment_ts: Math.floor(Date.now() / 1000),
-      };
-
-      await postComment(commentToBeSubmitted);
-
-      // 创建新评论对象并通知父组件
-      const newComment: CommentType = {
-        ...commentToBeSubmitted,
-        comment_id: "0", // 临时ID
-      };
+      const newComment = await postComment({
+        postId: postId,
+        commentText: commentText.trim()
+      });
 
       onCommentAdded(newComment);
       setCommentText("");

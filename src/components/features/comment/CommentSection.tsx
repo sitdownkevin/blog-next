@@ -147,10 +147,8 @@ function CommentForm({
 
     try {
       const newComment = await postComment({
-        user_id: currentUser.id,
-        post_id: postId,
-        comment_text: commentText.trim(),
-        comment_ts: Math.floor(Date.now() / 1000),
+        postId: postId,
+        commentText: commentText.trim(),
       });
 
       onCommentAdded(newComment);

@@ -15,7 +15,7 @@ export async function fetchComments({ postId }: { postId: string }): Promise<Com
 }
 
 export async function postComment(
-  comment: CommentToBeSubmittedType
+  comment: { postId: string; commentText: string }
 ): Promise<CommentType> {
   try {
     const response = await fetch("/api/comments", {
