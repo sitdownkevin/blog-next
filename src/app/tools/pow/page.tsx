@@ -12,8 +12,10 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 
-import { calculateHash } from "@/lib/pow/utils";
-import { Task, ValidateParams, ValidateResult } from "@/lib/pow/types";
+import { calculateHash } from "@/lib/utils/crypto";
+import { Task, ValidateParams, ValidateResult } from "@/lib/types/pow";
+// import { calculateHash } from "@/lib/pow/utils";
+// import { Task, ValidateParams, ValidateResult } from "@/lib/pow/types";
 
 async function proofOfWork(
   data: string,
@@ -156,9 +158,7 @@ function PoWCard({
         {hash && (
           <div className="flex flex-col">
             <span className="text-sm font-bold">Current Hash</span>
-            <span className="w-full whitespace-pre-wrap break-all">
-              {hash}
-            </span>
+            <span className="w-full whitespace-pre-wrap break-all">{hash}</span>
           </div>
         )}
         {result && (
@@ -224,7 +224,12 @@ function ValidateCard({
             {validationResult?.isValid ? "Valid" : "Invalid"}
           </p>
           {validationResult?.data?.image && (
-            <Image src={validationResult.data.image} alt="Wechat QR Code" width={200} height={200} />
+            <Image
+              src={validationResult.data.image}
+              alt="Wechat QR Code"
+              width={200}
+              height={200}
+            />
           )}
         </div>
       </CardContent>
@@ -288,17 +293,17 @@ export default function Page() {
 
   return (
     // Add the width constraint wrapper div here
-    <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
+    <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto mt-16">
       <div className="flex flex-col gap-4">
         <PoWCard
           task={task}
-        hash={hash}
-        nonce={nonce}
-        result={result}
-        isMining={isMining}
-        handleMine={handleMine}
-        handleStop={handleStop}
-      />
+          hash={hash}
+          nonce={nonce}
+          result={result}
+          isMining={isMining}
+          handleMine={handleMine}
+          handleStop={handleStop}
+        />
         {result && <ValidateCard task={task} nonce={result.nonce} />}
       </div>
     </div>

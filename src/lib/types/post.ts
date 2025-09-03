@@ -1,3 +1,7 @@
+/**
+ * TODO: For future reorganization
+ */
+
 type BasePostType = {
     id: string;
     title: string;
@@ -10,14 +14,13 @@ type BasePostType = {
 }
 
 
-
-export type PostMatterType = BasePostType & {
+export type PostCoverType = BasePostType & {
     content?: string;
     snippet?: string;
     snippetHtml?: string;
 }
 
 
-export type MarkdownType = BasePostType & {
+export type PostContentType = BasePostType & {
     markdown_content: string;
 }

@@ -1,6 +1,6 @@
-import { ValidateParams, ValidateResult } from "@/lib/pow/types";
-import { calculateHash } from "@/lib/pow/utils";
-import { wechatBase64 } from "@/lib/pow/data";
+import { ValidateParams, ValidateResult } from "@/lib/types/pow";
+import { calculateHash } from "@/lib/utils/crypto";
+import { wxBase64 } from "content/data/pow";
 
 export async function POST(req: Request) {
   const { task, nonce }: ValidateParams = await req.json();
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       data: {
         task: task,
         hash: calculatedHash,
-        image: `data:image/png;base64,${wechatBase64}`,
+        image: `data:image/png;base64,${wxBase64}`,
       },
     };
 
