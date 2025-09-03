@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { PostMatterType, MarkdownType } from "@/lib/posts/types";
-import { PostCovers } from "@/components/features/posts/PostCover";
+import { CoverList } from "@/components/features/posts/Cover";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search, Keyboard } from "lucide-react";
@@ -235,7 +235,7 @@ export default function Page() {
         setSearchQuery={setSearchQuery}
         osShortcut={osShortcut}
       />
-      <PostCovers matterList={filteredMatterList} searching={searching} />
+      <CoverList matterList={filteredMatterList} searching={searching} />
     </div>
   );
 }

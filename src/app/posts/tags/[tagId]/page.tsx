@@ -1,6 +1,6 @@
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { PostMatterType } from "@/lib/posts/types";
-import { PostCovers } from "@/components/features/posts/PostCover";
+import { CoverList } from "@/components/features/posts/Cover";
 
 export default function TagPage({ params }) {
   const { tagId } = params;
@@ -22,7 +22,7 @@ export default function TagPage({ params }) {
     // Apply the width constraint here, replacing w-full and adding mx-auto
     <div className="w-full mx-auto flex flex-col">
       <h1 className="text-2xl font-bold mb-4">Posts tagged with "{tagId}"</h1>
-      <PostCovers matterList={sortedFilteredMatterList} searching={false} />
+      <CoverList matterList={sortedFilteredMatterList} searching={false} />
     </div>
   );
 }
