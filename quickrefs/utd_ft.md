@@ -322,7 +322,7 @@ AND
 
 ## 同济大学经济与管理学院认定英文期刊
 
-[同济经管博士毕业要求](/pdf/tj_sem_requirements.pdf)
+[同济经管博士毕业要求](/assets/documents/pdf/tj_sem_requirements.pdf)
 
 ### Web of Science
 

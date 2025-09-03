@@ -5,7 +5,7 @@ create_date: 2024-10-30
 update_date: 2024-11-30
 ---
 
-[Python 代码](/jupyter/lagrange_solver_with_python.html)
+[Python 代码](/assets/documents/jupyter_notebook/lagrange_solver_with_python.html)
 
 ## Contents
 

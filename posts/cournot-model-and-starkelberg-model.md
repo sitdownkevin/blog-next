@@ -5,7 +5,7 @@ create_date: 2024-10-23
 update_date: 2024-11-19
 ---
 
-[Python 代码](/jupyter/cournot_model_and_starkelberg_model.html)
+[Python 代码](/assets/documents/jupyter_notebook/cournot_model_and_starkelberg_model.html)
 
 ##### Contents
 

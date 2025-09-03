@@ -7,9 +7,9 @@ update_date: 2024-12-02
 
 ## Standard errors
 
-[OLS 的标准误差、稳健误差、HC0、HC1、HC2 推导及 Python 代码实现](/jupyter/standard_errors.html)
+[OLS 的标准误差、稳健误差、HC0、HC1、HC2 推导及 Python 代码实现](/assets/documents/jupyter_notebook/standard_errors.html)
 
-<!-- [陈强教授的讲义](/pdf/China22_Qiang.pdf) -->
+<!-- [陈强教授的讲义](/assets/documents/pdf/China22_Qiang.pdf) -->
 
 ## 同方差和异方差
 

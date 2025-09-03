@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { JournalType } from "@/lib/types";
 
-const dataDir = path.join(process.cwd(), "public/search");
+const dataDir = path.join(process.cwd(), "content/data/search");
 
 
 export async function getData(rule: string): Promise<JournalType[]> {
