@@ -1,5 +1,5 @@
 "use client";
-import axios from "axios";
+
 import Link from "next/link";
 import { PostMatterType } from "@/lib/posts/types";
 import { PinTopIcon } from "@radix-ui/react-icons";
@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import { EnhancedMarkdownBody } from "./EnhancedMarkdownBody"; // Import EnhancedMarkdownBody
-
 
 export function Tag({ tags }: { tags: string[] }) {
   const gradients = [
@@ -58,7 +57,7 @@ export function Tag({ tags }: { tags: string[] }) {
         const gradient = getGradient(tag);
         return (
           <Link
-            href={`/tags/${tag}`}
+            href={`/posts/tags/${tag}`}
             key={tag}
             className={`bg-linear-to-r ${gradient.from} ${gradient.to} px-2 py-1 rounded-full`}
           >
@@ -145,7 +144,13 @@ export function PostCover({
   );
 }
 
-export function PostCovers({ matterList, searching }: { matterList: PostMatterType[]; searching: boolean }) {
+export function PostCovers({
+  matterList,
+  searching,
+}: {
+  matterList: PostMatterType[];
+  searching: boolean;
+}) {
   const [visibleCount, setVisibleCount] = useState(5);
 
   const handleShowMore = () => {
@@ -177,12 +182,21 @@ export function PostCovers({ matterList, searching }: { matterList: PostMatterTy
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
           >
-            <PostCover matter={matter} first={index === 0} searching={searching} />
+            <PostCover
+              matter={matter}
+              first={index === 0}
+              searching={searching}
+            />
           </motion.div>
         ))}
       </AnimatePresence>
       {visibleCount < matterList.length && (
-        <Button variant="secondary" size="sm" onClick={handleShowMore} className="w-full">
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={handleShowMore}
+          className="w-full"
+        >
           展开更多
         </Button>
       )}
