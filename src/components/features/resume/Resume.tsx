@@ -1,6 +1,13 @@
 "use client";
 
-import { BasicInfoType, EducationElementType, WorkExperienceElementType, ProjectExperienceElementType, AdditionalInformationElementType, PublicationElementType } from "@/lib/resume/types";
+import {
+  BasicInfoType,
+  EducationElementType,
+  WorkExperienceElementType,
+  ProjectExperienceElementType,
+  AdditionalInformationElementType,
+  PublicationElementType,
+} from "@/lib/resume/types";
 import EducationElementsCard from "./Education";
 import Header from "./Header";
 import WorkExperienceElementsCard from "./WorkExperience";
@@ -10,43 +17,42 @@ import Publications from "./Publications";
 
 // Define the props interface for the Resume component
 interface ResumeProps {
-    basicInfo: BasicInfoType;
-    educationElements: EducationElementType[];
-    workExperienceElements: WorkExperienceElementType[];
-    projectExperienceElements: ProjectExperienceElementType[];
-    additionalInformationElements: AdditionalInformationElementType[];
-    publications: PublicationElementType[];
+  basicInfo: BasicInfoType;
+  educationElements: EducationElementType[];
+  workExperienceElements: WorkExperienceElementType[];
+  projectExperienceElements: ProjectExperienceElementType[];
+  additionalInformationElements: AdditionalInformationElementType[];
+  publications: PublicationElementType[];
 }
 
 // Update the component to accept props
 export default function Resume({
-    basicInfo,
-    educationElements,
-    workExperienceElements,
-    projectExperienceElements,
-    additionalInformationElements,
-    publications
+  basicInfo,
+  educationElements,
+  workExperienceElements,
+  projectExperienceElements,
+  additionalInformationElements,
+  publications,
 }: ResumeProps) {
-    // Removed hardcoded data definitions
+  // Removed hardcoded data definitions
 
-    return (
-        <div className="flex flex-col gap-2 sm:gap-1">
-            <div className="">
-                <div className="">
-                    <div className="flex justify-end mb-4">
-                        {/* Placeholder for potential future elements like a download button */}
-                    </div>
-                    <div className="">
-                        {/* Pass props to child components */}
-                        <Header basicInfo={basicInfo} />
-                        <EducationElementsCard educationElements={educationElements} />
-                        <WorkExperienceElementsCard workExperienceElements={workExperienceElements} />
-                        <ProjectExperienceElementsCard projectExperienceElements={projectExperienceElements} />
-                        <AdditionalInformation additionalInformationElements={additionalInformationElements} />
-                        <Publications publications={publications} />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  return (
+    <div className="flex flex-col gap-2 sm:gap-1 mt-8">
+      <div>
+        {/* Pass props to child components */}
+        <Header basicInfo={basicInfo} />
+        <EducationElementsCard educationElements={educationElements} />
+        <WorkExperienceElementsCard
+          workExperienceElements={workExperienceElements}
+        />
+        <ProjectExperienceElementsCard
+          projectExperienceElements={projectExperienceElements}
+        />
+        <AdditionalInformation
+          additionalInformationElements={additionalInformationElements}
+        />
+        <Publications publications={publications} />
+      </div>
+    </div>
+  );
 }

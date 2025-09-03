@@ -12,7 +12,7 @@ import {
 export default function Page() {
     return (
         // Add width constraints to the existing container div
-        <div className="container mx-auto px-4 py-8 w-5/6 md:w-2/3 lg:w-1/2">
+        <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto">
             {/* Pass the imported data as props to the Resume component */}
             <Resume
                 basicInfo={basicInfo}

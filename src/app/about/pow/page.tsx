@@ -14,8 +14,6 @@ import {
 
 import { calculateHash } from "@/lib/utils/crypto";
 import { Task, ValidateParams, ValidateResult } from "@/lib/types/pow";
-// import { calculateHash } from "@/lib/pow/utils";
-// import { Task, ValidateParams, ValidateResult } from "@/lib/pow/types";
 
 async function proofOfWork(
   data: string,
@@ -295,6 +293,7 @@ export default function Page() {
     // Add the width constraint wrapper div here
     <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto mt-16">
       <div className="flex flex-col gap-4">
+        <h1 className="text-2xl font-serif">Get my WX through PoW</h1>
         <PoWCard
           task={task}
           hash={hash}

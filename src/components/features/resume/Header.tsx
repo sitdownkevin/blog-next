@@ -19,8 +19,8 @@ export default function Header({ basicInfo }: HeaderProps) {
   const iconClass = "inline-block mr-1 h-3 w-3"; // Adjusted size
 
   return (
-    <div className="flex flex-col gap-2 mb-2">
-      <div className="flex gap-4 font-bold text-2xl border-b-2 border-gray-300 pb-2">
+    <div className="flex flex-col gap-2">
+      <div className="flex gap-4 font-bold text-2xl border-b-1 border-gray-300 pb-2">
         <div>
           {/* Keep the original name format for now */}
           {basicInfo.name.first_name} {basicInfo.name.last_name}

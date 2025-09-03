@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="flex flex-col">
           <span className="text-xxs">About</span>
           <span className="text-gray-500 text-xxs dark:text-gray-300">
-            <Link href={"/resume"}>Resume</Link>
+            <Link href={"/about/resume"}>Resume</Link>
           </span>
           <span className="text-gray-500 text-xxs dark:text-gray-300">
-            <Link href={"/me/gallery"}>Gallery</Link>
+            <Link href={"/about/gallery"}>Gallery</Link>
           </span>
           <span className="text-gray-500 text-xxs dark:text-gray-300">
-            <Link href={"/pow"}>WeChat</Link>
+            <Link href={"/about/pow"}>WeChat</Link>
           </span>
         </div>
         <div className="flex flex-col">
