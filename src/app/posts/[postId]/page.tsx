@@ -1,9 +1,9 @@
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { getMarkdownContent } from "@/lib/posts/getMarkdownContent";
 import { MarkdownType } from "@/lib/posts/types";
-import { Comment } from "@/components/posts/Comment";
+import { Comment } from "@/components/features/posts/Comment";
 import { Separator } from "@/components/ui/separator";
-import { Tag, DateTag } from "@/components/posts/PostCover";
+import { Tag, DateTag } from "@/components/features/posts/PostCover";
 
 function MarkdownBody({ markdownHtml }: { markdownHtml: string }) {
     return (

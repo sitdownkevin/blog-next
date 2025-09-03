@@ -5,7 +5,7 @@ import matter from 'gray-matter';
 import { MarkdownType } from './types';
 import { createBasePipeline } from '@/lib/posts/markdownPipeline';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 function addCopyButton(contentHtml: string): string {
     return contentHtml.replace(

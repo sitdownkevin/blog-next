@@ -1,4 +1,4 @@
-import Resume from "@/components/resume/Resume";
+import Resume from "@/components/features/resume/Resume";
 // Import the resume data
 import {
     basicInfo,

@@ -1,7 +1,7 @@
 import { getData, getDescription } from "@/lib/advanced-search";
-import JournalTable from "@/components/advanced-search/JournalTable";
-import JournalClause from "@/components/advanced-search/JournalClause";
-import DescriptionCard from "@/components/advanced-search/DescriptionCard";
+import JournalTable from "@/components/features/tools/advanced-search/JournalTable";
+import JournalClause from "@/components/features/tools/advanced-search/JournalClause";
+import DescriptionCard from "@/components/features/tools/advanced-search/DescriptionCard";
 import { JournalType } from "@/lib/types";
 
 const caption = {

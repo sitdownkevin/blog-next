@@ -1,5 +1,3 @@
-// "use client";
-
 import {
   FaGithub,
   FaLinkedin,
@@ -9,33 +7,8 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
-import { useState, useEffect, useCallback } from "react";
 
 export default function Header() {
-  //   const [isVisible, setIsVisible] = useState(true);
-  //   const [lastScrollY, setLastScrollY] = useState(0);
-
-  //   const handleScroll = useCallback(() => {
-  //     if (typeof window !== "undefined") {
-  //       if (window.scrollY > lastScrollY && window.scrollY > 50) {
-  //         // Check if scrolling down and past a threshold
-  //         setIsVisible(false);
-  //       } else {
-  //         setIsVisible(true);
-  //       }
-  //       setLastScrollY(window.scrollY);
-  //     }
-  //   }, [lastScrollY]);
-
-  //   useEffect(() => {
-  //     if (typeof window !== "undefined") {
-  //       window.addEventListener("scroll", handleScroll);
-
-  //       return () => {
-  //         window.removeEventListener("scroll", handleScroll);
-  //       };
-  //     }
-  //   }, [handleScroll]);
 
   const socialLinks = [
     {

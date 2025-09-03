@@ -1,4 +1,4 @@
-import CvSectionElement from "@/components/CV";
+import CvSectionElement from "@/components/layout/PersonalIntroduction";
 
 
 

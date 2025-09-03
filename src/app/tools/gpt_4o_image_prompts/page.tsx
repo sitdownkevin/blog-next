@@ -1,7 +1,7 @@
 "use client"
 
 import Masonry from 'react-masonry-css'; // Import Masonry
-import { Box } from "@/components/tools/gpt_4o_image_prompts/Box"; // Import Box component
+import { Box } from "@/components/features/tools/gpt_4o_image_prompts/Box"; // Import Box component
 import { imageData } from "@/lib/tools/gpt_4o_image_prompts/data"; // Import image data
 
 

@@ -1,12 +1,12 @@
 "use client";
 
 import { BasicInfoType, EducationElementType, WorkExperienceElementType, ProjectExperienceElementType, AdditionalInformationElementType, PublicationElementType } from "@/lib/resume/types";
-import EducationElementsCard from "@/components/resume/Education";
-import Header from "@/components/resume/Header";
-import WorkExperienceElementsCard from "@/components/resume/WorkExperience";
-import ProjectExperienceElementsCard from "@/components/resume/ProjectExperience";
-import AdditionalInformation from "@/components/resume/AdditionalInformation";
-import Publications from "@/components/resume/Publications";
+import EducationElementsCard from "./Education";
+import Header from "./Header";
+import WorkExperienceElementsCard from "./WorkExperience";
+import ProjectExperienceElementsCard from "./ProjectExperience";
+import AdditionalInformation from "./AdditionalInformation";
+import Publications from "./Publications";
 
 // Define the props interface for the Resume component
 interface ResumeProps {

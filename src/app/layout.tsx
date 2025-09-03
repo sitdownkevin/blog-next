@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@fontsource/maple-mono";
-import "./globals.css";
-import Header from "@/components/global/Header";
-import Footer from "@/components/global/Footer";
-import ThemeProvider from "@/components/global/ThemeProvider";
+import "@/app/globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });

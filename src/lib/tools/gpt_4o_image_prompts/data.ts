@@ -1,4 +1,4 @@
-import type { BoxProps } from '@/components/tools/gpt_4o_image_prompts/Box'; // Import the type
+import type { BoxProps } from '@/components/features/tools/gpt_4o_image_prompts/Box'; // Import the type
 
 export const imageData: BoxProps[] = [ // Use the imported type
     {

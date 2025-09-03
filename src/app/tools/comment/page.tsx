@@ -1,4 +1,4 @@
-import { Comment } from "@/components/posts/Comment"
+import { Comment } from "@/components/features/posts/Comment"
 
 
 export default async function Page() {

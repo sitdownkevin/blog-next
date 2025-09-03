@@ -8,24 +8,29 @@ type PersonalInfo = {
   figurePath: string;
 };
 
-type CvItem = {
+type PersonalIntroductionItem = {
   title?: string;
   subtitle?: string;
   content?: string;
   period?: string;
 };
 
-type CvSection = {
+type PersonalIntroductionSection = {
   title: string;
-  items: CvItem[];
+  items: PersonalIntroductionItem[];
 };
 
-function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
+function PersonalIntroductionHeader({
+  personalInfo,
+}: {
+  personalInfo: PersonalInfo;
+}) {
   return (
     <div>
+      {/* Mobile view */}
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-4xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+          <h1 className="text-4xl font-serif text-claude-orange pb-2">
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -42,9 +47,10 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
         </div>
       </div>
 
+      {/* Tablet view */}
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-5xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+          <h1 className="text-5xl font-serif text-claude-orange pb-2">
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -61,10 +67,11 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
         </div>
       </div>
 
+      {/* Desktop view */}
       <div className="hidden lg:block pb-8">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col space-y-4">
-            <h1 className="text-6xl font-serif text-claude-orange border-b-1 border-gray-300 pb-2">
+            <h1 className="text-6xl font-serif text-claude-orange pb-2">
               {personalInfo.name}
             </h1>
             <div className="flex flex-col space-y-0">
@@ -90,49 +97,17 @@ function CvHeader({ personalInfo }: { personalInfo: PersonalInfo }) {
           </div>
         </div>
       </div>
-
-      {/* <div className="block md:hidden py-8">
-        <div className="flex flex-col space-y-4 justify-center items-center">
-          <h1 className="text-4xl font-serif text-claude-orange">{personalInfo.name}</h1>
-          <div className="flex flex-col space-y-0">
-            <span className="text-xs text-gray-500 dark:text-gray-300">{personalInfo.email}</span>
-            <span className="text-xs text-gray-500 dark:text-gray-300">
-              {personalInfo.location}
-            </span>
-          </div>
-          <span className="text-xs text-gray-600 dark:text-gray-300">{personalInfo.intro}</span>
-        </div>
-      </div> */}
-
-      {/* <div className="hidden md:block py-8">
-        <div className="flex flex-row justify-between">
-          <div className="col-span-6 md:col-span-5 space-y-4 flex flex-col justify-center items-center md:items-start">
-            <h1 className="text-5xl font-serif text-claude-orange">{personalInfo.name}</h1>
-            <div className="flex flex-col space-y-0">
-              <span className="text-xs text-gray-500 dark:text-gray-300">
-                {personalInfo.email}
-              </span>
-              <span className="text-xs text-gray-500 dark:text-gray-300">
-                {personalInfo.location}
-              </span>
-            </div>
-            <span className="text-xs text-gray-600 dark:text-gray-300">{personalInfo.intro}</span>
-          </div>
-          <Image
-            src={personalInfo.figurePath}
-            alt="figure"
-            width={2125}
-            height={3217}
-            className="hidden lg:block w-20 rounded-lg shadow-xs shadow-gray-500/50"
-          />
-        </div>
-      </div> */}
     </div>
   );
 }
 
-function CvItemElement({ cvItem }: { cvItem: CvItem }) {
+function PersonalIntroductionItemElement({
+  cvItem,
+}: {
+  cvItem: PersonalIntroductionItem;
+}) {
   return (
+    // @ts-ignore
     <p>
       {cvItem.title ? (
         <span className={"font-bold"}>{cvItem.title}</span>
@@ -165,7 +140,7 @@ function CvItemElement({ cvItem }: { cvItem: CvItem }) {
   );
 }
 
-export default function CvSectionElement() {
+export default function PersonalIntroduction() {
   const personalInfo: PersonalInfo = {
     name: "Ke Xu",
     email: "kexu567@gmail.com",
@@ -174,7 +149,7 @@ export default function CvSectionElement() {
     figurePath: "/assets/images/figures/photo_figure.webp",
   };
 
-  const data: CvSection[] = [
+  const data: PersonalIntroductionSection[] = [
     {
       title: "Education",
       items: [
@@ -244,21 +219,21 @@ export default function CvSectionElement() {
   ];
 
   return (
-    <>
+    <div>
       <div className="flex flex-col w-full mt-8">
-        <CvHeader personalInfo={personalInfo} />
+        <PersonalIntroductionHeader personalInfo={personalInfo} />
 
         <div className="flex flex-col space-y-4">
           {data.map((section, index) => (
             <div key={index} className="flex flex-col space-y-4">
               <h2 className="text-2xl font-semibold">{section.title}</h2>
               {section.items.map((item, idx) => (
-                <CvItemElement key={idx} cvItem={item} />
+                <PersonalIntroductionItemElement key={idx} cvItem={item} />
               ))}
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

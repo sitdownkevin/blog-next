@@ -1,4 +1,4 @@
-import Menubar from "@/components/advanced-search/Menubar";
+import Menubar from "@/components/features/tools/advanced-search/Menubar";
 export const metadata = {
   title: "Advanced Search",
   description: "Advanced Search for journal articles",

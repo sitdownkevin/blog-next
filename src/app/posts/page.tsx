@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { PostMatterType, MarkdownType } from "@/lib/posts/types";
-import { PostCovers } from "@/components/posts/PostCover";
+import { PostCovers } from "@/components/features/posts/PostCover";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search, Keyboard } from "lucide-react";

@@ -1,6 +1,6 @@
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { PostMatterType } from "@/lib/posts/types";
-import { PostCovers } from "@/components/posts/PostCover";
+import { PostCovers } from "@/components/features/posts/PostCover";
 
 export default function TagPage({ params }) {
   const { tagId } = params;

@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { encrypt, decrypt } from "./crypto";
 import { PostMatterType } from "./types";
 
-const postDirectory = path.join(process.cwd(), "posts");
+const postDirectory = path.join(process.cwd(), "content/posts");
 
 export function getMatterList() {
 

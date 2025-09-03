@@ -6,7 +6,7 @@ import { MarkdownType, PostMatterType } from './types';
 import { createBasePipeline } from '@/lib/posts/markdownPipeline';
 import { getMatterList } from '@/lib/posts/getMatterList';
 
-const postsDirectory = path.join(process.cwd(), 'posts');
+const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 
 async function getMarkdownContent(postId: string): Promise<MarkdownType> {
