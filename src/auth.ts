@@ -18,19 +18,33 @@ export const auth = betterAuth({
       scope: ["user:email", "read:user"]
     },
   },
-  trustedOrigins: [
-    // local dev
-    "http://localhost:3000",
-    // vercel system URL, e.g. my-app.vercel.app
-    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
-    // custom site url (production). Prefer BETTER_AUTH_URL, fallback to NEXT_PUBLIC_SITE_URL
-    ...(process.env.BETTER_AUTH_URL ? [process.env.BETTER_AUTH_URL] : []),
-    ...(process.env.NEXT_PUBLIC_SITE_URL ? [process.env.NEXT_PUBLIC_SITE_URL] : []),
-    // optionally allow apex and www variants if SITE_URL is apex or www
-    ...(process.env.NEXT_PUBLIC_SITE_URL?.includes("www.")
-      ? [process.env.NEXT_PUBLIC_SITE_URL.replace("https://www.", "https://")] 
-      : process.env.NEXT_PUBLIC_SITE_URL
-      ? [process.env.NEXT_PUBLIC_SITE_URL.replace("https://", "https://www.")]
-      : []),
-  ],
+  trustedOrigins: (() => {
+    const origins: string[] = [
+      "http://localhost:3000",
+    ];
+
+    if (process.env.VERCEL_URL) {
+      origins.push(`https://${process.env.VERCEL_URL}`);
+    }
+
+    const addWithVariants = (url?: string) => {
+      if (!url) return;
+      try {
+        origins.push(url);
+        const u = new URL(url);
+        if (u.hostname.startsWith("www.")) {
+          origins.push(`${u.protocol}//${u.hostname.replace("www.", "")}${u.port ? ":" + u.port : ""}`);
+        } else {
+          origins.push(`${u.protocol}//www.${u.hostname}${u.port ? ":" + u.port : ""}`);
+        }
+      } catch {
+        // ignore malformed
+      }
+    };
+
+    addWithVariants(process.env.BETTER_AUTH_URL);
+    addWithVariants(process.env.NEXT_PUBLIC_SITE_URL);
+
+    return Array.from(new Set(origins.filter(Boolean)));
+  })(),
 });
