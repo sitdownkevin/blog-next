@@ -19,7 +19,18 @@ export const auth = betterAuth({
     },
   },
   trustedOrigins: [
-    "http://localhost:3000", 
-    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : [])
+    // local dev
+    "http://localhost:3000",
+    // vercel system URL, e.g. my-app.vercel.app
+    ...(process.env.VERCEL_URL ? [`https://${process.env.VERCEL_URL}`] : []),
+    // custom site url (production). Prefer BETTER_AUTH_URL, fallback to NEXT_PUBLIC_SITE_URL
+    ...(process.env.BETTER_AUTH_URL ? [process.env.BETTER_AUTH_URL] : []),
+    ...(process.env.NEXT_PUBLIC_SITE_URL ? [process.env.NEXT_PUBLIC_SITE_URL] : []),
+    // optionally allow apex and www variants if SITE_URL is apex or www
+    ...(process.env.NEXT_PUBLIC_SITE_URL?.includes("www.")
+      ? [process.env.NEXT_PUBLIC_SITE_URL.replace("https://www.", "https://")] 
+      : process.env.NEXT_PUBLIC_SITE_URL
+      ? [process.env.NEXT_PUBLIC_SITE_URL.replace("https://", "https://www.")]
+      : []),
   ],
 });
