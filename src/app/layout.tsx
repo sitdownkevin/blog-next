@@ -40,7 +40,7 @@ export default function RootLayout({
             <Header />
             {/* Add padding-top equal to header height to prevent overlap */}
             {/* Removed width constraints (w-5/6 md:w-2/3 lg:w-1/2) - Apply them in specific page layouts/pages where needed */}
-            <div className="w-full mb-16 px-4">{children}</div>{" "}
+            <div className="w-full px-4 mb-8">{children}</div>{" "}
             {/* Use w-full and add some padding */}
             <Footer />
             <Toaster richColors /> {/* Add Toaster here */}
