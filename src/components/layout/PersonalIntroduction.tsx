@@ -155,7 +155,7 @@ export default function PersonalIntroduction() {
       items: [
         {
           title: "Tongji University, Shanghai",
-          subtitle: "Master's Degree in Management Science and Engineering",
+          subtitle: "Second-year Student in Integrated Master's-PhD Program in Management Science and Engineering",
           content: "",
           period: "September 2024 - Present",
         },
@@ -203,15 +203,21 @@ export default function PersonalIntroduction() {
         {
           title: "",
           subtitle: "",
-          content:
-            "Xu, K., Hu, W., & Zhou, Z. (2024). The impact of reward distribution policies on user engagement and service consumption: A natural experiment at a cloud computing service provider. China Association for Information Systems Annual Meeting (CNAIS) 2024.",
+          content: "Xu, Ke; HU, Wei; and Zhou, Zhongyun, Claiming vs. Automatic Rewards: Impact of Incentive Mechanism on Engagement and Consumption in Cloud Computing (2025). ICIS 2025 Proceedings. 15.",
           period: "",
         },
+        // {
+        //   title: "",
+        //   subtitle: "",
+        //   content:
+        //     "Xu, K., Hu, W., & Zhou, Z. (2024). The impact of reward distribution policies on user engagement and service consumption: A natural experiment at a cloud computing service provider. China Association for Information Systems Annual Meeting (CNAIS) 2024.",
+        //   period: "",
+        // },
         {
           title: "",
           subtitle: "",
           content:
-            "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, D., & Yin, R. (2024). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. In F. Tosi et al. (Eds.), Springer Series in Design and Innovation.",
+            "Xu, K. et al. (2025). Predicting Intensive Care Unit Length of Stay for Inflammatory Bowel Diseases Patients Using Machine Learning. In: Jin, S., Kim, J.H., Kong, YK., Park, J., Yun, M.H. (eds) Proceedings of the 22nd Congress of the International Ergonomics Association, Volume 1. IEA 2024. Springer Series in Design and Innovation, vol 39. Springer, Singapore. https://doi.org/10.1007/978-981-95-0211-0_40",
           period: "",
         },
       ],
