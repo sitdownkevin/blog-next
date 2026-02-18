@@ -9,6 +9,7 @@ import { Footer } from "./_components/footer";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kexu.win"),
   title: "kexu's website",
   description: "Personal website of Ke Xu",
   icons: {
