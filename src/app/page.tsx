@@ -11,13 +11,13 @@ export const metadata: Metadata = {
     title: "kexu's website",
     description: "Personal website of Ke Xu",
     url: "https://kexu.win",
-    siteName: "kexu's website",
+    siteName: "Ke Xu's website",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Ke Xu's personal website",
+        url: "/og-image.jpg",
+        width: 940,
+        height: 940,
+        alt: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
       },
     ],
     locale: "en_US",
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "kexu's website",
-    description: "Personal website of Ke Xu",
-    images: ["/og-image.png"],
+    title: "Ke Xu's website",
+    description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "https://kexu.win",
