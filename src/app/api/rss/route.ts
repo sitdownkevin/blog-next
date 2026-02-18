@@ -4,7 +4,7 @@ import { MarkdownType } from '@/lib/posts/types';
 
 
 export async function GET() {
-  const siteURL = 'https://kexu.win'; // 替换为你的网站域名
+  const siteURL = 'https://kexu.win';
   const date = new Date();
 
   const author = {
@@ -14,11 +14,11 @@ export async function GET() {
   };
 
   const feed = new Feed({
-    title: "Ke Xu's Blog",
-    description: "Ke Xu's Blog",
+    title: "KE XU's website",
+    description: "KE XU's website",
     id: siteURL,
     link: siteURL,
-    language: "zh",
+    language: "en",
     image: `${siteURL}/favicon.ico`,
     favicon: `${siteURL}/favicon.ico`,
     copyright: `All rights reserved ${date.getFullYear()}`,

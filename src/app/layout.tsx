@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/app/globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
+import { Header } from "./_components/header";
+import { Footer } from "./_components/footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -36,12 +36,11 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ThemeProvider>
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
-            <Header />
-            {/* Add padding-top equal to header height to prevent overlap */}
-            {/* Removed width constraints (w-5/6 md:w-2/3 lg:w-1/2) - Apply them in specific page layouts/pages where needed */}
-            <div className="w-full px-4 mb-8">{children}</div>{" "}
-            {/* Use w-full and add some padding */}
-            <Footer />
+            <div className="w-full md:w-2/3 flex flex-col">
+              <Header />
+              {children}
+              <Footer />
+            </div>
             <Toaster richColors /> {/* Add Toaster here */}
           </div>
         </ThemeProvider>

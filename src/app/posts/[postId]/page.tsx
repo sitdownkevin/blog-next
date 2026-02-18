@@ -22,7 +22,7 @@ export default async function Post({ params }) {
   const markdownContent: MarkdownType = await getMarkdownContent(postId);
 
   return (
-    <div className="w-full flex flex-col gap-4 mt-8">
+    <div className="w-full flex flex-col gap-4 py-8 px-4">
       <Title title={markdownContent.title} type="post" postId={postId} />
       <div className="flex flex-row items-center justify-between">
         <Tag tags={markdownContent.tags} />

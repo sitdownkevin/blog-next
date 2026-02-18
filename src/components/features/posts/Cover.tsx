@@ -68,7 +68,7 @@ export function CoverList({ matterList, searching }: CoverListProps) {
   const visiblePosts = matterList.slice(0, visibleCount);
 
   return (
-    <div className="flex flex-col space-y-0 md:space-y-2 lg:space-y-4">
+    <div className="flex flex-col space-y-2 lg:space-y-4">
       <AnimatePresence>
         {visiblePosts.map((matter, index) => (
           <motion.div

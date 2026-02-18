@@ -1,4 +1,9 @@
 import Image from "next/image";
+import { Anton } from "next/font/google";
+
+const nameDisplayFont = Anton({
+  weight: ["400"],
+});
 
 type PersonalInfo = {
   name: string;
@@ -30,7 +35,9 @@ function PersonalIntroductionHeader({
       {/* Mobile view */}
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-4xl font-sans text-claude-orange pb-2">
+          <h1
+            className={`${nameDisplayFont.className} text-4xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+          >
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -50,7 +57,9 @@ function PersonalIntroductionHeader({
       {/* Tablet view */}
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-5xl font-sans text-claude-orange pb-2">
+          <h1
+            className={`${nameDisplayFont.className} text-5xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+          >
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -71,7 +80,9 @@ function PersonalIntroductionHeader({
       <div className="hidden lg:block pb-8">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col space-y-4">
-            <h1 className="text-6xl font-sans text-claude-orange pb-2">
+            <h1
+              className={`${nameDisplayFont.className} text-6xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+            >
               {personalInfo.name}
             </h1>
             <div className="flex flex-col space-y-0">
@@ -123,7 +134,7 @@ function PersonalIntroductionItemElement({
       {cvItem.content ? (
         <>
           {cvItem.title || cvItem.subtitle ? <br /> : null}
-          <span className={"text-gray-600 dark:text-gray-300"}>
+          <span className="text-gray-600 dark:text-gray-300 wrap-break-words whitespace-pre-line">
             {cvItem.content}
           </span>
         </>
@@ -140,12 +151,12 @@ function PersonalIntroductionItemElement({
   );
 }
 
-export default function PersonalIntroduction() {
+export function PersonalIntroduction() {
   const personalInfo: PersonalInfo = {
     name: "Ke Xu",
     email: "kexu567@gmail.com",
     location: "Shanghai, China",
-    intro: "Information Systems, Data Mining, and Blockchain Technology.",
+    intro: "Blockchain Technology, Data Mining, and Machine Learning.",
     figurePath: "/assets/images/figures/photo_figure.webp",
   };
 
@@ -155,7 +166,7 @@ export default function PersonalIntroduction() {
       items: [
         {
           title: "Tongji University, Shanghai",
-          subtitle: "Second-year Student in Integrated Master's-PhD Program in Management Science and Engineering",
+          subtitle: "Ph.D. Candidate in Information Systems",
           content: "",
           period: "September 2024 - Present",
         },
@@ -203,21 +214,15 @@ export default function PersonalIntroduction() {
         {
           title: "",
           subtitle: "",
-          content: "Xu, Ke; HU, Wei; and Zhou, Zhongyun, Claiming vs. Automatic Rewards: Impact of Incentive Mechanism on Engagement and Consumption in Cloud Computing (2025). ICIS 2025 Proceedings. 15.",
+          content:
+            "Xu, K., Hu, W., & Zhou, Z. (2025). Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing. ICIS 2025 Proceedings, 15.",
           period: "",
         },
-        // {
-        //   title: "",
-        //   subtitle: "",
-        //   content:
-        //     "Xu, K., Hu, W., & Zhou, Z. (2024). The impact of reward distribution policies on user engagement and service consumption: A natural experiment at a cloud computing service provider. China Association for Information Systems Annual Meeting (CNAIS) 2024.",
-        //   period: "",
-        // },
         {
           title: "",
           subtitle: "",
           content:
-            "Xu, K. et al. (2025). Predicting Intensive Care Unit Length of Stay for Inflammatory Bowel Diseases Patients Using Machine Learning. In: Jin, S., Kim, J.H., Kong, YK., Park, J., Yun, M.H. (eds) Proceedings of the 22nd Congress of the International Ergonomics Association, Volume 1. IEA 2024. Springer Series in Design and Innovation, vol 39. Springer, Singapore. https://doi.org/10.1007/978-981-95-0211-0_40",
+            "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R. (2025). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. In S. Jin, J. H. Kim, Y.-K. Kong, J. Park, & M. H. Yun (Eds.), Proceedings of the 22nd Congress of the International Ergonomics Association, Volume 1 (pp. 255–261). Springer. https://doi.org/10.1007/978-981-95-0211-0_40",
           period: "",
         },
       ],
@@ -225,20 +230,18 @@ export default function PersonalIntroduction() {
   ];
 
   return (
-    <div>
-      <div className="flex flex-col w-full mt-8">
-        <PersonalIntroductionHeader personalInfo={personalInfo} />
+    <div className="flex flex-col w-full py-8 px-4">
+      <PersonalIntroductionHeader personalInfo={personalInfo} />
 
-        <div className="flex flex-col space-y-4">
-          {data.map((section, index) => (
-            <div key={index} className="flex flex-col space-y-4">
-              <h2 className="text-2xl font-semibold">{section.title}</h2>
-              {section.items.map((item, idx) => (
-                <PersonalIntroductionItemElement key={idx} cvItem={item} />
-              ))}
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col space-y-4">
+        {data.map((section, index) => (
+          <div key={index} className="flex flex-col space-y-4">
+            <h2 className="text-2xl font-semibold">{section.title}</h2>
+            {section.items.map((item, idx) => (
+              <PersonalIntroductionItemElement key={idx} cvItem={item} />
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

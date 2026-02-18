@@ -229,7 +229,7 @@ export default function Page() {
   }
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col py-8 px-4">
       <SearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}

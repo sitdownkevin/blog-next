@@ -37,7 +37,7 @@ export default function Resume({
   // Removed hardcoded data definitions
 
   return (
-    <div className="flex flex-col gap-2 sm:gap-1 mt-8">
+    <div className="flex flex-col gap-2 sm:gap-1">
       <div>
         {/* Pass props to child components */}
         <Header basicInfo={basicInfo} />

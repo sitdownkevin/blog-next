@@ -18,8 +18,8 @@ const breakpointColumnsObj = {
 export default function Page() {
 
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-8">Gallery</h1>
+    <div className="w-full py-8 px-4 space-y-4">
+      <h1 className="text-3xl font-bold">Gallery</h1>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="masonry-grid"

@@ -18,7 +18,7 @@ export default function Page() {
 
 
   return (
-    <div className="p-4"> {/* Remove flex-wrap */}
+    <div className="w-full py-8 px-4 space-y-4"> {/* Remove flex-wrap */}
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="masonry-grid"

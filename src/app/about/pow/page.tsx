@@ -21,7 +21,7 @@ async function proofOfWork(
   setHash: (hash: string) => void,
   nonce: number,
   setNonce: (nonce: number) => void,
-  stopSignal: React.RefObject<boolean>
+  stopSignal: React.RefObject<boolean>,
 ): Promise<{
   nonce: number;
   hash: string;
@@ -97,7 +97,7 @@ async function initiateTask(setTask: (task: Task) => void) {
 
 async function validateTask(
   task: Task,
-  nonce: number
+  nonce: number,
 ): Promise<ValidateResult> {
   const response = await fetch("/api/pow/validate", {
     method: "POST",
@@ -273,7 +273,7 @@ export default function Page() {
         setHash,
         nonce,
         setNonce,
-        stopMining
+        stopMining,
       );
       if (result) {
         setHash(result.hash);
@@ -291,20 +291,18 @@ export default function Page() {
 
   return (
     // Add the width constraint wrapper div here
-    <div className="w-5/6 md:w-2/3 lg:w-1/2 mx-auto mt-16">
-      <div className="flex flex-col gap-4">
-        <h1 className="text-2xl font-sans">Get my WX through PoW</h1>
-        <PoWCard
-          task={task}
-          hash={hash}
-          nonce={nonce}
-          result={result}
-          isMining={isMining}
-          handleMine={handleMine}
-          handleStop={handleStop}
-        />
-        {result && <ValidateCard task={task} nonce={result.nonce} />}
-      </div>
+    <div className="w-full py-8 px-4 space-y-4">
+      <h1 className="text-3xl font-bold">Get my WX through PoW</h1>
+      <PoWCard
+        task={task}
+        hash={hash}
+        nonce={nonce}
+        result={result}
+        isMining={isMining}
+        handleMine={handleMine}
+        handleStop={handleStop}
+      />
+      {result && <ValidateCard task={task} nonce={result.nonce} />}
     </div>
   );
 }
