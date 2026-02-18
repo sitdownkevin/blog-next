@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={inter.variable}>
         <ThemeProvider>
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
-            <div className="w-full md:w-2/3 flex flex-col">
+            <div className="w-full md:w-2/3 lg:w-1/2 flex flex-col">
               <Header />
               {children}
               <Footer />

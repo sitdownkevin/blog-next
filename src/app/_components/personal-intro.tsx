@@ -200,11 +200,19 @@ export function PersonalIntroduction() {
       items: [
         {
           title:
-            "Design and Control Method of Modular Mechanical Prosthesis, China",
+            "AI Mobile Large Model Technology Innovation Competition, Shenzhen",
+          subtitle:
+            "2nd 'Xingzhi Cup' National AI Innovation Application Competition",
+          content: "First Prize (National Finals)",
+          period: "December 2025",
+        },
+        {
+          title:
+            "Design and Control Method of Modular Mechanical Prosthesis, Chengdu",
           subtitle:
             "College Students' Innovation and Entrepreneurship Competition",
           content: "National Project",
-          period: "",
+          period: "December 2023 - December 2024",
         },
       ],
     },
