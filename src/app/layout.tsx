@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kexu.win"),
-  title: "kexu's website",
-  description: "Personal website of Ke Xu",
+  title: "Ke Xu's website",
+  description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
   icons: {
     icon: "/favicon.ico",
   },
