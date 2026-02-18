@@ -2,7 +2,11 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || "";
+
+if (!MONGODB_URI) {
+  throw new Error("MONGODB_URI is not defined in environment variables");
+}
 
 const client = new MongoClient(MONGODB_URI);
 const db = client.db();
@@ -13,15 +17,13 @@ export const auth = betterAuth({
   database: mongodbAdapter(db),
   socialProviders: {
     github: {
-      clientId: process.env.AUTH_GITHUB_ID as string,
-      clientSecret: process.env.AUTH_GITHUB_SECRET as string,
-      scope: ["user:email", "read:user"]
+      clientId: process.env.GITHUB_CLIENT_ID as string,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+      scope: ["user:email", "read:user"],
     },
   },
   trustedOrigins: (() => {
-    const origins: string[] = [
-      "http://localhost:3000",
-    ];
+    const origins: string[] = ["http://localhost:3000"];
 
     if (process.env.VERCEL_URL) {
       origins.push(`https://${process.env.VERCEL_URL}`);
@@ -33,9 +35,13 @@ export const auth = betterAuth({
         origins.push(url);
         const u = new URL(url);
         if (u.hostname.startsWith("www.")) {
-          origins.push(`${u.protocol}//${u.hostname.replace("www.", "")}${u.port ? ":" + u.port : ""}`);
+          origins.push(
+            `${u.protocol}//${u.hostname.replace("www.", "")}${u.port ? ":" + u.port : ""}`,
+          );
         } else {
-          origins.push(`${u.protocol}//www.${u.hostname}${u.port ? ":" + u.port : ""}`);
+          origins.push(
+            `${u.protocol}//www.${u.hostname}${u.port ? ":" + u.port : ""}`,
+          );
         }
       } catch {
         // ignore malformed

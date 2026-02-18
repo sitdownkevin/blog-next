@@ -83,7 +83,7 @@ function SearchBar({
               {osShortcut && (
                 <Badge
                   variant="secondary"
-                  className={`text-xs font-mono px-2 py-1 hidden sm:inline-flex transition-opacity ${
+                  className={`text-xs font-sans px-2 py-1 hidden sm:inline-flex transition-opacity ${
                     isFocused ? 'opacity-50' : 'opacity-100'
                   }`}
                 >

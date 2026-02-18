@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@fontsource/maple-mono";
 import "@/app/globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ThemeProvider from "@/components/layout/ThemeProvider";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "kexu's website",
@@ -34,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={inter.variable}>
         <ThemeProvider>
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
             <Header />

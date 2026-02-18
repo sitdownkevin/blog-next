@@ -7,8 +7,6 @@
 @theme {
   --text-xxs: 10px;
 
-  --font-maple: Maple Mono, sans-serif;
-
   --color-claude-orange: #ea580c;
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -214,7 +212,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 
@@ -338,6 +336,9 @@ html {
 */
 
 @theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-sans);
+  --font-mono: var(--font-sans);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);
@@ -381,7 +382,7 @@ html {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
 }
 

@@ -114,7 +114,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "plugins": [
       {
         "name": "next"
@@ -127,7 +127,8 @@
     "**/*.ts",
     "**/*.tsx",
     "postcss.config.js",
-    "src/lib/utils.ts"
+    "src/lib/utils.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

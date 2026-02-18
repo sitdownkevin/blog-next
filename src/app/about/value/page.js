@@ -10,7 +10,7 @@ function Values({ values }) {
 
     return (
         <div className="flex flex-col items-center w-full space-y-8">
-            <h1 className="font-serif">Here are some of the values that I believe in</h1>
+            <h1 className="font-sans">Here are some of the values that I believe in</h1>
             <Accordion type="single" collapsible className="w-full">
                 {values.map((value, index) => <AccordionItem key={index} value={value.title}>
                     <AccordionTrigger>{value.title}</AccordionTrigger>

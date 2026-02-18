@@ -30,7 +30,7 @@ function PersonalIntroductionHeader({
       {/* Mobile view */}
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-4xl font-serif text-claude-orange pb-2">
+          <h1 className="text-4xl font-sans text-claude-orange pb-2">
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -50,7 +50,7 @@ function PersonalIntroductionHeader({
       {/* Tablet view */}
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1 className="text-5xl font-serif text-claude-orange pb-2">
+          <h1 className="text-5xl font-sans text-claude-orange pb-2">
             {personalInfo.name}
           </h1>
           <div className="flex flex-col space-y-0">
@@ -71,7 +71,7 @@ function PersonalIntroductionHeader({
       <div className="hidden lg:block pb-8">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col space-y-4">
-            <h1 className="text-6xl font-serif text-claude-orange pb-2">
+            <h1 className="text-6xl font-sans text-claude-orange pb-2">
               {personalInfo.name}
             </h1>
             <div className="flex flex-col space-y-0">

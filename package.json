@@ -58,7 +58,7 @@
     "langchain": "^0.3.32",
     "lucide-react": "^0.542.0",
     "mongodb": "^6.19.0",
-    "next": "15.1.11",
+    "next": "16.1.6",
     "next-themes": "^0.4.6",
     "node-ical": "^0.20.1",
     "prism-themes": "^1.9.0",
@@ -97,6 +97,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.12",
+    "@types/hast": "^3.0.4",
     "@types/node": "^22.13.9",
     "@types/react": "^19.0.10",
     "crypto-js": "^4.2.0",

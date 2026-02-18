@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    turbopack: {},
     webpack: (config: any, { isServer, dev }: any) => {
         config.ignoreWarnings = [
             { module: /node_modules\/node-fetch\/lib\/index\.js/ },
