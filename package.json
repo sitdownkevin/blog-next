@@ -1,7 +1,8 @@
 {
-  "name": "k-space",
-  "version": "0.1.0",
+  "name": "blog-next",
+  "version": "0.2.0",
   "private": true,
+  "packageManager": "pnpm@10.30.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
