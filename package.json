@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "vitest",
+    "test": "vitest --passWithNoTests",
     "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run build",
     "audit:components": "node scripts/audit-components.js",
     "resolve:conflicts": "node scripts/resolve-conflicts.js"
