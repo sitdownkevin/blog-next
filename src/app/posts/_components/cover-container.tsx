@@ -5,11 +5,11 @@ import { PinTopIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { EnhancedMarkdownBody } from "./EnhancedMarkdownBody"; // Import EnhancedMarkdownBody
 
-import { Tag } from "./Tags";
-import { DateText } from "./Date";
-import { Title } from "./Title";
+import { EnhancedMarkdownBody } from "./markdown-body";
+import { CoverTags } from "./cover-tags";
+import { CoverDate } from "./cover-date";
+import { CoverTitle } from "./cover-title";
 
 interface CoverProps {
   matter: PostMatterType;
@@ -17,7 +17,7 @@ interface CoverProps {
   first?: boolean;
 }
 
-interface CoverListProps {
+interface CoverContainerProps {
   matterList: PostMatterType[];
   searching: boolean;
 }
@@ -28,7 +28,7 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
       className={`flex flex-col space-y-2 md:space-y-4 lg:space-y-6 p-4 border-b border-gray-200 dark:border-gray-700 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
     >
       <div className="flex justify-between items-start">
-        <Title title={matter.title} type="cover" postId={matter.id} />
+        <CoverTitle title={matter.title} postId={matter.id} />
         {matter.pinned && <PinTopIcon className="w-4 h-4" />}
       </div>
       {/* Use EnhancedMarkdownBody to render snippetHtml */}
@@ -38,8 +38,8 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
         </div>
       )}
       <div className="flex justify-between items-end">
-        <Tag tags={matter.tags} />
-        <DateText date={matter.update_date} />
+        <CoverTags tags={matter.tags} />
+        <CoverDate date={matter.update_date} />
       </div>
     </div>
   );
@@ -58,7 +58,7 @@ function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
   );
 }
 
-export function CoverList({ matterList, searching }: CoverListProps) {
+export function CoverContainer({ matterList, searching }: CoverContainerProps) {
   const [visibleCount, setVisibleCount] = useState(5);
 
   const handleShowMore = () => {

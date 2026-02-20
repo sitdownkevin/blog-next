@@ -36,7 +36,7 @@ function PersonalIntroductionHeader({
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
           <h1
-            className={`${nameDisplayFont.className} text-4xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+            className={`${nameDisplayFont.className} text-4xl uppercase leading-tight text-claude-orange pb-2`}
           >
             {personalInfo.name}
           </h1>
@@ -58,7 +58,7 @@ function PersonalIntroductionHeader({
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
           <h1
-            className={`${nameDisplayFont.className} text-5xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+            className={`${nameDisplayFont.className} text-5xl uppercase leading-tight text-claude-orange pb-2`}
           >
             {personalInfo.name}
           </h1>
@@ -244,7 +244,9 @@ export function PersonalIntroduction() {
       <div className="flex flex-col space-y-4">
         {data.map((section, index) => (
           <div key={index} className="flex flex-col space-y-4">
-            <h2 className="text-2xl font-semibold">{section.title}</h2>
+            <h2 className={`${nameDisplayFont.className} text-2xl uppercase`}>
+              {section.title}
+            </h2>
             {section.items.map((item, idx) => (
               <PersonalIntroductionItemElement key={idx} cvItem={item} />
             ))}

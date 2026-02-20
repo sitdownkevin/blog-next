@@ -1,4 +1,4 @@
-export function DateText({ date }: { date: Date }) {
+export function CoverDate({ date }: { date: Date }) {
   const pivotDate = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
   if (date.getTime() <= pivotDate.getTime()) {
     return null;

@@ -2,7 +2,8 @@ import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "@/app/globals.css";
-import ThemeProvider from "@/components/layout/ThemeProvider";
+
+import ThemeProvider from "./_components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
@@ -12,7 +13,8 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   metadataBase: new URL("https://kexu.win"),
   title: "Ke Xu's website",
-  description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+  description:
+    "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
   icons: {
     icon: "/favicon.ico",
   },

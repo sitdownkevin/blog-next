@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-export function Tag({ tags }: { tags: string[] }) {
+export function PostTags({ tags }: { tags: string[] }) {
   const gradients = [
     {
       from: "from-blue-100",
@@ -44,20 +42,15 @@ export function Tag({ tags }: { tags: string[] }) {
 
   return (
     <div className="flex flex-wrap gap-2 hover:opacity-80 select-none hover:scale-105 transition-all duration-300">
-      {tags.map((tag) => {
+      {tags.map((tag, index) => {
         const gradient = getGradient(tag);
         return (
-          <Link
-            href={`/posts/tags/${tag}`}
-            key={tag}
-            className={`bg-linear-to-r ${gradient.from} ${gradient.to} px-2 py-1 rounded-full`}
+          <p
+            key={index}
+            className={`bg-linear-to-r ${gradient.textFrom} ${gradient.textTo} bg-clip-text text-transparent text-xs font-bold`}
           >
-            <p
-              className={`bg-linear-to-r ${gradient.textFrom} ${gradient.textTo} bg-clip-text text-transparent text-xs font-bold`}
-            >
-              {tag}
-            </p>
-          </Link>
+            {tag}
+          </p>
         );
       })}
     </div>

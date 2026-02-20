@@ -2,11 +2,15 @@ import { getMatterList } from "@/lib/posts/getMatterList";
 import { getMarkdownContent } from "@/lib/posts/getMarkdownContent";
 import { MarkdownType } from "@/lib/posts/types";
 
-import { Tag } from "@/components/features/posts/Tags";
-import { DateText } from "@/components/features/posts/Date";
-import { Title } from "@/components/features/posts/Title";
+import { PostTitle } from "./_components/post-title";
+import { PostDate } from "./_components/post-date";
+import { PostTags } from "./_components/post-tags";
 
 import { Container as CommentContainer } from "@/components/features/comment/Container";
+
+import "katex/dist/katex.min.css";
+import "./markdown.css";
+import "./katex.css";
 
 const renderMarkdownBody = (markdownHtml: string) => {
   return (
@@ -23,10 +27,10 @@ export default async function Post({ params }) {
 
   return (
     <div className="w-full flex flex-col gap-4 py-8 px-4">
-      <Title title={markdownContent.title} type="post" postId={postId} />
+      <PostTitle title={markdownContent.title} />
       <div className="flex flex-row items-center justify-between">
-        <Tag tags={markdownContent.tags} />
-        <DateText date={markdownContent.update_date} />
+        <PostTags tags={markdownContent.tags} />
+        <PostDate date={markdownContent.update_date} />
       </div>
       {renderMarkdownBody(markdownContent.content)}
       <CommentContainer postId={postId} />

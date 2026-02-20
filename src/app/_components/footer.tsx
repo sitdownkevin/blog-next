@@ -5,7 +5,7 @@ export function Footer() {
     <div className="w-full py-4 flex flex-row justify-center space-x-8 md:space-x-16 border-t border-gray-300">
       <div className="flex flex-col">
         <span className="text-xxs">
-          <Link href={"/"}>About</Link>
+        <span className="text-xxs">About</span>
         </span>
         <span className="text-gray-500 text-xxs dark:text-gray-300">
           <Link href={"/about/resume"}>Resume</Link>
@@ -14,7 +14,7 @@ export function Footer() {
           <Link href={"/about/gallery"}>Gallery</Link>
         </span>
         <span className="text-gray-500 text-xxs dark:text-gray-300">
-          <Link href={"/about/pow"}>WeChat</Link>
+          <Link href={"/about/get_my_wx"}>WeChat</Link>
         </span>
       </div>
       <div className="flex flex-col">

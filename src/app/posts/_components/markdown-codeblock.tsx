@@ -1,26 +1,29 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import { CheckIcon, CopyIcon } from 'lucide-react'; // Assuming lucide-react is used for icons
+import { useState, useEffect, useRef } from "react";
+import { CheckIcon, CopyIcon } from "lucide-react"; // Assuming lucide-react is used for icons
 
-interface CodeBlockProps {
+interface MarkdownCodeBlockProps {
   code: string;
   language?: string;
 }
 
-export function CodeBlock({ code, language }: CodeBlockProps) {
+export function MarkdownCodeBlock({ code, language }: MarkdownCodeBlockProps) {
   const [copied, setCopied] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(code).then(() => {
-      setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-      }, 3000); // Reset copied state after 3 seconds
-    }).catch(err => {
-      console.error('Failed to copy code: ', err);
-    });
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => {
+          setCopied(false);
+        }, 3000); // Reset copied state after 3 seconds
+      })
+      .catch((err) => {
+        console.error("Failed to copy code: ", err);
+      });
   };
 
   // Optional: Add a way to dynamically load Prism.js language if needed
@@ -35,7 +38,7 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
       <button
         ref={buttonRef}
         className={`absolute hidden group-hover:flex items-center justify-center right-2 top-2
-                   ${copied ? 'bg-emerald-600/70 hover:bg-emerald-500/80 ring-emerald-400/30' : 'bg-zinc-500/50 hover:bg-zinc-400/60 text-zinc-100 hover:text-white ring-zinc-400/20 hover:ring-zinc-300/30'}
+                   ${copied ? "bg-emerald-600/70 hover:bg-emerald-500/80 ring-emerald-400/30" : "bg-zinc-500/50 hover:bg-zinc-400/60 text-zinc-100 hover:text-white ring-zinc-400/20 hover:ring-zinc-300/30"}
                    rounded-md w-8 h-8
                    transition-all duration-200 ease-in-out
                    shadow-xs hover:shadow-md
@@ -54,7 +57,9 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
       {/* We will dynamically insert the original pre/code HTML here */}
       {/* For now, we'll just render the code string, but the final implementation will use the original HTML */}
       <pre className="bg-slate-100 dark:bg-zinc-800 border border-zinc-400/20 dark:border-zinc-700 rounded-md">
-        <code className={`language-${language} font-sans text-zinc-900 dark:text-zinc-100 rounded-md p-2`}>
+        <code
+          className={`language-${language} font-sans text-zinc-900 dark:text-zinc-100 rounded-md p-2`}
+        >
           {code}
         </code>
       </pre>

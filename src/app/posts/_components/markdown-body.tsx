@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { createRoot, Root } from "react-dom/client";
-import { CodeBlock } from "./CodeBlock";
+import { MarkdownCodeBlock } from "./markdown-codeblock";
 
 interface EnhancedMarkdownBodyProps {
   markdownHtml: string;
@@ -45,7 +45,7 @@ export function EnhancedMarkdownBody({
 
         // Render the CodeBlock component into the temporary container
         const root = createRoot(reactContainer);
-        root.render(<CodeBlock code={codeContent} language={language} />);
+        root.render(<MarkdownCodeBlock code={codeContent} language={language} />);
         codeBlockRoots.current.push(root);
       }
     });

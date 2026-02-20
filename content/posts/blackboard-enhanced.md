@@ -1,5 +1,5 @@
 ---
-title: Bb 增强 | Blackboard Enhanced
+title: Blackboard Enhanced
 tags: PROJ
 create_date: 2023-10-01
 update_date: 2024-11-19
