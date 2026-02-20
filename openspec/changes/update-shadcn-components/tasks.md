@@ -132,25 +132,25 @@
 
 ## 11. 处理自定义组件
 
-- [ ] 11.1 识别自定义组件列表（shiny-button.jsx, scroll-based-velocity.jsx, sparkles-text.jsx, typing-animation.jsx, word-fade-in.jsx）
-- [ ] 11.2 手动检查 shiny-button.jsx，如有依赖 Radix UI 需手动更新
-- [ ] 11.3 手动检查 scroll-based-velocity.jsx
-- [ ] 11.4 手动检查 sparkles-text.jsx
-- [ ] 11.5 手动检查 typing-animation.jsx
-- [ ] 11.6 手动检查 word-fade-in.jsx
-- [ ] 11.7 如果自定义组件是 .jsx，手动重命名为 .tsx 并更新类型定义
-- [ ] 11.8 更新所有引用自定义组件的导入路径（如果扩展名改变）
-- [ ] 11.9 提交所有组件更新（commit message: "chore: regenerate shadcn components and migrate to tsx"）
+- [x] 11.1 识别自定义组件列表（shiny-button.jsx, scroll-based-velocity.jsx, sparkles-text.jsx, typing-animation.jsx, word-fade-in.jsx）
+- [x] 11.2 手动检查 shiny-button.jsx，如有依赖 Radix UI 需手动更新
+- [x] 11.3 手动检查 scroll-based-velocity.jsx
+- [x] 11.4 手动检查 sparkles-text.jsx
+- [x] 11.5 手动检查 typing-animation.jsx
+- [x] 11.6 手动检查 word-fade-in.jsx
+- [x] 11.7 如果自定义组件是 .jsx，手动重命名为 .tsx 并更新类型定义
+- [x] 11.8 更新所有引用自定义组件的导入路径（如果扩展名改变）
+- [x] 11.9 提交所有组件更新（commit message: "chore: regenerate shadcn components and migrate to tsx"）
 
 ## 12. 类型检查和构建验证
 
-- [ ] 12.1 运行 `pnpm typecheck` 检查 TypeScript 类型错误
-- [ ] 12.2 如有类型错误，修复导入语句或类型定义
-- [ ] 12.3 运行 `pnpm build` 执行生产构建
-- [ ] 12.4 检查构建输出，确认无错误和警告
-- [ ] 12.5 对比构建产物大小，记录是否有显著变化（超过10%需要分析）
-- [ ] 12.6 如构建失败，检查错误日志并修复问题
-- [ ] 12.7 提交修复（如有）：commit message: "fix: resolve type errors and build issues"
+- [x] 12.1 运行 `pnpm typecheck` 检查 TypeScript 类型错误
+- [x] 12.2 如有类型错误，修复导入语句或类型定义
+- [x] 12.3 运行 `pnpm build` 执行生产构建
+- [x] 12.4 检查构建输出，确认无错误和警告
+- [x] 12.5 对比构建产物大小，记录是否有显著变化（超过10%需要分析）
+- [x] 12.6 如构建失败，检查错误日志并修复问题
+- [x] 12.7 提交修复（如有）：commit message: "fix: resolve type errors and build issues"
 
 ## 13. 开发环境测试
 
