@@ -63,17 +63,17 @@
 
 ## 6. 重新生成 shadcn 组件 - 标准组件（第1批）
 
-- [ ] 6.1 列出所有需要重新生成的标准组件（排除自定义组件）
-- [ ] 6.2 运行 `npx shadcn@latest diff accordion` 检查变更
-- [ ] 6.3 运行 `npx shadcn@latest add accordion --overwrite`，删除旧的 accordion.jsx
-- [ ] 6.4 运行 `npx shadcn@latest diff alert-dialog` 并重新生成
-- [ ] 6.5 运行 `npx shadcn@latest diff alert` 并重新生成
-- [ ] 6.6 运行 `npx shadcn@latest diff aspect-ratio` 并重新生成
-- [ ] 6.7 运行 `npx shadcn@latest diff avatar` 并重新生成
-- [ ] 6.8 运行 `npx shadcn@latest diff badge` 并重新生成，删除旧的 badge.jsx
-- [ ] 6.9 运行 `npx shadcn@latest diff breadcrumb` 并重新生成
-- [ ] 6.10 运行 `npx shadcn@latest diff button` 并重新生成
-- [ ] 6.11 使用 `git diff` 检查前10个组件的变更合理性
+- [x] 6.1 列出所有需要重新生成的标准组件（排除自定义组件）
+- [x] 6.2 运行 `npx shadcn@latest diff accordion` 检查变更
+- [x] 6.3 运行 `npx shadcn@latest add accordion --overwrite`，删除旧的 accordion.jsx
+- [x] 6.4 运行 `npx shadcn@latest diff alert-dialog` 并重新生成
+- [x] 6.5 运行 `npx shadcn@latest diff alert` 并重新生成
+- [x] 6.6 运行 `npx shadcn@latest diff aspect-ratio` 并重新生成
+- [x] 6.7 运行 `npx shadcn@latest diff avatar` 并重新生成
+- [x] 6.8 运行 `npx shadcn@latest diff badge` 并重新生成，删除旧的 badge.jsx
+- [x] 6.9 运行 `npx shadcn@latest diff breadcrumb` 并重新生成
+- [x] 6.10 运行 `npx shadcn@latest diff button` 并重新生成
+- [x] 6.11 使用 `git diff` 检查前10个组件的变更合理性
 
 ## 7. 重新生成 shadcn 组件 - 标准组件（第2批）
 
@@ -125,10 +125,10 @@
 - [ ] 10.4 运行 `npx shadcn@latest diff tabs` 并重新生成
 - [ ] 10.5 运行 `npx shadcn@latest diff textarea` 并重新生成
 - [ ] 10.6 运行 `npx shadcn@latest diff toast/toaster` 并重新生成，删除旧的 toaster.jsx
-- [ ] 10.7 运行 `npx shadcn@latest diff toggle-group` 并重新生成
-- [ ] 10.8 运行 `npx shadcn@latest diff toggle` 并重新生成
-- [ ] 10.9 运行 `npx shadcn@latest diff tooltip` 并重新生成
-- [ ] 10.10 使用 `git diff` 检查这批组件的变更
+- [x] 10.7 运行 `npx shadcn@latest diff toggle-group` 并重新生成
+- [x] 10.8 运行 `npx shadcn@latest diff toggle` 并重新生成
+- [x] 10.9 运行 `npx shadcn@latest diff tooltip` 并重新生成
+- [x] 10.10 使用 `git diff` 检查这批组件的变更
 
 ## 11. 处理自定义组件
 
