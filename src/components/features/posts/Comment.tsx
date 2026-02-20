@@ -55,8 +55,7 @@ function CommentItem({
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-          </div>
+          <div className="flex items-center gap-2"></div>
         </div>
         <div className="w-full p-2">
           <p className="text-sm">{comment.comment_text}</p>
@@ -128,7 +127,7 @@ function CommentForm({
     try {
       const newComment = await postComment({
         postId: postId,
-        commentText: commentText.trim()
+        commentText: commentText.trim(),
       });
 
       onCommentAdded(newComment);
@@ -205,7 +204,7 @@ function CommentSkeleton() {
 }
 
 // 主评论组件
-export function Comment({ postId = '1' }: { postId?: string }) {
+export function Comment({ postId = "1" }: { postId?: string }) {
   const [comments, setComments] = useState<CommentType[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -242,7 +241,44 @@ export function Comment({ postId = '1' }: { postId?: string }) {
         {error ? (
           <div className="text-center py-4">
             <p className="text-red-500 mb-2">{error}</p>
-            <Button variant="outline" onClick={() => {
+            <Button
+              variant="outline"
+              onClick={() => {
+                const handleFetchComments = async () => {
+                  setIsLoading(true);
+                  setError(null);
+
+                  try {
+                    const data = await fetchComments({ postId });
+                    setComments(data);
+                  } catch (err) {
+                    setError("加载评论失败，请刷新重试");
+                    console.error(err);
+                  } finally {
+                    setIsLoading(false);
+                  }
+                };
+                handleFetchComments();
+              }}
+            >
+              <RefreshCw className="h-4 w-4 mr-2" />
+              重试
+            </Button>
+          </div>
+        ) : isLoading ? (
+          <>
+            <div className="flex justify-between items-center mb-4">
+              <Skeleton className="h-4 w-24" />
+              <Skeleton className="h-8 w-24" />
+            </div>
+            {[1].map((_, index) => (
+              <CommentSkeleton key={index} />
+            ))}
+          </>
+        ) : (
+          <CommentList
+            comments={comments}
+            onRefresh={() => {
               const handleFetchComments = async () => {
                 setIsLoading(true);
                 setError(null);
@@ -258,39 +294,8 @@ export function Comment({ postId = '1' }: { postId?: string }) {
                 }
               };
               handleFetchComments();
-            }}>
-              <RefreshCw className="h-4 w-4 mr-2" />
-              重试
-            </Button>
-          </div>
-        ) : isLoading ? (
-          <>
-            <div className="flex justify-between items-center mb-4">
-              <Skeleton className="h-4 w-24" />
-              <Skeleton className="h-8 w-24" />
-            </div>
-            {[1,].map((_, index) => (
-              <CommentSkeleton key={index} />
-            ))}
-          </>
-        ) : (
-          <CommentList comments={comments} onRefresh={() => {
-            const handleFetchComments = async () => {
-              setIsLoading(true);
-              setError(null);
-
-              try {
-                const data = await fetchComments({ postId });
-                setComments(data);
-              } catch (err) {
-                setError("加载评论失败，请刷新重试");
-                console.error(err);
-              } finally {
-                setIsLoading(false);
-              }
-            };
-            handleFetchComments();
-          }} />
+            }}
+          />
         )}
       </CardContent>
 

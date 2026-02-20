@@ -5,7 +5,6 @@ create_date: null
 update_date: null
 ---
 
-
 Goal: $Q^TAQ=D$ for any symmetric matrix $A$
 
 ---
@@ -39,7 +38,9 @@ $$
 $$
 \therefore\ B=\left[\begin{array}{c:c}\lambda_1&0\\\hdashline0&A_1 \end{array}\right]
 $$
+
 ---
+
 $$
 \because\ A\sim B\\\Rightarrow c_A(\lambda)=c_B(\lambda)
 $$
@@ -53,7 +54,7 @@ $$
 \end{aligned}
 $$
 
-$\therefore$ The characteristic polynomial of $A_1$ divides the characteristic polynomial of $A$. It follows that the eigenvalues of $A_1$ are also eigenvalues of $A$. 
+$\therefore$ The characteristic polynomial of $A_1$ divides the characteristic polynomial of $A$. It follows that the eigenvalues of $A_1$ are also eigenvalues of $A$.
 
 ---
 

@@ -1,17 +1,17 @@
-import fs from 'fs';
-import path from 'path';
-import { decrypt } from '@/lib/posts/crypto';
-import matter from 'gray-matter';
-import { MarkdownType } from './types';
-import { createBasePipeline } from '@/lib/posts/markdownPipeline';
+import fs from "fs";
+import path from "path";
+import { decrypt } from "@/lib/posts/crypto";
+import matter from "gray-matter";
+import { MarkdownType } from "./types";
+import { createBasePipeline } from "@/lib/posts/markdownPipeline";
 
-const postsDirectory = path.join(process.cwd(), 'content/posts');
+const postsDirectory = path.join(process.cwd(), "content/posts");
 
 function addCopyButton(contentHtml: string): string {
-    return contentHtml.replace(
-        /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/g,
-        (match, language, code) => {
-            return `
+  return contentHtml.replace(
+    /<pre><code class="language-([^"]+)">([\s\S]*?)<\/code><\/pre>/g,
+    (match, language, code) => {
+      return `
                 <div class="relative group">
                     <button class="absolute hidden group-hover:flex items-center justify-center right-2 top-2
                             bg-zinc-500/50 hover:bg-zinc-400/60 text-zinc-100 hover:text-white
@@ -42,31 +42,32 @@ function addCopyButton(contentHtml: string): string {
                     <pre class="bg-slate-100 dark:bg-zinc-800 border border-zinc-400/20 dark:border-zinc-700 rounded-md"><code class="language-${language} font-sans text-zinc-900 dark:text-zinc-100 rounded-md p-2">${code}</code></pre>
                 </div>
             `.trim();
-        }
-    );
+    },
+  );
 }
 
+export async function getMarkdownContent(
+  postId: string,
+): Promise<MarkdownType> {
+  const fileNameWithoutExt = decrypt(postId);
+  const fullPath = path.join(postsDirectory, `${fileNameWithoutExt}.md`);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const matterResult = matter(fileContents);
 
-export async function getMarkdownContent(postId: string): Promise<MarkdownType> {
-    const fileNameWithoutExt = decrypt(postId);
-    const fullPath = path.join(postsDirectory, `${fileNameWithoutExt}.md`);
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+  const pipeline = createBasePipeline();
+  const contentProcessed = await pipeline.process(matterResult.content);
+  let contentHtml: string = contentProcessed.toString();
 
-    const pipeline = createBasePipeline();
-    const contentProcessed = await pipeline.process(matterResult.content);
-    let contentHtml: string = contentProcessed.toString();
+  // Add copy button to code blocks
+  contentHtml = addCopyButton(contentHtml);
 
-    // Add copy button to code blocks
-    contentHtml = addCopyButton(contentHtml);
-
-    return {
-        content: contentHtml,
-        id: postId,
-        title: matterResult.data.title,
-        tags: matterResult.data.tags.split(','),
-        description: matterResult.data.description,
-        create_date: new Date(matterResult.data.create_date),
-        update_date: new Date(matterResult.data.update_date),
-    };
+  return {
+    content: contentHtml,
+    id: postId,
+    title: matterResult.data.title,
+    tags: matterResult.data.tags.split(","),
+    description: matterResult.data.description,
+    create_date: new Date(matterResult.data.create_date),
+    update_date: new Date(matterResult.data.update_date),
+  };
 }

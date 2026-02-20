@@ -19,8 +19,6 @@ $$
 \mathcal{H}(x_i^{\mathcal{U}})=-\sum_{q=0}^Q\sum_{c=0}^c p(y_i=c\mid x_i^{\mathcal{U}})\log(p(y_i=c\mid x_i^{\mathcal{U}}))
 $$
 
-
-
 - $\mathcal{MI}(x_i^{\mathcal{U}},\mathcal{T})$
 
 $$
@@ -30,6 +28,7 @@ $$
 ## Coach formula
 
 Old
+
 $$
 \mathrm{Score_1}=\mathcal{H}(x_i^{\mathcal{U}})+\lambda(x_i^{\mathcal{U}})
 $$
@@ -41,7 +40,6 @@ $$
 $$
 \mathrm{Score_3}=\mathcal{MI}(x_i^{\mathcal{U}},\mathcal{U})
 $$
-
 
 $$
 \mathrm{Score_1}=\mathcal{H}(x_i^{\mathcal{U}})+\lambda(x_i^{\mathcal{U}})
@@ -71,15 +69,9 @@ The liver is a common site of primary (i.e. originating in the liver like hepato
 
 ![1699260928004](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260928004.png)
 
-
 BKAI-IGH NeoPolyp-Small
-[Kaggle homepage](https://www.kaggle.com/c/bkai-igh-neopolyp/) 
+[Kaggle homepage](https://www.kaggle.com/c/bkai-igh-neopolyp/)
 
-This dataset contains 1200 images (1000 WLI images and 200 FICE images) with fine-grained segmentation annotations. The training set consists of 1000 images, and the test set consists of 200 images. All polyps are classified into neoplastic or non-neoplastic classes denoted by red and green colors, respectively. 
+This dataset contains 1200 images (1000 WLI images and 200 FICE images) with fine-grained segmentation annotations. The training set consists of 1000 images, and the test set consists of 200 images. All polyps are classified into neoplastic or non-neoplastic classes denoted by red and green colors, respectively.
 
 ![1699260961445](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260961445.png)
-
-
-
-
-

@@ -3,13 +3,15 @@ import { PersonalIntroduction } from "./_components/personal-intro";
 
 export const metadata: Metadata = {
   title: "Ke Xu's website",
-  description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+  description:
+    "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
   keywords: ["Ke Xu", "personal website", "blog", "portfolio"],
   authors: [{ name: "Ke Xu" }],
   creator: "Ke Xu",
   openGraph: {
     title: "Ke Xu's website",
-    description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+    description:
+      "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
     url: "https://kexu.win",
     siteName: "Ke Xu's website",
     images: [
@@ -26,7 +28,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ke Xu's website",
-    description: "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+    description:
+      "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
     images: ["/og-image.jpg"],
   },
   alternates: {

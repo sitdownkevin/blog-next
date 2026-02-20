@@ -13,6 +13,6 @@ update_date: 2025-04-14
 
 - `reghdfe`
   - https://scorreia.com/software/reghdfe/
-  
   - `ftools` is needed
+
 - `outreg2`

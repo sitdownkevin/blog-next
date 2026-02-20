@@ -1,506 +1,506 @@
 {
-    "source": {
-        "title": "经济与管理学科博士学位标准及发表学术成果规定 表一",
-        "link": "https://sem.tongji.edu.cn/semch/52674.html"
+  "source": {
+    "title": "经济与管理学科博士学位标准及发表学术成果规定 表一",
+    "link": "https://sem.tongji.edu.cn/semch/52674.html"
+  },
+  "data": [
+    {
+      "title": "Academy of Management Journal",
+      "subjectArea": "",
+      "printIssn": "0001-4273",
+      "onlineIssn": ""
     },
-    "data": [
-        {
-            "title": "Academy of Management Journal",
-            "subjectArea": "",
-            "printIssn": "0001-4273",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Academy of Management Review",
-            "subjectArea": "",
-            "printIssn": "0363-7425",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Administrative Science Quarterly",
-            "subjectArea": "",
-            "printIssn": "0001-8392",
-            "onlineIssn": ""
-        },
-        {
-            "title": "American Economic Review",
-            "subjectArea": "",
-            "printIssn": "0002-8282",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Econometrica",
-            "subjectArea": "",
-            "printIssn": "0012-9682",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Information Systems Research",
-            "subjectArea": "",
-            "printIssn": "1047-7047",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Accounting and Economics",
-            "subjectArea": "",
-            "printIssn": "0165-4101",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Accounting Research",
-            "subjectArea": "",
-            "printIssn": "0021-8456",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Consumer Research",
-            "subjectArea": "",
-            "printIssn": "0093-5301",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Finance",
-            "subjectArea": "",
-            "printIssn": "0022-1082",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Financial Economics",
-            "subjectArea": "",
-            "printIssn": "0304-405X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of International Business Studies",
-            "subjectArea": "",
-            "printIssn": "0047-2506",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Marketing",
-            "subjectArea": "",
-            "printIssn": "0022-2429",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Marketing Research",
-            "subjectArea": "",
-            "printIssn": "0022-2437",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Operations Management",
-            "subjectArea": "",
-            "printIssn": "0272-6963",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Political Economy",
-            "subjectArea": "",
-            "printIssn": "0022-3808",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Management Information Systems (MIS Quarterly)",
-            "subjectArea": "",
-            "printIssn": "0276-7783",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Management Science",
-            "subjectArea": "",
-            "printIssn": "0025-1909",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Manufacturing & Service Operations Management (M&SOM)",
-            "subjectArea": "",
-            "printIssn": "1523-4614",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Marketing Science",
-            "subjectArea": "",
-            "printIssn": "0732-2399",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Operations Research",
-            "subjectArea": "",
-            "printIssn": "0030-364X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Organization Science",
-            "subjectArea": "",
-            "printIssn": "1047-7039",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Production and Operations Management Society (POMS)",
-            "subjectArea": "",
-            "printIssn": "1059-1478",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Quarterly Journal of Economics",
-            "subjectArea": "",
-            "printIssn": "0033-5533",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Review of Economic Studies",
-            "subjectArea": "",
-            "printIssn": "0034-6527",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Review of Financial Studies",
-            "subjectArea": "",
-            "printIssn": "0893-9454",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Strategic Management Journal",
-            "subjectArea": "",
-            "printIssn": "0143-2095",
-            "onlineIssn": ""
-        },
-        {
-            "title": "The Accounting Review",
-            "subjectArea": "",
-            "printIssn": "0001-4826",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Accounting, Organizations and Society",
-            "subjectArea": "",
-            "printIssn": "0361-3682",
-            "onlineIssn": ""
-        },
-        {
-            "title": "American Economic Journal: Applied Economics",
-            "subjectArea": "",
-            "printIssn": "1945-7782",
-            "onlineIssn": ""
-        },
-        {
-            "title": "American Economic Journal: Macroeconomics",
-            "subjectArea": "",
-            "printIssn": "1945-7707",
-            "onlineIssn": ""
-        },
-        {
-            "title": "American Economic Journal: Microeconomics",
-            "subjectArea": "",
-            "printIssn": "1945-7669",
-            "onlineIssn": ""
-        },
-        {
-            "title": "American Journal of Agriculture Economics",
-            "subjectArea": "",
-            "printIssn": "0002-9092",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Contemporary Accounting Research",
-            "subjectArea": "",
-            "printIssn": "0823-9150",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Entrepreneurship Theory and Practice",
-            "subjectArea": "",
-            "printIssn": "1042-2587",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Global Environmental Change-Human and Policy Dimensions",
-            "subjectArea": "",
-            "printIssn": "0959-3780",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Human Resource Management",
-            "subjectArea": "",
-            "printIssn": "0090-4848",
-            "onlineIssn": ""
-        },
-        {
-            "title": "IEEE Transactions on Automatic Control",
-            "subjectArea": "",
-            "printIssn": "0018-9286",
-            "onlineIssn": ""
-        },
-        {
-            "title": "International Economic Review",
-            "subjectArea": "",
-            "printIssn": "0020-6598",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Applied Psychology",
-            "subjectArea": "",
-            "printIssn": "0021-9010",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Business Venturing",
-            "subjectArea": "",
-            "printIssn": "0883-9026",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Consumer Psychology",
-            "subjectArea": "",
-            "printIssn": "1057-7408",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Development Economics",
-            "subjectArea": "",
-            "printIssn": "0304-3878",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Economic Literature",
-            "subjectArea": "",
-            "printIssn": "0022-0515",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Economic Theory",
-            "subjectArea": "",
-            "printIssn": "0022-0531",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Financial and Quantitative Analysis",
-            "subjectArea": "",
-            "printIssn": "0022-1090",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of International Economics",
-            "subjectArea": "",
-            "printIssn": "0022-1996",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Labor Economics",
-            "subjectArea": "",
-            "printIssn": "0734-306X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Management",
-            "subjectArea": "",
-            "printIssn": "0149-2063",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Management Information Systems",
-            "subjectArea": "",
-            "printIssn": "0742-1222",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Management Studies",
-            "subjectArea": "",
-            "printIssn": "0022-2380",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Monetary Economics",
-            "subjectArea": "",
-            "printIssn": "0304-3932",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Public Administration: Research and Theory",
-            "subjectArea": "",
-            "printIssn": "1053-1858",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Public Economics",
-            "subjectArea": "",
-            "printIssn": "0047-2727",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of the Academy of Marketing Science",
-            "subjectArea": "",
-            "printIssn": "0092-0703",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Urban Economics",
-            "subjectArea": "",
-            "printIssn": "0094-1190",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal on Computing",
-            "subjectArea": "",
-            "printIssn": "1091-9856",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Mathematical Programming",
-            "subjectArea": "",
-            "printIssn": "0025-5610",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Organization Studies",
-            "subjectArea": "",
-            "printIssn": "0170-8406",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Organizational Behaviour and Human Decision Processes",
-            "subjectArea": "",
-            "printIssn": "0749-5978",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Personnel Psychology",
-            "subjectArea": "",
-            "printIssn": "0031-5826",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Policy Studies Journal",
-            "subjectArea": "",
-            "printIssn": "0190-292X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Public Administration Review",
-            "subjectArea": "",
-            "printIssn": "0033-3352",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Public Administration: An International Quarterly",
-            "subjectArea": "",
-            "printIssn": "0033-3298",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Rand Journal of Economics",
-            "subjectArea": "",
-            "printIssn": "0741-6261",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Regional Studies",
-            "subjectArea": "",
-            "printIssn": "0034-3404",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Research Policy",
-            "subjectArea": "",
-            "printIssn": "0048-7333",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Review of Accounting Studies",
-            "subjectArea": "",
-            "printIssn": "1380-6653",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Review of Finance",
-            "subjectArea": "",
-            "printIssn": "1572-3097",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Strategic Entrepreneurship Journal",
-            "subjectArea": "",
-            "printIssn": "1932-4391",
-            "onlineIssn": ""
-        },
-        {
-            "title": "The Journal of Law and Economics",
-            "subjectArea": "",
-            "printIssn": "0022-2186",
-            "onlineIssn": ""
-        },
-        {
-            "title": "The Review of Economics and Statistics",
-            "subjectArea": "",
-            "printIssn": "0034-6535",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Transportation Research Part B: Methodological",
-            "subjectArea": "",
-            "printIssn": "0191-2615",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Transportation Science",
-            "subjectArea": "",
-            "printIssn": "0041-1655",
-            "onlineIssn": ""
-        },
-        {
-            "title": "World Development",
-            "subjectArea": "",
-            "printIssn": "0305-750X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Nature",
-            "subjectArea": "",
-            "printIssn": "1476-4687",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Nature Energy",
-            "subjectArea": "",
-            "printIssn": "2058-7546",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Nature Communications",
-            "subjectArea": "",
-            "printIssn": "2041-1723",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Nature Human Behaviour",
-            "subjectArea": "",
-            "printIssn": "2397-3374",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Nature Sustainability",
-            "subjectArea": "",
-            "printIssn": "2398-9629",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Science",
-            "subjectArea": "",
-            "printIssn": "0036-8075",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Science Robotics",
-            "subjectArea": "",
-            "printIssn": "2470-9476",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Proceedings of the National Academy of Sciences of the USA",
-            "subjectArea": "",
-            "printIssn": "0027-8424",
-            "onlineIssn": ""
-        }
-    ]
+    {
+      "title": "Academy of Management Review",
+      "subjectArea": "",
+      "printIssn": "0363-7425",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Administrative Science Quarterly",
+      "subjectArea": "",
+      "printIssn": "0001-8392",
+      "onlineIssn": ""
+    },
+    {
+      "title": "American Economic Review",
+      "subjectArea": "",
+      "printIssn": "0002-8282",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Econometrica",
+      "subjectArea": "",
+      "printIssn": "0012-9682",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Information Systems Research",
+      "subjectArea": "",
+      "printIssn": "1047-7047",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Accounting and Economics",
+      "subjectArea": "",
+      "printIssn": "0165-4101",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Accounting Research",
+      "subjectArea": "",
+      "printIssn": "0021-8456",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Consumer Research",
+      "subjectArea": "",
+      "printIssn": "0093-5301",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Finance",
+      "subjectArea": "",
+      "printIssn": "0022-1082",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Financial Economics",
+      "subjectArea": "",
+      "printIssn": "0304-405X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of International Business Studies",
+      "subjectArea": "",
+      "printIssn": "0047-2506",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Marketing",
+      "subjectArea": "",
+      "printIssn": "0022-2429",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Marketing Research",
+      "subjectArea": "",
+      "printIssn": "0022-2437",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Operations Management",
+      "subjectArea": "",
+      "printIssn": "0272-6963",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Political Economy",
+      "subjectArea": "",
+      "printIssn": "0022-3808",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Management Information Systems (MIS Quarterly)",
+      "subjectArea": "",
+      "printIssn": "0276-7783",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Management Science",
+      "subjectArea": "",
+      "printIssn": "0025-1909",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Manufacturing & Service Operations Management (M&SOM)",
+      "subjectArea": "",
+      "printIssn": "1523-4614",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Marketing Science",
+      "subjectArea": "",
+      "printIssn": "0732-2399",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Operations Research",
+      "subjectArea": "",
+      "printIssn": "0030-364X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Organization Science",
+      "subjectArea": "",
+      "printIssn": "1047-7039",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Production and Operations Management Society (POMS)",
+      "subjectArea": "",
+      "printIssn": "1059-1478",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Quarterly Journal of Economics",
+      "subjectArea": "",
+      "printIssn": "0033-5533",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Review of Economic Studies",
+      "subjectArea": "",
+      "printIssn": "0034-6527",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Review of Financial Studies",
+      "subjectArea": "",
+      "printIssn": "0893-9454",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Strategic Management Journal",
+      "subjectArea": "",
+      "printIssn": "0143-2095",
+      "onlineIssn": ""
+    },
+    {
+      "title": "The Accounting Review",
+      "subjectArea": "",
+      "printIssn": "0001-4826",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Accounting, Organizations and Society",
+      "subjectArea": "",
+      "printIssn": "0361-3682",
+      "onlineIssn": ""
+    },
+    {
+      "title": "American Economic Journal: Applied Economics",
+      "subjectArea": "",
+      "printIssn": "1945-7782",
+      "onlineIssn": ""
+    },
+    {
+      "title": "American Economic Journal: Macroeconomics",
+      "subjectArea": "",
+      "printIssn": "1945-7707",
+      "onlineIssn": ""
+    },
+    {
+      "title": "American Economic Journal: Microeconomics",
+      "subjectArea": "",
+      "printIssn": "1945-7669",
+      "onlineIssn": ""
+    },
+    {
+      "title": "American Journal of Agriculture Economics",
+      "subjectArea": "",
+      "printIssn": "0002-9092",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Contemporary Accounting Research",
+      "subjectArea": "",
+      "printIssn": "0823-9150",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Entrepreneurship Theory and Practice",
+      "subjectArea": "",
+      "printIssn": "1042-2587",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Global Environmental Change-Human and Policy Dimensions",
+      "subjectArea": "",
+      "printIssn": "0959-3780",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Human Resource Management",
+      "subjectArea": "",
+      "printIssn": "0090-4848",
+      "onlineIssn": ""
+    },
+    {
+      "title": "IEEE Transactions on Automatic Control",
+      "subjectArea": "",
+      "printIssn": "0018-9286",
+      "onlineIssn": ""
+    },
+    {
+      "title": "International Economic Review",
+      "subjectArea": "",
+      "printIssn": "0020-6598",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Applied Psychology",
+      "subjectArea": "",
+      "printIssn": "0021-9010",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Business Venturing",
+      "subjectArea": "",
+      "printIssn": "0883-9026",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Consumer Psychology",
+      "subjectArea": "",
+      "printIssn": "1057-7408",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Development Economics",
+      "subjectArea": "",
+      "printIssn": "0304-3878",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Economic Literature",
+      "subjectArea": "",
+      "printIssn": "0022-0515",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Economic Theory",
+      "subjectArea": "",
+      "printIssn": "0022-0531",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Financial and Quantitative Analysis",
+      "subjectArea": "",
+      "printIssn": "0022-1090",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of International Economics",
+      "subjectArea": "",
+      "printIssn": "0022-1996",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Labor Economics",
+      "subjectArea": "",
+      "printIssn": "0734-306X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Management",
+      "subjectArea": "",
+      "printIssn": "0149-2063",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Management Information Systems",
+      "subjectArea": "",
+      "printIssn": "0742-1222",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Management Studies",
+      "subjectArea": "",
+      "printIssn": "0022-2380",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Monetary Economics",
+      "subjectArea": "",
+      "printIssn": "0304-3932",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Public Administration: Research and Theory",
+      "subjectArea": "",
+      "printIssn": "1053-1858",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Public Economics",
+      "subjectArea": "",
+      "printIssn": "0047-2727",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of the Academy of Marketing Science",
+      "subjectArea": "",
+      "printIssn": "0092-0703",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Urban Economics",
+      "subjectArea": "",
+      "printIssn": "0094-1190",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal on Computing",
+      "subjectArea": "",
+      "printIssn": "1091-9856",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Mathematical Programming",
+      "subjectArea": "",
+      "printIssn": "0025-5610",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Organization Studies",
+      "subjectArea": "",
+      "printIssn": "0170-8406",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Organizational Behaviour and Human Decision Processes",
+      "subjectArea": "",
+      "printIssn": "0749-5978",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Personnel Psychology",
+      "subjectArea": "",
+      "printIssn": "0031-5826",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Policy Studies Journal",
+      "subjectArea": "",
+      "printIssn": "0190-292X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Public Administration Review",
+      "subjectArea": "",
+      "printIssn": "0033-3352",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Public Administration: An International Quarterly",
+      "subjectArea": "",
+      "printIssn": "0033-3298",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Rand Journal of Economics",
+      "subjectArea": "",
+      "printIssn": "0741-6261",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Regional Studies",
+      "subjectArea": "",
+      "printIssn": "0034-3404",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Research Policy",
+      "subjectArea": "",
+      "printIssn": "0048-7333",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Review of Accounting Studies",
+      "subjectArea": "",
+      "printIssn": "1380-6653",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Review of Finance",
+      "subjectArea": "",
+      "printIssn": "1572-3097",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Strategic Entrepreneurship Journal",
+      "subjectArea": "",
+      "printIssn": "1932-4391",
+      "onlineIssn": ""
+    },
+    {
+      "title": "The Journal of Law and Economics",
+      "subjectArea": "",
+      "printIssn": "0022-2186",
+      "onlineIssn": ""
+    },
+    {
+      "title": "The Review of Economics and Statistics",
+      "subjectArea": "",
+      "printIssn": "0034-6535",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Transportation Research Part B: Methodological",
+      "subjectArea": "",
+      "printIssn": "0191-2615",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Transportation Science",
+      "subjectArea": "",
+      "printIssn": "0041-1655",
+      "onlineIssn": ""
+    },
+    {
+      "title": "World Development",
+      "subjectArea": "",
+      "printIssn": "0305-750X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Nature",
+      "subjectArea": "",
+      "printIssn": "1476-4687",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Nature Energy",
+      "subjectArea": "",
+      "printIssn": "2058-7546",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Nature Communications",
+      "subjectArea": "",
+      "printIssn": "2041-1723",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Nature Human Behaviour",
+      "subjectArea": "",
+      "printIssn": "2397-3374",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Nature Sustainability",
+      "subjectArea": "",
+      "printIssn": "2398-9629",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Science",
+      "subjectArea": "",
+      "printIssn": "0036-8075",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Science Robotics",
+      "subjectArea": "",
+      "printIssn": "2470-9476",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Proceedings of the National Academy of Sciences of the USA",
+      "subjectArea": "",
+      "printIssn": "0027-8424",
+      "onlineIssn": ""
+    }
+  ]
 }

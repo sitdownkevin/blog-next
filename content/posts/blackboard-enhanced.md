@@ -14,7 +14,6 @@ pinned: true
 
 - 🔗 Blackboard Enhanced [on GitHub](https://github.com/sitdownkevin/Blackboard-Enhanced)
 
-
 ## 安装
 
 ### 1. 安装浏览器插件 - 油猴脚本
@@ -30,7 +29,6 @@ Tampermonkey 和 Violentmonkey 二选一
 访问 **GreasyFork** 安装脚本
 
 - 🔗 Blackboard Enhanced [on GreasyFork](https://greasyfork.org/zh-CN/scripts/462240-bb%E8%AE%A1%E7%AE%97%E5%88%86%E6%95%B0)
-
 
 ### 3. 打开 **Blackboard** 开始使用
 

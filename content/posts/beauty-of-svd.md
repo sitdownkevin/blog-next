@@ -95,7 +95,6 @@ $$
 
 <img alt="Sample" src="https://s2.loli.net/2023/07/17/dXFBzbr17gvcHPl.jpg"  style="zoom: 33%;" />
 
-
 ```python
 import numpy as np
 import matplotlib.pyplot as plt

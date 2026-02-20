@@ -7,7 +7,6 @@ update_date: null
 
 Instructor: yumei.li@scupi.cn
 
-
 ## Forum 1
 
 - Think about your personal experiences with the media.
@@ -16,6 +15,7 @@ Instructor: yumei.li@scupi.cn
 - Due Date: Feb. 28, M on day, 11:00 pm
 
 The media product that leaves me a great impression is the magazine Vista. Because of the strict school rules, I could not access the mobile phone in senior school. Vista was the only media product that connected me to the outside world during the time. The latest news ranging from tech to politics in the world was posted on the Vista. This news is like that Google released a new smart glass, Trump won the presidential election, and war occurred in an area.
+
 <!--more-->
 
 Keeping the habit of reading Vista affected me a lot. For one thing, it significantly broadened my mind by letting me see the lifestyles foreigners lived and how western people think about we eastern people. It expressed me many fresh ideas and opinions that I never thought about, which changed my world view from the world is divided into two sides to the world has many hidden spaces. Furthermore, days in senior school were the roughest day for me because I was surrounded by countless exams and felt extremely nervous. Reading the Vista gave me an effective way to become soothing and cozy, which helped me get rid of the anxious condition.
@@ -42,10 +42,10 @@ The news from Reuters gave details about how this visit happened and analyzed wh
 The reason for the similarities is that both Reuters and Huanqiu are highly authorized media responsible to mass people for the accuracy of their content. In this case, both media would not change the information about the event, such as the place, time, and people. Audiences can learn about the basic information from them.
 However, Reuters and Huanqiu are the authorized media serving different countries. Because of the subtle relationship between China and the United States, Taiwan issues are often a sensitive topic that two countries have many disagreements about. In Reuters’ report, the delegation to Taipei is a powerful approach to protect Taiwan, especially during the rough time when war between Russia and Urakaine happened. Reuters’ article expressed that America cares about Taiwan and that mainland China was a devil eager to eat the small island. But when Huanqiu posted this news, all words in the article were serving for claiming the “One China” policy and warning the government of the United States. After reading Reuters’ report, readers might think that Taiwan was dangerous now because mainland China would only attack Taiwan; thus, this necessary visit to Taipei was a kind of protection from the United States. But after reading Huanqiu’s article, people might think that the United States broke the old promise and threatened China on purpose.
 
-Links: 
+Links:
 
 1. [https://www.reuters.com/world/china/china-says-us-attempts-support-taiwan-will-be-futile-2022-03-01/?taid=621e1429ed681a0001a1a6e0&utm_campaign=trueAnthem:+Trending+Content&utm_medium=trueAnthem&utm_source=twitter](https://www.reuters.com/world/china/china-says-us-attempts-support-taiwan-will-be-futile-2022-03-01/?taid=621e1429ed681a0001a1a6e0&utm_campaign=trueAnthem:+Trending+Content&utm_medium=trueAnthem&utm_source=twitter)
-2. [https://weibo.com/1686546714/La7LDlOBo?refer_flag=1001030103_](https://weibo.com/1686546714/La7LDlOBo?refer_flag=1001030103_)
+2. [https://weibo.com/1686546714/La7LDlOBo?refer*flag=1001030103*](https://weibo.com/1686546714/La7LDlOBo?refer_flag=1001030103_)
 
 ---
 
@@ -122,7 +122,7 @@ Although this film did not describe the scene of how bad the North Korean govern
 
 My further question is while so many films had the similar plots, why there is no other films showing up positive aspects of North Korea. Does it mean that the real situation in North Korea is so bad.
 
-link: 
+link:
 
 [北逃 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E5%8C%97%E9%80%83)
 
@@ -130,7 +130,7 @@ link:
 
 ## Forum 7
 
-For this week’s forum about gender, you are going to *select a piece of media* and *describe the roles of female and male characters in it*. This media piece can be *a film, a music video, or a TV drama*.
+For this week’s forum about gender, you are going to _select a piece of media_ and _describe the roles of female and male characters in it_. This media piece can be _a film, a music video, or a TV drama_.
 
 In your own words, briefly describe (less than 50 words) the role of the female/male character in this media piece (Avoid plagiarism by summarizing in your own words. A direct copy-paste from the internet will lead to a zero for the post.)
 
@@ -142,15 +142,15 @@ In your own words, briefly describe (less than 50 words) the role of the female/
 
 Due date: April 18, Monday, 11 pm
 
-The movie I chose was Malèna. Malèna was a beautiful woman deeply missing her husband who was thought to be dead in war. Because of her beauty, female envied her appearance and male wanted to gain her body. Although villagers admired Malèna’s beauty, they treated her badly and finally made her became a prostitute.****
+The movie I chose was Malèna. Malèna was a beautiful woman deeply missing her husband who was thought to be dead in war. Because of her beauty, female envied her appearance and male wanted to gain her body. Although villagers admired Malèna’s beauty, they treated her badly and finally made her became a prostitute.\*\*\*\*
 
 The film use a lots of scenes to depict Malèna’s beauty. I thought the purposes was to reveal people’s envies and dishonesty to woman’s good appearance. The director shaped Malèna a perfect woman. Malèna was so pretty that females envied her and males wanted her. In this case, the beauty became Malèna’s guilty that led her lost hope to life. In my opinion, the director hope audiences to realize that female had low social status and were much weaker than male.
 
 After watching the Malèna, many ideas appeared in my mind. I started to think what did female’s appearance can bring about in reality. It was so true that in my primary school, senior school and high school, the most beautiful girl in my class always suffered a lot. There were many boys in the classroom wanted to be these girl’s boyfriends. And there were many negative gossip about these girls coming from other girls. Same as the Malèna, the tag female made them an object instead of a fresh person. Males fell in love with not beautiful females’ souls, but their bodies. People, even including female themselves, did not regard themselves as independent individuals, which led the perception that female’s life must depend on male’s life. This perception was still popular and many people did not realize that.
 
-My further question was what influence such kinds of movies could have to change the situation that female was regarded as objects? 
+My further question was what influence such kinds of movies could have to change the situation that female was regarded as objects?
 
-Link: [https://en.wikipedia.org/wiki/Malèna_(film)](https://en.wikipedia.org/wiki/Mal%C3%A8na_(film))
+Link: [https://en.wikipedia.org/wiki/Malèna\_(film)](<https://en.wikipedia.org/wiki/Mal%C3%A8na_(film)>)
 
 (312 Words)
 
@@ -158,7 +158,7 @@ Link: [https://en.wikipedia.org/wiki/Malèna_(film)](https://en.wikipedia.org/wi
 
 ## Forum 8
 
-****Forum 8 Your understanding of LGBT and the media representation****
+\***\*Forum 8 Your understanding of LGBT and the media representation\*\***
 
 This week’s online forum will focus on representations of lesbians, gays, bisexuals, and the transgendered (LGBT) in the media. Please address the following questions adequately.
 
@@ -171,7 +171,7 @@ This week’s online forum will focus on representations of lesbians, gays, bise
 
 In my real life, I actually have some gay friends in my high school. Take one of them as an example. When he firstly told me that he was a gay, I was a little bit shocked because he looked really common like other boys who were not gay. Then he shared me that he had trouble in dealing the relationship with his family while his parents hoped he could marry a woman in the future. Because of this, he lied to his parents that he was addicted to both males and females, and promised that he would fall in love with a girl on the college. I was really sorry for him. It was so ordinary that most of our parents in current society could not accept a gay in the family. Most of them hold the traditional conception that their children would bring them new life to enlarge the family. Besides, other people of LGBT all faced the same problems, which led many of them want to end the life.
 
-In recent years, I had watched many LGBT vlogs from Bilibili and Youtube. This is a good way to learn about those group. From their vlogs, I had a brand new perception of LGBT. First, it was a huge group in our society. Second, many of them already had a normal life in our country and foreign countries like ordinary people. Third, many of them raised children through different ways such as adopting. The most different was that it seemed that LGBT people in the media were all confident but LGBT people I knew in daily life were not so confident and ashamed of themselves. 
+In recent years, I had watched many LGBT vlogs from Bilibili and Youtube. This is a good way to learn about those group. From their vlogs, I had a brand new perception of LGBT. First, it was a huge group in our society. Second, many of them already had a normal life in our country and foreign countries like ordinary people. Third, many of them raised children through different ways such as adopting. The most different was that it seemed that LGBT people in the media were all confident but LGBT people I knew in daily life were not so confident and ashamed of themselves.
 
 My further question is when the new generation grow up and master the society, can the whole society accept people of LGBT?
 
@@ -186,11 +186,11 @@ This week’s online forum will focus on representations of people with disabili
 - Include a word count (minimum 300 words)
 - Due date: May 9, Monday, 11 pm
 
-I agreed with that the goal of being “normal” drives every decision made by media workers. 
+I agreed with that the goal of being “normal” drives every decision made by media workers.
 
-For one thing, Whether the citizens are disabled or not, most of them hope own a healthy body and a normal life. As the audiences of all kinds of media product, citizens’ choice plays a significant role on sale performance of a media product, which leads media workers decide to post which kinds of topic in the media product. In this case, if  a tv show’s director put a lot of elements of disabled population in the tv program, audiences are reluctant to watch this program. Therefore, the media workers naturally derease the amount of element of disabled population, which in turn causes audience seldom see many news about diabled population in the news media. 
+For one thing, Whether the citizens are disabled or not, most of them hope own a healthy body and a normal life. As the audiences of all kinds of media product, citizens’ choice plays a significant role on sale performance of a media product, which leads media workers decide to post which kinds of topic in the media product. In this case, if a tv show’s director put a lot of elements of disabled population in the tv program, audiences are reluctant to watch this program. Therefore, the media workers naturally derease the amount of element of disabled population, which in turn causes audience seldom see many news about diabled population in the news media.
 
-On the other side, topics of disabled population are really sensitive and easily triggered a problem.  This senarios is more dangerous in entertainmant media where people often play jokes to make audiences laugh. And disabled topics are not suitable in these types of media because when people talk about the disabled people, they are often not aware of  their words including discrimiantion to disabled populaiton, and these words are easily misunderstood by other people, which led to a dangerous results like Obama’s “Special Olympic” event. And the director of a media product does not want this embarrassing situation. The easiest way to avoid these kind of mistakes are dereaseing the appearance of disabled topics, which is conservative but effective.  Therefore, it is not surprising that the disabled population is not more present in entertainment media.
+On the other side, topics of disabled population are really sensitive and easily triggered a problem. This senarios is more dangerous in entertainmant media where people often play jokes to make audiences laugh. And disabled topics are not suitable in these types of media because when people talk about the disabled people, they are often not aware of their words including discrimiantion to disabled populaiton, and these words are easily misunderstood by other people, which led to a dangerous results like Obama’s “Special Olympic” event. And the director of a media product does not want this embarrassing situation. The easiest way to avoid these kind of mistakes are dereaseing the appearance of disabled topics, which is conservative but effective. Therefore, it is not surprising that the disabled population is not more present in entertainment media.
 
 My further question is that does the phenomenon of little present of disabled population in media product will increase the discrimiantion to the disabled population from the society? If it will, what changes media workers can do to shift current situation?
 
@@ -206,7 +206,7 @@ For this forum, you will need to refer to the final project guideline and design
 
 Due date: May 23, 11 pm
 
-My project is about how media love variety on campus represents the sex. There are two reasons that I choose this topic. 
+My project is about how media love variety on campus represents the sex. There are two reasons that I choose this topic.
 
 For one thing, love variety today not only exists in influential television station but also in more and more college television station, which was benefited by convenient media producing technology. Furthermore, people's perception to sex changes along the development of society. In the love variety, college students perform themselves to others in opposite sex, which will reveal their perception to sex.
 
@@ -217,7 +217,7 @@ Have you ever watched a love variety? When thinking about the love variety, what
 The form of this new love variety is not individual to group, but individual to individual. Under the brand new form, male and female guests are invited to stay alone in some quiet places like milk tea store, grassland or classroom. They communicate with each other, share their hobbies, express their own perception to love. After experiencing several hours moment, they will learn about each other. In the end, they can decide to whether become a couple or not. After watching a series of campus variety on different college, I interview one of my friends who participate in this variety, and conclude some points.
 
 1. Unlike the old love variety, the importance of appearance of female and wealth of male are greatly weakened. In a campus love variety, guests are all ordinary college students. Most of them own an ordinary appearance and similar background. This variety even does not mention this point, and the appearance and wealth never become the reason one guest reject another. There are many reasons about it. In traditional perceptions, males are regarded as people earn the money for family, and females are considered who can not earn such amounts of money as male. However, in modern perception, both females and male are independent person who can do the same things. The campus love variety shapes totally different sex of people who just fall in love with each other instead of wealth and appearance.
-2. In the process of searching a partner, males often perform bashful than females. In most of the series, both male and female guest are shy at first. However, it is usually the female guest that try to master the topic of the conversation and do something to avoid embarrassment. It is really an interesting thing because people often think male is brave than female. My friend is the male guest in one of series in his campus. I know he is . Some reasons can explain it. The first one is female perform more brave than male in a relationship. The second reason is males are afraid of embarrassment more than females, which cause the scenario worse. 
-3. The campus love variety show the open mind of both male and female. Drinking, smoking, going to a club, those are thought to be bad habits in old days but can be accepted in people today. In campus love variety, guests do not consider these types of tags as a bad tag. For example, in one series of campus love variety in Xinan Jiaotong University, the male guest directly told the female guest that he enjoyed drinking. The female guest does not feel any thing wrong. 
+2. In the process of searching a partner, males often perform bashful than females. In most of the series, both male and female guest are shy at first. However, it is usually the female guest that try to master the topic of the conversation and do something to avoid embarrassment. It is really an interesting thing because people often think male is brave than female. My friend is the male guest in one of series in his campus. I know he is . Some reasons can explain it. The first one is female perform more brave than male in a relationship. The second reason is males are afraid of embarrassment more than females, which cause the scenario worse.
+3. The campus love variety show the open mind of both male and female. Drinking, smoking, going to a club, those are thought to be bad habits in old days but can be accepted in people today. In campus love variety, guests do not consider these types of tags as a bad tag. For example, in one series of campus love variety in Xinan Jiaotong University, the male guest directly told the female guest that he enjoyed drinking. The female guest does not feel any thing wrong.
 
 In a conclusion, the campus love variety brings a brand new form in which people can see new generation bravely chase the love, males sometimes can be more bashful than female, and the most importantly both of them are free and independent individual.

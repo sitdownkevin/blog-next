@@ -7,7 +7,7 @@ import {
   Phone, // Replaces FaPhone
   Linkedin, // Replaces FaLinkedin
   Github, // Replaces FaGithub
-} from 'lucide-react';
+} from "lucide-react";
 
 // Define props interface
 interface HeaderProps {
@@ -25,7 +25,10 @@ export default function Header({ basicInfo }: HeaderProps) {
           {/* Keep the original name format for now */}
           {basicInfo.name.first_name} {basicInfo.name.last_name}
           {(basicInfo.name.first_name_en || basicInfo.name.last_name_en) && (
-            <span> ({basicInfo.name.first_name_en} {basicInfo.name.last_name_en})</span>
+            <span>
+              {" "}
+              ({basicInfo.name.first_name_en} {basicInfo.name.last_name_en})
+            </span>
           )}
         </div>
       </div>
@@ -34,7 +37,9 @@ export default function Header({ basicInfo }: HeaderProps) {
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
         {/* Phone */}
         {basicInfo.phone && (
-          <div className="flex items-center"> {/* Keep items-center on individual items */}
+          <div className="flex items-center">
+            {" "}
+            {/* Keep items-center on individual items */}
             <Link
               href={`tel:${basicInfo.phone.prefix}${basicInfo.phone.number}`}
               className="hover:underline" // Removed flex items-center from Link, it's on the parent div now

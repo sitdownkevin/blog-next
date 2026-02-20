@@ -22,7 +22,6 @@ interface MongoClientCache {
 }
 
 declare global {
-  // eslint-disable-next-line no-var
   var _mongoClientPromise: MongoClientCache | undefined;
 }
 

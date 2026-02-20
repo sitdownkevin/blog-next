@@ -16,23 +16,23 @@ hidden: false
 
 ```json
 {
-    "user_name": "",
-    "user_url": "",
-    "basic_info": {
-        "name": "",
-        "bio": ""
-    },
-    "stats": {
-        "followers": "",
-        "following": "",
-        "answers": "",
-        "questions": "",
-        "posts": ""
-    },
-    "credentials": [],
-    "spaces": [],
-    "knows_about": [],
-    "scraped_at": ""
+  "user_name": "",
+  "user_url": "",
+  "basic_info": {
+    "name": "",
+    "bio": ""
+  },
+  "stats": {
+    "followers": "",
+    "following": "",
+    "answers": "",
+    "questions": "",
+    "posts": ""
+  },
+  "credentials": [],
+  "spaces": [],
+  "knows_about": [],
+  "scraped_at": ""
 }
 ```
 

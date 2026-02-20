@@ -18,7 +18,7 @@ export function EnhancedMarkdownBody({
     if (!containerRef.current) return;
 
     const codeBlocks = containerRef.current.querySelectorAll(
-      "div[data-code-block]"
+      "div[data-code-block]",
     );
 
     // Clean up previous roots
@@ -40,12 +40,14 @@ export function EnhancedMarkdownBody({
         // Replace the original wrapper with the new container
         codeBlockWrapper.parentNode?.replaceChild(
           reactContainer,
-          codeBlockWrapper
+          codeBlockWrapper,
         );
 
         // Render the CodeBlock component into the temporary container
         const root = createRoot(reactContainer);
-        root.render(<MarkdownCodeBlock code={codeContent} language={language} />);
+        root.render(
+          <MarkdownCodeBlock code={codeContent} language={language} />,
+        );
         codeBlockRoots.current.push(root);
       }
     });

@@ -29,8 +29,6 @@ tags: MATH
   - 求贴现率 $\delta$ 使无限次重复博弈、局中人会合作（价格战、无限重复古诺模型）
 - 求效率工资 $W^*$、设计使局中人说实话的机制
 
-
-
 古诺模型
 
 ![image-20241113185416891](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/image-20241113185416891.png)
@@ -117,11 +115,10 @@ tags: MATH
 
 ### 收益矩阵分析
 
-
-
 ### 古诺模型的推导
 
 不合作
+
 $$
 \pi_1=q_1(8-(q_1+q_2))-q_12\\
 \pi_2=q_2(8-(q_1+q_2))-q_22\\
@@ -136,7 +133,9 @@ q_1=q_2=2\\
 \downarrow\\
 \pi_1=\pi_2=4
 $$
+
 合作
+
 $$
 \pi=q(8-q)-q2=6q-q^2\\
 \downarrow\\
@@ -146,7 +145,9 @@ q=3,q_1=q_2=1.5\\
 \downarrow\\
 \pi=9,\pi_1=\pi_2=4.5
 $$
+
 合作但背叛
+
 $$
 \pi_2=q_2(8-(q_2+1.5))-q_22=4.5q_2-q_2^2\\
 \downarrow\\
@@ -156,7 +157,9 @@ q_1=1.5,q_2=2.25\\
 \downarrow\\
 \pi_2=5.0625,\pi_1=1.5(8-(1.5+2.25))-3=3.375
 $$
+
 最终得到的收益矩阵
+
 $$
 \begin{bmatrix}
 & 合作 & 不合作 \\
@@ -185,24 +188,30 @@ $$
 $$
 
 如果选择合作
+
 $$
 PV=[4.5,4.5\delta,4.5\delta^2,\dots,4.5\delta^{n-1}]\\
 \downarrow\\
 TPV=\frac{4.5}{1-\delta}
 $$
+
 如果选择不合作
+
 $$
 PV=[5.0625,4\delta,4\delta^2,\dots,4\delta^{n-1}]\\
 \downarrow\\
 TPV=5.0625+\frac{4(\delta-\delta^{n})}{1-\delta}=5.0625+\frac{4\delta}{1-\delta}
 $$
+
 如果合作的总现值大于不合作的总现值，选择合作
+
 $$
 \frac{4.5}{1-\delta}\gt 5.0625+\frac{4\delta}{1-\delta}\\
 4.5\gt 5.0625-5.0625\delta+4\delta\\
 1.0625\delta\gt0.5625\\
 \delta\gt\frac{0.5625}{1.0625}=\frac{9}{17}
 $$
+
 当 $\delta\gt\frac{9}{17}$ 时选择合作，否则选择不合作
 
 ---
@@ -210,6 +219,7 @@ $$
 如果选择不合作，也就是 $\delta\lt\frac{9}{17}$
 
 1. 各产产量 $d$，$1.5\lt d\lt 2$，实现低水平合作
+
    $$
    \pi_1=\pi_2=d(8-2d)-2d=-2d^2+6d
    $$
@@ -224,18 +234,23 @@ $$
    $$
 
 如果选择低水平合作
+
 $$
 PV=[(6d-2d^2),(6d-2d^2)\delta,(6d-2d^2)\delta^2,\dots,(6d-2d^2)\delta^{n-1}]\\
 \downarrow\\
 TPV=(6d-2d^2)\frac{1}{1-\delta}
 $$
+
 如果选择不合作
+
 $$
 PV=[\frac{(6-d)^2}{4},4\delta,4\delta^2,\dots,4\delta^{n-1}]\\
 \downarrow\\
 TPV=\frac{(6-d)^2}{4}+4\frac{\delta}{1-\delta}
 $$
+
 如果合作的总现值大于不合作的总现值，选择合作
+
 $$
 (6d-2d^2)\frac1{1-\delta}\gt\frac{(6-d)^2}{4}+4\frac{\delta}{1-\delta}\\
 6d-2d^2\gt\frac{1}{4}(36+d^2-12d)(1-\delta)+4\delta\\
@@ -244,7 +259,9 @@ $$
 0\gt (9-\delta) d^2+(12\delta-36)d+(36-20\delta)\\
 0\gt[(9-\delta)d+(-18+10\delta)][(d+(-2)]
 $$
+
 如果 $(9-\delta)d+(10\delta-18)\gt 0$ 选择合作
+
 $$
 d\gt\frac{18-10\delta}{9-\delta}=\frac{90-10\delta-90+18}{9-\delta}=10-\frac{72}{9-\delta}\\
 \downarrow\\
@@ -254,6 +271,7 @@ $$
 #### 价格战
 
 收益矩阵
+
 $$
 \begin{bmatrix}
 & 高 & 低 \\
@@ -261,7 +279,9 @@ $$
 低 & (5,0) & (1,1) \\
 \end{bmatrix}
 $$
+
 选择合作
+
 $$
 PV=[4,4\delta,4\delta^2,\dots,4\delta^{n-1}]
 $$
@@ -271,6 +291,7 @@ V_e=\frac{4}{1-\delta}
 $$
 
 选择不合作
+
 $$
 PV=[5,\delta,\delta^2,\dots,\delta^{n-1}]
 $$
@@ -280,6 +301,7 @@ V_c=5+\frac{\delta}{1-\delta}
 $$
 
 如果要选择合作
+
 $$
 \frac{4}{1-\delta}\gt 5+\frac{\delta}{1-\delta}\\
 4\gt5-5\delta+\delta\\
@@ -310,18 +332,24 @@ graph
 **第三阶段 对乙**
 
 买的期望收益
+
 $$
 p(V_H-P)+(1-p) (V_L-P)
 $$
+
 不买的期望收益
+
 $$
 p0+(1-p)0=0
 $$
+
 如果要买
+
 $$
 pV_H-pP+V_L-P-pV_L+pP\gt0\\
 pV_H+(1-p)V_L\gt P
 $$
+
 **第二阶段 对甲**
 
 如果 $P-C\gt0$，甲会选择伪装
@@ -342,7 +370,7 @@ graph
 	F -->|1-p低| I["(R_L-W_L,W_L-e)"]
 	G -->|q高| J["(R_H-W_H,W_H)"]
 	G -->|1-q低| K["(R_L-W_L,W_L)"]
-	
+
 ```
 
 逆推归纳法
@@ -352,41 +380,56 @@ graph
 **第三阶段 对代理**
 
 选择努力的期望收益
+
 $$
 p(W_H-e)+(1-p)(W_L-e)
 $$
+
 选择偷懒的期望收益
+
 $$
 qW_H+(1-q)W_L
 $$
+
 如果选择努力
+
 $$
 pW_H-pe+W_L-e-pW_L+pe\gt qW_H+W_L-qW_L\\
 pW_H-qW_L\gt qW_H-qWL+e\\
 (p-q)(W_H-W_L)\gt e\\
 W_H-W_L\gt\frac{e}{p-q}
 $$
+
 **第二阶段 对代理**
 
 选择应聘的期望收益
+
 $$
 p(W_H-e)+(1-p)(W_L-e)
 $$
+
 选择不应聘的期望收益
+
 $$
 W_o
 $$
+
 如果选择应聘
+
 $$
 pW_H+(1-p) W_L\gt W_o+e
 $$
+
 **第一阶段 对委托**
 
 选择雇佣的期望收益
+
 $$
 p(R_H-W_H)+(1-p)(R_L-W_L)
 $$
+
 选择不雇佣的期望收益
+
 $$
 R_o
 $$
@@ -411,9 +454,11 @@ TPV=\frac{(W^*-e)(1-\delta^n)}{1-\delta}=\frac{W^*-e}{1-\delta}
 $$
 
 两阶段博弈
+
 $$
 V_e=W^*-e+V_e\delta\rightarrow V_e=\frac{W^*-e}{1-\delta}
 $$
+
 **员工选择偷懒**
 
 ```mermaid
@@ -432,6 +477,7 @@ V_s=\frac{1}{1-p\delta}(W^*+(1-p)\delta\frac{W_o}{1-\delta})
 $$
 
 让员工选择努力
+
 $$
 \frac{W^*-e}{1-\delta}\gt\frac{1}{1-p\delta}(W^*+(1-p)\delta\frac{W_o}{1-\delta})\\
 (W^*-e)(1-p\delta)\gt W^*-\delta W^*+\delta W_o-p\delta W_o\\
@@ -474,6 +520,7 @@ $p$ 大，补贴小 （偷懒后高产的概率小 -> 容易分辨是否努力�
 设 A 的内心真实估价为 $a$，$x=ta$，不得画不付款
 
 A 的期望收益
+
 $$
 \pi_A=x(a-kx)+(1-x)0=ta(a-kta)=ta^2-kt^2a^2\\
 \downarrow\\
@@ -481,9 +528,5 @@ $$
 \downarrow\\
 t=\frac{1}{2k}
 $$
+
 甲要 A 说实话，也就是 $t=1$，需要设置 $k=\frac12$
-
-
-
-
-

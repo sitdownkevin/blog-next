@@ -14,6 +14,7 @@ update_date: 2024-11-30
 ### 原问题
 
 假设有一个在限定条件下需要求极值的问题，如下：
+
 $$
 \min_x f(x),x\in\mathbb{R}^n\\
 s.t.\ g_i(x)\le0,i=1,2,\dots,m\\
@@ -27,23 +28,25 @@ L(x,\lambda,\mu)=f(x)+\sum\lambda_i g_i(x)+\sum \mu_i h_i(x)
 $$
 
 转化为原问题的等价形式
+
 $$
 \min_{x}\max_{\lambda,\mu} L(x,\lambda,\mu)\\
 s.t.\ \lambda\ge0
 $$
 
-> *理解为什么原问题的拉格朗日函数形式等价于原问题？*
+> _理解为什么原问题的拉格朗日函数形式等价于原问题？_
 >
-> $x$ 在 $L$ 中是可以取全域的（没有限制条件了，可以随便瞎取），$L$ 只限制了 $\lambda$. 
+> $x$ 在 $L$ 中是可以取全域的（没有限制条件了，可以随便瞎取），$L$ 只限制了 $\lambda$.
 >
 > 先考虑 $\max_{\lambda,\mu} L(x,\lambda,\mu)$
+>
 > $$
 > x 不在可行域内\rightarrow \max_{\lambda,\mu} L(x,\lambda,\mu)=f(x)+\infty+\infty=\infty\\x 在可行域内\rightarrow \max_{\lambda,\mu}L(x,\lambda,\mu)=f(x)+0+0=f(x)  \\
-> \downarrow\\ 
+> \downarrow\\
 > \min_x\max_{\lambda,\mu} L(x,\lambda,\mu)=\min_x\{f(x),\infty\}=\min_{x}f (x)
 > $$
 
-> *理解什么是互补松弛？*
+> _理解什么是互补松弛？_
 >
 > ![z](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930175612867.png)
 >
@@ -56,6 +59,7 @@ $$
 ### 对偶函数
 
 假设 $g(\lambda,\mu)=\min_{x} L(x,\lambda,\mu)$，这个也被称为原问题的对偶函数
+
 $$
 \max_{\lambda,\mu} g(\lambda,\mu)\rightarrow \max_{\lambda,\mu}\min_{x} L(x,\lambda,\mu)\\
 s.t.\ \lambda\ge0\\
@@ -65,7 +69,7 @@ s.t.\ \nabla_x L(x,\lambda,\mu)=0\\
 \lambda\ge0
 $$
 
-> *理解什么是对偶问题？*
+> _理解什么是对偶问题？_
 >
 > 对偶问题的特性：无论原问题是什么，换成对偶问题后都是一个凸问题
 >
@@ -74,20 +78,24 @@ $$
 > ![image-20240930214455580](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930214455580.png)
 
 假设说找到一个 $x^*=\arg\min_{x} L(x,\lambda,\mu)$，则有
+
 $$
 g(\lambda,\mu)=f(x^*)+\sum\lambda_i g_i(x^*)+\sum\mu_i h_i(x^*)
 $$
+
 关于 $\lambda$ 和 $\mu$ 的一阶线性的 $g$ 函数确定的是一条直线（求最大值：凹函数）
 
 ### 总结
 
 - 原问题
+
   $$
   \min_{x}\max_{\lambda,\mu} L(x,\lambda,\mu)\\
   s.t.\ \lambda\ge0
   $$
 
   > 这种形式的表达等价于
+  >
   > $$
   > \min_x f(x)\\
   > s.t.\ g_i(x)\le0,i=1,2,\dots,m\\
@@ -95,12 +103,14 @@ $$
   > $$
 
 - 对偶问题
+
   $$
   \max_{\lambda,\mu} g(\lambda,\mu)=\max_{\lambda,\mu}\min_{x} L(x,\lambda,\mu)\\
   s.t.\ \lambda\ge0
   $$
 
 - 比较二者
+
   $$
   \max_{\lambda,\mu} L(x,\lambda,\mu)\ge L(x,\lambda,\mu)\ge \min_x L(x,\lambda,\mu)\\
   \downarrow\\
@@ -112,7 +122,6 @@ $$
   \downarrow\\
   P^*=\min_x A(x)\ge\max_{\lambda,\mu} I(\lambda,\mu)= D^*
   $$
-
   - $P^*$ 是原问题的解
   - $D^*$ 是对偶问题的解
 
@@ -122,7 +131,6 @@ $$
 \min f(x,y)\\
 s.t.\ y=g(x)
 $$
-
 
 $$
 L(x,y,\lambda)=f(x,y)+\lambda (y-g(x))\\
@@ -135,9 +143,7 @@ L(x,y,\lambda)=f(x,y)+\lambda (y-g(x))\\
 \end{cases}
 $$
 
-
 ---
-
 
 $$
 \min f(x),x\in \mathbb{R}^n\\
@@ -160,7 +166,7 @@ Slater 条件的定义：存在一个点 $x\in relint\ D$，使得 $g_i(x)\lt0$�
 
 $relint\ D$ 表示可行域 $D$ 的相对内部
 
-> *如何理解这个鬼定义？*
+> _如何理解这个鬼定义？_
 >
 > ![image-20240930231912111](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930231912111.png)
 >
@@ -226,7 +232,6 @@ $$
 $$
 -2(x-3)-\lambda_1 +\lambda_2=0 \rightarrow x=3\\
 $$
-
 
 ## Reference
 
