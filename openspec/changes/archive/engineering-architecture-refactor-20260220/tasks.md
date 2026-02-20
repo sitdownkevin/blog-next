@@ -18,24 +18,24 @@
 
 ## 2. Phase 2: Database & Security
 
-- [ ] 2.1 Create `src/server/db/` directory
-- [ ] 2.2 Implement MongoDB connection manager in `src/server/db/mongo.ts`
-- [ ] 2.3 Add `getMongoClient()` function with singleton pattern
-- [ ] 2.4 Add `getDatabase(name)` helper function
-- [ ] 2.5 Add `getCollection(dbName, collectionName)` helper function
-- [ ] 2.6 Refactor `src/app/api/comments/route.ts` to use centralized connection
-- [ ] 2.7 Refactor `src/app/api/comments/delete/route.ts` to use centralized connection
-- [ ] 2.8 Remove all per-request `connect()` and `close()` calls from API routes
-- [ ] 2.9 Create `src/shared/utils/logger.ts` with structured logging
-- [ ] 2.10 Implement `error()`, `warn()`, `info()` log methods with JSON format
-- [ ] 2.11 Add environment-aware log level filtering (production = error only)
-- [ ] 2.12 Remove all `console.log` debug statements from comments API
-- [ ] 2.13 Replace removed logs with appropriate logger calls
-- [ ] 2.14 Create Zod schema for comment creation request in `src/features/comments/schemas/`
-- [ ] 2.15 Create Zod schema for comment deletion request
-- [ ] 2.16 Add request validation to comments POST endpoint
-- [ ] 2.17 Add request validation to comments DELETE endpoint
-- [ ] 2.18 Implement standardized error response format across API routes
+- [x] 2.1 Create `src/server/db/` directory
+- [x] 2.2 Implement MongoDB connection manager in `src/server/db/mongo.ts`
+- [x] 2.3 Add `getMongoClient()` function with singleton pattern
+- [x] 2.4 Add `getDatabase(name)` helper function
+- [x] 2.5 Add `getCollection(dbName, collectionName)` helper function
+- [x] 2.6 Refactor `src/app/api/comments/route.ts` to use centralized connection
+- [x] 2.7 Refactor `src/app/api/comments/delete/route.ts` to use centralized connection
+- [x] 2.8 Remove all per-request `connect()` and `close()` calls from API routes
+- [x] 2.9 Create `src/shared/utils/logger.ts` with structured logging
+- [x] 2.10 Implement `error()`, `warn()`, `info()` log methods with JSON format
+- [x] 2.11 Add environment-aware log level filtering (production = error only)
+- [x] 2.12 Remove all `console.log` debug statements from comments API
+- [x] 2.13 Replace removed logs with appropriate logger calls
+- [x] 2.14 Create Zod schema for comment creation request in `src/lib/comments/schemas/`
+- [x] 2.15 Create Zod schema for comment deletion request
+- [x] 2.16 Add request validation to comments POST endpoint
+- [x] 2.17 Add request validation to comments DELETE endpoint
+- [x] 2.18 Implement standardized error response format across API routes
 - [ ] 2.19 Test comment creation and deletion flows manually
 - [ ] 2.20 Verify database connection stability under load
 

@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { MongoClient, ObjectId } from "mongodb";
+import { ObjectId } from "mongodb";
 import { auth } from "@/auth";
 import { headers } from "next/headers";
-
-const MONGODB_URI = process.env.MONGODB_URI;
-if (!MONGODB_URI) {
-  throw new Error("MONGODB_URI is not defined in environment variables");
-}
-const client = new MongoClient(MONGODB_URI);
+import { getCollection } from "@/server/db/mongo";
+import { logger } from "@/shared/utils/logger";
+import { ErrorResponses, handleError } from "@/shared/utils/api-response";
+import { createCommentSchema, getCommentsSchema } from "@/lib/comments/schemas";
 
 // 获取评论列表
 export async function GET(request: NextRequest) {
@@ -15,23 +13,17 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const postId = searchParams.get("postId");
 
-    if (!postId) {
-      return NextResponse.json(
-        { error: "postId is required" },
-        { status: 400 },
+    // Validate input
+    const validation = getCommentsSchema.safeParse({ postId });
+    if (!validation.success) {
+      return ErrorResponses.badRequest(
+        validation.error.issues[0]?.message || "postId is required",
       );
     }
 
-    await client.connect();
-    const db = client.db();
-    const commentsCollection = db.collection("comments");
+    const commentsCollection = await getCollection("comments");
 
-    // 先检查是否有评论数据
-    const allComments = await commentsCollection
-      .find({ post_id: postId })
-      .toArray();
-    console.log("找到评论数量:", allComments.length);
-    console.log("评论数据样例:", allComments[0]);
+    logger.debug("Fetching comments", { postId });
 
     // 获取评论并关联用户信息
     const comments = await commentsCollection
@@ -92,18 +84,14 @@ export async function GET(request: NextRequest) {
       ])
       .toArray();
 
-    console.log("聚合后评论数量:", comments.length);
-    console.log("聚合后评论样例:", comments[0]);
+    logger.info("Comments fetched successfully", {
+      postId,
+      count: comments.length,
+    });
 
     return NextResponse.json(comments);
   } catch (error) {
-    console.error("Error fetching comments:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 },
-    );
-  } finally {
-    await client.close();
+    return handleError(error, "获取评论失败");
   }
 }
 
@@ -116,42 +104,43 @@ export async function POST(request: NextRequest) {
     });
 
     if (!session) {
-      return NextResponse.json(
-        { error: "未授权访问，请先登录" },
-        { status: 401 },
+      return ErrorResponses.unauthorized();
+    }
+
+    const body = await request.json();
+
+    // Validate input
+    const validation = createCommentSchema.safeParse(body);
+    if (!validation.success) {
+      return ErrorResponses.badRequest(
+        validation.error.issues[0]?.message || "Invalid input",
       );
     }
 
-    const { postId, commentText } = await request.json();
+    const { postId, commentText } = validation.data;
 
-    if (!postId || !commentText || !commentText.trim()) {
-      return NextResponse.json(
-        { error: "postId和评论内容不能为空" },
-        { status: 400 },
-      );
-    }
-
-    await client.connect();
-    const db = client.db();
-    const commentsCollection = db.collection("comments");
-    const usersCollection = db.collection("user");
-
-    // 调试：检查用户数据结构
-    console.log("当前用户会话信息:", session.user);
-    const userInDb = await usersCollection.findOne({ id: session.user.id });
-    console.log("数据库中的用户信息:", userInDb);
+    const commentsCollection = await getCollection("comments");
 
     const newComment = {
       user_id: session.user.id,
       post_id: postId,
-      comment_text: commentText.trim(),
+      comment_text: commentText,
       comment_ts: Math.floor(Date.now() / 1000),
       created_at: new Date(),
     };
 
-    console.log("准备插入的评论:", newComment);
+    logger.debug("Creating comment", {
+      userId: session.user.id,
+      postId,
+    });
+
     const result = await commentsCollection.insertOne(newComment);
-    console.log("插入结果:", result);
+
+    logger.info("Comment created successfully", {
+      commentId: result.insertedId.toString(),
+      userId: session.user.id,
+      postId,
+    });
 
     // 返回新创建的评论，包含用户信息
     const createdComment = {
@@ -166,9 +155,6 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(createdComment);
   } catch (error) {
-    console.error("Error creating comment:", error);
-    return NextResponse.json({ error: "创建评论失败" }, { status: 500 });
-  } finally {
-    await client.close();
+    return handleError(error, "创建评论失败");
   }
 }

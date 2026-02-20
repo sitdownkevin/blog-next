@@ -1,13 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { MongoClient, ObjectId } from "mongodb";
+import { ObjectId } from "mongodb";
 import { auth } from "@/auth";
 import { headers } from "next/headers";
-
-const MONGODB_URI = process.env.MONGODB_URI;
-if (!MONGODB_URI) {
-  throw new Error("MONGODB_URI is not defined in environment variables");
-}
-const client = new MongoClient(MONGODB_URI);
+import { getCollection } from "@/server/db/mongo";
+import { logger } from "@/shared/utils/logger";
+import { ErrorResponses, handleError } from "@/shared/utils/api-response";
+import { deleteCommentSchema } from "@/lib/comments/schemas";
 
 export async function DELETE(request: NextRequest) {
   try {
@@ -17,24 +15,27 @@ export async function DELETE(request: NextRequest) {
     });
 
     if (!session) {
-      return NextResponse.json(
-        { error: "未授权访问，请先登录" },
-        { status: 401 },
+      return ErrorResponses.unauthorized();
+    }
+
+    const body = await request.json();
+
+    // Validate input
+    const validation = deleteCommentSchema.safeParse(body);
+    if (!validation.success) {
+      return ErrorResponses.badRequest(
+        validation.error.issues[0]?.message || "Invalid input",
       );
     }
 
-    const { commentId } = await request.json();
+    const { commentId } = validation.data;
 
-    if (!commentId) {
-      return NextResponse.json(
-        { error: "commentId is required" },
-        { status: 400 },
-      );
-    }
+    const commentsCollection = await getCollection("comments");
 
-    await client.connect();
-    const db = client.db();
-    const commentsCollection = db.collection("comments");
+    logger.debug("Deleting comment", {
+      commentId,
+      userId: session.user.id,
+    });
 
     // 检查评论是否存在且用户有权限删除
     const comment = await commentsCollection.findOne({
@@ -42,12 +43,12 @@ export async function DELETE(request: NextRequest) {
     });
 
     if (!comment) {
-      return NextResponse.json({ error: "评论不存在" }, { status: 404 });
+      return ErrorResponses.notFound("评论");
     }
 
     // 只有评论作者可以删除评论
     if (comment.user_id !== session.user.id) {
-      return NextResponse.json({ error: "无权限删除此评论" }, { status: 403 });
+      return ErrorResponses.forbidden();
     }
 
     // 删除评论
@@ -55,11 +56,13 @@ export async function DELETE(request: NextRequest) {
       _id: new ObjectId(commentId),
     });
 
+    logger.info("Comment deleted successfully", {
+      commentId,
+      userId: session.user.id,
+    });
+
     return NextResponse.json({ message: "评论删除成功" });
   } catch (error) {
-    console.error("Error deleting comment:", error);
-    return NextResponse.json({ error: "删除评论失败" }, { status: 500 });
-  } finally {
-    await client.close();
+    return handleError(error, "删除评论失败");
   }
 }
