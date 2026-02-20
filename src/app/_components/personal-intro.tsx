@@ -1,55 +1,124 @@
 import Image from "next/image";
-import { Anton } from "next/font/google";
+import Link from "next/link";
+import { Anton, Noto_Serif_SC } from "next/font/google";
+import abstractData from "../../../content/data/personal-intro/abstract.json";
+import educationData from "../../../content/data/personal-intro/education.json";
+import workingExpData from "../../../content/data/personal-intro/working-exp.json";
+import projectsData from "../../../content/data/personal-intro/projects.json";
+import publicationsData from "../../../content/data/personal-intro/publications.json";
 
 const nameDisplayFont = Anton({
   weight: ["400"],
+  variable: "--font-anton",
+  subsets: ["latin"],
 });
 
-type PersonalInfo = {
-  name: string;
-  email: string;
-  location: string;
-  intro: string;
-  figurePath: string;
+const chineseFallbackFont = Noto_Serif_SC({
+  weight: ["800"],
+  variable: "--font-noto-serif-sc",
+  subsets: ["latin"],
+});
+
+// Type definitions based on JSON structure
+type Location = {
+  city: string;
+  province: string;
+  country: string;
 };
 
-type PersonalIntroductionItem = {
-  title?: string;
-  subtitle?: string;
-  content?: string;
-  period?: string;
+type EducationItem = {
+  school: string;
+  location: Location;
+  degree: string;
+  period: {
+    start: string;
+    end: string;
+  };
 };
 
-type PersonalIntroductionSection = {
+type WorkingExpItem = {
+  company: string;
+  location: Location;
+  position: string;
+  period: {
+    start: string;
+    end: string;
+  };
+  content: string[];
+  tags: string[];
+};
+
+type ProjectItem = {
+  project: string;
+  location: Location;
+  description: string;
+  url: string;
+};
+
+type PublicationItem = {
+  authors: string;
+  year: string;
   title: string;
-  items: PersonalIntroductionItem[];
+  journal: string;
+  volume: string;
+  pages: string;
+  url: string;
 };
 
-function PersonalIntroductionHeader({
-  personalInfo,
-}: {
-  personalInfo: PersonalInfo;
-}) {
+// Helper function to format location
+function formatLocation(location: Location): string {
+  return `${location.city}, ${location.province}`;
+}
+
+// Helper function to format period
+function formatPeriod(period: { start: string; end: string }): string {
+  return `${period.start} - ${period.end}`;
+}
+
+// Helper function to format publication in APA style with JSX
+function formatAPAPublicationJSX(pub: PublicationItem) {
+  const { authors, year, title, journal, volume, pages } = pub;
+
+  return (
+    <>
+      {authors} ({year}). {title}. <em>{journal}</em>
+      {volume && `, ${volume}`}
+      {pages && `, ${pages}`}.
+    </>
+  );
+}
+
+function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
+  const data = (abstractData as any)[lang] || abstractData.en;
+  const fullName = `${data.name.first} ${data.name.last}`;
+  const locationStr = `${data.location.city}, ${data.location.country}`;
+
+  const titleFontClass = `${nameDisplayFont.variable} ${chineseFallbackFont.variable}`;
+  const titleStyle = {
+    fontFamily: "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
+  };
+
   return (
     <div>
       {/* Mobile view */}
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
           <h1
-            className={`${nameDisplayFont.className} text-4xl uppercase leading-tight text-claude-orange pb-2`}
+            className={`${titleFontClass} text-4xl uppercase leading-tight text-claude-orange pb-2`}
+            style={titleStyle}
           >
-            {personalInfo.name}
+            {fullName}
           </h1>
           <div className="flex flex-col space-y-0">
             <span className="text-xs text-gray-500 dark:text-gray-300">
-              {personalInfo.email}
+              {data.email}
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-300">
-              {personalInfo.location}
+              {locationStr}
             </span>
           </div>
           <span className="text-xs text-gray-600 dark:text-gray-300">
-            {personalInfo.intro}
+            {data.intro}
           </span>
         </div>
       </div>
@@ -58,20 +127,21 @@ function PersonalIntroductionHeader({
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
           <h1
-            className={`${nameDisplayFont.className} text-5xl uppercase leading-tight text-claude-orange pb-2`}
+            className={`${titleFontClass} text-5xl uppercase leading-tight text-claude-orange pb-2`}
+            style={titleStyle}
           >
-            {personalInfo.name}
+            {fullName}
           </h1>
           <div className="flex flex-col space-y-0">
             <span className="text-xs text-gray-500 dark:text-gray-300">
-              {personalInfo.email}
+              {data.email}
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-300">
-              {personalInfo.location}
+              {locationStr}
             </span>
           </div>
           <span className="text-xs text-gray-600 dark:text-gray-300">
-            {personalInfo.intro}
+            {data.intro}
           </span>
         </div>
       </div>
@@ -81,25 +151,26 @@ function PersonalIntroductionHeader({
         <div className="flex flex-row justify-between">
           <div className="flex flex-col space-y-4">
             <h1
-              className={`${nameDisplayFont.className} text-6xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+              className={`${titleFontClass} text-6xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
+              style={titleStyle}
             >
-              {personalInfo.name}
+              {fullName}
             </h1>
             <div className="flex flex-col space-y-0">
               <span className="text-xs text-gray-500 dark:text-gray-300">
-                {personalInfo.email}
+                {data.email}
               </span>
               <span className="text-xs text-gray-500 dark:text-gray-300">
-                {personalInfo.location}
+                {locationStr}
               </span>
             </div>
             <span className="text-xs text-gray-600 dark:text-gray-300">
-              {personalInfo.intro}
+              {data.intro}
             </span>
           </div>
           <div className="w-24">
             <Image
-              src={personalInfo.figurePath}
+              src="/assets/images/figures/photo_figure.webp"
               alt="figure"
               width={2125}
               height={3217}
@@ -112,146 +183,187 @@ function PersonalIntroductionHeader({
   );
 }
 
-function PersonalIntroductionItemElement({
-  cvItem,
-}: {
-  cvItem: PersonalIntroductionItem;
-}) {
+function EducationSection({ lang = "en" }: { lang?: "en" | "zh" }) {
+  const data = (educationData as any)[lang] || educationData.en;
+  const title = lang === "zh" ? "教育经历" : "Education";
+
   return (
-    // @ts-ignore
-    <p>
-      {cvItem.title ? (
-        <span className={"font-bold"}>{cvItem.title}</span>
-      ) : null}
-      {cvItem.subtitle ? (
-        <>
-          {cvItem.title ? <br /> : null}
-          <span className={"italic text-gray-600 dark:text-gray-300"}>
-            {cvItem.subtitle}
+    <div className="flex flex-col space-y-4">
+      <h2
+        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
+        style={{
+          fontFamily:
+            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
+        }}
+      >
+        {title}
+      </h2>
+      {data.items.map((item: EducationItem, idx: number) => (
+        <div key={idx} className="flex flex-col">
+          {/* Mobile/Tablet: Single line */}
+          <span className="font-bold lg:hidden">
+            {item.school}, {item.location.city}
           </span>
-        </>
-      ) : null}
-      {cvItem.content ? (
-        <>
-          {cvItem.title || cvItem.subtitle ? <br /> : null}
-          <span className="text-gray-600 dark:text-gray-300 wrap-wrap-break-word whitespace-pre-line">
-            {cvItem.content}
+          {/* Desktop: Split layout */}
+          <div className="hidden lg:flex justify-between items-baseline">
+            <span className="font-bold">{item.school}</span>
+            <span className="font-bold text-gray-500 dark:text-gray-400">
+              {item.location.city}
+            </span>
+          </div>
+          <span className="italic text-gray-600 dark:text-gray-300">
+            {item.degree}
           </span>
-        </>
-      ) : null}
-      {cvItem.period ? (
-        <>
-          {cvItem.title || cvItem.subtitle || cvItem.content ? <br /> : null}
-          <span className={"text-gray-600 dark:text-gray-300 text-sm"}>
-            {cvItem.period}
+          <span className="text-gray-600 dark:text-gray-300 text-sm">
+            {formatPeriod(item.period)}
           </span>
-        </>
-      ) : null}
-    </p>
+        </div>
+      ))}
+    </div>
   );
 }
 
-export function PersonalIntroduction() {
-  const personalInfo: PersonalInfo = {
-    name: "Ke Xu",
-    email: "kexu567@gmail.com",
-    location: "Shanghai, China",
-    intro: "Blockchain Technology, Data Mining, and Machine Learning.",
-    figurePath: "/assets/images/figures/photo_figure.webp",
-  };
-
-  const data: PersonalIntroductionSection[] = [
-    {
-      title: "Education",
-      items: [
-        {
-          title: "Tongji University, Shanghai",
-          subtitle: "Ph.D. Candidate in Information Systems",
-          content: "",
-          period: "September 2024 - Present",
-        },
-        {
-          title: "Sichuan University, Chengdu",
-          subtitle: "Bachelor's Degree in Industrial Engineering",
-          content: "",
-          period: "September 2020 - June 2024",
-        },
-      ],
-    },
-    {
-      title: "Working Experience",
-      items: [
-        {
-          title: "Airbus Beijing Engineering Centre (ABEC), Beijing",
-          subtitle: "Engineering Intern at ACO1I",
-          content: "Data Mining, Operations System Development",
-          period: "January 2024 - May 2024",
-        },
-        {
-          title: "West China Biomedical Big Data Center, Chengdu",
-          subtitle: "Research Assistant",
-          content: "Active Learning, Contrastive Learning",
-          period: "October 2022 - April 2023",
-        },
-      ],
-    },
-    {
-      title: "Projects",
-      items: [
-        {
-          title:
-            "AI Mobile Large Model Technology Innovation Competition, Shenzhen",
-          subtitle:
-            "2nd 'Xingzhi Cup' National AI Innovation Application Competition",
-          content: "First Prize (National Finals)",
-          period: "December 2025",
-        },
-        {
-          title:
-            "Design and Control Method of Modular Mechanical Prosthesis, Chengdu",
-          subtitle:
-            "College Students' Innovation and Entrepreneurship Competition",
-          content: "National Project",
-          period: "December 2023 - December 2024",
-        },
-      ],
-    },
-    {
-      title: "Publications",
-      items: [
-        {
-          title: "",
-          subtitle: "",
-          content:
-            "Xu, K., Hu, W., & Zhou, Z. (2025). Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing. ICIS 2025 Proceedings, 15.",
-          period: "",
-        },
-        {
-          title: "",
-          subtitle: "",
-          content:
-            "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R. (2025). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. In S. Jin, J. H. Kim, Y.-K. Kong, J. Park, & M. H. Yun (Eds.), Proceedings of the 22nd Congress of the International Ergonomics Association, Volume 1 (pp. 255–261). Springer. https://doi.org/10.1007/978-981-95-0211-0_40",
-          period: "",
-        },
-      ],
-    },
-  ];
+function WorkingExperienceSection({ lang = "en" }: { lang?: "en" | "zh" }) {
+  const data = (workingExpData as any)[lang] || workingExpData.en;
+  const title = lang === "zh" ? "工作经历" : "Working Experience";
 
   return (
+    <div className="flex flex-col space-y-4">
+      <h2
+        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
+        style={{
+          fontFamily:
+            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
+        }}
+      >
+        {title}
+      </h2>
+      {data.items.map((item: WorkingExpItem, idx: number) => (
+        <div key={idx} className="flex flex-col">
+          {/* Mobile/Tablet: Single line */}
+          <span className="font-bold lg:hidden">
+            {item.company}, {item.location.city}
+          </span>
+          {/* Desktop: Split layout */}
+          <div className="hidden lg:flex justify-between items-baseline">
+            <span className="font-bold">{item.company}</span>
+            <span className="font-bold text-gray-500 dark:text-gray-400">
+              {item.location.city}
+            </span>
+          </div>
+          <span className="italic text-gray-600 dark:text-gray-300">
+            {item.position}
+          </span>
+          {item.tags.length > 0 && (
+            <span className="text-gray-600 dark:text-gray-300">
+              {item.tags.join(", ")}
+            </span>
+          )}
+          <span className="text-gray-600 dark:text-gray-300 text-sm">
+            {formatPeriod(item.period)}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ProjectsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
+  const data = (projectsData as any)[lang] || projectsData.en;
+  const title = lang === "zh" ? "项目经历" : "Projects";
+
+  return (
+    <div className="flex flex-col space-y-4">
+      <h2
+        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
+        style={{
+          fontFamily:
+            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
+        }}
+      >
+        {title}
+      </h2>
+      {data.items.map((item: ProjectItem, idx: number) => (
+        <div key={idx} className="flex flex-col">
+          {/* Mobile/Tablet: Single line */}
+          <span className="font-bold lg:hidden">
+            {item.project}, {item.location.city}
+          </span>
+          {/* Desktop: Split layout */}
+          <div className="hidden lg:flex justify-between items-baseline">
+            <span className="font-bold">{item.project}</span>
+            <span className="font-bold text-gray-500 dark:text-gray-400">
+              {item.location.city}
+            </span>
+          </div>
+          <span className="italic text-gray-600 dark:text-gray-300">
+            {item.description}
+          </span>
+          {item.url && (
+            <Link
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-claude-orange hover:underline text-sm"
+            >
+              {item.url}
+            </Link>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function PublicationsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
+  const data = (publicationsData as any)[lang] || publicationsData.en;
+  const title = lang === "zh" ? "发表论文" : "Publications";
+
+  return (
+    <div className="flex flex-col space-y-4">
+      <h2
+        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
+        style={{
+          fontFamily:
+            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
+        }}
+      >
+        {title}
+      </h2>
+      {data.items.map((item: PublicationItem, idx: number) => (
+        <div key={idx} className="flex flex-col">
+          <p className="text-gray-600 dark:text-gray-300 text-sm hanging-indent">
+            {formatAPAPublicationJSX(item)}
+            {item.url && (
+              <>
+                {" "}
+                <Link
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-claude-orange hover:underline break-all"
+                >
+                  {item.url}
+                </Link>
+              </>
+            )}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export function PersonalIntroduction({ lang = "en" }: { lang?: "en" | "zh" }) {
+  return (
     <div className="flex flex-col w-full py-8 px-4">
-      <PersonalIntroductionHeader personalInfo={personalInfo} />
+      <PersonalIntroductionHeader lang={lang} />
 
       <div className="flex flex-col space-y-4">
-        {data.map((section, index) => (
-          <div key={index} className="flex flex-col space-y-4">
-            <h2 className={`${nameDisplayFont.className} text-2xl uppercase`}>
-              {section.title}
-            </h2>
-            {section.items.map((item, idx) => (
-              <PersonalIntroductionItemElement key={idx} cvItem={item} />
-            ))}
-          </div>
-        ))}
+        <EducationSection lang={lang} />
+        <WorkingExperienceSection lang={lang} />
+        <ProjectsSection lang={lang} />
+        <PublicationsSection lang={lang} />
       </div>
     </div>
   );

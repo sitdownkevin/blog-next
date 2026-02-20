@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { PersonalIntroduction } from "./_components/personal-intro";
+import { LanguageToggle } from "./_components/language-toggle";
 
 export const metadata: Metadata = {
   title: "Ke Xu's website",
@@ -37,7 +38,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: Promise<{ language?: string }>;
+}) {
+  const params = await searchParams;
+  const language = params?.language || "en";
+  const lang = language === "zh" ? "zh" : "en";
+
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -51,8 +60,9 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
-      <div className="w-full mx-auto">
-        <PersonalIntroduction />
+      <div className="w-full mx-auto relative">
+        <LanguageToggle currentLang={lang} />
+        <PersonalIntroduction lang={lang} />
       </div>
     </>
   );

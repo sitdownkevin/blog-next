@@ -386,3 +386,9 @@ html {
     @apply bg-background text-foreground font-sans;
   }
 }
+
+/* APA citation hanging indent */
+.hanging-indent {
+  padding-left: 2rem;
+  text-indent: -2rem;
+}

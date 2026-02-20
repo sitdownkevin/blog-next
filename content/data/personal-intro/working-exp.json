@@ -1,0 +1,70 @@
+{
+  "en": {
+    "items": [
+      {
+        "company": "Airbus Beijing Engineering Centre (ABEC)",
+        "location": {
+          "city": "Beijing",
+          "province": "Beijing",
+          "country": "China"
+        },
+        "position": "Engineering Intern",
+        "period": {
+          "start": "January 2024",
+          "end": "May 2024"
+        },
+        "content": [],
+        "tags": ["Data Mining", "Operations System Development"]
+      },
+      {
+        "company": "West China Biomedical Big Data Center",
+        "location": {
+          "city": "Chengdu",
+          "province": "Sichuan",
+          "country": "China"
+        },
+        "position": "Research Assistant",
+        "period": {
+          "start": "October 2022",
+          "end": "April 2023"
+        },
+        "content": [],
+        "tags": ["Active Learning", "Contrastive Learning"]
+      }
+    ]
+  },
+  "zh": {
+    "items": [
+      {
+        "company": "空中客车北京工程技术中心 (ABEC)",
+        "location": {
+          "city": "北京",
+          "province": "北京",
+          "country": "中国"
+        },
+        "position": "工程实习生",
+        "period": {
+          "start": "2024 年 1 月",
+          "end": "2024 年 5 月"
+        },
+        "content": [],
+        "tags": ["数据挖掘", "运营系统开发"]
+      },
+      {
+        "company": "华西生物医学大数据中心",
+        "location": {
+          "city": "成都",
+          "province": "四川",
+          "country": "中国"
+        },
+        "position": "研究实习生",
+        "period": {
+          "start": "2022 年 10 月",
+          "end": "2023 年 4 月"
+        },
+        "content": [],
+        "tags": ["医学影像", "主动学习", "对比学习"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "en": {
+    "items": [
+      {
+        "school": "Tongji University",
+        "location": {
+          "city": "Shanghai",
+          "province": "Shanghai",
+          "country": "China"
+        },
+        "degree": "Ph.D. Candidate in Information Systems",
+        "period": {
+          "start": "September 2024",
+          "end": "Present"
+        }
+      },
+      {
+        "school": "Sichuan University",
+        "location": {
+          "city": "Chengdu",
+          "province": "Sichuan",
+          "country": "China"
+        },
+        "degree": "Bachelor's Degree in Industrial Engineering",
+        "period": {
+          "start": "September 2020",
+          "end": "June 2024"
+        }
+      }
+    ]
+  },
+  "zh": {
+    "items": [
+      {
+        "school": "同济大学",
+        "location": {
+          "city": "上海",
+          "province": "上海",
+          "country": "中国"
+        },
+        "degree": "信息系统博士研究生",
+        "period": {
+          "start": "2024 年 9 月",
+          "end": "至今"
+        }
+      },
+      {
+        "school": "四川大学",
+        "location": {
+          "city": "成都",
+          "province": "四川",
+          "country": "中国"
+        },
+        "degree": "工业工程学士学位",
+        "period": {
+          "start": "2020 年 9 月",
+          "end": "2024 年 6 月"
+        }
+      }
+    ]
+  }
+}

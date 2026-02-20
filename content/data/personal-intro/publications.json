@@ -1,0 +1,46 @@
+{
+  "en": {
+    "items": [
+      {
+        "authors": "Xu, K., Hu, W., & Zhou, Z.",
+        "year": "2025",
+        "title": "Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing",
+        "journal": "International Conference on Information Systems Engineering (ICIS) 2025 Proceedings",
+        "volume": "15",
+        "pages": "",
+        "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15"
+      },
+      {
+        "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",
+        "year": "2025",
+        "title": "Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning",
+        "journal": "Proceedings of the 22nd Congress of the International Ergonomics Association",
+        "volume": "1",
+        "pages": "255–261",
+        "url": "https://doi.org/10.1007/978-981-95-0211-0_40"
+      }
+    ]
+  },
+  "zh": {
+    "items": [
+      {
+        "authors": "Xu, K., Hu, W., & Zhou, Z.",
+        "year": "2025",
+        "title": "Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing",
+        "journal": "International Conference on Information Systems Engineering (ICIS) 2025 Proceedings",
+        "volume": "15",
+        "pages": "",
+        "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15"
+      },
+      {
+        "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",
+        "year": "2025",
+        "title": "Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning",
+        "journal": "Proceedings of the 22nd Congress of the International Ergonomics Association",
+        "volume": "1",
+        "pages": "255–261",
+        "url": "https://doi.org/10.1007/978-981-95-0211-0_40"
+      }
+    ]
+  }
+}

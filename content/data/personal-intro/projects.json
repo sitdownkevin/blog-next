@@ -1,0 +1,110 @@
+{
+  "en": {
+    "items": [
+      {
+        "project": "AI Mobile Large Model Technology Innovation Competition",
+        "location": {
+          "city": "Shenzhen",
+          "province": "Guangdong",
+          "country": "China"
+        },
+        "description": "2nd 'Xingzhi Cup' National AI Innovation Application Competition",
+        "url": ""
+      },
+      {
+        "project": "DORM WIFI",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "A WiFi connection utility for Tongji University that enables automatic authentication and seamless connectivity",
+        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/"
+      },
+      {
+        "project": "Design and Control Method of Modular Mechanical Prosthesis",
+        "location": {
+          "city": "Chengdu",
+          "province": "Sichuan",
+          "country": "China"
+        },
+        "description": "College Students' Innovation and Entrepreneurship Competition",
+        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control"
+      },
+      {
+        "project": "RSSHub",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "Contributed to the open-source project RSSHub, by creating RSS rules for follow.is",
+        "url": "https://rsshub.netlify.app/"
+      },
+      {
+        "project": "Blackboard Enhanced",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "A Chrome extension that enhances the functionality of Blackboard, a popular educational management system widely used in universities. Developed with React",
+        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced"
+      }
+    ]
+  },
+  "zh": {
+    "items": [
+      {
+        "project": "AI 手机大模型技术创新赛",
+        "location": {
+          "city": "深圳",
+          "province": "广东",
+          "country": "中国"
+        },
+        "description": "第二届\"兴智杯\"全国人工智能创新应用大赛",
+        "url": ""
+      },
+      {
+        "project": "DORM WIFI",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "用于同济大学宿舍的 WiFi 连接工具，支持自动认证和无缝连接",
+        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/"
+      },
+      {
+        "project": "模块化机械义肢设计与控制方法",
+        "location": {
+          "city": "成都",
+          "province": "四川",
+          "country": "中国"
+        },
+        "description": "全国大学生创新创业竞赛",
+        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control"
+      },
+      {
+        "project": "RSSHub",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "贡献了 RSSHub 的 RSS 规则，用于 follow.is",
+        "url": "https://rsshub.netlify.app/"
+      },
+      {
+        "project": "Blackboard Enhanced",
+        "location": {
+          "city": "",
+          "province": "",
+          "country": ""
+        },
+        "description": "用于 Blackboard 教学管理系统的 Chrome 扩展，增强了 Blackboard 的功能",
+        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced"
+      }
+    ]
+  }
+}

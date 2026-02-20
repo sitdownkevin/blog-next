@@ -1,0 +1,28 @@
+{
+  "en": {
+    "name": {
+      "first": "Ke",
+      "last": "Xu"
+    },
+    "email": "kexu567@gmail.com",
+    "location": {
+      "city": "Shanghai",
+      "province": "Shanghai",
+      "country": "China"
+    },
+    "intro": "Blockchain Technology, Data Mining, and Machine Learning."
+  },
+  "zh": {
+    "name": {
+      "first": "徐",
+      "last": "可"
+    },
+    "email": "kexu567@gmail.com",
+    "location": {
+      "city": "上海",
+      "province": "上海",
+      "country": "中国"
+    },
+    "intro": "区块链技术、数据挖掘和机器学习。"
+  }
+}
