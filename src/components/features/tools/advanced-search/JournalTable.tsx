@@ -8,12 +8,25 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+type Journal = {
+  title: string;
+  subjectArea?: string;
+  printIssn?: string;
+};
+
+type JournalTableProps = {
+  journals: Journal[];
+  tableCaption: string;
+  hideSubjectArea?: boolean;
+  subjectAreaTitle?: string;
+};
+
 export default function JournalTable({
   journals,
   tableCaption,
   hideSubjectArea = false,
-  subjectAreaTitle = 'Subject Area',
-}) {
+  subjectAreaTitle = "Subject Area",
+}: JournalTableProps) {
   return (
     <Table className="w-full">
       <TableCaption>{tableCaption}</TableCaption>

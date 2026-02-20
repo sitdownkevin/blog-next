@@ -28,8 +28,12 @@ export default function Page() {
         // Convert date strings back to Date objects
         const dataWithDates = data.map((matter) => ({
           ...matter,
-          create_date: new Date(matter.create_date),
-          update_date: new Date(matter.update_date),
+          create_date: matter.create_date
+            ? new Date(matter.create_date)
+            : undefined,
+          update_date: matter.update_date
+            ? new Date(matter.update_date)
+            : undefined,
         }));
         setMatterList(dataWithDates);
       } catch (err: any) {
@@ -66,10 +70,10 @@ export default function Page() {
 
   // Sort both arrays by date
   const pinnedSorted = pinnedPosts.sort(
-    (a, b) => b.update_date.getTime() - a.update_date.getTime(),
+    (a, b) => (b.update_date?.getTime() ?? 0) - (a.update_date?.getTime() ?? 0),
   );
   const unpinnedSorted = unpinnedPosts.sort(
-    (a, b) => b.update_date.getTime() - a.update_date.getTime(),
+    (a, b) => (b.update_date?.getTime() ?? 0) - (a.update_date?.getTime() ?? 0),
   );
 
   // Combine the arrays with pinned posts first

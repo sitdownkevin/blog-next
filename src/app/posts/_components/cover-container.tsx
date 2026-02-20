@@ -39,7 +39,7 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
       )}
       <div className="flex justify-between items-end">
         <CoverTags tags={matter.tags} />
-        <CoverDate date={matter.update_date} />
+        {matter.update_date && <CoverDate date={matter.update_date} />}
       </div>
     </div>
   );

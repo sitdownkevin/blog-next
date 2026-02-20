@@ -3,7 +3,13 @@
 import { useState, useEffect } from "react";
 import { authClient } from "@/auth-client";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { GithubIcon, LogOutIcon, Loader2 } from "lucide-react";
 
@@ -11,7 +17,7 @@ interface User {
   id: string;
   name: string;
   email?: string;
-  image?: string;
+  image?: string | null;
   emailVerified: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -24,8 +30,8 @@ interface SessionData {
     userId: string;
     expiresAt: Date;
     token: string;
-    ipAddress?: string;
-    userAgent?: string;
+    ipAddress?: string | null;
+    userAgent?: string | null;
   };
 }
 
@@ -59,8 +65,9 @@ export function AuthSection() {
   const handleSignIn = async () => {
     try {
       setIsSigningIn(true);
-      const currentURL = typeof window !== 'undefined' ? window.location.href : '/';
-      
+      const currentURL =
+        typeof window !== "undefined" ? window.location.href : "/";
+
       await authClient.signIn.social({
         provider: "github",
         callbackURL: currentURL,
@@ -132,12 +139,15 @@ export function AuthSection() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Avatar className="h-10 w-10">
-              <AvatarImage src={sessionData.user.image} alt={sessionData.user.name} />
+              <AvatarImage
+                src={sessionData.user.image ?? undefined}
+                alt={sessionData.user.name}
+              />
               <AvatarFallback>
                 {sessionData.user.name?.charAt(0)?.toUpperCase() || "U"}
               </AvatarFallback>
             </Avatar>
-            
+
             <div className="flex flex-col">
               <p className="font-medium text-sm">{sessionData.user.name}</p>
               <p className="text-xs text-muted-foreground">
@@ -145,7 +155,7 @@ export function AuthSection() {
               </p>
             </div>
           </div>
-          
+
           <Button
             variant="outline"
             size="sm"

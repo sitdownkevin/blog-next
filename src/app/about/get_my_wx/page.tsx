@@ -269,13 +269,16 @@ export default function Page() {
   }, []);
 
   const handleMine = async () => {
+    if (!task?.message || task?.difficulty === undefined) {
+      return;
+    }
     // 重置停止信号
     stopMining.current = false;
     setIsMining(true);
     try {
       const result = await proofOfWork(
-        task?.message,
-        task?.difficulty,
+        task.message,
+        task.difficulty,
         setHash,
         nonce,
         setNonce,
@@ -310,7 +313,7 @@ export default function Page() {
         handleMine={handleMine}
         handleStop={handleStop}
       />
-      {result && <ValidateCard task={task} nonce={result.nonce} />}
+      {result && task && <ValidateCard task={task} nonce={result.nonce} />}
     </div>
   );
 }

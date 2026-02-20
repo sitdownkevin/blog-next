@@ -18,7 +18,7 @@ interface User {
   id: string;
   name: string;
   email?: string;
-  image?: string;
+  image?: string | null;
   emailVerified: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -31,8 +31,8 @@ interface SessionData {
     userId: string;
     expiresAt: Date;
     token: string;
-    ipAddress?: string;
-    userAgent?: string;
+    ipAddress?: string | null;
+    userAgent?: string | null;
   };
 }
 
@@ -65,16 +65,21 @@ function CommentItem({
   return (
     <div className="flex gap-4 py-4">
       <Avatar className="h-10 w-10">
-        <AvatarImage src={comment.user.image} alt={comment.user.name} />
+        <AvatarImage
+          src={comment.user?.image}
+          alt={comment.user?.name ?? "User"}
+        />
         <AvatarFallback>
-          {comment.user.name?.charAt(0)?.toUpperCase() || "U"}
+          {comment.user?.name?.charAt(0)?.toUpperCase() || "U"}
         </AvatarFallback>
       </Avatar>
 
       <div className="flex-1 space-y-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h4 className="font-semibold text-sm">{comment.user.name}</h4>
+            <h4 className="font-semibold text-sm">
+              {comment.user?.name ?? "Unknown"}
+            </h4>
             <span className="text-muted-foreground text-xs">
               {new Date(comment.comment_ts * 1000).toLocaleString("zh-CN")}
             </span>
@@ -173,7 +178,10 @@ function CommentForm({
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="flex gap-4">
         <Avatar className="h-10 w-10">
-          <AvatarImage src={currentUser.image} alt={currentUser.name} />
+          <AvatarImage
+            src={currentUser.image ?? undefined}
+            alt={currentUser.name}
+          />
           <AvatarFallback>
             {currentUser.name?.charAt(0)?.toUpperCase() || "U"}
           </AvatarFallback>
@@ -267,7 +275,7 @@ export function CommentSection({ postId }: { postId: string }) {
 
   const handleCommentDeleted = (commentId: string) => {
     setComments((prev) =>
-      prev.filter((comment) => comment.comment_id !== commentId)
+      prev.filter((comment) => comment.comment_id !== commentId),
     );
   };
 

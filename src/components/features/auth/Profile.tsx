@@ -8,7 +8,7 @@ interface User {
   id: string;
   name: string;
   email?: string;
-  image?: string;
+  image?: string | null;
   emailVerified: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -21,8 +21,8 @@ interface SessionData {
     userId: string;
     expiresAt: Date;
     token: string;
-    ipAddress?: string;
-    userAgent?: string;
+    ipAddress?: string | null;
+    userAgent?: string | null;
   };
 }
 
@@ -90,12 +90,16 @@ export default function Profile() {
             {sessionData.user?.name?.charAt(0)?.toUpperCase() || "U"}
           </AvatarFallback>
         </Avatar>
-        
+
         <div className="flex flex-col gap-2">
           <h1 className="text-2xl font-bold">用户资料</h1>
           <div className="space-y-1">
-            <p className="text-lg font-medium">{sessionData.user?.name || "未设置姓名"}</p>
-            <p className="text-gray-600">{sessionData.user?.email || "未设置邮箱"}</p>
+            <p className="text-lg font-medium">
+              {sessionData.user?.name || "未设置姓名"}
+            </p>
+            <p className="text-gray-600">
+              {sessionData.user?.email || "未设置邮箱"}
+            </p>
             <p className="text-sm text-green-600">
               状态: 已登录
               {sessionData.user?.emailVerified && " • 邮箱已验证"}
@@ -103,7 +107,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      
+
       <div className="mt-6 p-4 bg-gray-50 rounded-lg">
         <h3 className="font-semibold mb-2">会话信息</h3>
         <div className="text-sm space-y-1">
@@ -111,7 +115,12 @@ export default function Profile() {
           {sessionData.session?.token && (
             <p>会话ID: {sessionData.session.token.slice(0, 20)}...</p>
           )}
-          <p>创建时间: {sessionData.user?.createdAt ? sessionData.user.createdAt.toLocaleString('zh-CN') : "未知"}</p>
+          <p>
+            创建时间:{" "}
+            {sessionData.user?.createdAt
+              ? sessionData.user.createdAt.toLocaleString("zh-CN")
+              : "未知"}
+          </p>
         </div>
       </div>
     </div>

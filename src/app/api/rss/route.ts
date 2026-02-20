@@ -1,10 +1,9 @@
 import { Feed } from "feed";
-import getMarkdownContentForRss from '@/lib/posts/getMarkdownContentForRss';
-import { MarkdownType } from '@/lib/posts/types';
-
+import getMarkdownContentForRss from "@/lib/posts/getMarkdownContentForRss";
+import { MarkdownType } from "@/lib/posts/types";
 
 export async function GET() {
-  const siteURL = 'https://kexu.win';
+  const siteURL = "https://kexu.win";
   const date = new Date();
 
   const author = {
@@ -39,16 +38,15 @@ export async function GET() {
       link: `${siteURL}/posts/${post.id}`,
       description: post.description || post.title,
       author: [author],
-      date: new Date(post.update_date),
+      date: new Date(post.update_date || post.create_date || Date.now()),
     });
   }
 
   let rss2Content = feed.rss2();
 
-
   return new Response(rss2Content, {
     headers: {
-      'Content-Type': 'application/xml',
+      "Content-Type": "application/xml",
     },
   });
 }

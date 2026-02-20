@@ -21,7 +21,11 @@ const renderMarkdownBody = (markdownHtml: string) => {
   );
 };
 
-export default async function Post({ params }) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ postId: string }>;
+}) {
   const { postId } = await params;
   const markdownContent: MarkdownType = await getMarkdownContent(postId);
 
@@ -30,7 +34,9 @@ export default async function Post({ params }) {
       <PostTitle title={markdownContent.title} />
       <div className="flex flex-row items-center justify-between">
         <PostTags tags={markdownContent.tags} />
-        <PostDate date={markdownContent.update_date} />
+        {markdownContent.update_date && (
+          <PostDate date={markdownContent.update_date} />
+        )}
       </div>
       {renderMarkdownBody(markdownContent.content)}
       <CommentContainer postId={postId} />

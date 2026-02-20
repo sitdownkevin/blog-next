@@ -27,16 +27,24 @@ export async function generateStaticParams() {
   });
 }
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ rule: string }>;
+}) {
   const { rule } = await params;
 
   return {
-    title: `${caption[rule]} - Advanced Search`,
-    description: `Advanced search for ${caption[rule]}`,
+    title: `${caption[rule as keyof typeof caption]} - Advanced Search`,
+    description: `Advanced search for ${caption[rule as keyof typeof caption]}`,
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ rule: string }>;
+}) {
   const { rule } = await params;
   let data: JournalType[] = [];
   let title = "";
@@ -45,10 +53,13 @@ export default async function Page({ params }) {
   let subjectAreaTitle = "Subject Area";
 
   if (rule.startsWith("ustc_som")) {
-    data = await getData('ustc_som');
-    data = data.filter((journal) => journal.subjectArea === caption[rule]);
+    data = await getData("ustc_som");
+    data = data.filter(
+      (journal) =>
+        journal.subjectArea === caption[rule as keyof typeof caption],
+    );
     // console.log(data);
-    ({ title, link } = await getDescription('ustc_som'));
+    ({ title, link } = await getDescription("ustc_som"));
     subjectAreaTitle = "Level";
   } else {
     data = await getData(rule);
@@ -63,7 +74,12 @@ export default async function Page({ params }) {
   return (
     <div className="flex flex-col items-center space-y-4">
       <JournalClause journals={data} />
-      <JournalTable journals={data} tableCaption={caption[rule]} hideSubjectArea={hideSubjectArea} subjectAreaTitle={subjectAreaTitle} />
+      <JournalTable
+        journals={data}
+        tableCaption={caption[rule as keyof typeof caption]}
+        hideSubjectArea={hideSubjectArea}
+        subjectAreaTitle={subjectAreaTitle}
+      />
       <DescriptionCard title={title} link={link} />
     </div>
   );

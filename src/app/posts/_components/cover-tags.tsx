@@ -46,6 +46,7 @@ export function CoverTags({ tags }: { tags: string[] }) {
         const gradient = getGradient(tag);
         return (
           <p
+            key={tag}
             className={`bg-linear-to-r ${gradient.textFrom} ${gradient.textTo} bg-clip-text text-transparent text-xs font-bold`}
           >
             {tag}
