@@ -47,13 +47,8 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
 
 function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
   return (
-    <Button
-      variant="secondary"
-      size="sm"
-      onClick={handleShowMore}
-      className="w-full"
-    >
-      展开更多
+    <Button variant="outline" onClick={handleShowMore} className="w-full cursor-pointer">
+      +
     </Button>
   );
 }

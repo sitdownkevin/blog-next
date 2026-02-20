@@ -1,11 +1,13 @@
-import { Anton, Noto_Sans_SC } from "next/font/google";
+import { Anton, Noto_Serif_SC } from "next/font/google";
 
 const nameDisplayFont = Anton({
   weight: ["400"],
+  variable: "--font-anton",
 });
 
-const chineseFallbackFont = Noto_Sans_SC({
-  weight: ["400"],
+const chineseFallbackFont = Noto_Serif_SC({
+  weight: ["800"],
+  variable: "--font-noto-serif-sc",
 });
 
 export function PostTitle({ title }: { title: string }) {

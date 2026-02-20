@@ -1,14 +1,15 @@
-import { Anton, Noto_Sans_SC } from "next/font/google";
+import { Anton, Noto_Serif_SC } from "next/font/google";
+import Link from "next/link";
 
 const nameDisplayFont = Anton({
   weight: ["400"],
+  variable: "--font-anton",
 });
 
-const chineseFallbackFont = Noto_Sans_SC({
-  weight: ["400"],
+const chineseFallbackFont = Noto_Serif_SC({
+  weight: ["800"],
+  variable: "--font-noto-serif-sc",
 });
-
-import Link from "next/link";
 
 export function CoverTitle({
   title,
@@ -19,9 +20,9 @@ export function CoverTitle({
 }) {
   return (
     <div
-      className={`text-lg md:text-2xl truncate hover:opacity-80 select-none ${nameDisplayFont.className}`}
+      className={`text-lg md:text-2xl truncate hover:opacity-80 select-none ${nameDisplayFont.variable} ${chineseFallbackFont.variable}`}
       style={{
-        fontFamily: `${nameDisplayFont.style.fontFamily}, ${chineseFallbackFont.style.fontFamily}, sans-serif`,
+        fontFamily: "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
       }}
     >
       <Link href={`/posts/${postId}`} className="hover:underline" title={title}>
