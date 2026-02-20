@@ -12,7 +12,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "vitest",
-    "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run build"
+    "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run build",
+    "audit:components": "node scripts/audit-components.js",
+    "resolve:conflicts": "node scripts/resolve-conflicts.js"
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.10.0",
