@@ -12,11 +12,9 @@ $$
 X^{seq}=[x_1,x_2,\dots,x_n]^T\in R^{n\times k},x_i\in R^{k\times1}
 $$
 
-
 $$
 W^q,W^k,W^v\in R^{k\times h}
 $$
-
 
 $$
 Q=X^{seq} W^q\in R^{n\times h}\\
@@ -92,8 +90,6 @@ v_n^T
 \end{bmatrix}
 $$
 
-
 ### Multiple-Head Self-Attention
 
 有多个 $Q$ $K$ $V$
-

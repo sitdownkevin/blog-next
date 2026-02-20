@@ -8,7 +8,6 @@ export async function POST(req: Request) {
   const calculatedHash = calculateHash(task.message, nonce);
   const isValid = calculatedHash.startsWith("0".repeat(task.difficulty));
 
-
   try {
     const result: ValidateResult = {
       isValid,
@@ -19,10 +18,9 @@ export async function POST(req: Request) {
       },
     };
 
-    return new Response(
-      JSON.stringify(result),
-      { headers: { "Content-Type": "application/json" } }
-    );
+    return new Response(JSON.stringify(result), {
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
     return new Response(
       JSON.stringify({
@@ -33,9 +31,7 @@ export async function POST(req: Request) {
           image: `data:image/png;base64,`,
         },
       }),
-      { headers: { "Content-Type": "application/json" } }
+      { headers: { "Content-Type": "application/json" } },
     );
   }
-
-
 }

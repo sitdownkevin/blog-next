@@ -17,4 +17,4 @@ export type CommentToBeSubmittedType = {
   post_id: string;
   comment_text: string;
   comment_ts: number;
-}
+};

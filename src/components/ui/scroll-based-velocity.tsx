@@ -1,4 +1,5 @@
-"use client";;
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
@@ -12,21 +13,33 @@ import {
 
 import { cn } from "@/lib/utils";
 
-export const wrap = (min, max, v) => {
+export const wrap = (min: number, max: number, v: number): number => {
   const rangeSize = max - min;
   return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
 };
 
+interface VelocityScrollProps {
+  text: string;
+  default_velocity?: number;
+  className?: string;
+}
+
 export function VelocityScroll({
   text,
   default_velocity = 5,
-  className
-}) {
+  className,
+}: VelocityScrollProps) {
+  interface ParallaxTextProps {
+    children: React.ReactNode;
+    baseVelocity?: number;
+    className?: string;
+  }
+
   function ParallaxText({
     children,
     baseVelocity = 100,
-    className
-  }) {
+    className,
+  }: ParallaxTextProps) {
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
@@ -40,8 +53,8 @@ export function VelocityScroll({
     });
 
     const [repetitions, setRepetitions] = useState(1);
-    const containerRef = useRef(null);
-    const textRef = useRef(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const textRef = useRef<HTMLSpanElement>(null);
 
     useEffect(() => {
       const calculateRepetitions = () => {
@@ -61,7 +74,7 @@ export function VelocityScroll({
 
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
-    const directionFactor = React.useRef(1);
+    const directionFactor = React.useRef<number>(1);
     useAnimationFrame((t, delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
@@ -77,7 +90,10 @@ export function VelocityScroll({
     });
 
     return (
-      (<div className="w-full overflow-hidden whitespace-nowrap" ref={containerRef}>
+      <div
+        className="w-full overflow-hidden whitespace-nowrap"
+        ref={containerRef}
+      >
         <motion.div className={cn("inline-block", className)} style={{ x }}>
           {Array.from({ length: repetitions }).map((_, i) => (
             <span key={i} ref={i === 0 ? textRef : null}>
@@ -85,18 +101,18 @@ export function VelocityScroll({
             </span>
           ))}
         </motion.div>
-      </div>)
+      </div>
     );
   }
 
   return (
-    (<section className="relative w-full">
+    <section className="relative w-full">
       <ParallaxText baseVelocity={default_velocity} className={className}>
         {text}
       </ParallaxText>
       <ParallaxText baseVelocity={-default_velocity} className={className}>
         {text}
       </ParallaxText>
-    </section>)
+    </section>
   );
 }

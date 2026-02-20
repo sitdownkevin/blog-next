@@ -116,11 +116,9 @@ To better analyze the linear relationship between profit and expenses, we comput
 
 The table shows strong linear relationships between $y$ and $x_1, x_3$. But, the relationship between $y$ and $x_2$ is weak, so as $z_1$ and $z_2$. However, $z_1$ and $z_2$ are categorical variables, which just has values of 0 or 1. Therefore, generally profit has linear relationship with expenses.
 
-
 |     | $x_1$ | $x_2$ | $x_3$ | $z_1$ | $z_2$ |
 | --- | ----- | ----- | ----- | ----- | ----- |
 | $y$ | 0.97  | 0.13  | 0.73  | -0.06 | 0.03  |
-
 
 ### 2.2 Independence between Variables
 

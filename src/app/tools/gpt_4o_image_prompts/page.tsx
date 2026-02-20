@@ -1,32 +1,36 @@
-"use client"
+"use client";
 
-import Masonry from 'react-masonry-css'; // Import Masonry
+import Masonry from "react-masonry-css"; // Import Masonry
 import { Box } from "@/components/features/tools/gpt_4o_image_prompts/Box"; // Import Box component
 import { imageData } from "@/lib/tools/gpt_4o_image_prompts/data"; // Import image data
-
 
 // Define breakpoint columns for Masonry layout
 const breakpointColumnsObj = {
   default: 3, // Default to 3 columns
-  1100: 2,    // 2 columns for screens >= 1100px
-  700: 1      // 1 column for screens >= 700px
+  1100: 2, // 2 columns for screens >= 1100px
+  700: 1, // 1 column for screens >= 700px
 };
 
 export default function Page() {
-
-    // Data is now imported from src/lib/tools/gpt_4o_image_prompts/data.ts
-
+  // Data is now imported from src/lib/tools/gpt_4o_image_prompts/data.ts
 
   return (
-    <div className="w-full py-8 px-4 space-y-4"> {/* Remove flex-wrap */}
+    <div className="w-full py-8 px-4 space-y-4">
+      {" "}
+      {/* Remove flex-wrap */}
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="masonry-grid"
         columnClassName="masonry-grid_column"
       >
-        {imageData.map((item, index) => ( // Use imported imageData
+        {imageData.map(
+          (
+            item,
+            index, // Use imported imageData
+          ) => (
             <Box key={index} {...item} />
-        ))}
+          ),
+        )}
       </Masonry>
       {/* Add Masonry CSS styles */}
       <style jsx global>{`
@@ -41,7 +45,8 @@ export default function Page() {
         }
 
         /* Style your items */
-        .masonry-grid_column > div { /* Apply to the direct children of the column */
+        .masonry-grid_column > div {
+          /* Apply to the direct children of the column */
           margin-bottom: 16px; /* space between items */
         }
       `}</style>

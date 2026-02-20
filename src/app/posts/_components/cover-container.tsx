@@ -33,7 +33,7 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
       </div>
       {/* Use EnhancedMarkdownBody to render snippetHtml */}
       {searching && matter.snippetHtml && (
-        <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 w-full break-words">
+        <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 w-full wrap-break-word">
           <EnhancedMarkdownBody markdownHtml={matter.snippetHtml} />
         </div>
       )}
@@ -47,7 +47,11 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
 
 function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
   return (
-    <Button variant="outline" onClick={handleShowMore} className="w-full cursor-pointer">
+    <Button
+      variant="outline"
+      onClick={handleShowMore}
+      className="w-full cursor-pointer"
+    >
       +
     </Button>
   );

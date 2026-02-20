@@ -1,22 +1,21 @@
-"use client"
+"use client";
 
-import Masonry from 'react-masonry-css';
-import Image from 'next/image';
+import Masonry from "react-masonry-css";
+import Image from "next/image";
 
 const photos = Array.from({ length: 8 }, (_, index) => ({
   id: index + 1,
   src: `/assets/images/photos/g${index + 1}.webp`,
-  caption: ''
+  caption: "",
 }));
 
 const breakpointColumnsObj = {
   default: 4,
   1100: 3,
   700: 2,
-}
+};
 
 export default function Page() {
-
   return (
     <div className="w-full py-8 px-4 space-y-4">
       <h1 className="text-3xl font-bold">Gallery</h1>
@@ -52,5 +51,5 @@ export default function Page() {
         }
       `}</style>
     </div>
-  )
+  );
 }

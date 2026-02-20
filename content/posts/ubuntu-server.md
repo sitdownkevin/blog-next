@@ -67,6 +67,5 @@ echo '/dev/md0 /mnt/raid0 ext4 defaults,nofail 0 0' | sudo tee -a /etc/fstab # �
 2. 新版本的 1Panel 要求 `docker-compose`，而 `apt` 安装的是 `docker compose`，需要手动软链接
 
 ```shell
-sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose 
+sudo ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 ```
-

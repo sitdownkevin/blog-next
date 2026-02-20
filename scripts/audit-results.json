@@ -1,0 +1,742 @@
+{
+  "timestamp": "2026-02-20T11:55:07.654Z",
+  "packages": [
+    {
+      "name": "@radix-ui/react-accordion",
+      "currentVersion": "1.2.12",
+      "latestVersion": "1.2.12",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-alert-dialog",
+      "currentVersion": "1.1.15",
+      "latestVersion": "1.1.15",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-aspect-ratio",
+      "currentVersion": "1.1.8",
+      "latestVersion": "1.1.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-avatar",
+      "currentVersion": "1.1.11",
+      "latestVersion": "1.1.11",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-checkbox",
+      "currentVersion": "1.3.3",
+      "latestVersion": "1.3.3",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-collapsible",
+      "currentVersion": "1.1.12",
+      "latestVersion": "1.1.12",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-context-menu",
+      "currentVersion": "2.2.16",
+      "latestVersion": "2.2.16",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-dialog",
+      "currentVersion": "1.1.15",
+      "latestVersion": "1.1.15",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-dropdown-menu",
+      "currentVersion": "2.1.16",
+      "latestVersion": "2.1.16",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-hover-card",
+      "currentVersion": "1.1.15",
+      "latestVersion": "1.1.15",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-icons",
+      "currentVersion": "1.3.2",
+      "latestVersion": "1.3.2",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-label",
+      "currentVersion": "2.1.8",
+      "latestVersion": "2.1.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-menubar",
+      "currentVersion": "1.1.16",
+      "latestVersion": "1.1.16",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-navigation-menu",
+      "currentVersion": "1.2.14",
+      "latestVersion": "1.2.14",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-popover",
+      "currentVersion": "1.1.15",
+      "latestVersion": "1.1.15",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-progress",
+      "currentVersion": "1.1.8",
+      "latestVersion": "1.1.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-radio-group",
+      "currentVersion": "1.3.8",
+      "latestVersion": "1.3.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-scroll-area",
+      "currentVersion": "1.2.10",
+      "latestVersion": "1.2.10",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-select",
+      "currentVersion": "2.2.6",
+      "latestVersion": "2.2.6",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-separator",
+      "currentVersion": "1.1.8",
+      "latestVersion": "1.1.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-slider",
+      "currentVersion": "1.3.6",
+      "latestVersion": "1.3.6",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-slot",
+      "currentVersion": "1.2.4",
+      "latestVersion": "1.2.4",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-switch",
+      "currentVersion": "1.2.6",
+      "latestVersion": "1.2.6",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-tabs",
+      "currentVersion": "1.1.13",
+      "latestVersion": "1.1.13",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-toast",
+      "currentVersion": "1.2.15",
+      "latestVersion": "1.2.15",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-toggle",
+      "currentVersion": "1.1.10",
+      "latestVersion": "1.1.10",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-toggle-group",
+      "currentVersion": "1.1.11",
+      "latestVersion": "1.1.11",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "@radix-ui/react-tooltip",
+      "currentVersion": "1.2.8",
+      "latestVersion": "1.2.8",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "class-variance-authority",
+      "currentVersion": "0.7.1",
+      "latestVersion": "0.7.1",
+      "isOutdated": false,
+      "reactCompatibility": "unknown",
+      "severity": "MEDIUM",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "tailwind-merge",
+      "currentVersion": "3.5.0",
+      "latestVersion": "3.5.0",
+      "isOutdated": false,
+      "reactCompatibility": "unknown",
+      "severity": "MEDIUM",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "lucide-react",
+      "currentVersion": "0.575.0",
+      "latestVersion": "0.575.0",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "cmdk",
+      "currentVersion": "1.1.1",
+      "latestVersion": "1.1.1",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "sonner",
+      "currentVersion": "2.0.7",
+      "latestVersion": "2.0.7",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    },
+    {
+      "name": "vaul",
+      "currentVersion": "1.1.2",
+      "latestVersion": "1.1.2",
+      "isOutdated": false,
+      "reactCompatibility": "yes",
+      "severity": "LOW",
+      "hasMajorUpdate": false
+    }
+  ],
+  "components": [
+    {
+      "name": "accordion.jsx",
+      "basename": "accordion",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "accordion.tsx",
+      "basename": "accordion",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "alert-dialog.tsx",
+      "basename": "alert-dialog",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "alert.tsx",
+      "basename": "alert",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "aspect-ratio.tsx",
+      "basename": "aspect-ratio",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "avatar.tsx",
+      "basename": "avatar",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "badge.jsx",
+      "basename": "badge",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "badge.tsx",
+      "basename": "badge",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "breadcrumb.tsx",
+      "basename": "breadcrumb",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "button.tsx",
+      "basename": "button",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "calendar.tsx",
+      "basename": "calendar",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "card.tsx",
+      "basename": "card",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "carousel.jsx",
+      "basename": "carousel",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "carousel.tsx",
+      "basename": "carousel",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "chart.tsx",
+      "basename": "chart",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "checkbox.tsx",
+      "basename": "checkbox",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "collapsible.jsx",
+      "basename": "collapsible",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "collapsible.tsx",
+      "basename": "collapsible",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "command.tsx",
+      "basename": "command",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "context-menu.tsx",
+      "basename": "context-menu",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "dialog.tsx",
+      "basename": "dialog",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "drawer.tsx",
+      "basename": "drawer",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "dropdown-menu.tsx",
+      "basename": "dropdown-menu",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "form.tsx",
+      "basename": "form",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "hover-card.tsx",
+      "basename": "hover-card",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "input-otp.tsx",
+      "basename": "input-otp",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "input.jsx",
+      "basename": "input",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "input.tsx",
+      "basename": "input",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "label.jsx",
+      "basename": "label",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "label.tsx",
+      "basename": "label",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "menubar.tsx",
+      "basename": "menubar",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "navigation-menu.jsx",
+      "basename": "navigation-menu",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "navigation-menu.tsx",
+      "basename": "navigation-menu",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "pagination.tsx",
+      "basename": "pagination",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "popover.jsx",
+      "basename": "popover",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "popover.tsx",
+      "basename": "popover",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "progress.tsx",
+      "basename": "progress",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "radio-group.tsx",
+      "basename": "radio-group",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "resizable.tsx",
+      "basename": "resizable",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "scroll-area.tsx",
+      "basename": "scroll-area",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "scroll-based-velocity.jsx",
+      "basename": "scroll-based-velocity",
+      "extension": ".jsx",
+      "isCustom": true,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "select.tsx",
+      "basename": "select",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "separator.tsx",
+      "basename": "separator",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "sheet.tsx",
+      "basename": "sheet",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "shiny-button.jsx",
+      "basename": "shiny-button",
+      "extension": ".jsx",
+      "isCustom": true,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "sidebar.tsx",
+      "basename": "sidebar",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "skeleton.tsx",
+      "basename": "skeleton",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "slider.tsx",
+      "basename": "slider",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "sonner.tsx",
+      "basename": "sonner",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "sparkles-text.jsx",
+      "basename": "sparkles-text",
+      "extension": ".jsx",
+      "isCustom": true,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "switch.tsx",
+      "basename": "switch",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "table.tsx",
+      "basename": "table",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "tabs.tsx",
+      "basename": "tabs",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "textarea.tsx",
+      "basename": "textarea",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "toaster.jsx",
+      "basename": "toaster",
+      "extension": ".jsx",
+      "isCustom": false,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "toggle-group.tsx",
+      "basename": "toggle-group",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "toggle.tsx",
+      "basename": "toggle",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "tooltip.tsx",
+      "basename": "tooltip",
+      "extension": ".tsx",
+      "isCustom": false,
+      "needsTsxMigration": false
+    },
+    {
+      "name": "typing-animation.jsx",
+      "basename": "typing-animation",
+      "extension": ".jsx",
+      "isCustom": true,
+      "needsTsxMigration": true
+    },
+    {
+      "name": "word-fade-in.jsx",
+      "basename": "word-fade-in",
+      "extension": ".jsx",
+      "isCustom": true,
+      "needsTsxMigration": true
+    }
+  ],
+  "summary": {
+    "total": 34,
+    "outdated": 0,
+    "highSeverity": 0,
+    "mediumSeverity": 2,
+    "componentsTotal": 60,
+    "customComponents": 5,
+    "jsxComponents": 14
+  }
+}

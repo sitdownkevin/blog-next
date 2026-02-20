@@ -9,7 +9,6 @@ export default function PostLayout({
 }: {
   children: React.ReactNode;
 }) {
-
   return (
     // Add the width constraint wrapper div here
     <div className="w-full py-8 px-4">

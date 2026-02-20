@@ -13,7 +13,7 @@ export default function SignIn() {
       setIsLoading(true);
       // 获取当前页面 URL 作为回调地址
       // const currentURL = typeof window !== 'undefined' ? window.location.href : '/';
-      
+
       await authClient.signIn.social({
         provider: "github",
         // callbackURL: currentURL,

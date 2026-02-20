@@ -64,7 +64,7 @@ export function SearchBar({
           <div className="absolute inset-0 flex items-center">
             <div className="flex items-center gap-3 px-4 flex-1">
               <Search
-                className={`h-4 w-4 flex-shrink-0 transition-colors ${
+                className={`h-4 w-4 shrink-0 transition-colors ${
                   isFocused ? "text-primary" : "text-muted-foreground"
                 }`}
               />
@@ -79,7 +79,7 @@ export function SearchBar({
                 className="flex-1 border-0 bg-transparent p-0 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
               />
             </div>
-            <div className="flex items-center gap-2 px-4 flex-shrink-0">
+            <div className="flex items-center gap-2 px-4 shrink-0">
               {osShortcut && (
                 <Badge
                   variant="secondary"

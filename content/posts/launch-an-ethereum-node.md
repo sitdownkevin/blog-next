@@ -7,8 +7,6 @@ update_date: 2025-03-31
 
 ## Contents
 
-
-
 ## 需要的材料
 
 - 硬件：一块容量够大的硬盘或 RAID（至少 4 T）
@@ -52,8 +50,6 @@ geth --mainnet --http --http.api eth,net,engine,admin --ipcpath=/mnt/raid/ethere
 geth --mainnet --datadir /mnt/raid/ethereum/execution --http --ipcpath /mnt/raid/ethereum/execution/geth.ipc
 ```
 
-
-
 ```shell
 geth --datadir /mnt/raid/ethereum/execution \
      --syncmode "snap" \
@@ -91,8 +87,6 @@ lighthouse beacon --network mainnet \
                   --discovery-port 7002
 ```
 
-
-
 ### 思路二：`Erigon`
 
 相比于 `Geth` + `Lighthouse` 的方式，`Erigon` 自带了 Beacon，不要安装额外的共识层。并且，`Erigon` 对于数据有很大的压缩，存储空间显著降低。
@@ -120,7 +114,7 @@ lighthouse beacon --network mainnet \
    `config.toml`
 
    ```toml
-   "prune.mode" = "archive" 
+   "prune.mode" = "archive"
    datadir = '/Volumes/Disk/data-archive'
    chain = "mainnet"
    http = true
@@ -155,19 +149,19 @@ make rpcdaemon
 ### 参考
 
 - [Geth vs Erigon: Deep dive into RPC methods on Ethereum clients
-](https://docs.chainstack.com/docs/geth-vs-erigon-deep-dive-into-rpc-methods-on-ethereum-clients)
+  ](https://docs.chainstack.com/docs/geth-vs-erigon-deep-dive-into-rpc-methods-on-ethereum-clients)
 
 - [JSON-RPC Server
-](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
+  ](https://geth.ethereum.org/docs/interacting-with-geth/rpc)
 
 ### 常用命令
 
-````shell
+```shell
 curl --location --request GET 'http://localhost:8545/health' \
 --header 'X-ERIGON-HEALTHCHECK: min_peer_count1' \
 --header 'X-ERIGON-HEALTHCHECK: synced' \
 --header 'X-ERIGON-HEALTHCHECK: max_seconds_behind600'
-````
+```
 
 ```shell
 curl -X POST \

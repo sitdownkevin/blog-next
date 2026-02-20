@@ -1,74 +1,74 @@
 {
-    "source": {
-        "title": "Senior Scholars' List of Premier Journals",
-        "link": "https://aisnet.org/page/SeniorScholarListofPremierJournals/"
+  "source": {
+    "title": "Senior Scholars' List of Premier Journals",
+    "link": "https://aisnet.org/page/SeniorScholarListofPremierJournals/"
+  },
+  "data": [
+    {
+      "title": "Decision Support Systems",
+      "subjectArea": "",
+      "printIssn": "0167-9236",
+      "onlineIssn": ""
     },
-    "data": [
-        {
-            "title": "Decision Support Systems",
-            "subjectArea": "",
-            "printIssn": "0167-9236",
-            "onlineIssn": ""
-        },
-        {
-            "title": "European Journal of Information Systems",
-            "subjectArea": "",
-            "printIssn": "0960-085X",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Information & Management",
-            "subjectArea": "",
-            "printIssn": "0378-7206",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Information and Organization",
-            "subjectArea": "",
-            "printIssn": "1471-7727",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Information Systems Journal",
-            "subjectArea": "",
-            "printIssn": "1350-1917",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Information Systems Research",
-            "subjectArea": "",
-            "printIssn": "1047-7047",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of the Association for Information Systems",
-            "subjectArea": "",
-            "printIssn": "1536-9323",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Information Technology",
-            "subjectArea": "",
-            "printIssn": "0268-3962",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Management Information Systems",
-            "subjectArea": "",
-            "printIssn": "0742-1222",
-            "onlineIssn": ""
-        },
-        {
-            "title": "Journal of Strategic Information Systems",
-            "subjectArea": "",
-            "printIssn": "0963-8687",
-            "onlineIssn": ""
-        },
-        {
-            "title": "MIS Quarterly",
-            "subjectArea": "",
-            "printIssn": "0276-7783",
-            "onlineIssn": ""
-        }
-    ]
+    {
+      "title": "European Journal of Information Systems",
+      "subjectArea": "",
+      "printIssn": "0960-085X",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Information & Management",
+      "subjectArea": "",
+      "printIssn": "0378-7206",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Information and Organization",
+      "subjectArea": "",
+      "printIssn": "1471-7727",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Information Systems Journal",
+      "subjectArea": "",
+      "printIssn": "1350-1917",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Information Systems Research",
+      "subjectArea": "",
+      "printIssn": "1047-7047",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of the Association for Information Systems",
+      "subjectArea": "",
+      "printIssn": "1536-9323",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Information Technology",
+      "subjectArea": "",
+      "printIssn": "0268-3962",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Management Information Systems",
+      "subjectArea": "",
+      "printIssn": "0742-1222",
+      "onlineIssn": ""
+    },
+    {
+      "title": "Journal of Strategic Information Systems",
+      "subjectArea": "",
+      "printIssn": "0963-8687",
+      "onlineIssn": ""
+    },
+    {
+      "title": "MIS Quarterly",
+      "subjectArea": "",
+      "printIssn": "0276-7783",
+      "onlineIssn": ""
+    }
+  ]
 }

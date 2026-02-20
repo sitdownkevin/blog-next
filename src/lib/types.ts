@@ -11,10 +11,10 @@ export type DescriptionType = {
 };
 
 export type MenubarItem = {
-    title: string;
-    item: boolean;
-    href?: string;
-    description?: string;
-    alias?: string;
-    subItems?: MenubarItem[];
-}
+  title: string;
+  item: boolean;
+  href?: string;
+  description?: string;
+  alias?: string;
+  subItems?: MenubarItem[];
+};

@@ -134,7 +134,7 @@ function PersonalIntroductionItemElement({
       {cvItem.content ? (
         <>
           {cvItem.title || cvItem.subtitle ? <br /> : null}
-          <span className="text-gray-600 dark:text-gray-300 wrap-break-words whitespace-pre-line">
+          <span className="text-gray-600 dark:text-gray-300 wrap-wrap-break-word whitespace-pre-line">
             {cvItem.content}
           </span>
         </>

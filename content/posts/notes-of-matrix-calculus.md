@@ -18,6 +18,7 @@ update_date: 2024-10-03
 $f$
 
 $x_{p\times1}=(x_1,x_2,\dots,x_p)^T$
+
 $$
 \frac{\partial f}{\partial x}_{p\times1}=(\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\dots,\frac{\partial f}{\partial x_p})^T
 $$
@@ -27,6 +28,7 @@ $$
 $f_{m\times1}=(f_1,f_2,\dots,f_m)^T$
 
 $x$
+
 $$
 \frac{\partial f}{\partial x}_{1\times m}=(\frac{\partial f_1}{\partial x},\frac{\partial f_2}{\partial x},\dots,\frac{\partial f_m}{\partial x})
 $$
@@ -36,6 +38,7 @@ $$
 $f_{m\times1}=(f_1,f_2,\dots,f_m)^T$
 
 $x_{p\times1}=(x_1,x_2,\dots,x_p)^T$
+
 $$
 \frac{\partial f}{\partial x}_{p\times m}=
 \begin{bmatrix}
@@ -51,6 +54,7 @@ $$
 $f$
 
 $x_{p\times q}=\begin{bmatrix}x_{11} & x_{12} & \cdots & x_{1q}\\x_{21} & x_{22} & \cdots & x_{2q}\\\vdots & \vdots &\ddots & \vdots\\x_{p1} & x_{p2} & \cdots & x_{pq}\end{bmatrix}$
+
 $$
 \frac{\partial f}{\partial x}_{p\times q}=\begin{bmatrix}
 \frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{12}} & \cdots & \frac{\partial f}{\partial x_{1q}}\\
@@ -65,6 +69,7 @@ $$
 $f_{m\times n}=\begin{bmatrix}f_{11} & f_{12} & \cdots & f_{1n} \\ f_{21} & f_{22} & \cdots & f_{2n}\\\vdots&\vdots&\ddots&\vdots\\f_{m1}& f_{m2} &\cdots & f_{mn}\end{bmatrix}$
 
 $x$
+
 $$
 \frac{\partial f}{\partial x}_{n\times m}=\begin{bmatrix}
 \frac{\partial f_{11}}{\partial x} & \frac{\partial f_{21}}{\partial x} & \cdots & \frac{\partial f_{m1}}{\partial x}\\

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { authClient } from "@/auth-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -249,7 +249,7 @@ export function CommentSection({ postId }: { postId: string }) {
   }, []);
 
   // 获取评论
-  const loadComments = async () => {
+  const loadComments = useCallback(async () => {
     setIsLoadingComments(true);
     setError(null);
 
@@ -262,11 +262,11 @@ export function CommentSection({ postId }: { postId: string }) {
     } finally {
       setIsLoadingComments(false);
     }
-  };
+  }, [postId]);
 
   useEffect(() => {
     loadComments();
-  }, [postId]);
+  }, [loadComments]);
 
   const handleCommentAdded = async (newComment: CommentType) => {
     // 重新加载评论列表以确保数据同步

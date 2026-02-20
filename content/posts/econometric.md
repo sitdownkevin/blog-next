@@ -24,11 +24,6 @@ $$
 \beta_1=\frac{Cov(Y_i,x_i)}{V(x_i)}
 $$
 
-
-
-
-
-
 $$
 Y_i=\beta_0+\beta_1x_{1i}+\dots+\beta_k x_{ki}+\dots+\beta_{K}x_{Ki}+e_i
 $$
@@ -42,10 +37,6 @@ $$
 $$
 
 - $\tilde x_{ki}\in \mathbb{R}^K$
-
-
-
-
 
 ---
 
@@ -67,7 +58,6 @@ X^Ty=X^TX\beta\\
 \hat\beta=\beta+(X^TX)^{-1}X^T\epsilon
 $$
 
-
 $$
 \hat y=X\hat \beta =X(X^TX)^{-1}X^T y=Py\\
 \downarrow\\
@@ -76,11 +66,7 @@ $$
 \hat\epsilon=M(X\beta+\epsilon)=MX\beta+M\epsilon=M\epsilon
 $$
 
-
 - $PX=X\rightarrow (I-P)X=MX=0$
-
-
-
 
 $$
 y=X\beta+\epsilon
@@ -94,7 +80,6 @@ $$
 \mathbb{\hat V}[\hat\beta_{OLS}]=s^2 (X^TX)^{-1}
 $$
 
-
 $$
 \begin{aligned}
 \mathbb{\hat V}[\hat\beta_{OLS}]&=E[(\hat \beta_{OLS}-E[\hat\beta_{OLS}])^2]\\
@@ -106,11 +91,7 @@ $$
 \end{aligned}
 $$
 
-
-
-
 ---
-
 
 $$
 y=X\beta+\epsilon
@@ -120,7 +101,6 @@ $$
 \hat y=X\hat\beta\\
 \hat\epsilon=\hat y-y
 $$
-
 
 $$
 \arg\min_{\beta} \epsilon^T\epsilon=||y-X\beta||^2\\
@@ -148,11 +128,12 @@ $$
 &=(X^TX)^{-1}X^T \mathbb{V}[\epsilon]X(X^TX)^{-1}
 \end{aligned}
 $$
+
 上面这个算不出来，因为 $\mathbb{V}[\epsilon]$ 不知道
+
 $$
 \mathbb{\hat V}_{\mathrm{HCE}}[\hat\beta]=(X^TX)^{-1}X^T \mathrm{diag}(\hat\sigma_1,\dots,\hat\sigma_n) X(X^TX)^{-1}
 $$
-
 
 $\epsilon_i$ 如果是独立的，则 $\mathbb{V}[\epsilon]=\mathrm{diag} (\sigma_1^2,\dots,\sigma_n^2)$
 

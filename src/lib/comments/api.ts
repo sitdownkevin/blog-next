@@ -1,6 +1,10 @@
 import { CommentType, CommentToBeSubmittedType } from "@/lib/comments/types";
 
-export async function fetchComments({ postId }: { postId: string }): Promise<CommentType[]> {
+export async function fetchComments({
+  postId,
+}: {
+  postId: string;
+}): Promise<CommentType[]> {
   try {
     const response = await fetch(`/api/comments?postId=${postId}`, {
       method: "GET",
@@ -14,9 +18,10 @@ export async function fetchComments({ postId }: { postId: string }): Promise<Com
   }
 }
 
-export async function postComment(
-  comment: { postId: string; commentText: string }
-): Promise<CommentType> {
+export async function postComment(comment: {
+  postId: string;
+  commentText: string;
+}): Promise<CommentType> {
   try {
     const response = await fetch("/api/comments", {
       method: "POST",
@@ -36,9 +41,7 @@ export async function postComment(
   }
 }
 
-export async function deleteComment(
-  commentId: string
-): Promise<any> {
+export async function deleteComment(commentId: string): Promise<any> {
   try {
     const response = await fetch("/api/comments/delete", {
       method: "DELETE",

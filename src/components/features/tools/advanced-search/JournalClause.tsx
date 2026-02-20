@@ -12,7 +12,6 @@ function constructISSNQueryForScopus(journals: JournalType[]): string {
   return issnClauses;
 }
 
-
 function constructISSNQueryForWos(journals: JournalType[]): string {
   let issnClauses = "IS=(";
   for (const journal of journals) {
@@ -37,9 +36,7 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
 
   return (
     <div className="relative rounded-lg border backdrop-blur-xs bg-muted/30 p-4">
-      <div className="text-sm font-medium text-muted-foreground">
-        {title}
-      </div>
+      <div className="text-sm font-medium text-muted-foreground">{title}</div>
       <div className="absolute right-2 top-2 flex gap-1">
         <button
           onClick={() => setCollapsed(!collapsed)}
@@ -60,7 +57,7 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
               collapsed ? "rotate-180" : ""
             }`}
           >
-            <path d="m18 15-6-6-6 6"/>
+            <path d="m18 15-6-6-6 6" />
           </svg>
         </button>
 
@@ -113,7 +110,6 @@ function CodeBlock({ code, title }: { code: string; title: string }) {
     </div>
   );
 }
-
 
 export default function JournalClause({
   journals,
