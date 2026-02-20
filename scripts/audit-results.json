@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-20T11:51:02.727Z",
+  "timestamp": "2026-02-20T11:55:07.654Z",
   "packages": [
     {
       "name": "@radix-ui/react-accordion",
@@ -21,18 +21,18 @@
     },
     {
       "name": "@radix-ui/react-aspect-ratio",
-      "currentVersion": "1.1.7",
+      "currentVersion": "1.1.8",
       "latestVersion": "1.1.8",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
     },
     {
       "name": "@radix-ui/react-avatar",
-      "currentVersion": "1.1.10",
+      "currentVersion": "1.1.11",
       "latestVersion": "1.1.11",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -102,9 +102,9 @@
     },
     {
       "name": "@radix-ui/react-label",
-      "currentVersion": "2.1.7",
+      "currentVersion": "2.1.8",
       "latestVersion": "2.1.8",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -138,9 +138,9 @@
     },
     {
       "name": "@radix-ui/react-progress",
-      "currentVersion": "1.1.7",
+      "currentVersion": "1.1.8",
       "latestVersion": "1.1.8",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -174,9 +174,9 @@
     },
     {
       "name": "@radix-ui/react-separator",
-      "currentVersion": "1.1.7",
+      "currentVersion": "1.1.8",
       "latestVersion": "1.1.8",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -192,9 +192,9 @@
     },
     {
       "name": "@radix-ui/react-slot",
-      "currentVersion": "1.2.3",
+      "currentVersion": "1.2.4",
       "latestVersion": "1.2.4",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -219,9 +219,9 @@
     },
     {
       "name": "@radix-ui/react-toast",
-      "currentVersion": "1.2.5",
+      "currentVersion": "1.2.15",
       "latestVersion": "1.2.15",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -264,18 +264,18 @@
     },
     {
       "name": "tailwind-merge",
-      "currentVersion": "2.6.0",
+      "currentVersion": "3.5.0",
       "latestVersion": "3.5.0",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "unknown",
       "severity": "MEDIUM",
-      "hasMajorUpdate": true
+      "hasMajorUpdate": false
     },
     {
       "name": "lucide-react",
-      "currentVersion": "0.542.0",
+      "currentVersion": "0.575.0",
       "latestVersion": "0.575.0",
-      "isOutdated": true,
+      "isOutdated": false,
       "reactCompatibility": "yes",
       "severity": "LOW",
       "hasMajorUpdate": false
@@ -732,7 +732,7 @@
   ],
   "summary": {
     "total": 34,
-    "outdated": 9,
+    "outdated": 0,
     "highSeverity": 0,
     "mediumSeverity": 2,
     "componentsTotal": 60,
