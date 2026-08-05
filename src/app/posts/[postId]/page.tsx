@@ -6,8 +6,6 @@ import { PostTitle } from "./_components/post-title";
 import { PostDate } from "./_components/post-date";
 import { PostTags } from "./_components/post-tags";
 
-import { Container as CommentContainer } from "@/components/features/comment/Container";
-
 import "katex/dist/katex.min.css";
 import "./markdown.css";
 import "./katex.css";
@@ -39,7 +37,6 @@ export default async function Post({
         )}
       </div>
       {renderMarkdownBody(markdownContent.content)}
-      <CommentContainer postId={postId} />
     </div>
   );
 }

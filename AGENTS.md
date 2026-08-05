@@ -8,7 +8,6 @@ This document provides essential information for AI coding agents working on thi
 - **Language**: TypeScript 5.8.2 (strict mode disabled)
 - **Package Manager**: **pnpm** (always use `pnpm` commands)
 - **Styling**: Tailwind CSS 4.1.12 with shadcn/ui components
-- **Authentication**: better-auth with MongoDB
 - **Content**: Markdown-based blog posts with remark/rehype
 - **Deployment**: Vercel
 
@@ -55,16 +54,12 @@ blog-next/
 │   ├── components/
 │   │   ├── ui/                 # shadcn/ui components (DO NOT manually edit)
 │   │   └── features/           # Feature-specific components
-│   │       ├── auth/
-│   │       ├── comment/
 │   │       └── posts/
-│   ├── lib/
-│   │   ├── hooks/              # Custom React hooks
-│   │   ├── services/           # Service layer (API calls, business logic)
-│   │   ├── utils/              # Utility functions
-│   │   └── types/              # TypeScript type definitions
-│   ├── auth.ts                 # Server-side auth config
-│   └── auth-client.ts          # Client-side auth
+│   └── lib/
+│       ├── hooks/              # Custom React hooks
+│       ├── services/           # Service layer (API calls, business logic)
+│       ├── utils/              # Utility functions
+│       └── types/              # TypeScript type definitions
 ├── content/                    # Content directory
 │   └── posts/                  # Markdown blog posts (.md files)
 └── public/                     # Static assets
@@ -243,7 +238,6 @@ try {
 - **Date Handling**: date-fns
 - **Animations**: framer-motion
 - **Markdown**: gray-matter, remark, rehype
-- **Database**: MongoDB with native driver
 
 ## Common Tasks
 
