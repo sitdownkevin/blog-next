@@ -8,10 +8,12 @@ export function CoverTitle({
   postId: string;
 }) {
   return (
-    <div className="font-display text-lg md:text-2xl font-semibold tracking-tight truncate hover:opacity-80 select-none">
-      <Link href={`/posts/${postId}`} className="hover:underline" title={title}>
-        {title}
-      </Link>
-    </div>
+    <Link
+      href={`/posts/${postId}`}
+      className="font-display text-base sm:text-lg font-semibold tracking-tight text-balance group-hover:text-claude-orange transition-colors"
+      title={title}
+    >
+      {title}
+    </Link>
   );
 }

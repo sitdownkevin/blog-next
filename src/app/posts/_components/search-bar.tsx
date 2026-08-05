@@ -2,9 +2,8 @@ import { useState, useEffect, useRef } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
-import { Search, Keyboard } from "lucide-react";
+import { Search } from "lucide-react";
 
-// SearchBar Component
 interface SearchBarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
@@ -19,7 +18,6 @@ export function SearchBar({
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Effect to handle keyboard shortcuts (Cmd/Ctrl+K to focus, Esc to blur)
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if ((event.metaKey || event.ctrlKey) && event.key === "k") {
@@ -40,63 +38,48 @@ export function SearchBar({
     };
   }, []);
 
-  const handleFocus = () => {
-    setIsFocused(true);
-  };
-
-  const handleBlur = () => {
-    setIsFocused(false);
-  };
-
   return (
-    <div className="mt-4 mb-10 w-full max-w-lg mx-auto px-4 sm:px-0">
+    <div className="w-full mb-8">
       <div
         className={`
           relative w-full h-11 rounded-md border bg-background transition-colors duration-200
           ${
             isFocused || searchQuery
-              ? "border-primary ring-1 ring-primary/30"
-              : "border-border hover:border-primary/40"
+              ? "border-claude-orange ring-1 ring-claude-orange/30"
+              : "border-border hover:border-claude-orange/40"
           }
         `}
       >
         <div className="absolute inset-0 flex items-center">
-          <div className="flex items-center gap-3 px-3 flex-1">
+          <div className="flex items-center gap-3 px-3 flex-1 min-w-0">
             <Search
               className={`h-4 w-4 shrink-0 transition-colors ${
-                isFocused ? "text-primary" : "text-muted-foreground"
+                isFocused ? "text-claude-orange" : "text-muted-foreground"
               }`}
             />
             <Input
               ref={inputRef}
               type="text"
-              placeholder="搜索文章标题、描述、标签或内容..."
+              placeholder="Search titles, tags, or content..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              onFocus={handleFocus}
-              onBlur={handleBlur}
+              onFocus={() => setIsFocused(true)}
+              onBlur={() => setIsFocused(false)}
               className="flex-1 border-0 bg-transparent p-0 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
             />
           </div>
-          <div className="flex items-center gap-2 px-3 shrink-0">
-            {osShortcut && (
+          {osShortcut && (
+            <div className="flex items-center px-3 shrink-0">
               <Badge
                 variant="secondary"
-                className={`text-xs font-sans px-2 py-0.5 hidden sm:inline-flex transition-opacity ${
+                className={`text-xs font-mono px-2 py-0.5 hidden sm:inline-flex transition-opacity ${
                   isFocused ? "opacity-50" : "opacity-100"
                 }`}
               >
                 {osShortcut}
               </Badge>
-            )}
-            <Keyboard
-              className={`h-4 w-4 transition-colors ${
-                isFocused
-                  ? "text-primary opacity-50"
-                  : "text-muted-foreground opacity-50"
-              }`}
-            />
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

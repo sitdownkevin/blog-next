@@ -22,22 +22,28 @@ function FooterLink({
 
 export function Footer() {
   return (
-    <div className="w-full py-4 flex flex-row justify-center space-x-8 md:space-x-16 border-t border-border">
-      <div className="flex flex-col gap-0.5">
-        <span className="text-xxs font-semibold tracking-wide">About</span>
+    <footer className="w-full py-8 px-4 flex flex-row justify-center gap-10 sm:gap-16 md:gap-20 border-t border-border">
+      <div className="flex flex-col gap-1.5">
+        <span className="text-xxs font-semibold tracking-wide text-foreground/80">
+          About
+        </span>
         <FooterLink href="/about/resume">Resume</FooterLink>
         <FooterLink href="/about/gallery">Gallery</FooterLink>
         <FooterLink href="/about/get_my_wx">WeChat</FooterLink>
       </div>
-      <div className="flex flex-col gap-0.5">
-        <span className="text-xxs font-semibold tracking-wide">Tools</span>
+      <div className="flex flex-col gap-1.5">
+        <span className="text-xxs font-semibold tracking-wide text-foreground/80">
+          Tools
+        </span>
         <FooterLink href="/tools/advanced_search">Advanced Search</FooterLink>
         <FooterLink href="/tools/gpt_4o_image_prompts">
           GPT-4o Prompts
         </FooterLink>
       </div>
-      <div className="flex flex-col gap-0.5">
-        <span className="text-xxs font-semibold tracking-wide">Projects</span>
+      <div className="flex flex-col gap-1.5">
+        <span className="text-xxs font-semibold tracking-wide text-foreground/80">
+          Projects
+        </span>
         <FooterLink href="https://github.com/sitdownkevin/Blackboard-Enhanced">
           BB Enhanced
         </FooterLink>
@@ -54,6 +60,6 @@ export function Footer() {
           S-R-H-C
         </FooterLink>
       </div>
-    </div>
+    </footer>
   );
 }

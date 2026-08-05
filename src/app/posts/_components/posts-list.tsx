@@ -107,6 +107,15 @@ export function PostsList({
 
   return (
     <div className="w-full flex flex-col py-8 px-4">
+      <div className="flex flex-col gap-2 mb-8">
+        <h1 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight text-balance">
+          Posts
+        </h1>
+        <p className="text-sm text-muted-foreground">
+          Notes on research, tools, and building things.
+        </p>
+      </div>
+
       <SearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}

@@ -7,9 +7,8 @@ import projectsData from "../../../content/data/personal-intro/projects.json";
 import publicationsData from "../../../content/data/personal-intro/publications.json";
 
 const sectionTitleClass =
-  "font-display text-2xl font-semibold tracking-tight text-balance";
+  "font-display text-xl font-semibold tracking-tight text-balance";
 
-// Type definitions based on JSON structure
 type Location = {
   city: string;
   province: string;
@@ -43,6 +42,7 @@ type ProjectItem = {
   location: Location;
   description: string;
   url: string;
+  featured?: boolean;
 };
 
 type PublicationItem = {
@@ -53,256 +53,387 @@ type PublicationItem = {
   volume: string;
   pages: string;
   url: string;
+  summary?: string;
+  featured?: boolean;
 };
 
-// Helper function to format location
-function formatLocation(location: Location): string {
-  return `${location.city}, ${location.province}`;
+export type LatestPost = {
+  id: string;
+  title: string;
+  description?: string;
+  create_date?: string;
+  update_date?: string;
+};
+
+const EN_MONTH_ABBR: Record<string, string> = {
+  January: "Jan",
+  February: "Feb",
+  March: "Mar",
+  April: "Apr",
+  May: "May",
+  June: "Jun",
+  July: "Jul",
+  August: "Aug",
+  September: "Sep",
+  October: "Oct",
+  November: "Nov",
+  December: "Dec",
+};
+
+/** Compact period for timeline rows so dates stay on one line. */
+function formatPeriodCompact(
+  period: { start: string; end: string },
+  lang: "en" | "zh",
+): string {
+  if (lang === "zh") {
+    return `${period.start.replace(/\s+/g, "")} - ${period.end.replace(/\s+/g, "")}`;
+  }
+
+  const shorten = (value: string) =>
+    value.replace(
+      /\b(January|February|March|April|May|June|July|August|September|October|November|December)\b/g,
+      (month) => EN_MONTH_ABBR[month] || month,
+    );
+
+  return `${shorten(period.start)} - ${shorten(period.end)}`;
 }
 
-// Helper function to format period
-function formatPeriod(period: { start: string; end: string }): string {
-  return `${period.start} - ${period.end}`;
+function formatPostDate(value?: string, lang: "en" | "zh" = "en"): string {
+  if (!value) return "";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toLocaleDateString(lang === "zh" ? "zh-CN" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
-// Helper function to format publication in APA style with JSX
-function formatAPAPublicationJSX(pub: PublicationItem) {
-  const { authors, year, title, journal, volume, pages } = pub;
-
-  return (
-    <>
-      {authors} ({year}). {title}. <em>{journal}</em>
-      {volume && `, ${volume}`}
-      {pages && `, ${pages}`}.
-    </>
-  );
+function displayName(
+  name: { first: string; last: string },
+  lang: "en" | "zh",
+): string {
+  return lang === "zh" ? `${name.last}${name.first}` : `${name.first} ${name.last}`;
 }
 
-function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
+function Hero({ lang }: { lang: "en" | "zh" }) {
   const data = (abstractData as any)[lang] || abstractData.en;
-  const fullName = `${data.name.first} ${data.name.last}`;
+  const fullName = displayName(data.name, lang);
   const locationStr = `${data.location.city}, ${data.location.country}`;
+  const postsLabel = lang === "zh" ? "文章" : "Posts";
+  const resumeLabel = lang === "zh" ? "简历" : "Resume";
 
   return (
-    <div>
-      {/* Mobile view */}
-      <div className="block md:hidden pb-10">
-        <div className="flex flex-col space-y-5">
-          <h1 className="font-display text-4xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
+    <section className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8 pb-12 border-b border-border">
+      <div className="flex flex-col gap-5 min-w-0 flex-1">
+        <div className="flex flex-col gap-2">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] text-balance">
             {fullName}
-          </h1>
-          <div className="flex flex-col space-y-0.5">
-            <span className="text-xs font-medium text-muted-foreground">
-              {data.email}
-            </span>
-            <span className="text-xs font-medium text-muted-foreground">
-              {locationStr}
-            </span>
-          </div>
-          <span className="text-sm text-foreground/80 leading-relaxed">
-            {data.intro}
-          </span>
-        </div>
-      </div>
-
-      {/* Tablet view */}
-      <div className="hidden md:block lg:hidden pb-10">
-        <div className="flex flex-col space-y-5">
-          <h1 className="font-display text-5xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
-            {fullName}
-          </h1>
-          <div className="flex flex-col space-y-0.5">
-            <span className="text-xs font-medium text-muted-foreground">
-              {data.email}
-            </span>
-            <span className="text-xs font-medium text-muted-foreground">
-              {locationStr}
-            </span>
-          </div>
-          <span className="text-sm text-foreground/80 leading-relaxed">
-            {data.intro}
-          </span>
-        </div>
-      </div>
-
-      {/* Desktop view */}
-      <div className="hidden lg:block pb-10">
-        <div className="flex flex-row justify-between gap-8">
-          <div className="flex flex-col space-y-5">
-            <h1 className="font-display text-6xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
-              {fullName}
-            </h1>
-            <div className="flex flex-col space-y-0.5">
-              <span className="text-xs font-medium text-muted-foreground">
-                {data.email}
-              </span>
-              <span className="text-xs font-medium text-muted-foreground">
-                {locationStr}
-              </span>
-            </div>
-            <span className="text-sm text-foreground/80 leading-relaxed">
-              {data.intro}
-            </span>
-          </div>
-          <div className="w-24 shrink-0">
-            <Image
-              src="/assets/images/figures/photo_figure.webp"
-              alt="figure"
-              width={2125}
-              height={3217}
-              className="w-full h-full object-cover rounded-lg"
+            <span
+              className="inline-block w-2.5 h-2.5 ml-2 mb-1 rounded-sm bg-claude-orange align-baseline"
+              aria-hidden
             />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function EducationSection({ lang = "en" }: { lang?: "en" | "zh" }) {
-  const data = (educationData as any)[lang] || educationData.en;
-  const title = lang === "zh" ? "教育经历" : "Education";
-
-  return (
-    <div className="flex flex-col space-y-5">
-      <h2 className={sectionTitleClass}>{title}</h2>
-      {data.items.map((item: EducationItem, idx: number) => (
-        <div key={idx} className="flex flex-col gap-0.5">
-          {/* Mobile/Tablet: Single line */}
-          <span className="font-semibold lg:hidden">
-            {item.school}, {item.location.city}
-          </span>
-          {/* Desktop: Split layout */}
-          <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-semibold">{item.school}</span>
-            <span className="font-medium text-muted-foreground">
-              {item.location.city}
-            </span>
-          </div>
-          <span className="italic text-foreground/80">{item.degree}</span>
-          <span className="text-muted-foreground text-sm">
-            {formatPeriod(item.period)}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function WorkingExperienceSection({ lang = "en" }: { lang?: "en" | "zh" }) {
-  const data = (workingExpData as any)[lang] || workingExpData.en;
-  const title = lang === "zh" ? "工作经历" : "Working Experience";
-
-  return (
-    <div className="flex flex-col space-y-5">
-      <h2 className={sectionTitleClass}>{title}</h2>
-      {data.items.map((item: WorkingExpItem, idx: number) => (
-        <div key={idx} className="flex flex-col gap-0.5">
-          {/* Mobile/Tablet: Single line */}
-          <span className="font-semibold lg:hidden">
-            {item.company}, {item.location.city}
-          </span>
-          {/* Desktop: Split layout */}
-          <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-semibold">{item.company}</span>
-            <span className="font-medium text-muted-foreground">
-              {item.location.city}
-            </span>
-          </div>
-          <span className="italic text-foreground/80">{item.position}</span>
-          {item.tags.length > 0 && (
-            <span className="text-muted-foreground">
-              {item.tags.join(", ")}
-            </span>
-          )}
-          <span className="text-muted-foreground text-sm">
-            {formatPeriod(item.period)}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function ProjectsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
-  const data = (projectsData as any)[lang] || projectsData.en;
-  const title = lang === "zh" ? "项目经历" : "Projects";
-
-  return (
-    <div className="flex flex-col space-y-5">
-      <h2 className={sectionTitleClass}>{title}</h2>
-      {data.items.map((item: ProjectItem, idx: number) => (
-        <div key={idx} className="flex flex-col gap-0.5">
-          {/* Mobile/Tablet: Single line */}
-          <span className="font-semibold lg:hidden">
-            {item.project}, {item.location.city}
-          </span>
-          {/* Desktop: Split layout */}
-          <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-semibold">{item.project}</span>
-            <span className="font-medium text-muted-foreground">
-              {item.location.city}
-            </span>
-          </div>
-          <span className="italic text-foreground/80">{item.description}</span>
-          {item.url && (
-            <Link
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-claude-orange hover:underline text-sm"
-            >
-              {item.url}
-            </Link>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function PublicationsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
-  const data = (publicationsData as any)[lang] || publicationsData.en;
-  const title = lang === "zh" ? "发表论文" : "Publications";
-
-  return (
-    <div className="flex flex-col space-y-5">
-      <h2 className={sectionTitleClass}>{title}</h2>
-      {data.items.map((item: PublicationItem, idx: number) => (
-        <div key={idx} className="flex flex-col">
-          <p className="text-foreground/80 text-sm hanging-indent leading-relaxed">
-            {formatAPAPublicationJSX(item)}
-            {item.url && (
-              <>
-                {" "}
-                <Link
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-claude-orange hover:underline break-all"
-                >
-                  {item.url}
-                </Link>
-              </>
-            )}
+          </h1>
+          <p className="text-sm sm:text-base text-foreground/85 leading-relaxed max-w-[40ch]">
+            {data.role}
           </p>
         </div>
-      ))}
-    </div>
+
+        <p className="text-sm text-muted-foreground leading-relaxed max-w-[48ch]">
+          {data.intro}
+        </p>
+
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+          <a
+            href={`mailto:${data.email}`}
+            className="hover:text-claude-orange transition-colors"
+          >
+            {data.email}
+          </a>
+          <span aria-hidden className="text-border">
+            /
+          </span>
+          <span>{locationStr}</span>
+        </div>
+
+        <div className="flex flex-wrap gap-3 pt-1">
+          <Link
+            href="/posts"
+            className="inline-flex items-center justify-center rounded-md bg-claude-orange px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-claude-orange/90 active:scale-[0.98]"
+          >
+            {postsLabel}
+          </Link>
+          <Link
+            href="/about/resume"
+            className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-claude-orange hover:text-claude-orange dark:border-white/15 dark:hover:border-claude-orange active:scale-[0.98]"
+          >
+            {resumeLabel}
+          </Link>
+        </div>
+      </div>
+
+      <div className="w-28 sm:w-36 lg:w-40 shrink-0 self-start">
+        <Image
+          src="/assets/images/figures/photo_figure.webp"
+          alt={fullName}
+          width={2125}
+          height={3217}
+          priority
+          className="w-full aspect-[2/3] object-cover rounded-lg ring-1 ring-border dark:ring-white/10"
+        />
+      </div>
+    </section>
   );
 }
 
-export function PersonalIntroduction({ lang = "en" }: { lang?: "en" | "zh" }) {
-  return (
-    <div className="flex flex-col w-full py-8 px-4">
-      <PersonalIntroductionHeader lang={lang} />
+function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
+  const pubs = ((publicationsData as any)[lang] || publicationsData.en)
+    .items as PublicationItem[];
+  const projects = ((projectsData as any)[lang] || projectsData.en)
+    .items as ProjectItem[];
 
-      <div className="flex flex-col space-y-10">
-        <EducationSection lang={lang} />
-        <WorkingExperienceSection lang={lang} />
-        <ProjectsSection lang={lang} />
-        <PublicationsSection lang={lang} />
+  const featuredPub =
+    pubs.find((item) => item.featured) || pubs[0] || null;
+  const featuredProjects = projects.filter((item) => item.featured).slice(0, 2);
+
+  const title = lang === "zh" ? "精选" : "Selected";
+  const pubLabel = lang === "zh" ? "论文" : "Publication";
+  const projectsLabel = lang === "zh" ? "项目" : "Projects";
+  const viewLabel = lang === "zh" ? "查看" : "View";
+  const readLabel = lang === "zh" ? "阅读" : "Read";
+
+  if (!featuredPub && featuredProjects.length === 0) return null;
+
+  return (
+    <section className="flex flex-col gap-6">
+      <h2 className={sectionTitleClass}>{title}</h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10">
+        {featuredPub && (
+          <div className="md:col-span-3 flex flex-col gap-3">
+            <span className="text-xs font-medium tracking-wide text-claude-orange">
+              {pubLabel}
+            </span>
+            <h3 className="text-base sm:text-lg font-semibold leading-snug text-balance">
+              {featuredPub.title}
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {featuredPub.journal}
+              {featuredPub.year ? ` · ${featuredPub.year}` : ""}
+            </p>
+            {featuredPub.summary && (
+              <p className="text-sm text-foreground/80 leading-relaxed max-w-[52ch]">
+                {featuredPub.summary}
+              </p>
+            )}
+            {featuredPub.url && (
+              <Link
+                href={featuredPub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-claude-orange hover:underline w-fit"
+              >
+                {readLabel}
+              </Link>
+            )}
+          </div>
+        )}
+
+        {featuredProjects.length > 0 && (
+          <div className="md:col-span-2 flex flex-col gap-5">
+            <span className="text-xs font-medium tracking-wide text-claude-orange">
+              {projectsLabel}
+            </span>
+            <ul className="flex flex-col divide-y divide-border">
+              {featuredProjects.map((item) => (
+                <li key={item.project} className="py-4 first:pt-0 last:pb-0">
+                  <div className="flex flex-col gap-1.5">
+                    <span className="font-semibold text-sm">{item.project}</span>
+                    <p className="text-sm text-foreground/75 leading-relaxed">
+                      {item.description}
+                    </p>
+                    {item.url && (
+                      <Link
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-claude-orange hover:underline w-fit"
+                      >
+                        {viewLabel}
+                      </Link>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
+    </section>
+  );
+}
+
+type TimelineItem = {
+  key: string;
+  primary: string;
+  secondary: string;
+  period: string;
+  place?: string;
+};
+
+function TimelineSection({ lang }: { lang: "en" | "zh" }) {
+  const education = ((educationData as any)[lang] || educationData.en)
+    .items as EducationItem[];
+  const work = ((workingExpData as any)[lang] || workingExpData.en)
+    .items as WorkingExpItem[];
+
+  const title = lang === "zh" ? "轨迹" : "Path";
+  const resumeLabel = lang === "zh" ? "完整简历" : "Full resume";
+
+  const parseStart = (start: string) => {
+    const match = start.match(/(\d{4})/);
+    const monthMatch = start.match(
+      /\b(January|February|March|April|May|June|July|August|September|October|November|December)\b|(\d{1,2})\s*月/,
+    );
+    const year = match ? Number(match[1]) : 0;
+    let month = 0;
+    if (monthMatch?.[1]) {
+      month =
+        Object.keys(EN_MONTH_ABBR).indexOf(monthMatch[1]) + 1;
+    } else if (monthMatch?.[2]) {
+      month = Number(monthMatch[2]);
+    }
+    return year * 100 + month;
+  };
+
+  const items: TimelineItem[] = [
+    ...education.map((item, idx) => ({
+      key: `edu-${idx}`,
+      primary: item.school,
+      secondary: item.degree,
+      period: formatPeriodCompact(item.period, lang),
+      place: item.location.city || undefined,
+      sortKey: parseStart(item.period.start),
+    })),
+    ...work.map((item, idx) => ({
+      key: `work-${idx}`,
+      primary: item.company,
+      secondary: item.position,
+      period: formatPeriodCompact(item.period, lang),
+      place: item.location.city || undefined,
+      sortKey: parseStart(item.period.start),
+    })),
+  ].sort((a, b) => b.sortKey - a.sortKey);
+
+  return (
+    <section className="flex flex-col gap-5">
+      <div className="flex items-baseline justify-between gap-4">
+        <h2 className={sectionTitleClass}>{title}</h2>
+        <Link
+          href="/about/resume"
+          className="text-xs font-medium text-muted-foreground hover:text-claude-orange transition-colors shrink-0"
+        >
+          {resumeLabel}
+        </Link>
+      </div>
+
+      <ul className="flex flex-col border-t border-border">
+        {items.map((item) => (
+          <li
+            key={item.key}
+            className="flex flex-col gap-1 py-3.5 border-b border-border sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+          >
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                <span className="font-semibold text-sm text-foreground">
+                  {item.primary}
+                </span>
+                {item.place && (
+                  <span className="text-xs text-muted-foreground">
+                    {item.place}
+                  </span>
+                )}
+              </div>
+              <span className="text-sm text-foreground/75 leading-snug">
+                {item.secondary}
+              </span>
+            </div>
+            <time className="text-xs text-muted-foreground font-mono tabular-nums whitespace-nowrap shrink-0 order-first sm:order-none">
+              {item.period}
+            </time>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function LatestPostsSection({
+  lang,
+  posts,
+}: {
+  lang: "en" | "zh";
+  posts: LatestPost[];
+}) {
+  if (posts.length === 0) return null;
+
+  const title = lang === "zh" ? "最近写作" : "Latest writing";
+  const allLabel = lang === "zh" ? "全部文章" : "All posts";
+
+  return (
+    <section className="flex flex-col gap-6">
+      <div className="flex items-baseline justify-between gap-4">
+        <h2 className={sectionTitleClass}>{title}</h2>
+        <Link
+          href="/posts"
+          className="text-xs font-medium text-muted-foreground hover:text-claude-orange transition-colors shrink-0"
+        >
+          {allLabel}
+        </Link>
+      </div>
+
+      <ul className="flex flex-col">
+        {posts.map((post) => {
+          const dateLabel = formatPostDate(
+            post.update_date || post.create_date,
+            lang,
+          );
+          return (
+            <li key={post.id} className="border-t border-border first:border-t-0">
+              <Link
+                href={`/posts/${post.id}`}
+                className="group flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6 py-3 transition-colors"
+              >
+                <span className="text-sm font-medium group-hover:text-claude-orange transition-colors text-balance">
+                  {post.title}
+                </span>
+                {dateLabel && (
+                  <span className="text-xs text-muted-foreground font-mono tabular-nums shrink-0">
+                    {dateLabel}
+                  </span>
+                )}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
+export function PersonalIntroduction({
+  lang = "en",
+  latestPosts = [],
+}: {
+  lang?: "en" | "zh";
+  latestPosts?: LatestPost[];
+}) {
+  return (
+    <div className="flex flex-col w-full py-8 px-4 gap-14">
+      <Hero lang={lang} />
+      <FeaturedSection lang={lang} />
+      <TimelineSection lang={lang} />
+      <LatestPostsSection lang={lang} posts={latestPosts} />
     </div>
   );
 }

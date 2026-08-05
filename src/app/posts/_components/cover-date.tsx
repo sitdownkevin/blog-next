@@ -1,16 +1,13 @@
 export function CoverDate({ date }: { date: Date }) {
-  const pivotDate = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000);
-  if (date.getTime() <= pivotDate.getTime()) {
-    return null;
-  }
+  if (Number.isNaN(date.getTime())) return null;
 
   return (
-    <p className="select-none text-muted-foreground text-xs font-medium">
+    <span className="select-none text-muted-foreground text-xs font-mono tabular-nums shrink-0">
       {date.toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",
         day: "numeric",
       })}
-    </p>
+    </span>
   );
 }

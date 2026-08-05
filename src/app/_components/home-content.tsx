@@ -1,11 +1,18 @@
-import { PersonalIntroduction } from "./personal-intro";
-import { LanguageToggle } from "./language-toggle";
+import {
+  PersonalIntroduction,
+  type LatestPost,
+} from "./personal-intro";
 
-export function HomeContent({ lang }: { lang: "en" | "zh" }) {
+export function HomeContent({
+  lang,
+  latestPosts,
+}: {
+  lang: "en" | "zh";
+  latestPosts: LatestPost[];
+}) {
   return (
     <div className="w-full mx-auto relative">
-      <LanguageToggle currentLang={lang} />
-      <PersonalIntroduction lang={lang} />
+      <PersonalIntroduction lang={lang} latestPosts={latestPosts} />
     </div>
   );
 }

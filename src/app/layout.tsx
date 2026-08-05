@@ -74,8 +74,8 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         <ThemeProvider>
-          <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
-            <div className="w-full md:w-2/3 lg:w-1/2 flex flex-col">
+          <div className="min-w-[320px] flex flex-col items-center w-full">
+            <div className="w-full max-w-3xl lg:max-w-4xl flex flex-col px-0">
               <Header />
               {children}
               <Footer />

@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -7,6 +8,8 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
+import { NavLinks } from "./nav-links";
 
 export function Header() {
   const socialLinks = [
@@ -24,11 +27,13 @@ export function Header() {
       icon: FaInstagram,
       href: "https://www.instagram.com/sitdownkevin",
       label: "Instagram",
+      hideOnMobile: true,
     },
     {
       icon: FaWeibo,
       href: "https://weibo.com/u/5668436889",
       label: "Weibo",
+      hideOnMobile: true,
     },
     {
       icon: FaRss,
@@ -38,37 +43,30 @@ export function Header() {
   ];
 
   return (
-    <header className="py-4 px-4 flex items-center justify-between border-b border-border">
-      <div className="flex flex-row items-center space-x-4 w-full">
+    <header className="py-4 px-4 flex items-center justify-between border-b border-border gap-3 sm:gap-4">
+      <div className="flex flex-row items-center gap-3 sm:gap-4 min-w-0">
         {socialLinks.map((link) => (
           <Link
             key={link.label}
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-foreground/70 hover:text-claude-orange transition-colors duration-300"
+            className={`text-foreground/70 hover:text-claude-orange transition-colors duration-300${
+              link.hideOnMobile ? " hidden sm:inline-flex" : ""
+            }`}
+            aria-label={link.label}
           >
             <link.icon />
           </Link>
         ))}
 
         <ThemeToggle />
+        <Suspense fallback={null}>
+          <LanguageToggle />
+        </Suspense>
       </div>
 
-      <div className="flex space-x-4 font-sans text-muted-foreground tracking-wide">
-        <Link
-          href="/"
-          className="hover:text-claude-orange transition-colors duration-300 text-xs font-medium"
-        >
-          About
-        </Link>
-        <Link
-          href="/posts"
-          className="hover:text-claude-orange transition-colors duration-300 text-xs font-medium"
-        >
-          Posts
-        </Link>
-      </div>
+      <NavLinks />
     </header>
   );
 }

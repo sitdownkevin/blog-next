@@ -3,7 +3,6 @@
 import { PostMatterType } from "@/lib/posts/types";
 import { Pin } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { EnhancedMarkdownBody } from "./markdown-body";
@@ -14,7 +13,6 @@ import { CoverTitle } from "./cover-title";
 interface CoverProps {
   matter: PostMatterType;
   searching: boolean;
-  first?: boolean;
 }
 
 interface CoverContainerProps {
@@ -22,62 +20,80 @@ interface CoverContainerProps {
   searching: boolean;
 }
 
-export function Cover({ matter, searching, first = false }: CoverProps) {
+export function Cover({ matter, searching }: CoverProps) {
   return (
-    <div
-      className={`flex flex-col space-y-2 md:space-y-4 lg:space-y-6 p-4 border-b border-gray-200 dark:border-gray-700 ${first ? "" : ""} ${matter.pinned ? "" : ""}`}
-    >
-      <div className="flex justify-between items-start">
-        <CoverTitle title={matter.title} postId={matter.id} />
-        {matter.pinned && <Pin className="w-4 h-4" />}
+    <article className="group flex flex-col gap-2 py-4 border-t border-border first:border-t-0 first:pt-0">
+      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6">
+        <div className="flex items-start gap-2 min-w-0">
+          <CoverTitle title={matter.title} postId={matter.id} />
+          {matter.pinned && (
+            <Pin
+              className="w-3.5 h-3.5 mt-1.5 text-claude-orange shrink-0"
+              aria-label="Pinned"
+            />
+          )}
+        </div>
+        {matter.update_date && <CoverDate date={matter.update_date} />}
       </div>
-      {/* Use EnhancedMarkdownBody to render snippetHtml */}
+
+      {matter.description && !searching && (
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2 max-w-[65ch]">
+          {matter.description}
+        </p>
+      )}
+
       {searching && matter.snippetHtml && (
-        <div className="text-sm text-gray-500 dark:text-gray-400 mt-2 w-full wrap-break-word">
+        <div className="text-sm text-muted-foreground mt-1 w-full wrap-break-word">
           <EnhancedMarkdownBody markdownHtml={matter.snippetHtml} />
         </div>
       )}
-      <div className="flex justify-between items-end">
-        <CoverTags tags={matter.tags} />
-        {matter.update_date && <CoverDate date={matter.update_date} />}
-      </div>
-    </div>
+
+      <CoverTags tags={matter.tags} />
+    </article>
   );
 }
 
 function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
   return (
-    <Button
-      variant="outline"
+    <button
+      type="button"
       onClick={handleShowMore}
-      className="w-full cursor-pointer"
+      className="w-full mt-2 py-2.5 text-sm font-medium text-muted-foreground border border-border rounded-md transition-colors hover:border-claude-orange hover:text-claude-orange active:scale-[0.99] cursor-pointer"
     >
-      +
-    </Button>
+      Load more
+    </button>
   );
 }
 
 export function CoverContainer({ matterList, searching }: CoverContainerProps) {
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(8);
 
   const handleShowMore = () => {
-    setVisibleCount((prevCount) => Math.min(prevCount + 5, matterList.length));
+    setVisibleCount((prevCount) => Math.min(prevCount + 8, matterList.length));
   };
 
   const visiblePosts = matterList.slice(0, visibleCount);
 
+  if (matterList.length === 0) {
+    return (
+      <p className="py-10 text-sm text-muted-foreground text-center">
+        No posts matched your search.
+      </p>
+    );
+  }
+
   return (
-    <div className="flex flex-col space-y-2 lg:space-y-4">
-      <AnimatePresence>
-        {visiblePosts.map((matter, index) => (
+    <div className="flex flex-col">
+      <AnimatePresence initial={false}>
+        {visiblePosts.map((matter) => (
           <motion.div
             key={matter.id}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            <Cover matter={matter} first={index === 0} searching={searching} />
+            <Cover matter={matter} searching={searching} />
           </motion.div>
         ))}
       </AnimatePresence>

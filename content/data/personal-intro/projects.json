@@ -9,7 +9,8 @@
           "country": "China"
         },
         "description": "2nd 'Xingzhi Cup' National AI Innovation Application Competition",
-        "url": ""
+        "url": "",
+        "featured": false
       },
       {
         "project": "DORM WIFI",
@@ -18,8 +19,9 @@
           "province": "",
           "country": ""
         },
-        "description": "A WiFi connection utility for Tongji University that enables automatic authentication and seamless connectivity",
-        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/"
+        "description": "WiFi utility for Tongji dorms with automatic authentication and seamless reconnect.",
+        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/",
+        "featured": true
       },
       {
         "project": "Design and Control Method of Modular Mechanical Prosthesis",
@@ -29,7 +31,8 @@
           "country": "China"
         },
         "description": "College Students' Innovation and Entrepreneurship Competition",
-        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control"
+        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control",
+        "featured": false
       },
       {
         "project": "RSSHub",
@@ -39,7 +42,8 @@
           "country": ""
         },
         "description": "Contributed to the open-source project RSSHub, by creating RSS rules for follow.is",
-        "url": "https://rsshub.netlify.app/"
+        "url": "https://rsshub.netlify.app/",
+        "featured": false
       },
       {
         "project": "Blackboard Enhanced",
@@ -48,8 +52,9 @@
           "province": "",
           "country": ""
         },
-        "description": "A Chrome extension that enhances the functionality of Blackboard, a popular educational management system widely used in universities. Developed with React",
-        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced"
+        "description": "Chrome extension that improves Blackboard for university coursework, built with React.",
+        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced",
+        "featured": true
       }
     ]
   },
@@ -63,7 +68,8 @@
           "country": "中国"
         },
         "description": "第二届\"兴智杯\"全国人工智能创新应用大赛",
-        "url": ""
+        "url": "",
+        "featured": false
       },
       {
         "project": "DORM WIFI",
@@ -72,8 +78,9 @@
           "province": "",
           "country": ""
         },
-        "description": "用于同济大学宿舍的 WiFi 连接工具，支持自动认证和无缝连接",
-        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/"
+        "description": "同济宿舍 WiFi 工具，支持自动认证与无缝重连。",
+        "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/",
+        "featured": true
       },
       {
         "project": "模块化机械义肢设计与控制方法",
@@ -83,7 +90,8 @@
           "country": "中国"
         },
         "description": "全国大学生创新创业竞赛",
-        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control"
+        "url": "https://github.com/sitdownkevin/Simple-Robotic-Hand-Control",
+        "featured": false
       },
       {
         "project": "RSSHub",
@@ -93,7 +101,8 @@
           "country": ""
         },
         "description": "贡献了 RSSHub 的 RSS 规则，用于 follow.is",
-        "url": "https://rsshub.netlify.app/"
+        "url": "https://rsshub.netlify.app/",
+        "featured": false
       },
       {
         "project": "Blackboard Enhanced",
@@ -102,8 +111,9 @@
           "province": "",
           "country": ""
         },
-        "description": "用于 Blackboard 教学管理系统的 Chrome 扩展，增强了 Blackboard 的功能",
-        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced"
+        "description": "面向高校 Blackboard 的 Chrome 扩展，基于 React 增强常用功能。",
+        "url": "https://github.com/sitdownkevin/Blackboard-Enhanced",
+        "featured": true
       }
     ]
   }

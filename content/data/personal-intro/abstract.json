@@ -10,12 +10,13 @@
       "province": "Shanghai",
       "country": "China"
     },
-    "intro": "Blockchain Technology, Data Mining, and Machine Learning."
+    "role": "Ph.D. candidate in Information Systems, Tongji University",
+    "intro": "I study blockchain, data mining, and machine learning in socio-technical systems."
   },
   "zh": {
     "name": {
-      "first": "徐",
-      "last": "可"
+      "first": "可",
+      "last": "徐"
     },
     "email": "kexu567@gmail.com",
     "location": {
@@ -23,6 +24,7 @@
       "province": "上海",
       "country": "中国"
     },
-    "intro": "区块链技术、数据挖掘和机器学习。"
+    "role": "同济大学信息系统博士研究生",
+    "intro": "关注区块链、数据挖掘与机器学习在社会技术系统中的应用。"
   }
 }
