@@ -59,16 +59,16 @@ export function Header() {
         <ThemeToggle />
       </div>
 
-      <div className="flex space-x-4 font-sans text-gray-500">
+      <div className="flex space-x-4 font-sans text-gray-500 tracking-wide">
         <Link
           href="/"
-          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs hover:scale-105"
+          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs font-medium hover:scale-105"
         >
           About
         </Link>
         <Link
           href="/posts"
-          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs hover:scale-105"
+          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs font-medium hover:scale-105"
         >
           Posts
         </Link>

@@ -1,5 +1,10 @@
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {
+  Fraunces,
+  Source_Sans_3,
+  Noto_Serif_SC,
+  JetBrains_Mono,
+} from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "@/app/globals.css";
 
@@ -8,7 +13,32 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+  weight: ["500", "600", "700"],
+});
+
+const notoSerifSC = Noto_Serif_SC({
+  subsets: ["latin"],
+  variable: "--font-noto-serif-sc",
+  display: "swap",
+  weight: ["600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kexu.win"),
@@ -36,8 +66,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.variable}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${sourceSans.variable} ${fraunces.variable} ${notoSerifSC.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="font-sans antialiased">
         <ThemeProvider>
           <div className="min-w-[320px] flex flex-col items-center justify-center w-full">
             <div className="w-full md:w-2/3 lg:w-1/2 flex flex-col">

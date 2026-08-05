@@ -1,23 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Anton, Noto_Serif_SC } from "next/font/google";
 import abstractData from "../../../content/data/personal-intro/abstract.json";
 import educationData from "../../../content/data/personal-intro/education.json";
 import workingExpData from "../../../content/data/personal-intro/working-exp.json";
 import projectsData from "../../../content/data/personal-intro/projects.json";
 import publicationsData from "../../../content/data/personal-intro/publications.json";
 
-const nameDisplayFont = Anton({
-  weight: ["400"],
-  variable: "--font-anton",
-  subsets: ["latin"],
-});
-
-const chineseFallbackFont = Noto_Serif_SC({
-  weight: ["800"],
-  variable: "--font-noto-serif-sc",
-  subsets: ["latin"],
-});
+const sectionTitleClass =
+  "font-display text-2xl font-semibold tracking-tight text-balance";
 
 // Type definitions based on JSON structure
 type Location = {
@@ -93,31 +83,23 @@ function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
   const fullName = `${data.name.first} ${data.name.last}`;
   const locationStr = `${data.location.city}, ${data.location.country}`;
 
-  const titleFontClass = `${nameDisplayFont.variable} ${chineseFallbackFont.variable}`;
-  const titleStyle = {
-    fontFamily: "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
-  };
-
   return (
     <div>
       {/* Mobile view */}
       <div className="block md:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1
-            className={`${titleFontClass} text-4xl uppercase leading-tight text-claude-orange pb-2`}
-            style={titleStyle}
-          >
+          <h1 className="font-display text-4xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
             {fullName}
           </h1>
           <div className="flex flex-col space-y-0">
-            <span className="text-xs text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
               {data.email}
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
               {locationStr}
             </span>
           </div>
-          <span className="text-xs text-gray-600 dark:text-gray-300">
+          <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
             {data.intro}
           </span>
         </div>
@@ -126,21 +108,18 @@ function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
       {/* Tablet view */}
       <div className="hidden md:block lg:hidden pb-8">
         <div className="flex flex-col space-y-4">
-          <h1
-            className={`${titleFontClass} text-5xl uppercase leading-tight text-claude-orange pb-2`}
-            style={titleStyle}
-          >
+          <h1 className="font-display text-5xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
             {fullName}
           </h1>
           <div className="flex flex-col space-y-0">
-            <span className="text-xs text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
               {data.email}
             </span>
-            <span className="text-xs text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
               {locationStr}
             </span>
           </div>
-          <span className="text-xs text-gray-600 dark:text-gray-300">
+          <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
             {data.intro}
           </span>
         </div>
@@ -150,21 +129,18 @@ function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
       <div className="hidden lg:block pb-8">
         <div className="flex flex-row justify-between">
           <div className="flex flex-col space-y-4">
-            <h1
-              className={`${titleFontClass} text-6xl uppercase tracking-[0.12em] leading-tight text-claude-orange pb-2`}
-              style={titleStyle}
-            >
+            <h1 className="font-display text-6xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
               {fullName}
             </h1>
             <div className="flex flex-col space-y-0">
-              <span className="text-xs text-gray-500 dark:text-gray-300">
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
                 {data.email}
               </span>
-              <span className="text-xs text-gray-500 dark:text-gray-300">
+              <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
                 {locationStr}
               </span>
             </div>
-            <span className="text-xs text-gray-600 dark:text-gray-300">
+            <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
               {data.intro}
             </span>
           </div>
@@ -189,25 +165,17 @@ function EducationSection({ lang = "en" }: { lang?: "en" | "zh" }) {
 
   return (
     <div className="flex flex-col space-y-4">
-      <h2
-        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
-        style={{
-          fontFamily:
-            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
-        }}
-      >
-        {title}
-      </h2>
+      <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: EducationItem, idx: number) => (
         <div key={idx} className="flex flex-col">
           {/* Mobile/Tablet: Single line */}
-          <span className="font-bold lg:hidden">
+          <span className="font-semibold lg:hidden">
             {item.school}, {item.location.city}
           </span>
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-bold">{item.school}</span>
-            <span className="font-bold text-gray-500 dark:text-gray-400">
+            <span className="font-semibold">{item.school}</span>
+            <span className="font-medium text-gray-500 dark:text-gray-400">
               {item.location.city}
             </span>
           </div>
@@ -229,25 +197,17 @@ function WorkingExperienceSection({ lang = "en" }: { lang?: "en" | "zh" }) {
 
   return (
     <div className="flex flex-col space-y-4">
-      <h2
-        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
-        style={{
-          fontFamily:
-            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
-        }}
-      >
-        {title}
-      </h2>
+      <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: WorkingExpItem, idx: number) => (
         <div key={idx} className="flex flex-col">
           {/* Mobile/Tablet: Single line */}
-          <span className="font-bold lg:hidden">
+          <span className="font-semibold lg:hidden">
             {item.company}, {item.location.city}
           </span>
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-bold">{item.company}</span>
-            <span className="font-bold text-gray-500 dark:text-gray-400">
+            <span className="font-semibold">{item.company}</span>
+            <span className="font-medium text-gray-500 dark:text-gray-400">
               {item.location.city}
             </span>
           </div>
@@ -274,25 +234,17 @@ function ProjectsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
 
   return (
     <div className="flex flex-col space-y-4">
-      <h2
-        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
-        style={{
-          fontFamily:
-            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
-        }}
-      >
-        {title}
-      </h2>
+      <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: ProjectItem, idx: number) => (
         <div key={idx} className="flex flex-col">
           {/* Mobile/Tablet: Single line */}
-          <span className="font-bold lg:hidden">
+          <span className="font-semibold lg:hidden">
             {item.project}, {item.location.city}
           </span>
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
-            <span className="font-bold">{item.project}</span>
-            <span className="font-bold text-gray-500 dark:text-gray-400">
+            <span className="font-semibold">{item.project}</span>
+            <span className="font-medium text-gray-500 dark:text-gray-400">
               {item.location.city}
             </span>
           </div>
@@ -321,15 +273,7 @@ function PublicationsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
 
   return (
     <div className="flex flex-col space-y-4">
-      <h2
-        className={`${nameDisplayFont.variable} ${chineseFallbackFont.variable} text-2xl uppercase`}
-        style={{
-          fontFamily:
-            "var(--font-anton), var(--font-noto-serif-sc), sans-serif",
-        }}
-      >
-        {title}
-      </h2>
+      <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: PublicationItem, idx: number) => (
         <div key={idx} className="flex flex-col">
           <p className="text-gray-600 dark:text-gray-300 text-sm hanging-indent">

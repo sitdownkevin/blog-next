@@ -9,6 +9,7 @@
   --base-text-weight-medium: 500;
   --base-text-weight-semibold: 600;
   --fontStack-monospace: var(
+    --font-jetbrains-mono,
     --font-mono,
     ui-monospace,
     SFMono-Regular,
@@ -153,8 +154,9 @@
     "Segoe UI Emoji"
   );
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.7;
   word-wrap: break-word;
+  text-wrap: pretty;
 }
 
 .markdown-body .octicon {
@@ -427,8 +429,18 @@
 .markdown-body h6 {
   margin-top: var(--base-size-24);
   margin-bottom: var(--base-size-16);
+  font-family: var(
+    --font-display,
+    var(--font-fraunces),
+    var(--font-noto-serif-sc),
+    ui-serif,
+    Georgia,
+    serif
+  );
   font-weight: var(--base-text-weight-semibold, 600);
   line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .markdown-body h2 {

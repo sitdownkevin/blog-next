@@ -4,9 +4,7 @@ export function Footer() {
   return (
     <div className="w-full py-4 flex flex-row justify-center space-x-8 md:space-x-16 border-t border-gray-300">
       <div className="flex flex-col">
-        <span className="text-xxs">
-          <span className="text-xxs">About</span>
-        </span>
+        <span className="text-xxs font-semibold tracking-wide">About</span>
         <span className="text-gray-500 text-xxs dark:text-gray-300">
           <Link href={"/about/resume"}>Resume</Link>
         </span>
@@ -18,7 +16,7 @@ export function Footer() {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="text-xxs">Tools</span>
+        <span className="text-xxs font-semibold tracking-wide">Tools</span>
         <span className="text-gray-500 text-xxs dark:text-gray-300">
           <Link href={"/tools/advanced_search"}>Advanced Search</Link>
         </span>
@@ -27,7 +25,7 @@ export function Footer() {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="text-xxs">Projects</span>
+        <span className="text-xxs font-semibold tracking-wide">Projects</span>
         <span className="text-gray-500 text-xxs dark:text-gray-300">
           <Link href={"https://github.com/sitdownkevin/Blackboard-Enhanced"}>
             BB Enhanced

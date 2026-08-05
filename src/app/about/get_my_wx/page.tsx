@@ -1,11 +1,5 @@
 "use client";
 
-import { Anton } from "next/font/google";
-
-const nameDisplayFont = Anton({
-  weight: ["400"],
-});
-
 import { useState, useRef, useEffect, JSX } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -301,7 +295,7 @@ export default function Page() {
   return (
     // Add the width constraint wrapper div here
     <div className="w-full py-8 px-4 space-y-8">
-      <h1 className={`${nameDisplayFont.className} text-3xl`}>
+      <h1 className="font-display text-3xl font-semibold tracking-tight text-balance">
         Get my WX through PoW
       </h1>
       <PoWCard
