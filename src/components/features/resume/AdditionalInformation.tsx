@@ -1,25 +1,6 @@
 import { AdditionalInformationElementType } from "@/lib/resume/types";
+import { ResumeSection } from "./resume-section";
 
-// Define props interface for the single element card
-interface AdditionalInformationElementCardProps {
-  additionalInformationElement: AdditionalInformationElementType;
-}
-
-// Render as a list item (li)
-function AdditionalInformationElementCard({
-  additionalInformationElement,
-}: AdditionalInformationElementCardProps) {
-  return (
-    <li className="text-xs">
-      {" "}
-      {/* Use li and apply text-xs here */}
-      <span className="italic">{additionalInformationElement.title}</span>:{" "}
-      {additionalInformationElement.content}
-    </li>
-  );
-}
-
-// Define props interface for the main container
 interface AdditionalInformationProps {
   additionalInformationElements: AdditionalInformationElementType[];
 }
@@ -28,25 +9,22 @@ export default function AdditionalInformation({
   additionalInformationElements,
 }: AdditionalInformationProps) {
   return (
-    <div className="mt-2">
-      {" "}
-      {/* Add margin top for separation */}
-      <span className="font-bold text-lg border-b border-gray-300 block mb-1">
-        {" "}
-        {/* Make title block and add margin bottom */}
-        ADDITIONAL INFORMATION
-      </span>
-      {/* Use ul for the list */}
-      <ul className="list-disc list-inside ml-4 flex flex-col gap-1">
-        {" "}
-        {/* Add list styles and gap */}
+    <ResumeSection title="Additional information">
+      <dl className="flex flex-col">
         {additionalInformationElements.map((element, index) => (
-          <AdditionalInformationElementCard
-            key={index}
-            additionalInformationElement={element}
-          />
+          <div
+            key={`${element.title}-${index}`}
+            className="grid grid-cols-1 sm:grid-cols-[10rem_1fr] gap-1 sm:gap-6 py-3 border-b border-border last:border-b-0 last:pb-0 first:pt-0"
+          >
+            <dt className="text-sm font-medium text-foreground">
+              {element.title}
+            </dt>
+            <dd className="text-sm text-muted-foreground leading-relaxed">
+              {element.content}
+            </dd>
+          </div>
         ))}
-      </ul>
-    </div>
+      </dl>
+    </ResumeSection>
   );
 }

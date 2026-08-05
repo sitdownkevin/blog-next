@@ -1,5 +1,3 @@
-"use client";
-
 import {
   BasicInfoType,
   EducationElementType,
@@ -15,7 +13,6 @@ import ProjectExperienceElementsCard from "./ProjectExperience";
 import AdditionalInformation from "./AdditionalInformation";
 import Publications from "./Publications";
 
-// Define the props interface for the Resume component
 interface ResumeProps {
   basicInfo: BasicInfoType;
   educationElements: EducationElementType[];
@@ -25,7 +22,6 @@ interface ResumeProps {
   publications: PublicationElementType[];
 }
 
-// Update the component to accept props
 export default function Resume({
   basicInfo,
   educationElements,
@@ -34,25 +30,20 @@ export default function Resume({
   additionalInformationElements,
   publications,
 }: ResumeProps) {
-  // Removed hardcoded data definitions
-
   return (
-    <div className="flex flex-col gap-2 sm:gap-1">
-      <div>
-        {/* Pass props to child components */}
-        <Header basicInfo={basicInfo} />
-        <EducationElementsCard educationElements={educationElements} />
-        <Publications publications={publications} />
-        <WorkExperienceElementsCard
-          workExperienceElements={workExperienceElements}
-        />
-        <ProjectExperienceElementsCard
-          projectExperienceElements={projectExperienceElements}
-        />
-        <AdditionalInformation
-          additionalInformationElements={additionalInformationElements}
-        />
-      </div>
+    <div className="flex flex-col gap-12">
+      <Header basicInfo={basicInfo} />
+      <EducationElementsCard educationElements={educationElements} />
+      <Publications publications={publications} />
+      <WorkExperienceElementsCard
+        workExperienceElements={workExperienceElements}
+      />
+      <ProjectExperienceElementsCard
+        projectExperienceElements={projectExperienceElements}
+      />
+      <AdditionalInformation
+        additionalInformationElements={additionalInformationElements}
+      />
     </div>
   );
 }

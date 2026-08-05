@@ -1,5 +1,5 @@
+import { Metadata } from "next";
 import Resume from "@/components/features/resume/Resume";
-// Import the resume data
 import {
   basicInfo,
   educationElements,
@@ -9,11 +9,18 @@ import {
   publications,
 } from "@/lib/resume/data";
 
+export const metadata: Metadata = {
+  title: "Resume - Ke Xu's website",
+  description:
+    "Resume of Ke Xu, Ph.D. candidate in Information Systems at Tongji University.",
+  alternates: {
+    canonical: "https://kexu.win/about/resume",
+  },
+};
+
 export default function Page() {
   return (
-    // Add width constraints to the existing container div
     <div className="w-full py-8 px-4">
-      {/* Pass the imported data as props to the Resume component */}
       <Resume
         basicInfo={basicInfo}
         educationElements={educationElements}

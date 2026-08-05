@@ -67,6 +67,14 @@ export const workExperienceElements: WorkExperienceElementType[] = [
 
 export const projectExperienceElements: ProjectExperienceElementType[] = [
   {
+    project: "AI Mobile Large Model Technology Innovation Competition",
+    location: "Shenzhen",
+    role: "2nd Xingzhi Cup (兴智杯) National AI Innovation Application Competition",
+    content: [
+      "National First Prize (全国一等奖), AI mobile large model technology innovation track",
+    ],
+  },
+  {
     project: "Design and Control Method of Modular Mechanical Prosthesis",
     location: "China",
     role: "Project Leader",

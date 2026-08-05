@@ -2,102 +2,130 @@ import { BasicInfoType } from "@/lib/resume/types";
 import Link from "next/link";
 import { Mail, Globe, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Fragment } from "react";
 
-// Define props interface
 interface HeaderProps {
   basicInfo: BasicInfoType;
 }
 
+type ContactItem = {
+  key: string;
+  href: string;
+  label: string;
+  text: string;
+  external?: boolean;
+  icon: React.ReactNode;
+};
+
+function ContactLink({
+  href,
+  label,
+  text,
+  external,
+  icon,
+}: Omit<ContactItem, "key">) {
+  return (
+    <Link
+      href={href}
+      aria-label={label}
+      className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-claude-orange"
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
+      <span className="opacity-70">{icon}</span>
+      <span>{text}</span>
+    </Link>
+  );
+}
+
 export default function Header({ basicInfo }: HeaderProps) {
-  // Define common icon class for size and alignment
-  const iconClass = "inline-block mr-1 h-3 w-3"; // Adjusted size
+  const fullName = `${basicInfo.name.first_name} ${basicInfo.name.last_name}`;
+  const alias = basicInfo.name.first_name_en?.trim() || null;
+
+  const contacts: ContactItem[] = [
+    basicInfo.phone
+      ? {
+          key: "phone",
+          href: `tel:${basicInfo.phone.prefix ?? ""}${basicInfo.phone.number}`,
+          label: "Phone",
+          text: `${basicInfo.phone.prefix ?? ""} ${basicInfo.phone.number}`.trim(),
+          icon: <Phone className="h-3.5 w-3.5" />,
+        }
+      : null,
+    basicInfo.email
+      ? {
+          key: "email",
+          href: `mailto:${basicInfo.email}`,
+          label: "Email",
+          text: basicInfo.email,
+          icon: <Mail className="h-3.5 w-3.5" />,
+        }
+      : null,
+    basicInfo.website
+      ? {
+          key: "website",
+          href: `https://${basicInfo.website}`,
+          label: "Website",
+          text: basicInfo.website,
+          external: true,
+          icon: <Globe className="h-3.5 w-3.5" />,
+        }
+      : null,
+    basicInfo.github
+      ? {
+          key: "github",
+          href: `https://github.com/${basicInfo.github}`,
+          label: "GitHub",
+          text: basicInfo.github,
+          external: true,
+          icon: <FaGithub className="h-3.5 w-3.5" />,
+        }
+      : null,
+    basicInfo.linkedin
+      ? {
+          key: "linkedin",
+          href: `https://linkedin.com/in/${basicInfo.linkedin}`,
+          label: "LinkedIn",
+          text: basicInfo.linkedin,
+          external: true,
+          icon: <FaLinkedin className="h-3.5 w-3.5" />,
+        }
+      : null,
+  ].filter(Boolean) as ContactItem[];
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex gap-4 font-bold text-2xl border-b-1 border-gray-300 pb-2">
-        <div>
-          {/* Keep the original name format for now */}
-          {basicInfo.name.first_name} {basicInfo.name.last_name}
-          {(basicInfo.name.first_name_en || basicInfo.name.last_name_en) && (
-            <span>
-              {" "}
-              ({basicInfo.name.first_name_en} {basicInfo.name.last_name_en})
-            </span>
-          )}
-        </div>
-      </div>
+    <header className="flex flex-col gap-3 pb-6 border-b border-border">
+      <h1 className="font-display text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.15] text-balance flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+        <span>{fullName}</span>
+        {alias ? (
+          <span className="font-sans text-base sm:text-lg font-medium text-muted-foreground tracking-normal">
+            {alias}
+          </span>
+        ) : null}
+        <span
+          className="inline-block w-2 h-2 rounded-sm bg-claude-orange shrink-0 translate-y-[-0.15em]"
+          aria-hidden
+        />
+      </h1>
 
-      {/* Use flex-wrap for responsive layout */}
-      <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
-        {/* Phone */}
-        {basicInfo.phone && (
-          <div className="flex items-center">
-            {" "}
-            {/* Keep items-center on individual items */}
-            <Link
-              href={`tel:${basicInfo.phone.prefix}${basicInfo.phone.number}`}
-              className="hover:underline" // Removed flex items-center from Link, it's on the parent div now
-            >
-              <Phone className={iconClass} />
-              {basicInfo.phone.prefix} {basicInfo.phone.number}
-            </Link>
-          </div>
-        )}
-        {/* Email */}
-        {basicInfo.email && (
-          <div className="flex items-center">
-            <Link
-              href={`mailto:${basicInfo.email}`}
-              className="hover:underline"
-            >
-              <Mail className={iconClass} />
-              {basicInfo.email}
-            </Link>
-          </div>
-        )}
-        {/* Website */}
-        {basicInfo.website && (
-          <div className="flex items-center">
-            <Link
-              href={`https://${basicInfo.website}`}
-              target="_blank" // Open external links in new tab
-              rel="noopener noreferrer" // Security best practice
-              className="hover:underline"
-            >
-              <Globe className={iconClass} />
-              {basicInfo.website}
-            </Link>
-          </div>
-        )}
-        {/* GitHub */}
-        {basicInfo.github && (
-          <div className="flex items-center">
-            <Link
-              href={`https://github.com/${basicInfo.github}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              <FaGithub className={iconClass} />
-              {basicInfo.github}
-            </Link>
-          </div>
-        )}
-        {/* LinkedIn */}
-        {basicInfo.linkedin && (
-          <div className="flex items-center">
-            <Link
-              href={`https://linkedin.com/in/${basicInfo.linkedin}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              <FaLinkedin className={iconClass} />
-              {basicInfo.linkedin}
-            </Link>
-          </div>
-        )}
-      </div>
-    </div>
+      {contacts.length > 0 ? (
+        <ul className="flex flex-wrap items-center gap-y-2 text-xs list-none p-0 m-0">
+          {contacts.map((contact, index) => (
+            <Fragment key={contact.key}>
+              {index > 0 ? (
+                <li
+                  aria-hidden
+                  className="mx-2.5 text-border select-none"
+                >
+                  /
+                </li>
+              ) : null}
+              <li className="inline-flex">
+                <ContactLink {...contact} />
+              </li>
+            </Fragment>
+          ))}
+        </ul>
+      ) : null}
+    </header>
   );
 }
