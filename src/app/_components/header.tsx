@@ -38,11 +38,7 @@ export function Header() {
   ];
 
   return (
-    <header
-      className={`bg-gray-0 py-4 px-4 flex items-center justify-between 
-              border-b border-gray-300
-              `}
-    >
+    <header className="py-4 px-4 flex items-center justify-between border-b border-border">
       <div className="flex flex-row items-center space-x-4 w-full">
         {socialLinks.map((link) => (
           <Link
@@ -50,25 +46,25 @@ export function Header() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-gray-500 transition-colors duration-300 hover:scale-105"
+            className="text-foreground/70 hover:text-claude-orange transition-colors duration-300"
           >
-            <link.icon className="dark:text-white" />
+            <link.icon />
           </Link>
         ))}
 
         <ThemeToggle />
       </div>
 
-      <div className="flex space-x-4 font-sans text-gray-500 tracking-wide">
+      <div className="flex space-x-4 font-sans text-muted-foreground tracking-wide">
         <Link
           href="/"
-          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs font-medium hover:scale-105"
+          className="hover:text-claude-orange transition-colors duration-300 text-xs font-medium"
         >
           About
         </Link>
         <Link
           href="/posts"
-          className="dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-300 transition-colors duration-300 text-xs font-medium hover:scale-105"
+          className="hover:text-claude-orange transition-colors duration-300 text-xs font-medium"
         >
           Posts
         </Link>

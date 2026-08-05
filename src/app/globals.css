@@ -55,12 +55,12 @@
       height: 0;
     }
     to {
-      height: var(--radix-accordion-content-height);
+      height: var(--accordion-panel-height);
     }
   }
   @keyframes accordion-up {
     from {
-      height: var(--radix-accordion-content-height);
+      height: var(--accordion-panel-height);
     }
     to {
       height: 0;
@@ -71,12 +71,12 @@
       height: 0;
     }
     to {
-      height: var(--radix-collapsible-content-height);
+      height: var(--collapsible-panel-height);
     }
   }
   @keyframes slideUp {
     from {
-      height: var(--radix-collapsible-content-height);
+      height: var(--collapsible-panel-height);
     }
     to {
       height: 0;
@@ -337,11 +337,13 @@ html {
 */
 
 @theme inline {
-  --font-sans: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display:
-    var(--font-fraunces), var(--font-noto-serif-sc), ui-serif, Georgia, serif;
+    var(--font-ibm-plex-serif), var(--font-noto-serif-sc), ui-serif, Georgia,
+    serif;
   --font-serif:
-    var(--font-noto-serif-sc), var(--font-fraunces), ui-serif, Georgia, serif;
+    var(--font-noto-serif-sc), var(--font-ibm-plex-serif), ui-serif, Georgia,
+    serif;
   --font-mono:
     var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, monospace;
@@ -363,7 +365,7 @@ html {
       height: 0;
     }
     to {
-      height: var(--radix-accordion-content-height);
+      height: var(--accordion-panel-height);
     }
   }
   /*
@@ -371,7 +373,7 @@ html {
 */
   @keyframes accordion-up {
     from {
-      height: var(--radix-accordion-content-height);
+      height: var(--accordion-panel-height);
     }
     to {
       height: 0;

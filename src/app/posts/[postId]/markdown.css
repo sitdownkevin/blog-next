@@ -431,7 +431,7 @@
   margin-bottom: var(--base-size-16);
   font-family: var(
     --font-display,
-    var(--font-fraunces),
+    var(--font-ibm-plex-serif),
     var(--font-noto-serif-sc),
     ui-serif,
     Georgia,
@@ -936,10 +936,24 @@
   padding: var(--base-size-16);
   overflow: auto;
   font-size: 85%;
-  line-height: 1.45;
-  color: var(--fgColor-default);
-  background-color: hsl(40, 7%, 80%); /* Even darker beige */
-  border-radius: 6px;
+  line-height: 1.55;
+  font-family: var(--fontStack-monospace);
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+  border: 1px solid color-mix(in srgb, #1e1e1e 80%, #fff 8%);
+  border-radius: 8px;
+}
+
+.markdown-body .code-block {
+  margin-bottom: var(--base-size-16);
+}
+
+.markdown-body .code-block pre {
+  margin-bottom: 0;
+}
+
+.markdown-body .code-copy-btn.is-copied {
+  background-color: rgb(5 150 105 / 0.7);
 }
 
 .markdown-body pre code,

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import {
-  Fraunces,
-  Source_Sans_3,
+  IBM_Plex_Sans,
+  IBM_Plex_Serif,
   Noto_Serif_SC,
   JetBrains_Mono,
 } from "next/font/google";
@@ -13,15 +13,16 @@ import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 
-const sourceSans = Source_Sans_3({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-source-sans",
+  variable: "--font-ibm-plex-sans",
   display: "swap",
+  weight: ["400", "500", "600"],
 });
 
-const fraunces = Fraunces({
+const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-ibm-plex-serif",
   display: "swap",
   weight: ["500", "600", "700"],
 });
@@ -69,7 +70,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sourceSans.variable} ${fraunces.variable} ${notoSerifSC.variable} ${jetbrainsMono.variable}`}
+      className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} ${notoSerifSC.variable} ${jetbrainsMono.variable}`}
     >
       <body className="font-sans antialiased">
         <ThemeProvider>

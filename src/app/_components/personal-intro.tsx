@@ -86,65 +86,65 @@ function PersonalIntroductionHeader({ lang = "en" }: { lang?: "en" | "zh" }) {
   return (
     <div>
       {/* Mobile view */}
-      <div className="block md:hidden pb-8">
-        <div className="flex flex-col space-y-4">
-          <h1 className="font-display text-4xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
+      <div className="block md:hidden pb-10">
+        <div className="flex flex-col space-y-5">
+          <h1 className="font-display text-4xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
             {fullName}
           </h1>
-          <div className="flex flex-col space-y-0">
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+          <div className="flex flex-col space-y-0.5">
+            <span className="text-xs font-medium text-muted-foreground">
               {data.email}
             </span>
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-muted-foreground">
               {locationStr}
             </span>
           </div>
-          <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+          <span className="text-sm text-foreground/80 leading-relaxed">
             {data.intro}
           </span>
         </div>
       </div>
 
       {/* Tablet view */}
-      <div className="hidden md:block lg:hidden pb-8">
-        <div className="flex flex-col space-y-4">
-          <h1 className="font-display text-5xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
+      <div className="hidden md:block lg:hidden pb-10">
+        <div className="flex flex-col space-y-5">
+          <h1 className="font-display text-5xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
             {fullName}
           </h1>
-          <div className="flex flex-col space-y-0">
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+          <div className="flex flex-col space-y-0.5">
+            <span className="text-xs font-medium text-muted-foreground">
               {data.email}
             </span>
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+            <span className="text-xs font-medium text-muted-foreground">
               {locationStr}
             </span>
           </div>
-          <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+          <span className="text-sm text-foreground/80 leading-relaxed">
             {data.intro}
           </span>
         </div>
       </div>
 
       {/* Desktop view */}
-      <div className="hidden lg:block pb-8">
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-col space-y-4">
-            <h1 className="font-display text-6xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-2">
+      <div className="hidden lg:block pb-10">
+        <div className="flex flex-row justify-between gap-8">
+          <div className="flex flex-col space-y-5">
+            <h1 className="font-display text-6xl font-semibold tracking-tight leading-tight text-claude-orange text-balance pb-1">
               {fullName}
             </h1>
-            <div className="flex flex-col space-y-0">
-              <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+            <div className="flex flex-col space-y-0.5">
+              <span className="text-xs font-medium text-muted-foreground">
                 {data.email}
               </span>
-              <span className="text-xs font-medium text-gray-500 dark:text-gray-300">
+              <span className="text-xs font-medium text-muted-foreground">
                 {locationStr}
               </span>
             </div>
-            <span className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+            <span className="text-sm text-foreground/80 leading-relaxed">
               {data.intro}
             </span>
           </div>
-          <div className="w-24">
+          <div className="w-24 shrink-0">
             <Image
               src="/assets/images/figures/photo_figure.webp"
               alt="figure"
@@ -164,10 +164,10 @@ function EducationSection({ lang = "en" }: { lang?: "en" | "zh" }) {
   const title = lang === "zh" ? "教育经历" : "Education";
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-5">
       <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: EducationItem, idx: number) => (
-        <div key={idx} className="flex flex-col">
+        <div key={idx} className="flex flex-col gap-0.5">
           {/* Mobile/Tablet: Single line */}
           <span className="font-semibold lg:hidden">
             {item.school}, {item.location.city}
@@ -175,14 +175,12 @@ function EducationSection({ lang = "en" }: { lang?: "en" | "zh" }) {
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
             <span className="font-semibold">{item.school}</span>
-            <span className="font-medium text-gray-500 dark:text-gray-400">
+            <span className="font-medium text-muted-foreground">
               {item.location.city}
             </span>
           </div>
-          <span className="italic text-gray-600 dark:text-gray-300">
-            {item.degree}
-          </span>
-          <span className="text-gray-600 dark:text-gray-300 text-sm">
+          <span className="italic text-foreground/80">{item.degree}</span>
+          <span className="text-muted-foreground text-sm">
             {formatPeriod(item.period)}
           </span>
         </div>
@@ -196,10 +194,10 @@ function WorkingExperienceSection({ lang = "en" }: { lang?: "en" | "zh" }) {
   const title = lang === "zh" ? "工作经历" : "Working Experience";
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-5">
       <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: WorkingExpItem, idx: number) => (
-        <div key={idx} className="flex flex-col">
+        <div key={idx} className="flex flex-col gap-0.5">
           {/* Mobile/Tablet: Single line */}
           <span className="font-semibold lg:hidden">
             {item.company}, {item.location.city}
@@ -207,19 +205,17 @@ function WorkingExperienceSection({ lang = "en" }: { lang?: "en" | "zh" }) {
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
             <span className="font-semibold">{item.company}</span>
-            <span className="font-medium text-gray-500 dark:text-gray-400">
+            <span className="font-medium text-muted-foreground">
               {item.location.city}
             </span>
           </div>
-          <span className="italic text-gray-600 dark:text-gray-300">
-            {item.position}
-          </span>
+          <span className="italic text-foreground/80">{item.position}</span>
           {item.tags.length > 0 && (
-            <span className="text-gray-600 dark:text-gray-300">
+            <span className="text-muted-foreground">
               {item.tags.join(", ")}
             </span>
           )}
-          <span className="text-gray-600 dark:text-gray-300 text-sm">
+          <span className="text-muted-foreground text-sm">
             {formatPeriod(item.period)}
           </span>
         </div>
@@ -233,10 +229,10 @@ function ProjectsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
   const title = lang === "zh" ? "项目经历" : "Projects";
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-5">
       <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: ProjectItem, idx: number) => (
-        <div key={idx} className="flex flex-col">
+        <div key={idx} className="flex flex-col gap-0.5">
           {/* Mobile/Tablet: Single line */}
           <span className="font-semibold lg:hidden">
             {item.project}, {item.location.city}
@@ -244,13 +240,11 @@ function ProjectsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
           {/* Desktop: Split layout */}
           <div className="hidden lg:flex justify-between items-baseline">
             <span className="font-semibold">{item.project}</span>
-            <span className="font-medium text-gray-500 dark:text-gray-400">
+            <span className="font-medium text-muted-foreground">
               {item.location.city}
             </span>
           </div>
-          <span className="italic text-gray-600 dark:text-gray-300">
-            {item.description}
-          </span>
+          <span className="italic text-foreground/80">{item.description}</span>
           {item.url && (
             <Link
               href={item.url}
@@ -272,11 +266,11 @@ function PublicationsSection({ lang = "en" }: { lang?: "en" | "zh" }) {
   const title = lang === "zh" ? "发表论文" : "Publications";
 
   return (
-    <div className="flex flex-col space-y-4">
+    <div className="flex flex-col space-y-5">
       <h2 className={sectionTitleClass}>{title}</h2>
       {data.items.map((item: PublicationItem, idx: number) => (
         <div key={idx} className="flex flex-col">
-          <p className="text-gray-600 dark:text-gray-300 text-sm hanging-indent">
+          <p className="text-foreground/80 text-sm hanging-indent leading-relaxed">
             {formatAPAPublicationJSX(item)}
             {item.url && (
               <>
@@ -303,7 +297,7 @@ export function PersonalIntroduction({ lang = "en" }: { lang?: "en" | "zh" }) {
     <div className="flex flex-col w-full py-8 px-4">
       <PersonalIntroductionHeader lang={lang} />
 
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-10">
         <EducationSection lang={lang} />
         <WorkingExperienceSection lang={lang} />
         <ProjectsSection lang={lang} />

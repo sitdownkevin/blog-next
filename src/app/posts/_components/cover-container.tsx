@@ -1,7 +1,7 @@
 "use client";
 
 import { PostMatterType } from "@/lib/posts/types";
-import { PinTopIcon } from "@radix-ui/react-icons";
+import { Pin } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -29,7 +29,7 @@ export function Cover({ matter, searching, first = false }: CoverProps) {
     >
       <div className="flex justify-between items-start">
         <CoverTitle title={matter.title} postId={matter.id} />
-        {matter.pinned && <PinTopIcon className="w-4 h-4" />}
+        {matter.pinned && <Pin className="w-4 h-4" />}
       </div>
       {/* Use EnhancedMarkdownBody to render snippetHtml */}
       {searching && matter.snippetHtml && (

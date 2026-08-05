@@ -17,8 +17,10 @@ const breakpointColumnsObj = {
 
 export default function Page() {
   return (
-    <div className="w-full py-8 px-4 space-y-4">
-      <h1 className="text-3xl font-bold">Gallery</h1>
+    <div className="w-full py-8 px-4 space-y-6">
+      <h1 className="font-display text-3xl font-semibold tracking-tight text-balance">
+        Gallery
+      </h1>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="masonry-grid"
@@ -27,7 +29,7 @@ export default function Page() {
         {photos.map((photo) => (
           <div
             key={photo.id}
-            className="mb-4 transform transition duration-300 hover:scale-105 hover:shadow-xl rounded-lg overflow-hidden"
+            className="mb-4 transition duration-300 hover:opacity-90 rounded-lg overflow-hidden"
           >
             <Image
               src={photo.src}

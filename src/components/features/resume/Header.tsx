@@ -1,13 +1,7 @@
 import { BasicInfoType } from "@/lib/resume/types";
 import Link from "next/link";
-// Import icons from lucide-react
-import {
-  Mail, // Replaces FaEnvelope
-  Globe, // Replaces FaGlobe
-  Phone, // Replaces FaPhone
-  Linkedin, // Replaces FaLinkedin
-  Github, // Replaces FaGithub
-} from "lucide-react";
+import { Mail, Globe, Phone } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Define props interface
 interface HeaderProps {
@@ -84,7 +78,7 @@ export default function Header({ basicInfo }: HeaderProps) {
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              <Github className={iconClass} />
+              <FaGithub className={iconClass} />
               {basicInfo.github}
             </Link>
           </div>
@@ -98,7 +92,7 @@ export default function Header({ basicInfo }: HeaderProps) {
               rel="noopener noreferrer"
               className="hover:underline"
             >
-              <Linkedin className={iconClass} />
+              <FaLinkedin className={iconClass} />
               {basicInfo.linkedin}
             </Link>
           </div>

@@ -49,55 +49,53 @@ export function SearchBar({
   };
 
   return (
-    <div className="mt-6 mb-8 w-full max-w-lg mx-auto px-4 sm:px-0">
-      <div className="relative group">
-        <div
-          className={`
-            relative w-full h-12 rounded-lg border-2 transition-all duration-300 shadow-sm
-            ${
-              isFocused || searchQuery
-                ? "border-primary shadow-md bg-background"
-                : "border-dashed border-border hover:border-primary/50 bg-background hover:shadow-md"
-            }
-          `}
-        >
-          <div className="absolute inset-0 flex items-center">
-            <div className="flex items-center gap-3 px-4 flex-1">
-              <Search
-                className={`h-4 w-4 shrink-0 transition-colors ${
-                  isFocused ? "text-primary" : "text-muted-foreground"
+    <div className="mt-4 mb-10 w-full max-w-lg mx-auto px-4 sm:px-0">
+      <div
+        className={`
+          relative w-full h-11 rounded-md border bg-background transition-colors duration-200
+          ${
+            isFocused || searchQuery
+              ? "border-primary ring-1 ring-primary/30"
+              : "border-border hover:border-primary/40"
+          }
+        `}
+      >
+        <div className="absolute inset-0 flex items-center">
+          <div className="flex items-center gap-3 px-3 flex-1">
+            <Search
+              className={`h-4 w-4 shrink-0 transition-colors ${
+                isFocused ? "text-primary" : "text-muted-foreground"
+              }`}
+            />
+            <Input
+              ref={inputRef}
+              type="text"
+              placeholder="搜索文章标题、描述、标签或内容..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              className="flex-1 border-0 bg-transparent p-0 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
+            />
+          </div>
+          <div className="flex items-center gap-2 px-3 shrink-0">
+            {osShortcut && (
+              <Badge
+                variant="secondary"
+                className={`text-xs font-sans px-2 py-0.5 hidden sm:inline-flex transition-opacity ${
+                  isFocused ? "opacity-50" : "opacity-100"
                 }`}
-              />
-              <Input
-                ref={inputRef}
-                type="text"
-                placeholder="搜索文章标题、描述、标签或内容..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                className="flex-1 border-0 bg-transparent p-0 text-sm placeholder:text-muted-foreground focus-visible:ring-0 focus-visible:ring-offset-0"
-              />
-            </div>
-            <div className="flex items-center gap-2 px-4 shrink-0">
-              {osShortcut && (
-                <Badge
-                  variant="secondary"
-                  className={`text-xs font-sans px-2 py-1 hidden sm:inline-flex transition-opacity ${
-                    isFocused ? "opacity-50" : "opacity-100"
-                  }`}
-                >
-                  {osShortcut}
-                </Badge>
-              )}
-              <Keyboard
-                className={`h-4 w-4 transition-colors ${
-                  isFocused
-                    ? "text-primary opacity-50"
-                    : "text-muted-foreground opacity-50"
-                }`}
-              />
-            </div>
+              >
+                {osShortcut}
+              </Badge>
+            )}
+            <Keyboard
+              className={`h-4 w-4 transition-colors ${
+                isFocused
+                  ? "text-primary opacity-50"
+                  : "text-muted-foreground opacity-50"
+              }`}
+            />
           </div>
         </div>
       </div>

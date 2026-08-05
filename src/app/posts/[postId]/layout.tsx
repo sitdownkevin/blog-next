@@ -1,5 +1,6 @@
 import "@/app/posts/[postId]/katex.css";
 import "katex/dist/katex.min.css";
+import "prism-themes/themes/prism-vsc-dark-plus.css";
 import "@/app/posts/[postId]/markdown.css";
 
 export default function PostLayout({

@@ -5,7 +5,7 @@ Site-wide typography system: font roles, loading, theme tokens, and title/body u
 ## Requirements
 
 ### Requirement: Centralized font loading
-The application MUST load Fraunces, Source Sans 3, Noto Serif SC, and JetBrains Mono via `next/font` in the root layout and expose them as CSS variables on the document root.
+The application MUST load IBM Plex Serif, IBM Plex Sans, Noto Serif SC, and JetBrains Mono via `next/font` in the root layout and expose them as CSS variables on the document root.
 
 #### Scenario: Root layout provides font variables
 - **WHEN** any page renders
