@@ -8,7 +8,7 @@ export function PostDate({ date }: { date: Date | string }) {
   }
 
   return (
-    <p className="select-none text-gray-600 dark:text-gray-300 text-xs font-bold">
+    <p className="select-none text-muted-foreground text-xs font-medium font-mono tabular-nums">
       {resolvedDate.toLocaleDateString("en-US", {
         year: "numeric",
         month: "short",

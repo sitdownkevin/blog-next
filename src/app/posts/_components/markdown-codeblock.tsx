@@ -56,9 +56,9 @@ export function MarkdownCodeBlock({ code, language }: MarkdownCodeBlockProps) {
       {/* This component will replace the original pre/code structure */}
       {/* We will dynamically insert the original pre/code HTML here */}
       {/* For now, we'll just render the code string, but the final implementation will use the original HTML */}
-      <pre className="bg-slate-100 dark:bg-zinc-800 border border-zinc-400/20 dark:border-zinc-700 rounded-md">
+      <pre className="bg-muted border border-border rounded-md">
         <code
-          className={`language-${language} font-sans text-zinc-900 dark:text-zinc-100 rounded-md p-2`}
+          className={`language-${language} font-mono text-foreground rounded-md p-2`}
         >
           {code}
         </code>

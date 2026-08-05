@@ -172,38 +172,39 @@
   }
 
   .dark {
-    --background: 220 20% 10%; /* 更深的蓝色调背景 */
-    --foreground: 210 40% 98%; /* 亮白色前景 */
+    /* Warm charcoal — lifted for comfort, still pairs with cream + orange */
+    --background: 30 8% 13%;
+    --foreground: 40 12% 94%;
 
-    --card: 220 20% 15%; /* 比背景稍亮的卡片 */
-    --card-foreground: 210 40% 98%; /* 亮白色前景 */
+    --card: 30 8% 16%;
+    --card-foreground: 40 12% 94%;
 
-    --popover: 220 20% 15%; /* 比背景稍亮的弹窗 */
-    --popover-foreground: 210 40% 98%; /* 亮白色前景 */
+    --popover: 30 8% 16%;
+    --popover-foreground: 40 12% 94%;
 
-    --primary: 214 100% 70%; /* 更亮的蓝色主色调 */
-    --primary-foreground: 0 0% 100%; /* 纯白色主色调前景 */
+    --primary: 24 90% 54%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 15% 25%; /* 柔和的次要颜色 */
-    --secondary-foreground: 210 40% 98%; /* 亮白色次要颜色前景 */
+    --secondary: 30 7% 19%;
+    --secondary-foreground: 40 10% 92%;
 
-    --muted: 220 15% 25%; /* 柔和的静音颜色 */
-    --muted-foreground: 215 20% 65%; /* 浅灰色静音颜色前景 */
+    --muted: 30 7% 19%;
+    --muted-foreground: 35 8% 72%;
 
-    --accent: 220 15% 25%; /* 柔和的强调颜色 */
-    --accent-foreground: 210 40% 98%; /* 亮白色强调颜色前景 */
+    --accent: 30 7% 19%;
+    --accent-foreground: 40 10% 92%;
 
-    --destructive: 0 84.2% 60.2%; /* 保持红色不变 */
-    --destructive-foreground: 0 0% 98%; /* 保持白色不变 */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 220 15% 30%; /* 柔和的边框颜色 */
-    --input: 220 15% 30%; /* 柔和的输入框颜色 */
-    --ring: 215 20% 85%; /* 浅色光环 */
-    --chart-1: 220 70% 50%; /* 保持图表颜色不变 */
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 30 6% 24%;
+    --input: 30 6% 24%;
+    --ring: 24 90% 54%;
+    --chart-1: 24 80% 55%;
+    --chart-2: 160 50% 45%;
+    --chart-3: 40 60% 50%;
+    --chart-4: 200 50% 50%;
+    --chart-5: 340 55% 55%;
   }
 }
 
@@ -322,14 +323,14 @@ html {
 */
 
 .dark {
-  --sidebar: hsl(240 5.9% 10%);
-  --sidebar-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --sidebar: hsl(30 8% 13%);
+  --sidebar-foreground: hsl(40 12% 94%);
+  --sidebar-primary: hsl(24 90% 54%);
   --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(240 3.7% 15.9%);
-  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
-  --sidebar-border: hsl(240 3.7% 15.9%);
-  --sidebar-ring: hsl(217.2 91.2% 59.8%);
+  --sidebar-accent: hsl(30 7% 19%);
+  --sidebar-accent-foreground: hsl(40 10% 92%);
+  --sidebar-border: hsl(30 6% 24%);
+  --sidebar-ring: hsl(24 90% 54%);
 }
 
 /*

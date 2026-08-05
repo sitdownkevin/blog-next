@@ -23,48 +23,48 @@
 }
 
 .dark .markdown-body {
-  /* dark — align with site theme (cool blue-gray, not warm beige) */
+  /* dark — warm charcoal + orange accents for readability */
   color-scheme: dark;
-  --focus-outlineColor: #1f6feb;
+  --focus-outlineColor: #ea580c;
   --fgColor-default: hsl(var(--foreground));
   --fgColor-muted: hsl(var(--muted-foreground));
-  --fgColor-accent: #4493f8;
-  --fgColor-success: #3fb950;
-  --fgColor-attention: #d29922;
-  --fgColor-danger: #f85149;
-  --fgColor-done: #ab7df8;
+  --fgColor-accent: #fb923c;
+  --fgColor-success: #4ade80;
+  --fgColor-attention: #fbbf24;
+  --fgColor-danger: #f87171;
+  --fgColor-done: #c4b5fd;
   --bgColor-default: hsl(var(--background));
   --bgColor-muted: hsl(var(--muted));
   --bgColor-neutral-muted: hsl(var(--muted));
-  --bgColor-attention-muted: #bb800926;
+  --bgColor-attention-muted: #fbbf241a;
   --borderColor-default: hsl(var(--border));
   --borderColor-muted: hsl(var(--border) / 0.7);
   --borderColor-neutral-muted: hsl(var(--border) / 0.7);
-  --borderColor-accent-emphasis: #1f6feb;
+  --borderColor-accent-emphasis: #ea580c;
   --borderColor-success-emphasis: #238636;
   --borderColor-attention-emphasis: #9e6a03;
   --borderColor-danger-emphasis: #da3633;
   --borderColor-done-emphasis: #8957e5;
-  --color-prettylights-syntax-comment: #9198a1;
-  --color-prettylights-syntax-constant: #79c0ff;
-  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
-  --color-prettylights-syntax-entity: #d2a8ff;
-  --color-prettylights-syntax-storage-modifier-import: #f0f6fc;
-  --color-prettylights-syntax-entity-tag: #7ee787;
-  --color-prettylights-syntax-keyword: #ff7b72;
-  --color-prettylights-syntax-string: #a5d6ff;
-  --color-prettylights-syntax-variable: #ffa657;
-  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
-  --color-prettylights-syntax-brackethighlighter-angle: #9198a1;
-  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-comment: #a8a29e;
+  --color-prettylights-syntax-constant: #93c5fd;
+  --color-prettylights-syntax-constant-other-reference-link: #bfdbfe;
+  --color-prettylights-syntax-entity: #d8b4fe;
+  --color-prettylights-syntax-storage-modifier-import: #f5f5f4;
+  --color-prettylights-syntax-entity-tag: #86efac;
+  --color-prettylights-syntax-keyword: #fb7185;
+  --color-prettylights-syntax-string: #fdba74;
+  --color-prettylights-syntax-variable: #fcd34d;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f87171;
+  --color-prettylights-syntax-brackethighlighter-angle: #a8a29e;
+  --color-prettylights-syntax-invalid-illegal-text: #f5f5f4;
   --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
-  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-text: #f5f5f4;
   --color-prettylights-syntax-carriage-return-bg: #b62324;
-  --color-prettylights-syntax-string-regexp: #7ee787;
-  --color-prettylights-syntax-markup-list: #f2cc60;
-  --color-prettylights-syntax-markup-heading: #1f6feb;
-  --color-prettylights-syntax-markup-italic: #f0f6fc;
-  --color-prettylights-syntax-markup-bold: #f0f6fc;
+  --color-prettylights-syntax-string-regexp: #86efac;
+  --color-prettylights-syntax-markup-list: #fcd34d;
+  --color-prettylights-syntax-markup-heading: #fb923c;
+  --color-prettylights-syntax-markup-italic: #f5f5f4;
+  --color-prettylights-syntax-markup-bold: #f5f5f4;
   --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
   --color-prettylights-syntax-markup-deleted-bg: #67060c;
   --color-prettylights-syntax-markup-inserted-text: #aff5b4;
@@ -936,10 +936,17 @@
   font-size: 85%;
   line-height: 1.55;
   font-family: var(--fontStack-monospace);
-  color: #d4d4d4;
-  background-color: #1e1e1e;
-  border: 1px solid color-mix(in srgb, #1e1e1e 80%, #fff 8%);
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-muted);
+  border: 1px solid var(--borderColor-default);
   border-radius: 8px;
+}
+
+.dark .markdown-body .highlight pre,
+.dark .markdown-body pre {
+  color: #e7e5e4;
+  background-color: hsl(30 8% 17%);
+  border-color: hsl(30 6% 26%);
 }
 
 .markdown-body .code-block {
