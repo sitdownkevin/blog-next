@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { cacheLife } from "next/cache";
 import { decrypt } from "@/lib/posts/crypto";
 import matter from "gray-matter";
 import { MarkdownType } from "./types";
@@ -50,6 +51,9 @@ function addCopyButton(contentHtml: string): string {
 export async function getMarkdownContent(
   postId: string,
 ): Promise<MarkdownType> {
+  "use cache";
+  cacheLife("days");
+
   const fileNameWithoutExt = decrypt(postId);
   const fullPath = path.join(postsDirectory, `${fileNameWithoutExt}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");

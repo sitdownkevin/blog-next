@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import { notFound } from "next/navigation";
 import { getData, getDescription } from "@/lib/advanced-search";
 import JournalTable from "@/components/features/tools/advanced-search/JournalTable";
 import JournalClause from "@/components/features/tools/advanced-search/JournalClause";
@@ -20,7 +22,12 @@ const caption = {
   ustc_som_c1: "C1",
 };
 
-export const dynamicParams = false;
+type RuleKey = keyof typeof caption;
+
+function isRuleKey(rule: string): rule is RuleKey {
+  return Object.prototype.hasOwnProperty.call(caption, rule);
+}
+
 export async function generateStaticParams() {
   return Object.keys(caption).map((rule) => {
     return { rule };
@@ -33,19 +40,26 @@ export async function generateMetadata({
   params: Promise<{ rule: string }>;
 }) {
   const { rule } = await params;
+  if (!isRuleKey(rule)) {
+    return { title: "Not Found" };
+  }
 
   return {
-    title: `${caption[rule as keyof typeof caption]} - Advanced Search`,
-    description: `Advanced search for ${caption[rule as keyof typeof caption]}`,
+    title: `${caption[rule]} - Advanced Search`,
+    description: `Advanced search for ${caption[rule]}`,
   };
 }
 
-export default async function Page({
+async function RuleContent({
   params,
 }: {
   params: Promise<{ rule: string }>;
 }) {
   const { rule } = await params;
+  if (!isRuleKey(rule)) {
+    notFound();
+  }
+
   let data: JournalType[] = [];
   let title = "";
   let link = "";
@@ -54,11 +68,7 @@ export default async function Page({
 
   if (rule.startsWith("ustc_som")) {
     data = await getData("ustc_som");
-    data = data.filter(
-      (journal) =>
-        journal.subjectArea === caption[rule as keyof typeof caption],
-    );
-    // console.log(data);
+    data = data.filter((journal) => journal.subjectArea === caption[rule]);
     ({ title, link } = await getDescription("ustc_som"));
     subjectAreaTitle = "Level";
   } else {
@@ -76,11 +86,27 @@ export default async function Page({
       <JournalClause journals={data} />
       <JournalTable
         journals={data}
-        tableCaption={caption[rule as keyof typeof caption]}
+        tableCaption={caption[rule]}
         hideSubjectArea={hideSubjectArea}
         subjectAreaTitle={subjectAreaTitle}
       />
       <DescriptionCard title={title} link={link} />
     </div>
+  );
+}
+
+export default function Page({
+  params,
+}: {
+  params: Promise<{ rule: string }>;
+}) {
+  return (
+    <Suspense
+      fallback={
+        <div className="w-full h-40 animate-pulse rounded-md bg-muted" />
+      }
+    >
+      <RuleContent params={params} />
+    </Suspense>
   );
 }

@@ -33,7 +33,7 @@ async function getMarkdownContent(postId: string): Promise<MarkdownType> {
 export default async function getMarkdownContentForRss(): Promise<
   MarkdownType[]
 > {
-  let matterList: PostMatterType[] = getMatterList();
+  let matterList: PostMatterType[] = await getMatterList();
   matterList = matterList.filter((item) => item.hidden !== true);
   const postIds = matterList.map((item) => item.id);
   const posts = await Promise.all(postIds.map(getMarkdownContent));

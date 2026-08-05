@@ -1,12 +1,16 @@
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
-import { encrypt, decrypt } from "./crypto";
+import { cacheLife } from "next/cache";
+import { encrypt } from "./crypto";
 import { PostMatterType } from "./types";
 
 const postDirectory = path.join(process.cwd(), "content/posts");
 
-export function getMatterList() {
+export async function getMatterList(): Promise<PostMatterType[]> {
+  "use cache";
+  cacheLife("days");
+
   const fileNames = fs.readdirSync(postDirectory);
   const matterList = fileNames.map((fileName) => {
     const fileNameWithoutExt = fileName.replace(/\.md$/, "");
@@ -24,11 +28,11 @@ export function getMatterList() {
       hidden: matterResult.data?.hidden || false,
       create_date: new Date(matterResult.data.create_date),
       update_date: new Date(matterResult.data.update_date),
-      content: matterResult.content, // Add content here
+      content: matterResult.content,
     };
 
     return matterData;
-  }) as PostMatterType[]; // Cast to PostMatterType[]
+  }) as PostMatterType[];
 
   return matterList;
 }

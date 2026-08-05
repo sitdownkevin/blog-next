@@ -1,19 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  cacheComponents: true,
   turbopack: {},
-  webpack: (config: any, { isServer, dev }: any) => {
+  webpack: (config) => {
     config.ignoreWarnings = [
       { module: /node_modules\/node-fetch\/lib\/index\.js/ },
       { module: /node_modules\/punycode\/punycode\.js/ },
     ];
     return config;
   },
-  transpilePackages: [
-    "@fullcalendar/core",
-    "@fullcalendar/react",
-    "@fullcalendar/daygrid",
-    "@fullcalendar/timegrid",
-  ],
 };
 
 export default nextConfig;

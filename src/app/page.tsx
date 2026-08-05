@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import { PersonalIntroduction } from "./_components/personal-intro";
-import { LanguageToggle } from "./_components/language-toggle";
+import { Suspense } from "react";
+import { HomeContent } from "./_components/home-content";
 
 export const metadata: Metadata = {
   title: "Ke Xu's website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Page({
+async function HomeWithLang({
   searchParams,
 }: {
   searchParams?: Promise<{ language?: string }>;
@@ -47,6 +47,14 @@ export default async function Page({
   const language = params?.language || "en";
   const lang = language === "zh" ? "zh" : "en";
 
+  return <HomeContent lang={lang} />;
+}
+
+export default function Page({
+  searchParams,
+}: {
+  searchParams?: Promise<{ language?: string }>;
+}) {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -60,10 +68,9 @@ export default async function Page({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
-      <div className="w-full mx-auto relative">
-        <LanguageToggle currentLang={lang} />
-        <PersonalIntroduction lang={lang} />
-      </div>
+      <Suspense fallback={<HomeContent lang="en" />}>
+        <HomeWithLang searchParams={searchParams} />
+      </Suspense>
     </>
   );
 }
