@@ -2,6 +2,28 @@
   "en": {
     "items": [
       {
+        "authors": "Peng, B., Xu, K., & Pan, Y.",
+        "year": "2026",
+        "title": "STD-Former: Image-conditioned texture dictionary encoding with sparse topological supervision for texture recognition",
+        "journal": "International Conference on Machine Learning (ICML) 2026",
+        "volume": "",
+        "pages": "",
+        "url": "https://icml.cc/virtual/2026/poster/60791",
+        "summary": "Learns an image-conditioned texture dictionary with sparse topological supervision, achieving strong results across six texture benchmarks.",
+        "featured": true
+      },
+      {
+        "authors": "Pan, Y., Xu, K., & Peng, B.",
+        "year": "2026",
+        "title": "Topology-enhanced alignment for large language models: Trajectory topology loss and topological preference optimization",
+        "journal": "Findings of the Association for Computational Linguistics: ACL 2026",
+        "volume": "",
+        "pages": "24807-24821",
+        "url": "https://aclanthology.org/2026.findings-acl.1242/",
+        "summary": "Regularizes LLM alignment trajectories with persistent homology via Trajectory Topology Loss and Topological Preference Optimization.",
+        "featured": false
+      },
+      {
         "authors": "Xu, K., Hu, W., & Zhou, Z.",
         "year": "2025",
         "title": "Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing",
@@ -10,7 +32,7 @@
         "pages": "",
         "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15",
         "summary": "Compares claiming versus automatic rewards and how incentive design shapes engagement and consumption in cloud computing.",
-        "featured": true
+        "featured": false
       },
       {
         "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",
@@ -28,6 +50,28 @@
   "zh": {
     "items": [
       {
+        "authors": "Peng, B., Xu, K., & Pan, Y.",
+        "year": "2026",
+        "title": "STD-Former: Image-conditioned texture dictionary encoding with sparse topological supervision for texture recognition",
+        "journal": "International Conference on Machine Learning (ICML) 2026",
+        "volume": "",
+        "pages": "",
+        "url": "https://icml.cc/virtual/2026/poster/60791",
+        "summary": "提出图像条件纹理词典编码与稀疏拓扑监督，在六个纹理基准上取得较强结果。",
+        "featured": true
+      },
+      {
+        "authors": "Pan, Y., Xu, K., & Peng, B.",
+        "year": "2026",
+        "title": "Topology-enhanced alignment for large language models: Trajectory topology loss and topological preference optimization",
+        "journal": "Findings of the Association for Computational Linguistics: ACL 2026",
+        "volume": "",
+        "pages": "24807-24821",
+        "url": "https://aclanthology.org/2026.findings-acl.1242/",
+        "summary": "用持续同调约束 LLM 对齐轨迹，提出 Trajectory Topology Loss 与 Topological Preference Optimization。",
+        "featured": false
+      },
+      {
         "authors": "Xu, K., Hu, W., & Zhou, Z.",
         "year": "2025",
         "title": "Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing",
@@ -36,7 +80,7 @@
         "pages": "",
         "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15",
         "summary": "比较主动领取与自动发放两类激励，分析其对云计算场景中参与度与消费行为的影响。",
-        "featured": true
+        "featured": false
       },
       {
         "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",

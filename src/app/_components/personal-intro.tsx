@@ -124,7 +124,7 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
   const resumeLabel = lang === "zh" ? "简历" : "Resume";
 
   return (
-    <section className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-8 pb-12 border-b border-border">
+    <section className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 pb-12 border-b border-border">
       <div className="flex flex-col gap-5 min-w-0 flex-1">
         <div className="flex flex-col gap-2">
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] text-balance">
@@ -172,7 +172,7 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
         </div>
       </div>
 
-      <div className="w-28 sm:w-36 lg:w-40 shrink-0 self-start">
+      <div className="hidden sm:block w-36 lg:w-40 shrink-0 self-start">
         <Image
           src="/assets/images/figures/photo_figure.webp"
           alt={fullName}

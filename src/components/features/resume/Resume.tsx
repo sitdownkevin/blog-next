@@ -42,6 +42,7 @@ export default function Resume({
         {/* Pass props to child components */}
         <Header basicInfo={basicInfo} />
         <EducationElementsCard educationElements={educationElements} />
+        <Publications publications={publications} />
         <WorkExperienceElementsCard
           workExperienceElements={workExperienceElements}
         />
@@ -51,7 +52,6 @@ export default function Resume({
         <AdditionalInformation
           additionalInformationElements={additionalInformationElements}
         />
-        <Publications publications={publications} />
       </div>
     </div>
   );

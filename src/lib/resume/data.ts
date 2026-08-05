@@ -138,10 +138,18 @@ export const additionalInformationElements: AdditionalInformationElementType[] =
 export const publications: PublicationElementType[] = [
   {
     content:
-      "Xu, K., Hu, W., & Zhou, Z. (2024). The impact of reward distribution policies on user engagement and service consumption: A natural experiment at a cloud computing service provider. China Association for Information Systems Annual Meeting (CNAIS) 2024.",
+      "Peng, B., Xu, K., & Pan, Y. (2026). STD-Former: Image-conditioned texture dictionary encoding with sparse topological supervision for texture recognition. International Conference on Machine Learning (ICML) 2026. https://icml.cc/virtual/2026/poster/60791",
   },
   {
     content:
-      "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, D., & Yin, R. (2024). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. In F. Tosi et al. (Eds.), Springer Series in Design and Innovation.",
+      "Pan, Y., Xu, K., & Peng, B. (2026). Topology-enhanced alignment for large language models: Trajectory topology loss and topological preference optimization. In Findings of the Association for Computational Linguistics: ACL 2026, pages 24807-24821. https://aclanthology.org/2026.findings-acl.1242/",
+  },
+  {
+    content:
+      "Xu, K., Hu, W., & Zhou, Z. (2025). Claiming vs. automatic rewards: Impact of incentive mechanism on engagement and consumption in cloud computing. International Conference on Information Systems (ICIS) 2025 Proceedings. https://aisel.aisnet.org/icis2025/user_behav/user_behav/15",
+  },
+  {
+    content:
+      "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R. (2025). Predicting intensive care unit length of stay for inflammatory bowel diseases patients using machine learning. Proceedings of the 22nd Congress of the International Ergonomics Association, 1, 255-261. https://doi.org/10.1007/978-981-95-0211-0_40",
   },
 ];
