@@ -23,23 +23,23 @@
 }
 
 .dark .markdown-body {
-  /* dark */
+  /* dark — align with site theme (cool blue-gray, not warm beige) */
   color-scheme: dark;
   --focus-outlineColor: #1f6feb;
-  --fgColor-default: #f0f6fc;
-  --fgColor-muted: #9198a1;
+  --fgColor-default: hsl(var(--foreground));
+  --fgColor-muted: hsl(var(--muted-foreground));
   --fgColor-accent: #4493f8;
   --fgColor-success: #3fb950;
   --fgColor-attention: #d29922;
   --fgColor-danger: #f85149;
   --fgColor-done: #ab7df8;
-  --bgColor-default: hsl(40, 14%, 7%); /* #12120f in HSL */
-  --bgColor-muted: hsl(40, 7%, 11%); /* Dark Beige */
-  --bgColor-neutral-muted: hsl(40, 7%, 11%); /* Dark Beige */
+  --bgColor-default: hsl(var(--background));
+  --bgColor-muted: hsl(var(--muted));
+  --bgColor-neutral-muted: hsl(var(--muted));
   --bgColor-attention-muted: #bb800926;
-  --borderColor-default: #3d444d;
-  --borderColor-muted: #3d444db3;
-  --borderColor-neutral-muted: #3d444db3;
+  --borderColor-default: hsl(var(--border));
+  --borderColor-muted: hsl(var(--border) / 0.7);
+  --borderColor-neutral-muted: hsl(var(--border) / 0.7);
   --borderColor-accent-emphasis: #1f6feb;
   --borderColor-success-emphasis: #238636;
   --borderColor-attention-emphasis: #9e6a03;
@@ -75,29 +75,27 @@
   --color-prettylights-syntax-markup-ignored-bg: #1158c7;
   --color-prettylights-syntax-meta-diff-range: #d2a8ff;
   --color-prettylights-syntax-sublimelinter-gutter-mark: #3d444d;
-  background-color: var(
-    --bgColor-default
-  ) !important; /* Ensure dark background */
+  background-color: transparent !important;
 }
 
 .markdown-body {
-  /* light */
+  /* light — align with site theme tokens */
   color-scheme: light;
   --focus-outlineColor: #0969da;
-  --fgColor-default: #1f2328;
-  --fgColor-muted: #59636e;
+  --fgColor-default: hsl(var(--foreground));
+  --fgColor-muted: hsl(var(--muted-foreground));
   --fgColor-accent: #0969da;
   --fgColor-success: #1a7f37;
   --fgColor-attention: #9a6700;
   --fgColor-danger: #d1242f;
   --fgColor-done: #0969da;
-  --bgColor-default: hsl(40, 14%, 97%); /* #f8f8f2 in HSL */
-  --bgColor-muted: hsl(40, 7%, 94%); /* Light Beige */
-  --bgColor-neutral-muted: hsl(40, 7%, 94%); /* Light Beige */
+  --bgColor-default: hsl(var(--background));
+  --bgColor-muted: hsl(var(--muted));
+  --bgColor-neutral-muted: hsl(var(--muted));
   --bgColor-attention-muted: #fff8c5;
-  --borderColor-default: #d1d9e0;
-  --borderColor-muted: #d1d9e0b3;
-  --borderColor-neutral-muted: #d1d9e0b3;
+  --borderColor-default: hsl(var(--border));
+  --borderColor-muted: hsl(var(--border) / 0.7);
+  --borderColor-neutral-muted: hsl(var(--border) / 0.7);
   --borderColor-accent-emphasis: #0969da;
   --borderColor-success-emphasis: #1a7f37;
   --borderColor-attention-emphasis: #9a6700;
@@ -140,7 +138,7 @@
   -webkit-text-size-adjust: 100%;
   margin: 0;
   color: var(--fgColor-default);
-  background-color: var(--bgColor-default) !important;
+  background-color: transparent !important;
   font-family: var(
     --font-sans,
     -apple-system,
