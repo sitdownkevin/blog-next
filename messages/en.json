@@ -3,7 +3,9 @@
     "homeTitle": "Ke Xu's website",
     "homeDescription": "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
     "resumeTitle": "Resume",
-    "resumeDescription": "Resume of Ke Xu, Ph.D. candidate in Information Systems at Tongji University."
+    "resumeDescription": "Resume of Ke Xu, Ph.D. candidate in Information Systems at Tongji University.",
+    "projectsTitle": "Projects",
+    "projectsDescription": "Selected software projects by Ke Xu, including DORM WIFI and Blackboard Enhanced."
   },
   "Nav": {
     "about": "About",
@@ -77,6 +79,16 @@
     "website": "Website",
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "Projects": {
+    "title": "Projects",
+    "subtitle": "Tools and experiments I build and maintain.",
+    "view": "View",
+    "features": "Features",
+    "links": "Links",
+    "backToList": "All projects",
+    "metadataTitle": "Projects",
+    "metadataDescription": "Selected software projects by Ke Xu, including DORM WIFI and Blackboard Enhanced."
   },
   "Posts": {
     "title": "Posts",

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getMatterList } from "@/lib/posts/getMatterList";
+import { getProjectSlugs } from "@/lib/projects/data";
 import { menubarComponents } from "@/lib/tools/advanced-search/data";
 import { absoluteUrl } from "@/lib/seo/site";
 import type { MenubarItem } from "@/lib/types";
@@ -34,6 +35,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: absoluteUrl("/projects"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...getProjectSlugs().map((slug) => ({
+      url: absoluteUrl(`/projects/${slug}`),
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     {
       url: absoluteUrl("/about/resume"),
       lastModified: now,

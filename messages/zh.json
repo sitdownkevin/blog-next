@@ -3,7 +3,9 @@
     "homeTitle": "徐可的个人网站",
     "homeDescription": "你好，我是徐可，同济大学管理科学与工程（信息系统）博士研究生，现居中国上海。",
     "resumeTitle": "简历",
-    "resumeDescription": "徐可的简历，同济大学管理科学与工程（信息系统）博士研究生。"
+    "resumeDescription": "徐可的简历，同济大学管理科学与工程（信息系统）博士研究生。",
+    "projectsTitle": "项目",
+    "projectsDescription": "徐可的精选软件项目，包括 DORM WIFI 与 Blackboard Enhanced。"
   },
   "Nav": {
     "about": "关于",
@@ -77,6 +79,16 @@
     "website": "网站",
     "github": "GitHub",
     "linkedin": "LinkedIn"
+  },
+  "Projects": {
+    "title": "项目",
+    "subtitle": "我构建并维护的工具与实验。",
+    "view": "查看",
+    "features": "功能",
+    "links": "相关链接",
+    "backToList": "全部项目",
+    "metadataTitle": "项目",
+    "metadataDescription": "徐可的精选软件项目，包括 DORM WIFI 与 Blackboard Enhanced。"
   },
   "Posts": {
     "title": "日志",

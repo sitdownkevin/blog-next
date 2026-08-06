@@ -43,6 +43,7 @@ type ProjectItem = {
   location: Location;
   description: string;
   url: string;
+  slug?: string;
   featured?: boolean;
 };
 
@@ -247,15 +248,24 @@ function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
                     <p className="text-sm text-foreground/75 leading-relaxed">
                       {item.description}
                     </p>
-                    {item.url && (
-                      <a
-                        href={item.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    {item.slug ? (
+                      <Link
+                        href={`/projects/${item.slug}`}
                         className="text-sm font-medium text-claude-orange hover:underline w-fit"
                       >
                         {t("view")}
-                      </a>
+                      </Link>
+                    ) : (
+                      item.url && (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-claude-orange hover:underline w-fit"
+                        >
+                          {t("view")}
+                        </a>
+                      )
                     )}
                   </div>
                 </li>

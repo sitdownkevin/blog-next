@@ -21,6 +21,7 @@
         },
         "description": "WiFi utility for Tongji dorms with automatic authentication and seamless reconnect.",
         "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/",
+        "slug": "dorm-wifi",
         "featured": true
       },
       {
@@ -52,8 +53,9 @@
           "province": "",
           "country": ""
         },
-        "description": "Chrome extension that improves Blackboard for university coursework, built with React.",
+        "description": "Userscript that improves Blackboard for university coursework, rebuilt with React.",
         "url": "https://github.com/sitdownkevin/Blackboard-Enhanced",
+        "slug": "blackboard-enhanced",
         "featured": true
       }
     ]
@@ -80,6 +82,7 @@
         },
         "description": "同济宿舍 WiFi 工具，支持自动认证与无缝重连。",
         "url": "https://sitdownkevin.github.io/dorm-wifi-tauri/",
+        "slug": "dorm-wifi",
         "featured": true
       },
       {
@@ -111,8 +114,9 @@
           "province": "",
           "country": ""
         },
-        "description": "面向高校 Blackboard 的 Chrome 扩展，基于 React 增强常用功能。",
+        "description": "面向高校 Blackboard 的油猴脚本，基于 React 增强常用功能。",
         "url": "https://github.com/sitdownkevin/Blackboard-Enhanced",
+        "slug": "blackboard-enhanced",
         "featured": true
       }
     ]
