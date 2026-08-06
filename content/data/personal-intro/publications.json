@@ -10,7 +10,7 @@
         "pages": "",
         "url": "https://icml.cc/virtual/2026/poster/60791",
         "summary": "Learns an image-conditioned texture dictionary with sparse topological supervision, achieving strong results across six texture benchmarks.",
-        "featured": true
+        "featured": false
       },
       {
         "authors": "Pan, Y., Xu, K., & Peng, B.",
@@ -32,7 +32,7 @@
         "pages": "",
         "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15",
         "summary": "Compares claiming versus automatic rewards and how incentive design shapes engagement and consumption in cloud computing.",
-        "featured": false
+        "featured": true
       },
       {
         "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",
@@ -58,7 +58,7 @@
         "pages": "",
         "url": "https://icml.cc/virtual/2026/poster/60791",
         "summary": "提出图像条件纹理词典编码与稀疏拓扑监督，在六个纹理基准上取得较强结果。",
-        "featured": true
+        "featured": false
       },
       {
         "authors": "Pan, Y., Xu, K., & Peng, B.",
@@ -80,7 +80,7 @@
         "pages": "",
         "url": "https://aisel.aisnet.org/icis2025/user_behav/user_behav/15",
         "summary": "比较主动领取与自动发放两类激励，分析其对云计算场景中参与度与消费行为的影响。",
-        "featured": false
+        "featured": true
       },
       {
         "authors": "Xu, K., Nie, J., Chen, Y., Ban, Z., Liu, L., Li, K., Liu, D., & Yin, R.",
