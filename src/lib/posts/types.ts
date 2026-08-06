@@ -1,5 +1,6 @@
 export type PostMatterType = {
   id: string;
+  slug?: string;
   title: string;
   tags: string[];
   pinned?: boolean;

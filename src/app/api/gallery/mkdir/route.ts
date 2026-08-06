@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { AuthError, requireAdminSession } from "@/lib/gallery/auth";
-import { normalizeDirKey } from "@/lib/gallery/path";
+import {
+  isProtectedAdminKey,
+  normalizeAdminPath,
+} from "@/lib/gallery/path";
 import { putEmptyDir } from "@/lib/gallery/r2";
 
 const bodySchema = z.object({
@@ -21,9 +24,20 @@ export async function POST(request: NextRequest) {
 
     let dirKey: string;
     try {
-      dirKey = normalizeDirKey(parsed.data.path);
+      dirKey = normalizeAdminPath(parsed.data.path, { asPrefix: true });
     } catch {
       return NextResponse.json({ error: "Invalid directory path" }, { status: 400 });
+    }
+
+    if (!dirKey) {
+      return NextResponse.json({ error: "Invalid directory path" }, { status: 400 });
+    }
+
+    if (isProtectedAdminKey(dirKey) || dirKey === "admin/") {
+      return NextResponse.json(
+        { error: "Cannot create directory under protected admin path" },
+        { status: 403 },
+      );
     }
 
     await putEmptyDir(dirKey);

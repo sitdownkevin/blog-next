@@ -1,24 +1,16 @@
 import crypto from "crypto";
-import path from "path";
-import fs from "fs";
-
-const postsDirectory = path.join(process.cwd(), "content/posts");
+import { listPostSlugs } from "@/lib/posts/r2-store";
 
 export function encrypt(text: string): string {
   return crypto.createHash("sha256").update(text).digest("hex");
 }
 
-export function decrypt(textDecrypted: string): string {
-  const fileNamesWithoutExt = fs
-    .readdirSync(postsDirectory)
-    .map((fileName) => fileName.replace(/\.md$/, ""));
-  const decryptedText = fileNamesWithoutExt.find(
-    (fileName) => encrypt(fileName) === textDecrypted,
-  );
+export async function decrypt(textDecrypted: string): Promise<string> {
+  const slugs = await listPostSlugs();
+  const decryptedText = slugs.find((slug) => encrypt(slug) === textDecrypted);
 
   if (decryptedText) {
     return decryptedText;
-  } else {
-    return "404";
   }
+  return "404";
 }

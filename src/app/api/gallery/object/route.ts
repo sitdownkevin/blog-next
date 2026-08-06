@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { AuthError, requireAdminSession } from "@/lib/gallery/auth";
-import { normalizeDirKey, normalizeKey } from "@/lib/gallery/path";
+import {
+  isProtectedAdminKey,
+  normalizeAdminPath,
+} from "@/lib/gallery/path";
 import { deleteByKey } from "@/lib/gallery/r2";
 
 const bodySchema = z.object({
@@ -22,9 +25,23 @@ export async function DELETE(request: NextRequest) {
     const raw = parsed.data.key;
     let key: string;
     try {
-      key = raw.endsWith("/") ? normalizeDirKey(raw) : normalizeKey(raw);
+      key = normalizeAdminPath(raw, { asPrefix: raw.endsWith("/") });
     } catch {
       return NextResponse.json({ error: "Invalid key" }, { status: 400 });
+    }
+
+    if (!key) {
+      return NextResponse.json(
+        { error: "Cannot delete bucket root" },
+        { status: 400 },
+      );
+    }
+
+    if (isProtectedAdminKey(key) || key === "admin/") {
+      return NextResponse.json(
+        { error: "Cannot delete protected admin path" },
+        { status: 403 },
+      );
     }
 
     const result = await deleteByKey(key);

@@ -1,24 +1,27 @@
-import fs from "fs";
-import path from "path";
-import { decrypt, encrypt } from "@/lib/posts/crypto";
 import matter from "gray-matter";
+import { decrypt } from "@/lib/posts/crypto";
 import { MarkdownType, PostMatterType } from "./types";
 import { createBasePipeline } from "@/lib/posts/markdownPipeline";
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { parsePostDate } from "./parse-post-date";
-
-const postsDirectory = path.join(process.cwd(), "content/posts");
+import { getPostRaw } from "./r2-store";
 
 async function getMarkdownContent(postId: string): Promise<MarkdownType> {
-  const fileNameWithoutExt = decrypt(postId);
-  const fullPath = path.join(postsDirectory, `${fileNameWithoutExt}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const fileNameWithoutExt = await decrypt(postId);
+  if (fileNameWithoutExt === "404") {
+    throw new Error(`Post not found: ${postId}`);
+  }
+
+  const fileContents = await getPostRaw(fileNameWithoutExt);
+  if (fileContents === null) {
+    throw new Error(`Post not found: ${postId}`);
+  }
 
   const matterResult = matter(fileContents);
 
   const pipeline = createBasePipeline();
   const contentProcessed = await pipeline.process(matterResult.content);
-  let contentHtml: string = contentProcessed.toString();
+  const contentHtml: string = contentProcessed.toString();
 
   return {
     content: contentHtml,

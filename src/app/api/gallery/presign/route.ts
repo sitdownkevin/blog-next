@@ -2,7 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { AuthError, requireAdminSession } from "@/lib/gallery/auth";
-import { mimeMatchesKey, normalizeKey } from "@/lib/gallery/path";
+import {
+  isProtectedAdminKey,
+  mimeMatchesKey,
+  normalizeAdminPath,
+} from "@/lib/gallery/path";
 import { presignPut } from "@/lib/gallery/r2";
 import { ALLOWED_IMAGE_TYPES } from "@/lib/gallery/types";
 
@@ -23,9 +27,16 @@ export async function POST(request: NextRequest) {
 
     let key: string;
     try {
-      key = normalizeKey(parsed.data.key);
+      key = normalizeAdminPath(parsed.data.key, { asPrefix: false });
     } catch {
       return NextResponse.json({ error: "Invalid key" }, { status: 400 });
+    }
+
+    if (isProtectedAdminKey(key)) {
+      return NextResponse.json(
+        { error: "Cannot write to protected admin path" },
+        { status: 403 },
+      );
     }
 
     if (!mimeMatchesKey(key, parsed.data.contentType)) {

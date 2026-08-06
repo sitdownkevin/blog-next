@@ -2,118 +2,143 @@ import {
   DeleteObjectsCommand,
   ListObjectsV2Command,
   PutObjectCommand,
-  S3Client,
 } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
+import {
+  DEFAULT_LIST_LIMIT,
+  MAX_LIST_LIMIT,
+} from "@/lib/gallery/constants";
 import { basename, isImageKey, normalizePrefix } from "@/lib/gallery/path";
 import type { GalleryEntry } from "@/lib/gallery/types";
+import { getBucket, getR2Client, publicUrl } from "@/lib/r2/client";
 
 const DELETE_LIMIT = 1000;
 const PRESIGN_EXPIRES_IN = 600; // 10 minutes
 
-function requireEnv(name: string): string {
-  const value = process.env[name];
-  if (!value) {
-    throw new Error(`Missing environment variable: ${name}`);
-  }
-  return value;
+export { getR2Client, publicUrl };
+
+export type ListOptions = {
+  cursor?: string | null;
+  limit?: number;
+};
+
+function clampLimit(limit?: number): number {
+  if (!limit || !Number.isFinite(limit)) return DEFAULT_LIST_LIMIT;
+  return Math.min(MAX_LIST_LIMIT, Math.max(1, Math.floor(limit)));
 }
 
-function getBucket(): string {
-  return requireEnv("R2_BUCKET");
-}
-
-function getPublicBaseUrl(): string {
-  return requireEnv("R2_PUBLIC_URL").replace(/\/+$/, "");
-}
-
-let client: S3Client | null = null;
-
-export function getR2Client(): S3Client {
-  if (client) return client;
-
-  const accountId = requireEnv("R2_ACCOUNT_ID");
-  client = new S3Client({
-    region: "auto",
-    endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
-    credentials: {
-      accessKeyId: requireEnv("R2_ACCESS_KEY_ID"),
-      secretAccessKey: requireEnv("R2_SECRET_ACCESS_KEY"),
-    },
-    // Avoid x-amz-checksum-* on presigned PUTs — they break browser CORS with R2.
-    requestChecksumCalculation: "WHEN_REQUIRED",
-    responseChecksumValidation: "WHEN_REQUIRED",
-  });
-  return client;
-}
-
-export function publicUrl(key: string): string {
-  const encoded = key
-    .split("/")
-    .map((seg) => encodeURIComponent(seg))
-    .join("/");
-  return `${getPublicBaseUrl()}/${encoded}`;
-}
-
-export async function listPrefix(prefixRaw: string): Promise<{
+/** One-level listing with delimiter (admin folder browser). */
+export async function listPrefix(
+  prefixRaw: string,
+  options: ListOptions = {},
+): Promise<{
   prefix: string;
   entries: GalleryEntry[];
+  nextCursor: string | null;
 }> {
   const prefix = normalizePrefix(prefixRaw);
   const s3 = getR2Client();
+  const limit = clampLimit(options.limit);
+
+  const response = await s3.send(
+    new ListObjectsV2Command({
+      Bucket: getBucket(),
+      Prefix: prefix || undefined,
+      Delimiter: "/",
+      MaxKeys: limit,
+      ContinuationToken: options.cursor || undefined,
+    }),
+  );
+
   const dirs = new Map<string, GalleryEntry>();
   const files: GalleryEntry[] = [];
-  let continuationToken: string | undefined;
 
-  do {
-    const response = await s3.send(
-      new ListObjectsV2Command({
-        Bucket: getBucket(),
-        Prefix: prefix || undefined,
-        Delimiter: "/",
-        ContinuationToken: continuationToken,
-      }),
-    );
+  for (const common of response.CommonPrefixes ?? []) {
+    if (!common.Prefix) continue;
+    const dirKey = common.Prefix;
+    const name = basename(dirKey);
+    if (!name) continue;
+    dirs.set(dirKey, {
+      type: "dir",
+      name,
+      key: dirKey,
+    });
+  }
 
-    for (const common of response.CommonPrefixes ?? []) {
-      if (!common.Prefix) continue;
-      const dirKey = common.Prefix;
-      const name = basename(dirKey);
-      if (!name) continue;
-      dirs.set(dirKey, {
-        type: "dir",
-        name,
-        key: dirKey,
-      });
-    }
+  for (const obj of response.Contents ?? []) {
+    if (!obj.Key) continue;
+    if (obj.Key === prefix || obj.Key.endsWith("/")) continue;
+    if (!isImageKey(obj.Key)) continue;
 
-    for (const obj of response.Contents ?? []) {
-      if (!obj.Key) continue;
-      // Skip the directory placeholder object itself (e.g. "foo/")
-      if (obj.Key === prefix || obj.Key.endsWith("/")) continue;
-      if (!isImageKey(obj.Key)) continue;
-
-      files.push({
-        type: "file",
-        name: basename(obj.Key),
-        key: obj.Key,
-        url: publicUrl(obj.Key),
-        size: obj.Size,
-        lastModified: obj.LastModified?.toISOString(),
-      });
-    }
-
-    continuationToken = response.IsTruncated
-      ? response.NextContinuationToken
-      : undefined;
-  } while (continuationToken);
+    files.push({
+      type: "file",
+      name: basename(obj.Key),
+      key: obj.Key,
+      url: publicUrl(obj.Key),
+      size: obj.Size,
+      lastModified: obj.LastModified?.toISOString(),
+    });
+  }
 
   const entries = [
     ...Array.from(dirs.values()).sort((a, b) => a.name.localeCompare(b.name)),
     ...files.sort((a, b) => a.name.localeCompare(b.name)),
   ];
 
-  return { prefix, entries };
+  return {
+    prefix,
+    entries,
+    nextCursor: response.IsTruncated
+      ? (response.NextContinuationToken ?? null)
+      : null,
+  };
+}
+
+/** Recursive image listing under a prefix (public gallery). */
+export async function listImagesRecursive(
+  prefixRaw: string,
+  options: ListOptions = {},
+): Promise<{
+  prefix: string;
+  entries: GalleryEntry[];
+  nextCursor: string | null;
+}> {
+  const prefix = normalizePrefix(prefixRaw);
+  const s3 = getR2Client();
+  const limit = clampLimit(options.limit);
+
+  const response = await s3.send(
+    new ListObjectsV2Command({
+      Bucket: getBucket(),
+      Prefix: prefix || undefined,
+      MaxKeys: limit,
+      ContinuationToken: options.cursor || undefined,
+    }),
+  );
+
+  const entries: GalleryEntry[] = [];
+  for (const obj of response.Contents ?? []) {
+    if (!obj.Key) continue;
+    if (obj.Key.endsWith("/")) continue;
+    if (!isImageKey(obj.Key)) continue;
+
+    entries.push({
+      type: "file",
+      name: basename(obj.Key),
+      key: obj.Key,
+      url: publicUrl(obj.Key),
+      size: obj.Size,
+      lastModified: obj.LastModified?.toISOString(),
+    });
+  }
+
+  return {
+    prefix,
+    entries,
+    nextCursor: response.IsTruncated
+      ? (response.NextContinuationToken ?? null)
+      : null,
+  };
 }
 
 export async function putEmptyDir(dirKey: string): Promise<void> {
@@ -155,7 +180,6 @@ export async function deleteByKey(key: string): Promise<{ deleted: number }> {
 async function deletePrefixExactOrObjects(
   key: string,
 ): Promise<{ deleted: number }> {
-  // Single file delete
   const s3 = getR2Client();
   await s3.send(
     new DeleteObjectsCommand({

@@ -11,7 +11,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import "@/app/globals.css";
 
-import ThemeProvider from "./_components/theme-provider";
+import ThemeProvider from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";

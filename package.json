@@ -15,7 +15,8 @@
     "test": "vitest --passWithNoTests",
     "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run build",
     "audit:components": "node scripts/audit-components.js",
-    "resolve:conflicts": "node scripts/resolve-conflicts.js"
+    "resolve:conflicts": "node scripts/resolve-conflicts.js",
+    "migrate:posts-r2": "node scripts/migrate-posts-to-r2.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1104.0",
@@ -23,6 +24,7 @@
     "@babel/runtime": "^7.26.9",
     "@base-ui/react": "^1.7.0",
     "@hookform/resolvers": "^5.2.1",
+    "@mdxeditor/editor": "^4.2.0",
     "@types/prismjs": "^1.26.5",
     "@vercel/analytics": "^1.6.1",
     "@wrksz/themes": "^1.1.0",

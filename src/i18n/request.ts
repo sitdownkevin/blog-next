@@ -15,11 +15,15 @@ export default getRequestConfig(async ({ locale: overrideLocale }) => {
   let locale = overrideLocale;
 
   if (!locale) {
-    const paramValue = await rootParams.locale();
+    // [locale] is a root param on localized routes; unlocalized roots (e.g. /admin) have none.
+    const localeFn = (
+      rootParams as { locale?: () => Promise<string | undefined> }
+    ).locale;
+    const paramValue = localeFn ? await localeFn() : undefined;
     if (hasLocale(routing.locales, paramValue)) {
       locale = paramValue;
     } else {
-      notFound();
+      locale = routing.defaultLocale;
     }
   }
 

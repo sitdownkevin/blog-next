@@ -1,39 +1,39 @@
-import path from "path";
-import fs from "fs";
 import matter from "gray-matter";
-import { cacheLife } from "next/cache";
+import { cacheLife, cacheTag } from "next/cache";
 import { encrypt } from "./crypto";
 import { parsePostDate } from "./parse-post-date";
+import { listPostSlugs, getPostRaw } from "./r2-store";
 import { PostMatterType } from "./types";
-
-const postDirectory = path.join(process.cwd(), "content/posts");
 
 export async function getMatterList(): Promise<PostMatterType[]> {
   "use cache";
   cacheLife("days");
+  cacheTag("posts");
 
-  const fileNames = fs.readdirSync(postDirectory);
-  const matterList = fileNames.map((fileName) => {
-    const fileNameWithoutExt = fileName.replace(/\.md$/, "");
-    const fullPath = path.join(postDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+  const slugs = await listPostSlugs();
+  const matterList = (
+    await Promise.all(
+      slugs.map(async (slug) => {
+        const fileContents = await getPostRaw(slug);
+        if (fileContents === null) return null;
 
-    const matterResult = matter(fileContents);
+        const matterResult = matter(fileContents);
 
-    const matterData = {
-      id: encrypt(fileNameWithoutExt),
-      title: matterResult.data.title,
-      tags: matterResult.data.tags ? matterResult.data.tags.split(",") : [],
-      description: matterResult.data?.description,
-      pinned: matterResult.data?.pinned || false,
-      hidden: matterResult.data?.hidden || false,
-      create_date: parsePostDate(matterResult.data.create_date),
-      update_date: parsePostDate(matterResult.data.update_date),
-      content: matterResult.content,
-    };
+        return {
+          id: encrypt(slug),
+          slug,
+          title: matterResult.data.title,
+          tags: matterResult.data.tags ? matterResult.data.tags.split(",") : [],
+          description: matterResult.data?.description,
+          pinned: matterResult.data?.pinned || false,
+          hidden: matterResult.data?.hidden || false,
+          create_date: parsePostDate(matterResult.data.create_date),
+          update_date: parsePostDate(matterResult.data.update_date),
+          content: matterResult.content,
+        } satisfies PostMatterType & { slug: string };
+      }),
+    )
+  ).filter((item): item is NonNullable<typeof item> => item !== null);
 
-    return matterData;
-  }) as PostMatterType[];
-
-  return matterList;
+  return matterList as PostMatterType[];
 }

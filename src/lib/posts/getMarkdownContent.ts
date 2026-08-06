@@ -1,13 +1,10 @@
-import fs from "fs";
-import path from "path";
-import { cacheLife } from "next/cache";
-import { decrypt } from "@/lib/posts/crypto";
+import { cacheLife, cacheTag } from "next/cache";
 import matter from "gray-matter";
+import { decrypt } from "@/lib/posts/crypto";
 import { MarkdownType } from "./types";
 import { createBasePipeline } from "@/lib/posts/markdownPipeline";
 import { parsePostDate } from "./parse-post-date";
-
-const postsDirectory = path.join(process.cwd(), "content/posts");
+import { getPostRaw } from "./r2-store";
 
 function addCopyButton(contentHtml: string): string {
   // Preserve Prism-highlighted markup inside <code>; only wrap for copy UX.
@@ -54,10 +51,19 @@ export async function getMarkdownContent(
 ): Promise<MarkdownType> {
   "use cache";
   cacheLife("days");
+  cacheTag("posts");
+  cacheTag(`post:${postId}`);
 
-  const fileNameWithoutExt = decrypt(postId);
-  const fullPath = path.join(postsDirectory, `${fileNameWithoutExt}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
+  const fileNameWithoutExt = await decrypt(postId);
+  if (fileNameWithoutExt === "404") {
+    throw new Error(`Post not found: ${postId}`);
+  }
+
+  const fileContents = await getPostRaw(fileNameWithoutExt);
+  if (fileContents === null) {
+    throw new Error(`Post not found: ${postId}`);
+  }
+
   const matterResult = matter(fileContents);
 
   const pipeline = createBasePipeline();

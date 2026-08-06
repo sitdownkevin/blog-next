@@ -1,6 +1,8 @@
 /**
- * One-shot: download images referenced in content/posts/*.md,
+ * Historical one-shot: download images referenced in content/posts/*.md,
  * upload to R2 under posts/, rewrite markdown links to R2_PUBLIC_URL.
+ * Local Markdown was removed after R2 migration; restore content/posts/ first
+ * if you need to re-run this script.
  */
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
