@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { AuthError, requireAdminSession } from "@/lib/gallery/auth";
 import { mimeMatchesKey, normalizeKey } from "@/lib/gallery/path";
@@ -37,6 +38,7 @@ export async function POST(request: NextRequest) {
     const result = await presignPut(key, parsed.data.contentType);
     return NextResponse.json(result);
   } catch (error) {
+    unstable_rethrow(error);
     if (error instanceof AuthError) {
       return NextResponse.json({ error: error.message }, { status: error.status });
     }

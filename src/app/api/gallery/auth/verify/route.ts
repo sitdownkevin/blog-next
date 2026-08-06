@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { unstable_rethrow } from "next/navigation";
 import { z } from "zod";
 import { verifySiweLogin } from "@/lib/gallery/auth";
 
@@ -31,6 +32,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ address: result.address });
   } catch (error) {
+    unstable_rethrow(error);
     console.error("Gallery verify error:", error);
     return NextResponse.json(
       { error: "Verification failed" },
