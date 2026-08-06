@@ -1,57 +1,54 @@
-"use client";
+import { Suspense } from "react";
+import { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { hasLocale } from "next-intl";
+import { Loader2 } from "lucide-react";
 
-import Masonry from "react-masonry-css";
-import Image from "next/image";
+import { GalleryPage } from "@/components/features/gallery/gallery-page";
+import { routing, type AppLocale } from "@/i18n/routing";
 
-const photos = Array.from({ length: 8 }, (_, index) => ({
-  id: index + 1,
-  src: `/assets/images/photos/g${index + 1}.webp`,
-  caption: "",
-}));
-
-const breakpointColumnsObj = {
-  default: 4,
-  1100: 3,
-  700: 2,
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Page() {
+async function resolveLocale(params: Props["params"]): Promise<AppLocale> {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    return routing.defaultLocale;
+  }
+  return locale;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const locale = await resolveLocale(params);
+  const t = await getTranslations({ locale, namespace: "Gallery" });
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+    alternates: {
+      canonical: "https://kexu.win/about/gallery",
+    },
+  };
+}
+
+function GalleryFallback() {
   return (
-    <div className="w-full py-8 px-4 space-y-6">
-      <h1 className="font-display text-3xl font-semibold tracking-tight text-balance">
-        Gallery
-      </h1>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="masonry-grid"
-        columnClassName="masonry-grid_column"
-      >
-        {photos.map((photo) => (
-          <div
-            key={photo.id}
-            className="mb-4 transition duration-300 hover:opacity-90 rounded-lg overflow-hidden"
-          >
-            <Image
-              src={photo.src}
-              alt={photo.caption}
-              width={1000}
-              height={1000}
-              className="w-full h-auto object-cover rounded-lg"
-            />
-          </div>
-        ))}
-      </Masonry>
-      <style jsx global>{`
-        .masonry-grid {
-          display: flex;
-          margin-left: -16px;
-          width: auto;
-        }
-        .masonry-grid_column {
-          padding-left: 16px;
-          background-clip: padding-box;
-        }
-      `}</style>
+    <div className="w-full py-8 px-4">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground py-12">
+        <Loader2 className="size-4 animate-spin" />
+      </div>
     </div>
+  );
+}
+
+export default async function Page({ params }: Props) {
+  const locale = await resolveLocale(params);
+  setRequestLocale(locale);
+
+  return (
+    <Suspense fallback={<GalleryFallback />}>
+      <GalleryPage />
+    </Suspense>
   );
 }
