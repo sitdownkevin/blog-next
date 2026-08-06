@@ -2,7 +2,7 @@
   "Metadata": {
     "homeTitle": "Ke Xu's website",
     "homeDescription": "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
-    "resumeTitle": "Resume - Ke Xu's website",
+    "resumeTitle": "Resume",
     "resumeDescription": "Resume of Ke Xu, Ph.D. candidate in Information Systems at Tongji University."
   },
   "Nav": {
@@ -87,7 +87,7 @@
     "noMatches": "No posts matched your search.",
     "pinned": "Pinned",
     "copyCode": "Copy code to clipboard",
-    "metadataTitle": "Posts - Ke Xu's website",
+    "metadataTitle": "Posts",
     "metadataDescription": "Blog posts and notes by Ke Xu.",
     "errorTitle": "Failed to load posts",
     "errorDescription": "Something went wrong while loading this page. You can try again.",
@@ -99,7 +99,7 @@
   "Gallery": {
     "title": "Gallery",
     "subtitle": "Image host with folders. Browse publicly; manage with a wallet.",
-    "metadataTitle": "Gallery - Ke Xu's website",
+    "metadataTitle": "Gallery",
     "metadataDescription": "Browse and host images on Ke Xu's Cloudflare R2 gallery.",
     "root": "Root",
     "breadcrumb": "Directory path",

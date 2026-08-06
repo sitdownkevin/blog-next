@@ -6,6 +6,7 @@ import { Loader2 } from "lucide-react";
 
 import { GalleryPage } from "@/components/features/gallery/gallery-page";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { absoluteUrl } from "@/lib/seo/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("metadataTitle"),
     description: t("metadataDescription"),
     alternates: {
-      canonical: "https://kexu.win/about/gallery",
+      canonical: absoluteUrl("/about/gallery"),
     },
   };
 }

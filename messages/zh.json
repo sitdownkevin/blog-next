@@ -2,7 +2,7 @@
   "Metadata": {
     "homeTitle": "徐可的个人网站",
     "homeDescription": "你好，我是徐可，同济大学管理科学与工程（信息系统）博士研究生，现居中国上海。",
-    "resumeTitle": "简历 - 徐可的个人网站",
+    "resumeTitle": "简历",
     "resumeDescription": "徐可的简历，同济大学管理科学与工程（信息系统）博士研究生。"
   },
   "Nav": {
@@ -87,7 +87,7 @@
     "noMatches": "没有匹配的日志。",
     "pinned": "置顶",
     "copyCode": "复制代码",
-    "metadataTitle": "日志 - 徐可的个人网站",
+    "metadataTitle": "日志",
     "metadataDescription": "徐可的博客与笔记。",
     "errorTitle": "加载日志失败",
     "errorDescription": "加载页面时出错，请重试。",
@@ -99,7 +99,7 @@
   "Gallery": {
     "title": "图库",
     "subtitle": "支持目录的图床。公开浏览，钱包管理。",
-    "metadataTitle": "图库 - 徐可的个人网站",
+    "metadataTitle": "图库",
     "metadataDescription": "在徐可的 Cloudflare R2 图床中浏览与托管图片。",
     "root": "根目录",
     "breadcrumb": "目录路径",

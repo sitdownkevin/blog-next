@@ -5,6 +5,13 @@ import { getMatterList } from "@/lib/posts/getMatterList";
 import type { LatestPost } from "./_components/personal-intro";
 import { hasLocale } from "next-intl";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { serializeJsonLd } from "@/lib/seo/json-ld";
+import {
+  SITE_AUTHOR,
+  SITE_OG_IMAGE,
+  SITE_URL,
+  absoluteUrl,
+} from "@/lib/seo/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -23,19 +30,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    title: t("homeTitle"),
+    title: {
+      absolute: t("homeTitle"),
+    },
     description: t("homeDescription"),
     keywords: ["Ke Xu", "personal website", "blog", "portfolio", "徐可"],
-    authors: [{ name: "Ke Xu" }],
-    creator: "Ke Xu",
+    authors: [{ name: SITE_AUTHOR.name }],
+    creator: SITE_AUTHOR.name,
     openGraph: {
       title: t("homeTitle"),
       description: t("homeDescription"),
-      url: "https://kexu.win",
+      url: SITE_URL,
       siteName: t("homeTitle"),
       images: [
         {
-          url: "/og-image.jpg",
+          url: SITE_OG_IMAGE,
           width: 940,
           height: 940,
           alt: t("homeDescription"),
@@ -48,10 +57,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("homeTitle"),
       description: t("homeDescription"),
-      images: ["/og-image.jpg"],
+      images: [SITE_OG_IMAGE],
     },
     alternates: {
-      canonical: "https://kexu.win",
+      canonical: absoluteUrl("/"),
     },
   };
 }
@@ -84,8 +93,16 @@ export default async function Page({ params }: Props) {
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Ke Xu",
-    url: "https://kexu.win",
+    name: SITE_AUTHOR.name,
+    url: SITE_URL,
+    email: SITE_AUTHOR.email,
+    jobTitle: SITE_AUTHOR.jobTitle,
+    affiliation: {
+      "@type": "CollegeOrUniversity",
+      name: SITE_AUTHOR.affiliation,
+    },
+    image: absoluteUrl(SITE_OG_IMAGE),
+    sameAs: [SITE_AUTHOR.githubUrl],
   };
 
   return (
@@ -93,7 +110,7 @@ export default async function Page({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema).replace(/</g, "\\u003c"),
+          __html: serializeJsonLd(personSchema),
         }}
       />
       <HomeContent lang={locale} latestPosts={latestPosts} />

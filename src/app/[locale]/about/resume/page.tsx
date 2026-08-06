@@ -8,6 +8,7 @@ import Resume from "@/components/features/resume/Resume";
 import { getResumeData } from "@/lib/resume/data";
 import { hasLocale } from "next-intl";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { absoluteUrl } from "@/lib/seo/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("resumeTitle"),
     description: t("resumeDescription"),
     alternates: {
-      canonical: "https://kexu.win/about/resume",
+      canonical: absoluteUrl("/about/resume"),
     },
   };
 }

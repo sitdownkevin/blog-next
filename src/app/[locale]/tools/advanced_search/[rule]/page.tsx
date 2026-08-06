@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { getData, getDescription } from "@/lib/advanced-search";
@@ -5,6 +6,7 @@ import JournalTable from "@/components/features/tools/advanced-search/JournalTab
 import JournalClause from "@/components/features/tools/advanced-search/JournalClause";
 import DescriptionCard from "@/components/features/tools/advanced-search/DescriptionCard";
 import { JournalType } from "@/lib/types";
+import { absoluteUrl } from "@/lib/seo/site";
 
 const caption = {
   utd: "UTD24",
@@ -38,7 +40,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ rule: string }>;
-}) {
+}): Promise<Metadata> {
   const { rule } = await params;
   if (!isRuleKey(rule)) {
     return { title: "Not Found" };
@@ -47,6 +49,9 @@ export async function generateMetadata({
   return {
     title: `${caption[rule]} - Advanced Search`,
     description: `Advanced search for ${caption[rule]}`,
+    alternates: {
+      canonical: absoluteUrl(`/tools/advanced_search/${rule}`),
+    },
   };
 }
 

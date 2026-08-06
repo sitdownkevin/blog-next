@@ -4,6 +4,7 @@ import { hasLocale } from "next-intl";
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { PostsList } from "./_components/posts-list";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { absoluteUrl } from "@/lib/seo/site";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("metadataTitle"),
     description: t("metadataDescription"),
     alternates: {
-      canonical: "https://kexu.win/posts",
+      canonical: absoluteUrl("/posts"),
     },
   };
 }

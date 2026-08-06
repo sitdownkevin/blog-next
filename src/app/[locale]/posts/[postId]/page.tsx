@@ -7,6 +7,13 @@ import { getMatterList } from "@/lib/posts/getMatterList";
 import { getMarkdownContent } from "@/lib/posts/getMarkdownContent";
 import { MarkdownType } from "@/lib/posts/types";
 import { routing, type AppLocale } from "@/i18n/routing";
+import { serializeJsonLd } from "@/lib/seo/json-ld";
+import {
+  SITE_AUTHOR,
+  SITE_OG_IMAGE,
+  SITE_URL,
+  absoluteUrl,
+} from "@/lib/seo/site";
 
 import { PostTitle } from "./_components/post-title";
 import { PostDate } from "./_components/post-date";
@@ -51,15 +58,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   const siteName = tMeta("homeTitle");
-  const title = `${post.title} - ${siteName}`;
   const description = post.description || post.title;
-  const url = `https://kexu.win/posts/${postId}`;
+  const url = absoluteUrl(`/posts/${postId}`);
+  const ogImage = absoluteUrl(SITE_OG_IMAGE);
 
   return {
-    title,
+    title: post.title,
     description,
     keywords: post.tags,
-    authors: [{ name: "Ke Xu" }],
+    authors: [{ name: SITE_AUTHOR.name }],
     openGraph: {
       title: post.title,
       description,
@@ -67,6 +74,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName,
       type: "article",
       locale: locale === "zh" ? "zh_CN" : "en_US",
+      images: [
+        {
+          url: ogImage,
+          width: 940,
+          height: 940,
+          alt: post.title,
+        },
+      ],
       ...(post.update_date && {
         modifiedTime: post.update_date.toISOString(),
       }),
@@ -75,14 +90,62 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       }),
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title: post.title,
       description,
+      images: [ogImage],
     },
     alternates: {
       canonical: url,
     },
   };
+}
+
+async function PostJsonLd({ postId }: { postId: string }) {
+  const post = (await getMatterList()).find((matter) => matter.id === postId);
+  if (!post) {
+    return null;
+  }
+
+  const url = absoluteUrl(`/posts/${postId}`);
+  const description = post.description || post.title;
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description,
+    image: absoluteUrl(SITE_OG_IMAGE),
+    author: {
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: SITE_URL,
+    },
+    publisher: {
+      "@type": "Person",
+      name: SITE_AUTHOR.name,
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    ...(post.create_date && {
+      datePublished: post.create_date.toISOString(),
+    }),
+    ...(post.update_date && {
+      dateModified: post.update_date.toISOString(),
+    }),
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: serializeJsonLd(articleSchema),
+      }}
+    />
+  );
 }
 
 async function PostContent({ params }: Props) {
@@ -127,11 +190,16 @@ function PostFallback() {
   );
 }
 
-export default function Post({ params }: Props) {
+export default async function Post({ params }: Props) {
+  const { postId } = await params;
+
   return (
-    <Suspense fallback={<PostFallback />}>
-      <PostContent params={params} />
-    </Suspense>
+    <>
+      <PostJsonLd postId={postId} />
+      <Suspense fallback={<PostFallback />}>
+        <PostContent params={params} />
+      </Suspense>
+    </>
   );
 }
 

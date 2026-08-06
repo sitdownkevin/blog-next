@@ -1,30 +1,37 @@
 import { Feed } from "feed";
 import getMarkdownContentForRss from "@/lib/posts/getMarkdownContentForRss";
 import { MarkdownType } from "@/lib/posts/types";
+import {
+  SITE_AUTHOR,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_OG_IMAGE,
+  SITE_URL,
+  absoluteUrl,
+} from "@/lib/seo/site";
 
 export async function GET() {
-  const siteURL = "https://kexu.win";
   const date = new Date();
 
   const author = {
-    name: "Ke Xu",
-    email: "kexu567@gmail.com",
-    link: siteURL,
+    name: SITE_AUTHOR.name,
+    email: SITE_AUTHOR.email,
+    link: SITE_URL,
   };
 
   const feed = new Feed({
-    title: "KE XU's website",
-    description: "KE XU's website",
-    id: siteURL,
-    link: siteURL,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    id: SITE_URL,
+    link: SITE_URL,
     language: "en",
-    image: `${siteURL}/favicon.ico`,
-    favicon: `${siteURL}/favicon.ico`,
+    image: absoluteUrl(SITE_OG_IMAGE),
+    favicon: absoluteUrl("/favicon.ico"),
     copyright: `All rights reserved ${date.getFullYear()}`,
     updated: date,
     generator: "Next.js using Feed for Node.js",
     feedLinks: {
-      rss2: `${siteURL}/api/rss`,
+      rss2: absoluteUrl("/api/rss"),
     },
     author,
   });
@@ -35,14 +42,14 @@ export async function GET() {
     feed.addItem({
       title: post.title,
       id: `${post.id}`,
-      link: `${siteURL}/posts/${post.id}`,
+      link: absoluteUrl(`/posts/${post.id}`),
       description: post.description || post.title,
       author: [author],
       date: new Date(post.update_date || post.create_date || Date.now()),
     });
   }
 
-  let rss2Content = feed.rss2();
+  const rss2Content = feed.rss2();
 
   return new Response(rss2Content, {
     headers: {

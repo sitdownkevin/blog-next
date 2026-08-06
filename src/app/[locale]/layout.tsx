@@ -17,6 +17,13 @@ import { Header } from "./_components/header";
 import { Footer } from "./_components/footer";
 import { LocaleSync } from "./_components/locale-sync";
 import { routing } from "@/i18n/routing";
+import {
+  SITE_AUTHOR,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_OG_IMAGE,
+  SITE_URL,
+} from "@/lib/seo/site";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
@@ -47,12 +54,50 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kexu.win"),
-  title: "Ke Xu's website",
-  description:
-    "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: "%s | Ke Xu",
+  },
+  description: SITE_DESCRIPTION,
+  authors: [{ name: SITE_AUTHOR.name, url: SITE_URL }],
+  creator: SITE_AUTHOR.name,
+  publisher: SITE_AUTHOR.name,
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: SITE_OG_IMAGE,
+        width: 940,
+        height: 940,
+        alt: SITE_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     types: {

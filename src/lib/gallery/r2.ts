@@ -40,6 +40,9 @@ export function getR2Client(): S3Client {
       accessKeyId: requireEnv("R2_ACCESS_KEY_ID"),
       secretAccessKey: requireEnv("R2_SECRET_ACCESS_KEY"),
     },
+    // Avoid x-amz-checksum-* on presigned PUTs — they break browser CORS with R2.
+    requestChecksumCalculation: "WHEN_REQUIRED",
+    responseChecksumValidation: "WHEN_REQUIRED",
   });
   return client;
 }
