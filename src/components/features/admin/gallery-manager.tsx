@@ -14,6 +14,16 @@ import {
   X,
 } from "lucide-react";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -71,6 +81,7 @@ export function GalleryManager() {
   const [mkdirName, setMkdirName] = useState("");
   const [mkdirBusy, setMkdirBusy] = useState(false);
   const [preview, setPreview] = useState<GalleryEntry | null>(null);
+  const [pendingDelete, setPendingDelete] = useState<GalleryEntry | null>(null);
   const [deleteBusy, setDeleteBusy] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -222,10 +233,9 @@ export function GalleryManager() {
     }
   };
 
-  const handleDelete = async (entry: GalleryEntry) => {
-    if (!window.confirm(`Delete “${entry.name}”? This cannot be undone.`)) {
-      return;
-    }
+  const confirmDelete = async () => {
+    if (!pendingDelete) return;
+    const entry = pendingDelete;
     setDeleteBusy(true);
     try {
       const res = await fetch("/api/gallery/object", {
@@ -235,6 +245,7 @@ export function GalleryManager() {
       });
       if (!res.ok) throw new Error("DELETE_FAILED");
       toast.success("Deleted");
+      setPendingDelete(null);
       if (preview?.key === entry.key) setPreview(null);
       await loadEntries(null, false);
     } catch {
@@ -347,7 +358,7 @@ export function GalleryManager() {
                     size="icon-sm"
                     aria-label="Delete"
                     disabled={deleteBusy}
-                    onClick={() => void handleDelete(dir)}
+                    onClick={() => setPendingDelete(dir)}
                   >
                     <Trash2 className="text-muted-foreground hover:text-destructive" />
                   </Button>
@@ -435,7 +446,7 @@ export function GalleryManager() {
                   <Button
                     variant="destructive"
                     disabled={deleteBusy}
-                    onClick={() => void handleDelete(preview)}
+                    onClick={() => setPendingDelete(preview)}
                   >
                     <Trash2 />
                     Delete
@@ -450,6 +461,33 @@ export function GalleryManager() {
           )}
         </DialogContent>
       </Dialog>
+
+      <AlertDialog
+        open={Boolean(pendingDelete)}
+        onOpenChange={(open) => {
+          if (!open && !deleteBusy) setPendingDelete(null);
+        }}
+      >
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Delete item?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Delete &quot;{pendingDelete?.name}&quot;? This cannot be undone.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleteBusy}>Cancel</AlertDialogCancel>
+            <AlertDialogAction
+              variant="destructive"
+              disabled={deleteBusy}
+              onClick={() => void confirmDelete()}
+            >
+              {deleteBusy ? <Loader2 className="size-4 animate-spin" /> : null}
+              Delete
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
 
       <Dialog open={mkdirOpen} onOpenChange={setMkdirOpen}>
         <DialogContent>
