@@ -10,7 +10,7 @@ hidden: false
 
 最近，我接手了一个从 Quora 爬取数据的项目。目标是抓取大约 18000 个用户的主页，收集他们的详细信息，包括基本简介、粉丝和回答数等统计数据、个人履历等等。
 
-![image-20250703004225432](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/public/9f7f48d7d02d61b6c5d68b86f0632d2d.png)
+![image-20250703004225432](https://img.kexu.win/posts/9f7f48d7d02d61b6c5d68b86f0632d2d.png)
 
 我希望为每个用户生成结构清晰的 JSON 文件，格式如下：
 
@@ -42,7 +42,7 @@ Quora 的一个友好之处在于，无需登录即可查看用户主页。这�
 
 我为整个爬虫系统设计了如下的简单架构：
 
-![image-20250703003900521](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/public/95014db1c79f2c0b8052ceadc458f445.png)
+![image-20250703003900521](https://img.kexu.win/posts/95014db1c79f2c0b8052ceadc458f445.png)
 
 架构说明：
 
@@ -179,7 +179,7 @@ await page.route(
 
 为了验证我这套设计哲学的合理性，在正式部署之前，我专门构建了一个离散事件模拟（Discrete Event Simulation）程序来测试系统的行为。结果令人振奋，完全证实了我的想法是正确且高效的。
 
-![image-20250703004801426](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/public/11083bba2191c5f66a939f343662e6c4.png)
+![image-20250703004801426](https://img.kexu.win/posts/11083bba2191c5f66a939f343662e6c4.png)
 
 从模拟结果的可视化图表和统计数据中，我们可以清晰地看到：
 

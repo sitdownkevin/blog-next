@@ -57,7 +57,7 @@ CHAOS - Combined (CT-MR) Healthy Abdominal Organ Segmentation
 
 [Homepage](https://chaos.grand-challenge.org/)
 
-![1699260885748](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260885748.png)
+![1699260885748](https://img.kexu.win/posts/1699260885748.png)
 
 Liver and Liver Tumor Segmentation
 
@@ -67,11 +67,11 @@ The liver is a common site of primary (i.e. originating in the liver like hepato
 
 130 CT scans, resized to 256x256 and converted to PNG for segmentation of the liver as well as tumor lesions.
 
-![1699260928004](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260928004.png)
+![1699260928004](https://img.kexu.win/posts/1699260928004.png)
 
 BKAI-IGH NeoPolyp-Small
 [Kaggle homepage](https://www.kaggle.com/c/bkai-igh-neopolyp/)
 
 This dataset contains 1200 images (1000 WLI images and 200 FICE images) with fine-grained segmentation annotations. The training set consists of 1000 images, and the test set consists of 200 images. All polyps are classified into neoplastic or non-neoplastic classes denoted by red and green colors, respectively.
 
-![1699260961445](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260961445.png)
+![1699260961445](https://img.kexu.win/posts/1699260961445.png)

@@ -31,7 +31,7 @@ tags: MATH
 
 古诺模型
 
-![image-20241113185416891](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/image-20241113185416891.png)
+![image-20241113185416891](https://img.kexu.win/posts/image-20241113185416891.png)
 
 ---
 

@@ -38,16 +38,16 @@ Tampermonkey 和 Violentmonkey 二选一
 
 Bb 首页显示日程悬浮海报与倒计时，点击课程名称直接跳转至对应课程。
 
-![1699258143871](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699258143871.gif)
+![1699258143871](https://img.kexu.win/posts/1699258143871.gif)
 
 ### 作业批改 - 扣分统计
 
 在“给学习者的反馈”窗口输入扣分情况。格式：**在“-”后输入扣的分值**。脚本会自动识别“-”符号后的扣分数字，并将扣分后的成绩填入 Bb“尝试”栏中。
 
-![1699258656055](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699258656055.gif)
+![1699258656055](https://img.kexu.win/posts/1699258656055.gif)
 
 ### 作业批改 - 备忘录&布局优化
 
 作业批改界面自动展开，下方增加备忘录，可以用来记录答案，便于快速批改作业（备忘录里的内容存储于本地，不会随着页面刷新而消失）。
 
-![1699258737835](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699258737835.png)
+![1699258737835](https://img.kexu.win/posts/1699258737835.png)

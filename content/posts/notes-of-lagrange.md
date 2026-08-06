@@ -48,7 +48,7 @@ $$
 
 > _理解什么是互补松弛？_
 >
-> ![z](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930175612867.png)
+> ![z](https://img.kexu.win/posts/image-20240930175612867.png)
 >
 > 假设有五个不等式约束函数 $g_i(x)$，只有其中两个约束 $g_{\alpha}$ 和 $g_{\beta}$ 在求极值的时候用上了。因此其他约束函数的系数 $\lambda_i=0$，$\lambda_{\alpha},\lambda_{\beta}\ge0$. 通俗理解就是，约束函数用上了（紧致），则系数不等于 0（松弛），约束函数没用上（松弛），则系数等于 0（紧致）.
 >
@@ -75,7 +75,7 @@ $$
 >
 > 凸集 $C$ 的定义：$\forall x_1,x_2\in C,0\le\theta\le1 \rightarrow \theta x_1+(1-\theta)x_2 \in C$
 >
-> ![image-20240930214455580](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930214455580.png)
+> ![image-20240930214455580](https://img.kexu.win/posts/image-20240930214455580.png)
 
 假设说找到一个 $x^*=\arg\min_{x} L(x,\lambda,\mu)$，则有
 
@@ -168,7 +168,7 @@ $relint\ D$ 表示可行域 $D$ 的相对内部
 
 > _如何理解这个鬼定义？_
 >
-> ![image-20240930231912111](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930231912111.png)
+> ![image-20240930231912111](https://img.kexu.win/posts/image-20240930231912111.png)
 >
 > 这个定义域的左半边至少存在一个点
 
@@ -178,7 +178,7 @@ KKT 条件是强对偶问题的必要条件（只要是强对偶问题，一定�
 
 KKT 条件的定义
 
-![image-20240930232633793](https://raw.githubusercontent.com/sitdownkevin/ImageHosting/main/bed/image-20240930232633793.png)
+![image-20240930232633793](https://img.kexu.win/posts/image-20240930232633793.png)
 
 ### 举个例子
 

@@ -94,7 +94,7 @@ For print and social media expenses, up to 6 sets of data locates in the same ra
 
 For profit of the companies, it is distributed in the range of **50,000** to **200,000**. Most of the companies have a profit around **100,000**. There is only one company with a profit of 50000, and four companies with a profit of 200000, accounting for a very small proportion.
 
-![1699261215166](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699261215166.png)
+![1699261215166](https://img.kexu.win/posts/1699261215166.png)
 
 ## 2. Data Test
 
@@ -108,7 +108,7 @@ Three figures below show the value of profit versus three different expenses.
 
 Fig 2.1 and 2.3 shows a strong linear relationship between profit and print media expenses and outdoor ad expenses. Fig 2.2 shows the weak linear relationships between profit and social media expenses.
 
-![1699261082472](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699261082472.png)
+![1699261082472](https://img.kexu.win/posts/1699261082472.png)
 
 #### 2.1.2 Correlation Coefficient
 
@@ -128,7 +128,7 @@ In the residual plot we could see that the data points show no significant trend
 
 Regarding the source, the data comes from different companies in 3 different cities, which leads to low interaction between these companies. Together with the residual plot shown above, we roughly consider our variables to be independent.
 
-![1699261122481](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699261122481.png)
+![1699261122481](https://img.kexu.win/posts/1699261122481.png)
 
 ### 2.3 Normality for Residuals
 
@@ -138,7 +138,7 @@ To roughly see whether the residuals follow normal distribution, we scatch the q
 
 In the figure, we could see that the scatter points lie close to the marked straight line, which means that the distribution of these residuals are approximately normal.
 
-![1699261153558](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699261153558.png)
+![1699261153558](https://img.kexu.win/posts/1699261153558.png)
 
 #### 2.3.2 **Kolmogorov–Smirnov Test**
 
@@ -173,7 +173,7 @@ $$
 To build our multiple linear regression model, equal variance is also a very important need. So, we use the residual plot to see if there is an obvious trend of residuals regarding the change of profit.
 As Fig 5, the residuals seem random and homogeneous around zero, without significant increasing, decreasing or bending. Therefore, we consider our model to be with equal variance.
 
-![1699261184946](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699261184946.png)
+![1699261184946](https://img.kexu.win/posts/1699261184946.png)
 
 ## 3. Data Regression
 

@@ -93,7 +93,7 @@ $$
 
 我选择了我的头像（如图）作为试验的对象，并使用了两个 Python 环境中的开源模块 Numpy 和 Matplotlib 来计算奇异值分解与读取图片。首先我便遇到了读取图片的困难。由于图片是彩色的，其导入到计算机的矩阵并不是一个二维矩阵，而是类似与$(m,n,3)$的三维数组。其中 3 代表了图片的 rgb 三个颜色通道，每一个位置对应了一个 0-255 间的颜色数值。我先想到的是有没有什么办法对一个高维数组进行奇异值分解，但并不能找到答案。接着我从 Numpy 的一个栈相关的函数中得到了启发，意识到可以将三个颜色通道进行分别处理，这样就可以得到 3 个二维矩阵的奇异值分解，最后再把它们加起来即可。代码如下：
 
-<img alt="Sample" src="https://s2.loli.net/2023/07/17/dXFBzbr17gvcHPl.jpg"  style="zoom: 33%;" />
+<img alt="Sample" src="https://img.kexu.win/posts/dXFBzbr17gvcHPl.jpg"  style="zoom: 33%;" />
 
 ```python
 import numpy as np
@@ -129,14 +129,14 @@ def SVD_compression(channel, p):
 
 说到最重要的奇异值分解部分，不得不感谢 Numpy 模块 linalg 下自带的 svd 函数，使我省去了最繁琐的过程。为了清晰对比出我保留不同数量$\sigma$对图片压缩的影响，我定义了一个 p 值用来表示保留的$\sigma$个数占非零$\sigma$总个数的占比，最后得到的压缩代码与结果如下。事实证明，奇异值分解对于压缩图片取得的效果是十分显著的，即使我取一个很少很少数量也就是很小很小的 p 值，图片也能压缩得与原图差不多清晰。这个压缩过程令我大为震撼，感叹于小小的公式在这个复杂的过程中发挥出的巨大的作用，也联想到不光是图片，或许是一切可以想法设法表现成矩阵的信息，如音频都可以通过奇异值分解的方式进行压缩。那么奇异值虽然是奇异值，那它到底是什么呢？它附着信息的神奇深深地吸引到我了，让我对线代这门学科产生了更多的好奇与思考。
 
-![](https://s2.loli.net/2023/07/17/cZbU6hqKYvz3wVu.jpg)
+![](https://img.kexu.win/posts/cZbU6hqKYvz3wVu.jpg)
 
-![](https://s2.loli.net/2023/07/17/l8EfKvcoG53gD6J.jpg)
+![](https://img.kexu.win/posts/l8EfKvcoG53gD6J.jpg)
 
-![](https://s2.loli.net/2023/07/17/AUJK7f95qyiZtwE.jpg)
+![](https://img.kexu.win/posts/AUJK7f95qyiZtwE.jpg)
 
-![](https://s2.loli.net/2023/07/17/7W4ktqRhPynJA9E.jpg)
+![](https://img.kexu.win/posts/7W4ktqRhPynJA9E.jpg)
 
-![](https://s2.loli.net/2023/07/17/gGJ4VAzC5a7jwRb.jpg)
+![](https://img.kexu.win/posts/gGJ4VAzC5a7jwRb.jpg)
 
-![](https://s2.loli.net/2023/07/17/i1XdaJUtnsqWkHP.jpg)
+![](https://img.kexu.win/posts/i1XdaJUtnsqWkHP.jpg)

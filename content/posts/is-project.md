@@ -31,9 +31,9 @@ Based on 95% Confidence Interval, the defect rate to Shimano’ seat post, TTT�
 
 And manufacturer **Niner, Fox Racing, TTT and Profile** produced high defect rate components(defect rate greater than 0.30%), which worth great attention.
 
-![1699258798211](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699258798211.png)
+![1699258798211](https://img.kexu.win/posts/1699258798211.png)
 
-![1699260421947](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260421947.jpg)
+![1699260421947](https://img.kexu.win/posts/1699260421947.jpg)
 
 ```sql
 SELECT Category, B.ManufacturerID AS ManufacturerID, B.ManufacturerName AS ManufacturerName, count(*) AS TotalProduction, count(B.isDefect) AS TotalDefected, FormatPercent(count(B.isDefect) / count(*)) AS DefectRate
@@ -59,7 +59,7 @@ Each components are produced in different groups. Calculate the defect rate of e
 
 Based on 95% Confidence Interval, some defect rate are abnormal (greater than 0.10%). They are from **Group 2, 7, 19, 29, 33, 34, 44, 96, 98, 102, 103 and 104** (Group ID).
 
-![1699260475831](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260475831.png)
+![1699260475831](https://img.kexu.win/posts/1699260475831.png)
 
 #### 1.2.3 Possible root cause: ModelType and Material
 
@@ -69,7 +69,7 @@ The ModelType of **Mountain full** has the **highest defect rate**. There is no 
 
 Among different materials, the **Titanium material** with **Tube ID 540** performs badly. And the **Aluminum material** with **Tube ID 320** has a high defect rate either. These two types of materials are suspicious.
 
-![1699260507661](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260507661.png)
+![1699260507661](https://img.kexu.win/posts/1699260507661.png)
 
 ```sql
 SELECT S.ModelType, count(*) AS Total, count(S.isDefect) AS Defects, FormatPercent(Defects / Total) AS DefectRate
@@ -172,11 +172,11 @@ In Fig 2-1(b), it shows the **yearly amounts of bicycles**. The yearly amounts a
 
 In Fig 2-1(c) and (d), the amounts of bicycle order is plotted along the weekly date axis and monthly date axis respectively. The trend is similar as MA30 in Fig 2-1(a) shows. Regularly, bicycles are sell in the most amounts in **November** and least amounts in **March.** The increasing trend of sale amount becomes stable after 2010.
 
-![1699260545655](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260545655.png)
+![1699260545655](https://img.kexu.win/posts/1699260545655.png)
 
 Fig 2-2 shows that, in the end of a month, the sale condition goes downward rapidly, and in the end of a year, the order amounts goes upward rapidly. The weekly sales amouns are about 50 and monthly sales amounts are about 200 to 300.
 
-![1699260579443](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260579443.png)
+![1699260579443](https://img.kexu.win/posts/1699260579443.png)
 
 ```sql
 SELECT S.OrderDate AS OrderDate, S.Year AS [Year], S.Month AS [Month], S.Day AS [Day], sum(S.Amount) AS Amount, sum(S.Profit) AS TotalSell
@@ -192,7 +192,7 @@ Among the color, Morning Sun, Hazard Flame, Grey Granite, Fire and Smoke, Copper
 
 Among the model type, Race, Mountain full and Road are **the most welcomed model types**. Tour and Hybrid bicycles are not main model type in the company. During 2001 to 2012, there is zero Hybrid bicycles produced. However, the company produced Hybrid bicycles again.
 
-![1699260579443](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260579443.png)
+![1699260579443](https://img.kexu.win/posts/1699260579443.png)
 
 ```sql
 SELECT B.Year AS [Year], B.Month AS [Month], B.Color AS Color, sum(B.Amount) AS Amount, sum(B.TotalSell) AS TotalSell, round(TotalSell / Amount, 2) AS AveragePrice
@@ -212,7 +212,7 @@ The business volume and the profit are both increasing yearly. The profit are fr
 
 Using simple linear regression and 95% confidence interval, we expect that **in 2014**, the business volume is about 16 million dollars, the profit is about 3 million dollars and **the profit rate are 23.68%**.
 
-![1699260579443](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260579443.png)
+![1699260579443](https://img.kexu.win/posts/1699260579443.png)
 
 #### 2.2.5 Sale Profit: ModelType and Color
 
@@ -222,13 +222,13 @@ Types of **color** have **no influence** to profit rate.
 
 Different **types of bicycle model** have obviously difference of profit rate. **Hybrid and Tour bicycles** have the higher profit rate than others. **The Mountain bicycle** has the lowest profit rate.
 
-![1699260672846](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260672846.png)
+![1699260672846](https://img.kexu.win/posts/1699260672846.png)
 
 #### 2.2.6 Sale Profit: State
 
 Half of the states have a profit rate above 15%. Some states like **AL, CA, IL and TX** have a high sale volume. But their profit rate are lower than normal condition of all states. It reveals a phenomenon that when the business in a state becomes huge, the profit rate of this state will decrease. State **PA** is the unique one which has high business volume and profit rate. The company should make deeply analysis of this state and find out reason why this state is successful to balcance both.
 
-![1699260717045](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260717045.png)
+![1699260717045](https://img.kexu.win/posts/1699260717045.png)
 
 ### 2.3 Conclusion
 
@@ -284,7 +284,7 @@ After distinguish the bicycle’s color, the group becomes much smaller. To cont
 
 Fig 3-2 shows the amounts of each smallest group after all information are filled. **Most of the option have only one candidate**, which means the wanted bicycle can be easily found by further information.
 
-![1699260744681](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260744681.png)
+![1699260744681](https://img.kexu.win/posts/1699260744681.png)
 
 ```sql
 SELECT B.ModelType AS ModelType, B.FrameSize AS FrameSize, B.TopTube AS TopTube, B.ColorName AS ColorName, B.ColorStyle AS ColorStyle, B.StoreCity AS StoreCity, count(*) AS Amount
@@ -345,13 +345,13 @@ According to the data of OrderDate, StartDate and ShipDate, we can compute the c
 Using SQL, we can easily find the average component preparing days and assmebling day for each season. In Fig 4-1, it shows that the data between 1999 to 2001 have a irregular value, **which means these data are obviously the dirty data**. Therefore, we only use the data in other time period.
 The average assembling days of each seasons are surrounding 4 or 5 days, which is already stable and performs well. But the data of component preparing days have a great space of shortening the time. In Winter season of each year, the component preparing days are greatly increasing. It shows a bad performance of the company’s inventory ability in Winter. Therefore, the company need to redesign the inventory plan and store more components in Winter.
 
-![1699260780379](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260780379.png)
+![1699260780379](https://img.kexu.win/posts/1699260780379.png)
 
 Then, we consider how to adjust the amounts of components in the inventory. First, we estimate the amounts of components used in next one year. The data of component usage in the last year is a good estimator. Therefore, we can use SQL to retrieve the data of component uage in the last year. Second, we use SQL to retrieve the data of the quantity of components in the inventory. Third, we compare these two values and define a **Prepared Rate = QuantityOnHand / Usage of Component**. This ratio reveal the condition how a component is prepared in enough amounts. Finally, we set **79.97%** , which is the upward bound of 95% confidence interval as the standard prepared rate.
 
 The company can build a **Enterprise Resource Planning Systems** to assign component purchasing orders to each inventory. After using this system, the amounts of most of the components are always enough. And it will greatly shorten the component preparing days, and thus shorten the delivery days to improve customer’s experiences.
 
-![1699260813018](https://cdn.statically.io/gh/sitdownkevin/ImageHosting@main/1699260813018.png)
+![1699260813018](https://img.kexu.win/posts/1699260813018.png)
 
 ```sql
 SELECT O.ComponentID, C.ProductNumber, O.QuantityUsed, C.QuantityOnHand, FormatPercent(C.QuantityOnHand / O.QuantityUsed) AS PrepareRate
