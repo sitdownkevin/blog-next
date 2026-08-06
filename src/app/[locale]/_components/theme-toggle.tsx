@@ -1,11 +1,13 @@
 "use client";
 
-import { useTheme } from "next-themes";
+import { useTheme } from "@wrksz/themes/client";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { FiSun, FiMoon, FiMonitor } from "react-icons/fi";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("Theme");
   const [mounted, setMounted] = useState(false);
 
   // 防止水合不匹配
@@ -25,7 +27,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       className="text-foreground/70 hover:text-claude-orange transition-colors duration-300 cursor-pointer"
-      aria-label="Toggle theme"
+      aria-label={t("toggle")}
     >
       {theme === "dark" ? (
         <FiSun className="text-yellow-400" size={18} />

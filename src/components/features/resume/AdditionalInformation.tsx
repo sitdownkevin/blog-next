@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { AdditionalInformationElementType } from "@/lib/resume/types";
 import { ResumeSection } from "./resume-section";
 
@@ -8,8 +9,10 @@ interface AdditionalInformationProps {
 export default function AdditionalInformation({
   additionalInformationElements,
 }: AdditionalInformationProps) {
+  const t = useTranslations("Resume");
+
   return (
-    <ResumeSection title="Additional information">
+    <ResumeSection title={t("additionalInformation")}>
       <dl className="flex flex-col">
         {additionalInformationElements.map((element, index) => (
           <div

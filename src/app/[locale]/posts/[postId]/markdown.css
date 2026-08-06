@@ -911,13 +911,18 @@
   font-size: 100%;
 }
 
-.markdown-body pre > code {
-  padding: 0;
+.markdown-body pre > code,
+.markdown-body pre code[class*="language-"] {
+  padding: 0 !important;
   margin: 0;
   word-break: normal;
   white-space: pre;
-  background: transparent;
+  /* no !important on color — let .token.* from vsc-dark-plus win */
+  color: #d4d4d4;
+  background: transparent !important;
   border: 0;
+  text-shadow: none !important;
+  font-size: inherit;
 }
 
 .markdown-body .highlight {
@@ -930,23 +935,54 @@
 }
 
 .markdown-body .highlight pre,
-.markdown-body pre {
-  padding: var(--base-size-16);
+.markdown-body pre,
+.markdown-body .code-block pre,
+.markdown-body pre[class*="language-"] {
+  /* Force dark pane so prism-vsc-dark-plus tokens stay readable in light UI */
+  color-scheme: dark;
+  padding: var(--base-size-16) !important;
   overflow: auto;
   font-size: 85%;
   line-height: 1.55;
   font-family: var(--fontStack-monospace);
-  color: var(--fgColor-default);
-  background-color: var(--bgColor-muted);
-  border: 1px solid var(--borderColor-default);
+  color: #d4d4d4;
+  background: #1e1e1e !important;
+  border: 1px solid #3c3c3c !important;
   border-radius: 8px;
+  text-shadow: none !important;
 }
 
-.dark .markdown-body .highlight pre,
-.dark .markdown-body pre {
-  color: #e7e5e4;
-  background-color: hsl(30 8% 17%);
-  border-color: hsl(30 6% 26%);
+/* Brighten shell/bash tokens that often look muddy on #1e1e1e */
+.markdown-body pre .token.function,
+.markdown-body pre .token.builtin,
+.markdown-body pre .token.class-name {
+  color: #ffe08a !important;
+}
+
+.markdown-body pre .token.parameter,
+.markdown-body pre .token.variable {
+  color: #9cdcfe !important;
+}
+
+.markdown-body pre .token.keyword {
+  color: #c586c0 !important;
+}
+
+.markdown-body pre .token.string {
+  color: #ce9178 !important;
+}
+
+.markdown-body pre .token.number {
+  color: #b5cea8 !important;
+}
+
+.markdown-body pre .token.comment {
+  color: #6a9955 !important;
+}
+
+.markdown-body pre .token.operator,
+.markdown-body pre .token.punctuation {
+  color: #d4d4d4 !important;
 }
 
 .markdown-body .code-block {
@@ -1319,4 +1355,9 @@
 
 .markdown-body .highlight pre:has(+ .zeroclipboard-container) {
   min-height: 52px;
+}
+
+/* Keep vsc-dark-plus token hues; only neutralize shadows / pane chrome */
+.markdown-body pre .token {
+  text-shadow: none !important;
 }

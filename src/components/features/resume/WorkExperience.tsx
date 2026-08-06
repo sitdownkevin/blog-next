@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { WorkExperienceElementType } from "@/lib/resume/types";
 import {
   ResumeBulletList,
@@ -12,8 +13,10 @@ interface WorkExperienceElementsCardProps {
 export default function WorkExperienceElementsCard({
   workExperienceElements,
 }: WorkExperienceElementsCardProps) {
+  const t = useTranslations("Resume");
+
   return (
-    <ResumeSection title="Work experience">
+    <ResumeSection title={t("workExperience")}>
       <div className="flex flex-col">
         {workExperienceElements.map((element, index) => (
           <ResumeEntry

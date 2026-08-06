@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { EducationElementType } from "@/lib/resume/types";
 import {
   ResumeBulletList,
@@ -12,8 +13,10 @@ interface EducationElementsCardProps {
 export default function EducationElementsCard({
   educationElements,
 }: EducationElementsCardProps) {
+  const t = useTranslations("Resume");
+
   return (
-    <ResumeSection title="Education">
+    <ResumeSection title={t("education")}>
       <div className="flex flex-col">
         {educationElements.map((element, index) => (
           <ResumeEntry

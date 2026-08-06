@@ -1,20 +1,21 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-const links = [
-  { href: "/", label: "About", match: (path: string) => path === "/" },
-  {
-    href: "/posts",
-    label: "Posts",
-    match: (path: string) => path.startsWith("/posts"),
-  },
-];
-
 export function NavLinks() {
+  const t = useTranslations("Nav");
   const pathname = usePathname() || "/";
+
+  const links = [
+    { href: "/", label: t("about"), match: (path: string) => path === "/" },
+    {
+      href: "/posts",
+      label: t("posts"),
+      match: (path: string) => path.startsWith("/posts"),
+    },
+  ] as const;
 
   return (
     <nav className="flex shrink-0 space-x-4 font-sans text-muted-foreground tracking-wide">

@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import {
   FaGithub,
   FaLinkedin,
@@ -6,7 +5,6 @@ import {
   FaWeibo,
   FaRss,
 } from "react-icons/fa";
-import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { NavLinks } from "./nav-links";
@@ -46,7 +44,7 @@ export function Header() {
     <header className="py-4 px-4 flex items-center justify-between border-b border-border gap-3 sm:gap-4">
       <div className="flex flex-row items-center gap-3 sm:gap-4 min-w-0">
         {socialLinks.map((link) => (
-          <Link
+          <a
             key={link.label}
             href={link.href}
             target="_blank"
@@ -57,13 +55,11 @@ export function Header() {
             aria-label={link.label}
           >
             <link.icon />
-          </Link>
+          </a>
         ))}
 
         <ThemeToggle />
-        <Suspense fallback={null}>
-          <LanguageToggle />
-        </Suspense>
+        <LanguageToggle />
       </div>
 
       <NavLinks />

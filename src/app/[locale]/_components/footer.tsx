@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 function FooterLink({
   href,
@@ -9,11 +10,23 @@ function FooterLink({
   children: React.ReactNode;
   external?: boolean;
 }) {
+  if (external || href.startsWith("http")) {
+    return (
+      <a
+        href={href}
+        className="text-muted-foreground text-xxs hover:text-claude-orange transition-colors duration-300"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <Link
       href={href}
       className="text-muted-foreground text-xxs hover:text-claude-orange transition-colors duration-300"
-      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {children}
     </Link>
@@ -21,28 +34,32 @@ function FooterLink({
 }
 
 export function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="w-full py-8 px-4 flex flex-row justify-center gap-10 sm:gap-16 md:gap-20 border-t border-border">
       <div className="flex flex-col gap-1.5">
         <span className="text-xxs font-semibold tracking-wide text-foreground/80">
-          About
+          {t("about")}
         </span>
-        <FooterLink href="/about/resume">Resume</FooterLink>
-        <FooterLink href="/about/gallery">Gallery</FooterLink>
-        <FooterLink href="/about/get_my_wx">WeChat</FooterLink>
+        <FooterLink href="/about/resume">{t("resume")}</FooterLink>
+        <FooterLink href="/about/gallery">{t("gallery")}</FooterLink>
+        <FooterLink href="/about/get_my_wx">{t("wechat")}</FooterLink>
       </div>
       <div className="flex flex-col gap-1.5">
         <span className="text-xxs font-semibold tracking-wide text-foreground/80">
-          Tools
+          {t("tools")}
         </span>
-        <FooterLink href="/tools/advanced_search">Advanced Search</FooterLink>
+        <FooterLink href="/tools/advanced_search">
+          {t("advancedSearch")}
+        </FooterLink>
         <FooterLink href="/tools/gpt_4o_image_prompts">
-          GPT-4o Prompts
+          {t("gpt4oPrompts")}
         </FooterLink>
       </div>
       <div className="flex flex-col gap-1.5">
         <span className="text-xxs font-semibold tracking-wide text-foreground/80">
-          Projects
+          {t("projects")}
         </span>
         <FooterLink href="https://github.com/sitdownkevin/Blackboard-Enhanced">
           BB Enhanced

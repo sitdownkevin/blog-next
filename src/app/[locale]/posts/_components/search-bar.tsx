@@ -8,12 +8,14 @@ interface SearchBarProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   osShortcut: string;
+  placeholder: string;
 }
 
 export function SearchBar({
   searchQuery,
   setSearchQuery,
   osShortcut,
+  placeholder,
 }: SearchBarProps) {
   const [isFocused, setIsFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -60,7 +62,7 @@ export function SearchBar({
             <Input
               ref={inputRef}
               type="text"
-              placeholder="Search titles, tags, or content..."
+              placeholder={placeholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               onFocus={() => setIsFocused(true)}

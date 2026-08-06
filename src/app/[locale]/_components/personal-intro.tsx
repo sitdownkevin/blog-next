@@ -1,10 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
-import abstractData from "../../../content/data/personal-intro/abstract.json";
-import educationData from "../../../content/data/personal-intro/education.json";
-import workingExpData from "../../../content/data/personal-intro/working-exp.json";
-import projectsData from "../../../content/data/personal-intro/projects.json";
-import publicationsData from "../../../content/data/personal-intro/publications.json";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import abstractData from "content/data/personal-intro/abstract.json";
+import educationData from "content/data/personal-intro/education.json";
+import workingExpData from "content/data/personal-intro/working-exp.json";
+import projectsData from "content/data/personal-intro/projects.json";
+import publicationsData from "content/data/personal-intro/publications.json";
 
 const sectionTitleClass =
   "font-display text-xl font-semibold tracking-tight text-balance";
@@ -117,11 +118,10 @@ function displayName(
 }
 
 function Hero({ lang }: { lang: "en" | "zh" }) {
+  const t = useTranslations("Home");
   const data = (abstractData as any)[lang] || abstractData.en;
   const fullName = displayName(data.name, lang);
   const locationStr = `${data.location.city}, ${data.location.country}`;
-  const postsLabel = lang === "zh" ? "文章" : "Posts";
-  const resumeLabel = lang === "zh" ? "简历" : "Resume";
 
   return (
     <section className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 pb-12 border-b border-border">
@@ -161,20 +161,20 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
             href="/posts"
             className="inline-flex items-center justify-center rounded-md bg-claude-orange px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-claude-orange/90 active:scale-[0.98]"
           >
-            {postsLabel}
+            {t("posts")}
           </Link>
           <Link
             href="/about/resume"
             className="inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium text-foreground/80 transition-colors hover:border-claude-orange hover:text-claude-orange dark:border-white/15 dark:hover:border-claude-orange active:scale-[0.98]"
           >
-            {resumeLabel}
+            {t("resume")}
           </Link>
         </div>
       </div>
 
       <div className="hidden sm:block w-36 lg:w-40 shrink-0 self-start">
         <Image
-          src="/assets/images/figures/photo_figure.webp"
+          src="/assets/images/figures/figure.webp"
           alt={fullName}
           width={2125}
           height={3217}
@@ -187,6 +187,7 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
 }
 
 function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
+  const t = useTranslations("Home");
   const pubs = ((publicationsData as any)[lang] || publicationsData.en)
     .items as PublicationItem[];
   const projects = ((projectsData as any)[lang] || projectsData.en)
@@ -196,23 +197,17 @@ function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
     pubs.find((item) => item.featured) || pubs[0] || null;
   const featuredProjects = projects.filter((item) => item.featured).slice(0, 2);
 
-  const title = lang === "zh" ? "精选" : "Selected";
-  const pubLabel = lang === "zh" ? "论文" : "Publication";
-  const projectsLabel = lang === "zh" ? "项目" : "Projects";
-  const viewLabel = lang === "zh" ? "查看" : "View";
-  const readLabel = lang === "zh" ? "阅读" : "Read";
-
   if (!featuredPub && featuredProjects.length === 0) return null;
 
   return (
     <section className="flex flex-col gap-6">
-      <h2 className={sectionTitleClass}>{title}</h2>
+      <h2 className={sectionTitleClass}>{t("selected")}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-10">
         {featuredPub && (
           <div className="md:col-span-3 flex flex-col gap-3">
             <span className="text-xs font-medium tracking-wide text-claude-orange">
-              {pubLabel}
+              {t("publication")}
             </span>
             <h3 className="text-base sm:text-lg font-semibold leading-snug text-balance">
               {featuredPub.title}
@@ -227,14 +222,14 @@ function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
               </p>
             )}
             {featuredPub.url && (
-              <Link
+              <a
                 href={featuredPub.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-claude-orange hover:underline w-fit"
               >
-                {readLabel}
-              </Link>
+                {t("read")}
+              </a>
             )}
           </div>
         )}
@@ -242,7 +237,7 @@ function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
         {featuredProjects.length > 0 && (
           <div className="md:col-span-2 flex flex-col gap-5">
             <span className="text-xs font-medium tracking-wide text-claude-orange">
-              {projectsLabel}
+              {t("projects")}
             </span>
             <ul className="flex flex-col divide-y divide-border">
               {featuredProjects.map((item) => (
@@ -253,14 +248,14 @@ function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
                       {item.description}
                     </p>
                     {item.url && (
-                      <Link
+                      <a
                         href={item.url}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm font-medium text-claude-orange hover:underline w-fit"
                       >
-                        {viewLabel}
-                      </Link>
+                        {t("view")}
+                      </a>
                     )}
                   </div>
                 </li>
@@ -279,16 +274,15 @@ type TimelineItem = {
   secondary: string;
   period: string;
   place?: string;
+  sortKey: number;
 };
 
 function TimelineSection({ lang }: { lang: "en" | "zh" }) {
+  const t = useTranslations("Home");
   const education = ((educationData as any)[lang] || educationData.en)
     .items as EducationItem[];
   const work = ((workingExpData as any)[lang] || workingExpData.en)
     .items as WorkingExpItem[];
-
-  const title = lang === "zh" ? "轨迹" : "Path";
-  const resumeLabel = lang === "zh" ? "完整简历" : "Full resume";
 
   const parseStart = (start: string) => {
     const match = start.match(/(\d{4})/);
@@ -298,8 +292,7 @@ function TimelineSection({ lang }: { lang: "en" | "zh" }) {
     const year = match ? Number(match[1]) : 0;
     let month = 0;
     if (monthMatch?.[1]) {
-      month =
-        Object.keys(EN_MONTH_ABBR).indexOf(monthMatch[1]) + 1;
+      month = Object.keys(EN_MONTH_ABBR).indexOf(monthMatch[1]) + 1;
     } else if (monthMatch?.[2]) {
       month = Number(monthMatch[2]);
     }
@@ -328,12 +321,12 @@ function TimelineSection({ lang }: { lang: "en" | "zh" }) {
   return (
     <section className="flex flex-col gap-5">
       <div className="flex items-baseline justify-between gap-4">
-        <h2 className={sectionTitleClass}>{title}</h2>
+        <h2 className={sectionTitleClass}>{t("path")}</h2>
         <Link
           href="/about/resume"
           className="text-xs font-medium text-muted-foreground hover:text-claude-orange transition-colors shrink-0"
         >
-          {resumeLabel}
+          {t("fullResume")}
         </Link>
       </div>
 
@@ -375,20 +368,18 @@ function LatestPostsSection({
   lang: "en" | "zh";
   posts: LatestPost[];
 }) {
+  const t = useTranslations("Home");
   if (posts.length === 0) return null;
-
-  const title = lang === "zh" ? "最近写作" : "Latest writing";
-  const allLabel = lang === "zh" ? "全部文章" : "All posts";
 
   return (
     <section className="flex flex-col gap-6">
       <div className="flex items-baseline justify-between gap-4">
-        <h2 className={sectionTitleClass}>{title}</h2>
+        <h2 className={sectionTitleClass}>{t("latestWriting")}</h2>
         <Link
           href="/posts"
           className="text-xs font-medium text-muted-foreground hover:text-claude-orange transition-colors shrink-0"
         >
-          {allLabel}
+          {t("allPosts")}
         </Link>
       </div>
 

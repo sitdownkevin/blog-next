@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { ProjectExperienceElementType } from "@/lib/resume/types";
 import {
   ResumeBulletList,
@@ -21,12 +22,13 @@ interface ProjectExperienceElementsCardProps {
 export default function ProjectExperienceElementsCard({
   projectExperienceElements,
 }: ProjectExperienceElementsCardProps) {
+  const t = useTranslations("Resume");
+
   return (
-    <ResumeSection title="Projects">
+    <ResumeSection title={t("projects")}>
       <div className="flex flex-col">
         {projectExperienceElements.map((element, index) => {
-          const roleIsLink =
-            !!element.role && looksLikeUrl(element.role);
+          const roleIsLink = !!element.role && looksLikeUrl(element.role);
 
           return (
             <ResumeEntry

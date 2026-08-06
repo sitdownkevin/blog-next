@@ -3,6 +3,7 @@
 import { PostMatterType } from "@/lib/posts/types";
 import { Pin } from "lucide-react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { EnhancedMarkdownBody } from "./markdown-body";
@@ -21,6 +22,8 @@ interface CoverContainerProps {
 }
 
 export function Cover({ matter, searching }: CoverProps) {
+  const t = useTranslations("Posts");
+
   return (
     <article className="group flex flex-col gap-2 py-4 border-t border-border first:border-t-0 first:pt-0">
       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-6">
@@ -29,7 +32,7 @@ export function Cover({ matter, searching }: CoverProps) {
           {matter.pinned && (
             <Pin
               className="w-3.5 h-3.5 mt-1.5 text-claude-orange shrink-0"
-              aria-label="Pinned"
+              aria-label={t("pinned")}
             />
           )}
         </div>
@@ -54,18 +57,21 @@ export function Cover({ matter, searching }: CoverProps) {
 }
 
 function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
+  const t = useTranslations("Posts");
+
   return (
     <button
       type="button"
       onClick={handleShowMore}
       className="w-full mt-2 py-2.5 text-sm font-medium text-muted-foreground border border-border rounded-md transition-colors hover:border-claude-orange hover:text-claude-orange active:scale-[0.99] cursor-pointer"
     >
-      Load more
+      {t("loadMore")}
     </button>
   );
 }
 
 export function CoverContainer({ matterList, searching }: CoverContainerProps) {
+  const t = useTranslations("Posts");
   const [visibleCount, setVisibleCount] = useState(8);
 
   const handleShowMore = () => {
@@ -77,7 +83,7 @@ export function CoverContainer({ matterList, searching }: CoverContainerProps) {
   if (matterList.length === 0) {
     return (
       <p className="py-10 text-sm text-muted-foreground text-center">
-        No posts matched your search.
+        {t("noMatches")}
       </p>
     );
   }

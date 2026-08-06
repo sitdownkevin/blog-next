@@ -1,11 +1,13 @@
 import { BasicInfoType } from "@/lib/resume/types";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Mail, Globe, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Fragment } from "react";
+import type { AppLocale } from "@/i18n/routing";
 
 interface HeaderProps {
   basicInfo: BasicInfoType;
+  locale: AppLocale;
 }
 
 type ContactItem = {
@@ -25,7 +27,7 @@ function ContactLink({
   icon,
 }: Omit<ContactItem, "key">) {
   return (
-    <Link
+    <a
       href={href}
       aria-label={label}
       className="inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-claude-orange"
@@ -33,20 +35,27 @@ function ContactLink({
     >
       <span className="opacity-70">{icon}</span>
       <span>{text}</span>
-    </Link>
+    </a>
   );
 }
 
-export default function Header({ basicInfo }: HeaderProps) {
-  const fullName = `${basicInfo.name.first_name} ${basicInfo.name.last_name}`;
-  const alias = basicInfo.name.first_name_en?.trim() || null;
+export default function Header({ basicInfo, locale }: HeaderProps) {
+  const t = useTranslations("Resume");
+  const fullName =
+    locale === "zh"
+      ? `${basicInfo.name.last_name}${basicInfo.name.first_name}`
+      : `${basicInfo.name.first_name} ${basicInfo.name.last_name}`;
+  const alias =
+    locale === "zh"
+      ? basicInfo.name.first_name_en?.trim() || null
+      : basicInfo.name.first_name_en?.trim() || null;
 
   const contacts: ContactItem[] = [
     basicInfo.phone
       ? {
           key: "phone",
           href: `tel:${basicInfo.phone.prefix ?? ""}${basicInfo.phone.number}`,
-          label: "Phone",
+          label: t("phone"),
           text: `${basicInfo.phone.prefix ?? ""} ${basicInfo.phone.number}`.trim(),
           icon: <Phone className="h-3.5 w-3.5" />,
         }
@@ -55,7 +64,7 @@ export default function Header({ basicInfo }: HeaderProps) {
       ? {
           key: "email",
           href: `mailto:${basicInfo.email}`,
-          label: "Email",
+          label: t("email"),
           text: basicInfo.email,
           icon: <Mail className="h-3.5 w-3.5" />,
         }
@@ -64,7 +73,7 @@ export default function Header({ basicInfo }: HeaderProps) {
       ? {
           key: "website",
           href: `https://${basicInfo.website}`,
-          label: "Website",
+          label: t("website"),
           text: basicInfo.website,
           external: true,
           icon: <Globe className="h-3.5 w-3.5" />,
@@ -74,7 +83,7 @@ export default function Header({ basicInfo }: HeaderProps) {
       ? {
           key: "github",
           href: `https://github.com/${basicInfo.github}`,
-          label: "GitHub",
+          label: t("github"),
           text: basicInfo.github,
           external: true,
           icon: <FaGithub className="h-3.5 w-3.5" />,
@@ -84,7 +93,7 @@ export default function Header({ basicInfo }: HeaderProps) {
       ? {
           key: "linkedin",
           href: `https://linkedin.com/in/${basicInfo.linkedin}`,
-          label: "LinkedIn",
+          label: t("linkedin"),
           text: basicInfo.linkedin,
           external: true,
           icon: <FaLinkedin className="h-3.5 w-3.5" />,
@@ -109,21 +118,21 @@ export default function Header({ basicInfo }: HeaderProps) {
 
       {contacts.length > 0 ? (
         <ul className="flex flex-wrap items-center gap-y-2 text-xs list-none p-0 m-0">
-          {contacts.map((contact, index) => (
-            <Fragment key={contact.key}>
-              {index > 0 ? (
-                <li
-                  aria-hidden
-                  className="mx-2.5 text-border select-none"
-                >
-                  /
+          {contacts.map((contact, index) => {
+            const { key, ...linkProps } = contact;
+            return (
+              <Fragment key={key}>
+                {index > 0 ? (
+                  <li aria-hidden className="mx-2.5 text-border select-none">
+                    /
+                  </li>
+                ) : null}
+                <li className="inline-flex">
+                  <ContactLink {...linkProps} />
                 </li>
-              ) : null}
-              <li className="inline-flex">
-                <ContactLink {...contact} />
-              </li>
-            </Fragment>
-          ))}
+              </Fragment>
+            );
+          })}
         </ul>
       ) : null}
     </header>

@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "homeTitle": "Ke Xu's website",
+    "homeDescription": "Hi, I'm Ke Xu, a Ph.D. candidate in Information Systems at Tongji University, Shanghai, China.",
+    "resumeTitle": "Resume - Ke Xu's website",
+    "resumeDescription": "Resume of Ke Xu, Ph.D. candidate in Information Systems at Tongji University."
+  },
+  "Nav": {
+    "about": "About",
+    "posts": "Posts"
+  },
+  "Footer": {
+    "about": "About",
+    "resume": "Resume",
+    "gallery": "Gallery",
+    "wechat": "WeChat",
+    "tools": "Tools",
+    "advancedSearch": "Advanced Search",
+    "gpt4oPrompts": "GPT-4o Prompts",
+    "projects": "Projects"
+  },
+  "Theme": {
+    "toggle": "Toggle theme"
+  },
+  "Language": {
+    "switchToZh": "中文",
+    "switchToEn": "English",
+    "switchAria": "Switch to {label}"
+  },
+  "Home": {
+    "posts": "Posts",
+    "resume": "Resume",
+    "selected": "Selected",
+    "publication": "Publication",
+    "projects": "Projects",
+    "view": "View",
+    "read": "Read",
+    "path": "Path",
+    "fullResume": "Full resume",
+    "latestWriting": "Latest writing",
+    "allPosts": "All posts"
+  },
+  "Resume": {
+    "education": "Education",
+    "publications": "Publications",
+    "workExperience": "Work experience",
+    "projects": "Projects",
+    "additionalInformation": "Additional information",
+    "phone": "Phone",
+    "email": "Email",
+    "website": "Website",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "Posts": {
+    "title": "Posts",
+    "subtitle": "Notes on research, tools, and building things.",
+    "searchPlaceholder": "Search titles, tags, or content...",
+    "loadMore": "Load more",
+    "noMatches": "No posts matched your search.",
+    "pinned": "Pinned",
+    "copyCode": "Copy code to clipboard",
+    "metadataTitle": "Posts - Ke Xu's website",
+    "metadataDescription": "Blog posts and notes by Ke Xu.",
+    "errorTitle": "Failed to load posts",
+    "errorDescription": "Something went wrong while loading this page. You can try again.",
+    "errorRetry": "Try again",
+    "postErrorTitle": "Failed to load this post",
+    "postErrorDescription": "Something went wrong while loading the article. You can try again.",
+    "postNotFound": "Post Not Found"
+  }
+}

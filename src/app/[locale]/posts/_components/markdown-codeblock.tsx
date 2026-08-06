@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { CheckIcon, CopyIcon } from "lucide-react"; // Assuming lucide-react is used for icons
+import { useState, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { CheckIcon, CopyIcon } from "lucide-react";
 
 interface MarkdownCodeBlockProps {
   code: string;
@@ -9,6 +10,7 @@ interface MarkdownCodeBlockProps {
 }
 
 export function MarkdownCodeBlock({ code, language }: MarkdownCodeBlockProps) {
+  const t = useTranslations("Posts");
   const [copied, setCopied] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -44,7 +46,7 @@ export function MarkdownCodeBlock({ code, language }: MarkdownCodeBlockProps) {
                    shadow-xs hover:shadow-md
                    ring-1`}
         onClick={handleCopy}
-        aria-label="Copy code to clipboard"
+        aria-label={t("copyCode")}
       >
         {copied ? (
           <CheckIcon className="w-4 h-4" />
@@ -56,9 +58,16 @@ export function MarkdownCodeBlock({ code, language }: MarkdownCodeBlockProps) {
       {/* This component will replace the original pre/code structure */}
       {/* We will dynamically insert the original pre/code HTML here */}
       {/* For now, we'll just render the code string, but the final implementation will use the original HTML */}
-      <pre className="bg-muted border border-border rounded-md">
+      <pre
+        className="rounded-md border p-4"
+        style={{
+          backgroundColor: "#2e2c29",
+          borderColor: "#453f3a",
+          color: "#e7e5e4",
+        }}
+      >
         <code
-          className={`language-${language} font-mono text-foreground rounded-md p-2`}
+          className={`language-${language} font-mono rounded-md text-inherit`}
         >
           {code}
         </code>

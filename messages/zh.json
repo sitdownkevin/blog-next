@@ -1,0 +1,72 @@
+{
+  "Metadata": {
+    "homeTitle": "徐可的个人网站",
+    "homeDescription": "你好，我是徐可，同济大学管理科学与工程（信息系统）博士研究生，现居中国上海。",
+    "resumeTitle": "简历 - 徐可的个人网站",
+    "resumeDescription": "徐可的简历，同济大学管理科学与工程（信息系统）博士研究生。"
+  },
+  "Nav": {
+    "about": "关于",
+    "posts": "日志"
+  },
+  "Footer": {
+    "about": "关于",
+    "resume": "简历",
+    "gallery": "图库",
+    "wechat": "微信",
+    "tools": "工具",
+    "advancedSearch": "高级搜索",
+    "gpt4oPrompts": "GPT-4o 提示词",
+    "projects": "项目"
+  },
+  "Theme": {
+    "toggle": "切换主题"
+  },
+  "Language": {
+    "switchToZh": "中文",
+    "switchToEn": "English",
+    "switchAria": "切换到{label}"
+  },
+  "Home": {
+    "posts": "日志",
+    "resume": "简历",
+    "selected": "精选",
+    "publication": "论文",
+    "projects": "项目",
+    "view": "查看",
+    "read": "阅读",
+    "path": "轨迹",
+    "fullResume": "完整简历",
+    "latestWriting": "最近写作",
+    "allPosts": "全部日志"
+  },
+  "Resume": {
+    "education": "教育经历",
+    "publications": "论文发表",
+    "workExperience": "工作经历",
+    "projects": "项目经历",
+    "additionalInformation": "其他信息",
+    "phone": "电话",
+    "email": "邮箱",
+    "website": "网站",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "Posts": {
+    "title": "日志",
+    "subtitle": "研究、工具与日常折腾的记录。",
+    "searchPlaceholder": "搜索标题、标签或正文…",
+    "loadMore": "加载更多",
+    "noMatches": "没有匹配的日志。",
+    "pinned": "置顶",
+    "copyCode": "复制代码",
+    "metadataTitle": "日志 - 徐可的个人网站",
+    "metadataDescription": "徐可的博客与笔记。",
+    "errorTitle": "加载日志失败",
+    "errorDescription": "加载页面时出错，请重试。",
+    "errorRetry": "重试",
+    "postErrorTitle": "加载文章失败",
+    "postErrorDescription": "加载文章时出错，请重试。",
+    "postNotFound": "未找到文章"
+  }
+}

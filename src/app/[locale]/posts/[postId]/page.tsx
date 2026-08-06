@@ -1,15 +1,19 @@
 import { Metadata } from "next";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { getMarkdownContent } from "@/lib/posts/getMarkdownContent";
 import { MarkdownType } from "@/lib/posts/types";
+import { routing, type AppLocale } from "@/i18n/routing";
 
 import { PostTitle } from "./_components/post-title";
 import { PostDate } from "./_components/post-date";
 import { PostTags } from "./_components/post-tags";
 
 import "katex/dist/katex.min.css";
+import "prism-themes/themes/prism-vsc-dark-plus.css";
 import "./markdown.css";
 import "./katex.css";
 
@@ -22,23 +26,33 @@ const renderMarkdownBody = (markdownHtml: string) => {
   );
 };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ postId: string }>;
-}): Promise<Metadata> {
-  const { postId } = await params;
+type Props = {
+  params: Promise<{ locale: string; postId: string }>;
+};
+
+async function resolveLocale(locale: string): Promise<AppLocale> {
+  if (!hasLocale(routing.locales, locale)) {
+    return routing.defaultLocale;
+  }
+  return locale;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: localeParam, postId } = await params;
+  const locale = await resolveLocale(localeParam);
+  const t = await getTranslations({ locale, namespace: "Posts" });
+  const tMeta = await getTranslations({ locale, namespace: "Metadata" });
   const post = (await getMatterList()).find((matter) => matter.id === postId);
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: t("postNotFound"),
     };
   }
 
-  const title = `${post.title} - Ke Xu's website`;
-  const description =
-    post.description || `Blog post by Ke Xu: ${post.title}`;
+  const siteName = tMeta("homeTitle");
+  const title = `${post.title} - ${siteName}`;
+  const description = post.description || post.title;
   const url = `https://kexu.win/posts/${postId}`;
 
   return {
@@ -50,9 +64,9 @@ export async function generateMetadata({
       title: post.title,
       description,
       url,
-      siteName: "Ke Xu's website",
+      siteName,
       type: "article",
-      locale: "en_US",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
       ...(post.update_date && {
         modifiedTime: post.update_date.toISOString(),
       }),
@@ -71,12 +85,10 @@ export async function generateMetadata({
   };
 }
 
-async function PostContent({
-  params,
-}: {
-  params: Promise<{ postId: string }>;
-}) {
-  const { postId } = await params;
+async function PostContent({ params }: Props) {
+  const { locale: localeParam, postId } = await params;
+  setRequestLocale(await resolveLocale(localeParam));
+
   const exists = (await getMatterList()).some((matter) => matter.id === postId);
   if (!exists) {
     notFound();
@@ -115,11 +127,7 @@ function PostFallback() {
   );
 }
 
-export default function Post({
-  params,
-}: {
-  params: Promise<{ postId: string }>;
-}) {
+export default function Post({ params }: Props) {
   return (
     <Suspense fallback={<PostFallback />}>
       <PostContent params={params} />
@@ -129,9 +137,10 @@ export default function Post({
 
 export async function generateStaticParams() {
   const matterList = await getMatterList();
-  return matterList.map((matter) => {
-    return {
+  return routing.locales.flatMap((locale) =>
+    matterList.map((matter) => ({
+      locale,
       postId: matter.id,
-    };
-  });
+    })),
+  );
 }

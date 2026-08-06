@@ -6,6 +6,7 @@ import {
   AdditionalInformationElementType,
   PublicationElementType,
 } from "@/lib/resume/types";
+import type { AppLocale } from "@/i18n/routing";
 import EducationElementsCard from "./Education";
 import Header from "./Header";
 import WorkExperienceElementsCard from "./WorkExperience";
@@ -20,6 +21,7 @@ interface ResumeProps {
   projectExperienceElements: ProjectExperienceElementType[];
   additionalInformationElements: AdditionalInformationElementType[];
   publications: PublicationElementType[];
+  locale: AppLocale;
 }
 
 export default function Resume({
@@ -29,10 +31,11 @@ export default function Resume({
   projectExperienceElements,
   additionalInformationElements,
   publications,
+  locale,
 }: ResumeProps) {
   return (
     <div className="flex flex-col gap-12">
-      <Header basicInfo={basicInfo} />
+      <Header basicInfo={basicInfo} locale={locale} />
       <EducationElementsCard educationElements={educationElements} />
       <Publications publications={publications} />
       <WorkExperienceElementsCard

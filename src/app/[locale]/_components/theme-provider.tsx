@@ -1,7 +1,4 @@
-"use client";
-
-import { ThemeProvider as NextThemeProvider } from "next-themes";
-import React from "react";
+import { ThemeProvider as WrkszThemeProvider } from "@wrksz/themes/next";
 
 export default function ThemeProvider({
   children,
@@ -9,8 +6,8 @@ export default function ThemeProvider({
   children: React.ReactNode;
 }) {
   return (
-    <NextThemeProvider attribute="class" defaultTheme="light">
+    <WrkszThemeProvider attribute="class" defaultTheme="light">
       {children}
-    </NextThemeProvider>
+    </WrkszThemeProvider>
   );
 }
