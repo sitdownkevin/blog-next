@@ -1,63 +1,16 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import abstractData from "content/data/personal-intro/abstract.json";
-import educationData from "content/data/personal-intro/education.json";
-import workingExpData from "content/data/personal-intro/working-exp.json";
-import projectsData from "content/data/personal-intro/projects.json";
-import publicationsData from "content/data/personal-intro/publications.json";
+import type {
+  EducationItem,
+  PersonalIntroDocument,
+  ProjectItem,
+  PublicationItem,
+  WorkingExpItem,
+} from "@/lib/personal-intro/types";
 
 const sectionTitleClass =
   "font-display text-xl font-semibold tracking-tight text-balance";
-
-type Location = {
-  city: string;
-  province: string;
-  country: string;
-};
-
-type EducationItem = {
-  school: string;
-  location: Location;
-  degree: string;
-  period: {
-    start: string;
-    end: string;
-  };
-};
-
-type WorkingExpItem = {
-  company: string;
-  location: Location;
-  position: string;
-  period: {
-    start: string;
-    end: string;
-  };
-  content: string[];
-  tags: string[];
-};
-
-type ProjectItem = {
-  project: string;
-  location: Location;
-  description: string;
-  url: string;
-  slug?: string;
-  featured?: boolean;
-};
-
-type PublicationItem = {
-  authors: string;
-  year: string;
-  title: string;
-  journal: string;
-  volume: string;
-  pages: string;
-  url: string;
-  summary?: string;
-  featured?: boolean;
-};
 
 export type LatestPost = {
   id: string;
@@ -118,11 +71,17 @@ function displayName(
   return lang === "zh" ? `${name.last}${name.first}` : `${name.first} ${name.last}`;
 }
 
-function Hero({ lang }: { lang: "en" | "zh" }) {
+function Hero({
+  lang,
+  data,
+}: {
+  lang: "en" | "zh";
+  data: PersonalIntroDocument;
+}) {
   const t = useTranslations("Home");
-  const data = (abstractData as any)[lang] || abstractData.en;
-  const fullName = displayName(data.name, lang);
-  const locationStr = `${data.location.city}, ${data.location.country}`;
+  const abstract = data.abstract[lang] || data.abstract.en;
+  const fullName = displayName(abstract.name, lang);
+  const locationStr = `${abstract.location.city}, ${abstract.location.country}`;
 
   return (
     <section className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8 pb-12 border-b border-border">
@@ -136,20 +95,20 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
             />
           </h1>
           <p className="text-sm sm:text-base text-foreground/85 leading-relaxed max-w-[40ch]">
-            {data.role}
+            {abstract.role}
           </p>
         </div>
 
         <p className="text-sm text-muted-foreground leading-relaxed max-w-[48ch]">
-          {data.intro}
+          {abstract.intro}
         </p>
 
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
           <a
-            href={`mailto:${data.email}`}
+            href={`mailto:${abstract.email}`}
             className="hover:text-claude-orange transition-colors"
           >
-            {data.email}
+            {abstract.email}
           </a>
           <span aria-hidden className="text-border">
             /
@@ -187,11 +146,17 @@ function Hero({ lang }: { lang: "en" | "zh" }) {
   );
 }
 
-function FeaturedSection({ lang }: { lang: "en" | "zh" }) {
+function FeaturedSection({
+  lang,
+  data,
+}: {
+  lang: "en" | "zh";
+  data: PersonalIntroDocument;
+}) {
   const t = useTranslations("Home");
-  const pubs = ((publicationsData as any)[lang] || publicationsData.en)
+  const pubs = (data.publications[lang] || data.publications.en)
     .items as PublicationItem[];
-  const projects = ((projectsData as any)[lang] || projectsData.en)
+  const projects = (data.projects[lang] || data.projects.en)
     .items as ProjectItem[];
 
   const featuredPub =
@@ -287,11 +252,17 @@ type TimelineItem = {
   sortKey: number;
 };
 
-function TimelineSection({ lang }: { lang: "en" | "zh" }) {
+function TimelineSection({
+  lang,
+  data,
+}: {
+  lang: "en" | "zh";
+  data: PersonalIntroDocument;
+}) {
   const t = useTranslations("Home");
-  const education = ((educationData as any)[lang] || educationData.en)
+  const education = (data.education[lang] || data.education.en)
     .items as EducationItem[];
-  const work = ((workingExpData as any)[lang] || workingExpData.en)
+  const work = (data.workingExp[lang] || data.workingExp.en)
     .items as WorkingExpItem[];
 
   const parseStart = (start: string) => {
@@ -425,15 +396,17 @@ function LatestPostsSection({
 export function PersonalIntroduction({
   lang = "en",
   latestPosts = [],
+  data,
 }: {
   lang?: "en" | "zh";
   latestPosts?: LatestPost[];
+  data: PersonalIntroDocument;
 }) {
   return (
     <div className="flex flex-col w-full py-8 px-4 gap-14">
-      <Hero lang={lang} />
-      <FeaturedSection lang={lang} />
-      <TimelineSection lang={lang} />
+      <Hero lang={lang} data={data} />
+      <FeaturedSection lang={lang} data={data} />
+      <TimelineSection lang={lang} data={data} />
       <LatestPostsSection lang={lang} posts={latestPosts} />
     </div>
   );

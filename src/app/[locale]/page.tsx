@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
 import { HomeContent } from "./_components/home-content";
 import { getMatterList } from "@/lib/posts/getMatterList";
+import { getPersonalIntroData } from "@/lib/personal-intro/data";
 import type { LatestPost } from "./_components/personal-intro";
 import { hasLocale } from "next-intl";
 import { routing, type AppLocale } from "@/i18n/routing";
@@ -88,7 +89,10 @@ export default async function Page({ params }: Props) {
   setRequestLocale(localeParam);
 
   const locale = (await getLocale()) as AppLocale;
-  const latestPosts = await getLatestPosts(3);
+  const [latestPosts, personalIntro] = await Promise.all([
+    getLatestPosts(3),
+    getPersonalIntroData(),
+  ]);
 
   const personSchema = {
     "@context": "https://schema.org",
@@ -113,7 +117,11 @@ export default async function Page({ params }: Props) {
           __html: serializeJsonLd(personSchema),
         }}
       />
-      <HomeContent lang={locale} latestPosts={latestPosts} />
+      <HomeContent
+        lang={locale}
+        latestPosts={latestPosts}
+        personalIntro={personalIntro}
+      />
     </>
   );
 }

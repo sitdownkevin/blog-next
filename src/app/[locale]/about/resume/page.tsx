@@ -5,7 +5,7 @@ import {
   setRequestLocale,
 } from "next-intl/server";
 import Resume from "@/components/features/resume/Resume";
-import { getResumeData } from "@/lib/resume/data";
+import { getResumeData } from "@/lib/resume/get-resume";
 import { hasLocale } from "next-intl";
 import { routing, type AppLocale } from "@/i18n/routing";
 import { absoluteUrl } from "@/lib/seo/site";
@@ -40,7 +40,7 @@ export default async function Page({ params }: Props) {
   setRequestLocale(localeParam);
 
   const locale = (await getLocale()) as AppLocale;
-  const data = getResumeData(locale);
+  const data = await getResumeData(locale);
 
   return (
     <div className="w-full py-8 px-4">
