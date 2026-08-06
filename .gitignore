@@ -39,3 +39,20 @@ yarn-error.log*
 next-env.d.ts
 
 *.db
+
+# agent / tooling (local only)
+.agents/
+.claude/
+.cursor/
+.cline/
+.clinerules/
+.opencode/
+.pi/
+openspec/
+skills-lock.json
+.migration/
+migrations/
+
+# Cloudflare / OpenNext build
+.open-next/
+.wrangler/
