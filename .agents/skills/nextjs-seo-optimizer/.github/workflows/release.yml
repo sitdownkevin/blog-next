@@ -1,0 +1,77 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Get version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+    
+    - name: Create .skill package
+      run: |
+        # Create package excluding unnecessary files
+        zip -r nextjs-seo-optimizer-${{ steps.get_version.outputs.VERSION }}.skill \
+          SKILL.md \
+          scripts/ \
+          references/ \
+          -x "*.git*" "*.DS_Store" "*node_modules*" "*.github*"
+        
+        echo "✅ Created nextjs-seo-optimizer-${{ steps.get_version.outputs.VERSION }}.skill"
+    
+    - name: Create Release Notes
+      run: |
+        cat > RELEASE_NOTES.md << 'EOF'
+        # Next.js SEO Optimizer v${{ steps.get_version.outputs.VERSION }}
+        
+        ## Installation
+        
+        ### Quick Install
+        ```bash
+        npx add-skill rajendraprasadn/nextjs-seo-optimizer
+        ```
+        
+        ### Claude.ai
+        Download the `.skill` file below and upload to Settings → Features → Skills
+        
+        ### Manual Install
+        ```bash
+        git clone https://github.com/rajendraprasadn/nextjs-seo-optimizer.git ~/.claude/skills/nextjs-seo-optimizer
+        ```
+        
+        ## What's Included
+        
+        - ✅ Comprehensive Next.js SEO guide
+        - ✅ Metadata API implementation
+        - ✅ Sitemap generation patterns
+        - ✅ Structured data schemas
+        - ✅ Performance optimization
+        - ✅ Automated validation script
+        
+        ## Compatibility
+        
+        - Next.js 13, 14, 15+
+        - Claude Code, Cursor, OpenCode, and other Agent Skills compatible assistants
+        
+        ## Documentation
+        
+        See [README.md](https://github.com/rajendraprasadn/nextjs-seo-optimizer#readme) for full documentation.
+        EOF
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: nextjs-seo-optimizer-*.skill
+        body_path: RELEASE_NOTES.md
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -91,6 +91,12 @@
       "skillPath": "skills/next-dev-loop/SKILL.md",
       "computedHash": "1fb1b47ed7186737df086aa198f86961f72691539f1c4507f60bbedf60a128be"
     },
+    "nextjs-seo-optimizer": {
+      "source": "kumbajirajkumar123/nextjs-seo-optimizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "debb6a6d992a035fee55cf6a74cf00deac53a7aed3572938ecfd8ce3b89caa63"
+    },
     "pick-ui-library": {
       "source": "emilkowalski/skills",
       "sourceType": "github",
