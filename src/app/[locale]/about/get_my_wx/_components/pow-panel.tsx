@@ -258,15 +258,32 @@ export function PowPanel() {
           </div>
 
           {validationResult?.data?.image && (
-            <div className="flex flex-col items-start gap-3">
-              <div className="rounded-lg border border-border p-3 dark:border-white/10">
+            <div className="flex justify-center sm:justify-start pt-2">
+              <div className="relative w-full max-w-[280px] rounded-[1.75rem] bg-white px-8 pt-10 pb-7 shadow-[0_12px_40px_-12px_rgba(0,0,0,0.12)] ring-1 ring-black/5 dark:bg-[#1c1a17] dark:shadow-[0_12px_40px_-12px_rgba(0,0,0,0.5)] dark:ring-white/10">
+                <span
+                  aria-hidden
+                  className="absolute top-5 right-5 size-2 rounded-full bg-claude-orange"
+                />
+
                 <Image
                   src={validationResult.data.image}
                   alt={t("qrAlt")}
-                  width={200}
-                  height={200}
-                  className="size-[200px]"
+                  width={280}
+                  height={280}
+                  className="mx-auto w-[72%] h-auto"
                 />
+
+                <div className="relative mt-8 mb-5">
+                  <div className="h-px bg-border dark:bg-white/10" />
+                  <span
+                    aria-hidden
+                    className="absolute left-1/2 top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-claude-orange"
+                  />
+                </div>
+
+                <p className="text-center text-sm tracking-wide text-muted-foreground">
+                  {t("qrHint")}
+                </p>
               </div>
             </div>
           )}

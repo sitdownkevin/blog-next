@@ -42,6 +42,7 @@
     "valid": "Valid",
     "invalid": "Invalid",
     "qrAlt": "WeChat QR code",
+    "qrHint": "Scan to add me on WeChat",
     "loadingTask": "Fetching task…"
   },
   "Theme": {
