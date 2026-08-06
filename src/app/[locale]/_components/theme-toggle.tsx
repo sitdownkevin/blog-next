@@ -26,13 +26,13 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="text-foreground/70 hover:text-claude-orange transition-colors duration-300 cursor-pointer"
+      className="inline-flex shrink-0 items-center justify-center text-foreground/70 hover:text-claude-orange transition-colors duration-300 cursor-pointer"
       aria-label={t("toggle")}
     >
       {theme === "dark" ? (
-        <FiSun className="text-yellow-400" size={18} />
+        <FiSun className="text-yellow-400" size={16} />
       ) : (
-        <FiMoon size={18} />
+        <FiMoon size={16} />
       )}
     </button>
   );

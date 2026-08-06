@@ -1,8 +1,8 @@
 "use client";
 
 import { PostMatterType } from "@/lib/posts/types";
-import { Pin } from "lucide-react";
-import { useState } from "react";
+import { Pin, Loader2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -10,6 +10,8 @@ import { EnhancedMarkdownBody } from "./markdown-body";
 import { CoverTags } from "./cover-tags";
 import { CoverDate } from "./cover-date";
 import { CoverTitle } from "./cover-title";
+
+const PAGE_SIZE = 8;
 
 interface CoverProps {
   matter: PostMatterType;
@@ -56,27 +58,35 @@ export function Cover({ matter, searching }: CoverProps) {
   );
 }
 
-function LoadMore({ handleShowMore }: { handleShowMore: () => void }) {
-  const t = useTranslations("Posts");
-
-  return (
-    <button
-      type="button"
-      onClick={handleShowMore}
-      className="w-full mt-2 py-2.5 text-sm font-medium text-muted-foreground border border-border rounded-md transition-colors hover:border-claude-orange hover:text-claude-orange active:scale-[0.99] cursor-pointer"
-    >
-      {t("loadMore")}
-    </button>
-  );
-}
-
 export function CoverContainer({ matterList, searching }: CoverContainerProps) {
   const t = useTranslations("Posts");
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const listSignature = matterList.map((matter) => matter.id).join(",");
+  const hasMore = visibleCount < matterList.length;
 
-  const handleShowMore = () => {
-    setVisibleCount((prevCount) => Math.min(prevCount + 8, matterList.length));
-  };
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [listSignature]);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setVisibleCount((prev) =>
+            Math.min(prev + PAGE_SIZE, matterList.length),
+          );
+        }
+      },
+      { rootMargin: "240px 0px" },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [hasMore, visibleCount, matterList.length]);
 
   const visiblePosts = matterList.slice(0, visibleCount);
 
@@ -103,8 +113,16 @@ export function CoverContainer({ matterList, searching }: CoverContainerProps) {
           </motion.div>
         ))}
       </AnimatePresence>
-      {visibleCount < matterList.length && (
-        <LoadMore handleShowMore={handleShowMore} />
+      {hasMore && (
+        <div
+          ref={sentinelRef}
+          className="flex items-center justify-center gap-2 py-6 text-sm text-muted-foreground"
+          aria-live="polite"
+          aria-busy="true"
+        >
+          <Loader2 className="size-4 animate-spin" aria-hidden />
+          <span>{t("loadingMore")}</span>
+        </div>
       )}
     </div>
   );

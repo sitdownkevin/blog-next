@@ -5,6 +5,7 @@ import { decrypt } from "@/lib/posts/crypto";
 import matter from "gray-matter";
 import { MarkdownType } from "./types";
 import { createBasePipeline } from "@/lib/posts/markdownPipeline";
+import { parsePostDate } from "./parse-post-date";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -71,7 +72,7 @@ export async function getMarkdownContent(
     title: matterResult.data.title,
     tags: matterResult.data.tags.split(","),
     description: matterResult.data.description,
-    create_date: new Date(matterResult.data.create_date),
-    update_date: new Date(matterResult.data.update_date),
+    create_date: parsePostDate(matterResult.data.create_date),
+    update_date: parsePostDate(matterResult.data.update_date),
   };
 }

@@ -5,6 +5,7 @@ import matter from "gray-matter";
 import { MarkdownType, PostMatterType } from "./types";
 import { createBasePipeline } from "@/lib/posts/markdownPipeline";
 import { getMatterList } from "@/lib/posts/getMatterList";
+import { parsePostDate } from "./parse-post-date";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -25,8 +26,8 @@ async function getMarkdownContent(postId: string): Promise<MarkdownType> {
     title: matterResult.data.title,
     tags: matterResult.data.tags.split(","),
     description: matterResult.data.description,
-    create_date: new Date(matterResult.data.create_date),
-    update_date: new Date(matterResult.data.update_date),
+    create_date: parsePostDate(matterResult.data.create_date),
+    update_date: parsePostDate(matterResult.data.update_date),
   };
 }
 

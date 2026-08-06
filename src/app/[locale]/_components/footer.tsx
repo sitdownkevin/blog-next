@@ -44,7 +44,6 @@ export function Footer() {
         </span>
         <FooterLink href="/about/resume">{t("resume")}</FooterLink>
         <FooterLink href="/about/gallery">{t("gallery")}</FooterLink>
-        <FooterLink href="/about/get_my_wx">{t("wechat")}</FooterLink>
       </div>
       <div className="flex flex-col gap-1.5">
         <span className="text-xxs font-semibold tracking-wide text-foreground/80">

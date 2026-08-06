@@ -3,6 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { cacheLife } from "next/cache";
 import { encrypt } from "./crypto";
+import { parsePostDate } from "./parse-post-date";
 import { PostMatterType } from "./types";
 
 const postDirectory = path.join(process.cwd(), "content/posts");
@@ -26,8 +27,8 @@ export async function getMatterList(): Promise<PostMatterType[]> {
       description: matterResult.data?.description,
       pinned: matterResult.data?.pinned || false,
       hidden: matterResult.data?.hidden || false,
-      create_date: new Date(matterResult.data.create_date),
-      update_date: new Date(matterResult.data.update_date),
+      create_date: parsePostDate(matterResult.data.create_date),
+      update_date: parsePostDate(matterResult.data.update_date),
       content: matterResult.content,
     };
 

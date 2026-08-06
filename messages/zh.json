@@ -9,15 +9,40 @@
     "about": "关于",
     "posts": "日志"
   },
+  "Header": {
+    "wechat": "微信"
+  },
   "Footer": {
     "about": "关于",
     "resume": "简历",
     "gallery": "图库",
-    "wechat": "微信",
     "tools": "工具",
     "advancedSearch": "高级搜索",
     "gpt4oPrompts": "GPT-4o 提示词",
     "projects": "项目"
+  },
+  "GetMyWx": {
+    "title": "通过 PoW 获取微信",
+    "subtitle": "完成一次工作量证明后，即可查看我的微信二维码。",
+    "description": "浏览器会在本地计算哈希，找到满足难度要求的 nonce，再提交校验。",
+    "message": "消息",
+    "difficulty": "难度",
+    "currentNonce": "当前 Nonce",
+    "currentHash": "当前哈希",
+    "finalNonce": "最终 Nonce",
+    "finalHash": "最终哈希",
+    "mine": "开始挖矿",
+    "mining": "挖矿中…",
+    "stop": "停止",
+    "miningStatus": "正在搜索有效 nonce…",
+    "mineComplete": "已找到解，可以提交校验。",
+    "validate": "校验",
+    "validating": "校验中…",
+    "validationResult": "校验结果",
+    "valid": "有效",
+    "invalid": "无效",
+    "qrAlt": "微信二维码",
+    "loadingTask": "正在获取任务…"
   },
   "Theme": {
     "toggle": "切换主题"
@@ -57,6 +82,7 @@
     "subtitle": "研究、工具与日常折腾的记录。",
     "searchPlaceholder": "搜索标题、标签或正文…",
     "loadMore": "加载更多",
+    "loadingMore": "加载中…",
     "noMatches": "没有匹配的日志。",
     "pinned": "置顶",
     "copyCode": "复制代码",
