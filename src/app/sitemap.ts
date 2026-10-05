@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getMatterList } from "@/lib/posts/getMatterList";
 import { getProjectSlugs } from "@/lib/projects/data";
 import { menubarComponents } from "@/lib/tools/advanced-search/data";
-import { absoluteUrl } from "@/lib/seo/site";
+import { SEO_INDEXABLE, absoluteUrl } from "@/lib/seo/site";
 import type { MenubarItem } from "@/lib/types";
 
 function collectAdvancedSearchPaths(items: MenubarItem[]): string[] {
@@ -19,6 +19,11 @@ function collectAdvancedSearchPaths(items: MenubarItem[]): string[] {
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // De-indexed mode: advertise no URLs at all (and avoid touching R2).
+  if (!SEO_INDEXABLE) {
+    return [];
+  }
+
   const now = new Date();
   const advancedSearchPaths = collectAdvancedSearchPaths(menubarComponents);
 

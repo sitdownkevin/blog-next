@@ -18,6 +18,8 @@ import { Footer } from "./_components/footer";
 import { LocaleSync } from "./_components/locale-sync";
 import { routing } from "@/i18n/routing";
 import {
+  GOOGLE_SITE_VERIFICATION,
+  SEO_INDEXABLE,
   SITE_AUTHOR,
   SITE_DESCRIPTION,
   SITE_NAME,
@@ -88,16 +90,28 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [SITE_OG_IMAGE],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+  robots: SEO_INDEXABLE
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
+      },
+  verification: {
+    google: GOOGLE_SITE_VERIFICATION,
   },
   alternates: {
     types: {

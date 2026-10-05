@@ -8,6 +8,17 @@ export const SITE_DESCRIPTION =
 
 export const SITE_OG_IMAGE = "/og-image.jpg";
 
+// Site-wide indexing switch. Off by default: the site serves `noindex` to all
+// search engines. To re-enable indexing, set NEXT_PUBLIC_SEO_INDEXABLE=true in
+// Vercel and redeploy. Keep this in sync with next.config.ts (which cannot
+// import this module because path aliases don't resolve there).
+export const SEO_INDEXABLE = process.env.NEXT_PUBLIC_SEO_INDEXABLE === "true";
+
+// Google Search Console ownership proof (HTML tag method). Search Console
+// re-checks periodically, so this must stay in the page forever.
+export const GOOGLE_SITE_VERIFICATION =
+  "ty_Edz-GlpmZtQRxE23apEADiK5cP8jG5SlPdczvb1s";
+
 export const SITE_AUTHOR = {
   name: "Ke Xu",
   email: "kexu567@gmail.com",

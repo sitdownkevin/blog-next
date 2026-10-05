@@ -34,11 +34,31 @@ function galleryRemotePatterns(): NonNullable<
   return patterns;
 }
 
+// Mirror of SEO_INDEXABLE in src/lib/seo/site.ts. This file is loaded outside
+// the app's module resolution, so it reads the env var directly instead of
+// importing the shared constant.
+const SEO_INDEXABLE = process.env.NEXT_PUBLIC_SEO_INDEXABLE === "true";
+
 const nextConfig: NextConfig = {
   cacheComponents: true,
   turbopack: {},
   images: {
     remotePatterns: galleryRemotePatterns(),
+  },
+  // De-indexed mode: mark every response (HTML pages, public/ files, PDFs,
+  // images) as noindex for crawlers that honor response headers.
+  async headers() {
+    if (SEO_INDEXABLE) {
+      return [];
+    }
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        ],
+      },
+    ];
   },
   webpack: (config) => {
     config.ignoreWarnings = [
