@@ -19,6 +19,10 @@ export const SEO_INDEXABLE = process.env.NEXT_PUBLIC_SEO_INDEXABLE === "true";
 export const GOOGLE_SITE_VERIFICATION =
   "ty_Edz-GlpmZtQRxE23apEADiK5cP8jG5SlPdczvb1s";
 
+// Bing Webmaster Tools ownership proof (HTML meta tag method). Keep this
+// alongside the Google verification tag so the site remains verifiable.
+export const BING_SITE_VERIFICATION = "5BFADA5B25E32E2EF27ACACA9458DAA5";
+
 export const SITE_AUTHOR = {
   name: "Ke Xu",
   email: "kexu567@gmail.com",

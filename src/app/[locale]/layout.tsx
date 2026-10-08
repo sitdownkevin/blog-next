@@ -18,6 +18,7 @@ import { Footer } from "./_components/footer";
 import { LocaleSync } from "./_components/locale-sync";
 import { routing } from "@/i18n/routing";
 import {
+  BING_SITE_VERIFICATION,
   GOOGLE_SITE_VERIFICATION,
   SEO_INDEXABLE,
   SITE_AUTHOR,
@@ -112,6 +113,9 @@ export const metadata: Metadata = {
       },
   verification: {
     google: GOOGLE_SITE_VERIFICATION,
+    other: {
+      "msvalidate.01": BING_SITE_VERIFICATION,
+    },
   },
   alternates: {
     types: {
